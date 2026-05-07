@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html class="dark" lang="es" data-page="home">
+<head>
+  <meta charset="utf-8"/>
+  <link rel="icon" type="image/png" href="logo-lezac-mini.png"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lezac Consultoria | Inteligencia Comercial B2B</title>
+  <meta name="description" content="Consultoría comercial especializada en distribuidoras, mayoristas y fábricas B2B. Ordenamos tu gestión comercial, mejoramos tus ventas y tomamos decisiones con datos claros."/>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Organization","name":"Lezac Consultoria","url":"https://lezacconsultoria.com","areaServed":["Argentina","Paraguay","Bolivia","Uruguay"]}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Playfair+Display:ital,wght@1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface":                "#0A0A0B",
+            "surface-dim":           "#050506",
+            "surface-container":     "#111112",
+            "surface-container-low": "#0D0D0E",
+            "surface-container-high":"#1A1A1B",
+            "on-surface":            "#E5E2E3",
+            "on-surface-variant":    "#958DA1",
+            "outline-variant":       "#2A2A2B",
+            "primary":               "#8C52FF",
+            "primary-container":     "#7131E3",
+            "on-primary":            "#FFFFFF",
+            "error":                 "#EC0543",
+            "success":               "#25F5A4",
+            "accent":                "var(--color-accent)",
+            "accent-dim":            "var(--color-accent-dim)",
+          },
+          borderRadius: {
+            "DEFAULT": "0.75rem",
+            "sm":  "0.5rem",
+            "lg":  "1rem",
+            "xl":  "1.5rem",
+            "2xl": "2rem",
+            "full":"9999px"
+          },
+          fontFamily: {
+            "headline": ["Montserrat","sans-serif"],
+            "serif":    ["Playfair Display","serif"],
+            "body":     ["Inter","sans-serif"],
+          },
+        },
+      },
+    }
+  </script>
+  <style>
+    :root {
+      --color-accent: #8C52FF;
+      --color-accent-dim: #7131E3;
+      --color-accent-glow: rgba(140,82,255,0.3);
+    }
+    body { font-family:'Inter',sans-serif; background:#0A0A0B; color:#E5E2E3; -webkit-font-smoothing:antialiased; overflow-x:hidden; }
+    h1,h2,h3,h4 { font-family:'Montserrat',sans-serif; }
+    .serif-italic { font-family:'Playfair Display',serif; font-style:italic; }
+    .material-symbols-outlined { font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24; }
+
+    /* Grid background */
+    .grid-bg {
+      background-image:
+        linear-gradient(rgba(255,255,255,0.022) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.022) 1px, transparent 1px);
+      background-size: 72px 72px;
+    }
+
+    /* Glass / Liquid glass */
+    .glass { background:rgba(17,17,18,0.6); backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px); border:1px solid rgba(255,255,255,0.06); }
+    .liquid-glass { background:rgba(26,26,27,0.45); backdrop-filter:blur(28px); -webkit-backdrop-filter:blur(28px); border:1px solid rgba(255,255,255,0.07); box-shadow:0 8px 32px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.04); }
+
+    /* Pill badge */
+    .pill-badge { display:inline-flex; align-items:center; gap:8px; padding:6px 14px; border-radius:9999px; background:rgba(140,82,255,0.08); border:1px solid rgba(140,82,255,0.2); font-size:11px; font-weight:600; letter-spacing:.05em; color:#C4A8FF; }
+    .pill-dot { width:7px; height:7px; border-radius:50%; background:var(--color-accent); animation:pulse-dot 2s ease-in-out infinite; }
+    @keyframes pulse-dot { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.5;transform:scale(.75)} }
+
+    /* Glow blob */
+    .glow-blob { position:absolute; border-radius:50%; filter:blur(120px); pointer-events:none; }
+
+    /* Service card */
+    .service-card { transition:transform .35s cubic-bezier(.34,1.56,.64,1), box-shadow .35s ease; }
+    .service-card:hover { transform:translateY(-6px); }
+
+    /* Sparkline */
+    .sparkline-path { stroke-dasharray:600; stroke-dashoffset:600; transition:stroke-dashoffset 2.2s ease; }
+    .sparkline-path.animated { stroke-dashoffset:0; }
+
+    /* Activity feed */
+    .feed-inner { animation:feed-scroll 14s linear infinite; }
+    @keyframes feed-scroll { 0%{transform:translateY(0)} 100%{transform:translateY(-50%)} }
+
+    /* Scroll reveal */
+    .lezac-reveal { opacity:0; transform:translateY(22px); transition:opacity .65s ease, transform .65s ease; }
+    .lezac-reveal.revealed { opacity:1; transform:translateY(0); }
+
+    /* Progress bar */
+    .svc-bar { width:0; transition:width 1.1s cubic-bezier(.25,1,.5,1); }
+  </style>
+</head>
+<body class="bg-surface selection:bg-primary/30 selection:text-white" data-hero>
+
+<!-- ══════════════════════════════════════
+     HERO
+══════════════════════════════════════ -->
+<section class="relative min-h-screen flex items-center px-6 md:px-12 lg:px-20 pt-32 pb-24 overflow-hidden grid-bg">
+  <div class="glow-blob w-[700px] h-[700px] opacity-[0.07] top-1/2 left-1/3 -translate-x-1/2 -translate-y-1/2" style="background:var(--color-accent)"></div>
+  <div class="glow-blob w-[300px] h-[300px] opacity-10 top-16 right-16" style="background:#38BDF8"></div>
+
+  <div class="w-full max-w-7xl mx-auto grid grid-cols-12 gap-8 lg:gap-12 items-center relative z-10">
+
+    <!-- Left -->
+    <div class="col-span-12 lg:col-span-7 space-y-6">
+      <span class="pill-badge"><span class="pill-dot"></span>Inteligencia Comercial B2B · LATAM</span>
+
+      <h1 class="text-5xl md:text-6xl xl:text-[4.5rem] font-black leading-[1.0] tracking-tight text-white">
+        Dominá tu operación<br/>
+        <span class="serif-italic font-semibold text-5xl md:text-6xl xl:text-7xl" style="color:var(--color-accent)">con datos reales.</span>
+      </h1>
+
+      <p class="text-base lg:text-lg text-on-surface-variant font-light max-w-lg leading-relaxed">
+        Consultoría especializada en <span class="text-white font-medium">distribuidoras, mayoristas y fábricas</span>. Ordenamos tu gestión comercial, mejoramos tus ventas y tomamos decisiones con información clara.
+      </p>
+
+      <ul class="space-y-3">
+        <li class="flex items-center gap-3 text-sm text-white/75"><span class="w-5 h-5 rounded-full flex-shrink-0 flex items-center justify-center" style="background:rgba(140,82,255,.15);color:var(--color-accent)"><span class="material-symbols-outlined" style="font-size:13px">check</span></span>Identificá dónde estás perdiendo ventas</li>
+        <li class="flex items-center gap-3 text-sm text-white/75"><span class="w-5 h-5 rounded-full flex-shrink-0 flex items-center justify-center" style="background:rgba(140,82,255,.15);color:var(--color-accent)"><span class="material-symbols-outlined" style="font-size:13px">check</span></span>Detectá oportunidades reales de crecimiento</li>
+        <li class="flex items-center gap-3 text-sm text-white/75"><span class="w-5 h-5 rounded-full flex-shrink-0 flex items-center justify-center" style="background:rgba(140,82,255,.15);color:var(--color-accent)"><span class="material-symbols-outlined" style="font-size:13px">check</span></span>Ordená tu equipo con información clara</li>
+      </ul>
+
+      <div class="flex flex-col sm:flex-row gap-3 pt-1">
+        <a href="https://api.whatsapp.com/send?phone=5491154107921&text=%E2%9C%85%20Lezac%20Consultoria%20I%20Me%20interesa%20conocer%20m%C3%A1s%20de%20sus%20servicios." target="_blank" rel="noopener" class="flex items-center justify-center gap-2 px-8 py-4 rounded-full text-sm font-bold text-white transition-all hover:brightness-110 hover:scale-[1.02]" style="background:var(--color-accent);box-shadow:0 0 40px var(--color-accent-glow)">Agendar diagnóstico <span class="material-symbols-outlined" style="font-size:18px">arrow_forward</span></a>
+        <a href="#ecosystem" class="flex items-center justify-center gap-2 px-8 py-4 rounded-full text-sm font-semibold text-white/70 hover:text-white transition-all" style="border:1px solid rgba(255,255,255,0.12)">Ver servicios</a>
+      </div>
+
+      <div class="flex items-center gap-8 pt-4 border-t border-white/5">
+        <div><span class="text-2xl font-black text-white">+<span class="counter" data-target="100">0</span></span><p class="text-[10px] uppercase tracking-widest text-on-surface-variant mt-0.5">Empresas</p></div>
+        <div class="w-px h-8 bg-white/10"></div>
+        <div><span class="text-2xl font-black text-white">+<span class="counter" data-target="10">0</span></span><p class="text-[10px] uppercase tracking-widest text-on-surface-variant mt-0.5">Años</p></div>
+        <div class="w-px h-8 bg-white/10"></div>
+        <div><span class="text-2xl font-black text-white"><span class="counter" data-target="4">0</span></span><p class="text-[10px] uppercase tracking-widest text-on-surface-variant mt-0.5">Países</p></div>
+      </div>
+    </div>
+
+    <!-- Right: Dashboard card -->
+    <div class="col-span-12 lg:col-span-5">
+      <div class="liquid-glass rounded-2xl overflow-hidden" style="box-shadow:0 0 80px -20px var(--color-accent-glow)">
+
+        <!-- Header -->
+        <div class="px-5 py-3.5 border-b border-white/5 flex items-center justify-between">
+          <div class="flex items-center gap-2.5">
+            <span class="w-2 h-2 rounded-full animate-pulse" style="background:#25F5A4"></span>
+            <span class="text-xs font-semibold text-white/80 uppercase tracking-wider">Intelligence Hub</span>
+          </div>
+          <span class="text-[10px] text-on-surface-variant">En vivo · LATAM</span>
+        </div>
+
+        <!-- KPIs -->
+        <div class="grid grid-cols-3 divide-x border-b" style="border-color:rgba(255,255,255,.05);divide-color:rgba(255,255,255,.05)">
+          <div class="px-4 py-4"><p class="text-[10px] text-on-surface-variant uppercase tracking-wider mb-1">Cobertura</p><p class="text-xl font-black text-white">87%</p><p class="text-[10px] text-success mt-0.5">↑ +4% mes</p></div>
+          <div class="px-4 py-4"><p class="text-[10px] text-on-surface-variant uppercase tracking-wider mb-1">Conversión</p><p class="text-xl font-black text-white">+23%</p><p class="text-[10px] text-success mt-0.5">↑ Meta</p></div>
+          <div class="px-4 py-4"><p class="text-[10px] text-on-surface-variant uppercase tracking-wider mb-1">PDVs</p><p class="text-xl font-black text-white">1.248</p><p class="text-[10px] text-success mt-0.5">↑ Activos</p></div>
+        </div>
+
+        <!-- Sparkline -->
+        <div class="px-5 pt-4 pb-2">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-[11px] font-semibold text-white/50 uppercase tracking-wider">Performance comercial</span>
+            <span class="text-[10px]" style="color:var(--color-accent)">Últimos 6 meses</span>
+          </div>
+          <div class="relative h-20">
+            <svg viewBox="0 0 300 70" class="w-full h-full" preserveAspectRatio="none">
+              <defs>
+                <linearGradient id="cg" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="var(--color-accent)" stop-opacity=".22"/>
+                  <stop offset="100%" stop-color="var(--color-accent)" stop-opacity="0"/>
+                </linearGradient>
+              </defs>
+              <path d="M0,58 C25,54 50,48 75,40 C100,32 125,35 150,25 C175,15 200,20 225,12 C250,4 275,7 300,3 L300,70 L0,70 Z" fill="url(#cg)"/>
+              <path class="sparkline-path" d="M0,58 C25,54 50,48 75,40 C100,32 125,35 150,25 C175,15 200,20 225,12 C250,4 275,7 300,3" fill="none" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round"/>
+              <circle cx="300" cy="3" r="3.5" fill="var(--color-accent)" opacity="0" id="spark-dot">
+                <animate attributeName="opacity" from="0" to="1" dur=".3s" begin="2.2s" fill="freeze"/>
+              </circle>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Activity feed -->
+        <div class="border-t border-white/5 overflow-hidden" style="height:96px">
+          <div class="feed-inner px-5">
+            <div class="py-2.5 border-b border-white/5 flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-success flex-shrink-0"></span><span class="text-xs text-white/65">Ruteo optimizado en Córdoba · <span class="text-success">-18% km</span></span></div>
+            <div class="py-2.5 border-b border-white/5 flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full flex-shrink-0" style="background:#38BDF8"></span><span class="text-xs text-white/65">280 nuevos PDVs mapeados en Asunción</span></div>
+            <div class="py-2.5 border-b border-white/5 flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full flex-shrink-0" style="background:#25D366"></span><span class="text-xs text-white/65">WhatsApp: +340 pedidos automatizados</span></div>
+            <div class="py-2.5 flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full flex-shrink-0" style="background:#B08AFF"></span><span class="text-xs text-white/65">Censo completado: 1.200 clientes validados</span></div>
+            <!-- duplicate for seamless loop -->
+            <div class="py-2.5 border-b border-white/5 flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-success flex-shrink-0"></span><span class="text-xs text-white/65">Ruteo optimizado en Córdoba · <span class="text-success">-18% km</span></span></div>
+            <div class="py-2.5 border-b border-white/5 flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full flex-shrink-0" style="background:#38BDF8"></span><span class="text-xs text-white/65">280 nuevos PDVs mapeados en Asunción</span></div>
+            <div class="py-2.5 border-b border-white/5 flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full flex-shrink-0" style="background:#25D366"></span><span class="text-xs text-white/65">WhatsApp: +340 pedidos automatizados</span></div>
+            <div class="py-2.5 flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full flex-shrink-0" style="background:#B08AFF"></span><span class="text-xs text-white/65">Censo completado: 1.200 clientes validados</span></div>
+          </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="px-5 py-3 flex items-center justify-between" style="background:rgba(5,5,6,.5)">
+          <span class="text-[10px] text-on-surface-variant uppercase tracking-wider">Clientes activos</span>
+          <div class="flex -space-x-1">
+            <div class="w-6 h-6 rounded-full border border-surface flex items-center justify-center text-[8px] text-white font-bold" style="background:rgba(140,82,255,.4)">AR</div>
+            <div class="w-6 h-6 rounded-full border border-surface flex items-center justify-center text-[8px] text-white font-bold" style="background:rgba(37,245,164,.4)">PY</div>
+            <div class="w-6 h-6 rounded-full border border-surface flex items-center justify-center text-[8px] text-white font-bold" style="background:rgba(56,189,248,.4)">BO</div>
+            <div class="w-6 h-6 rounded-full border border-surface flex items-center justify-center text-[8px] text-white font-bold" style="background:rgba(249,115,22,.4)">UY</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     MARQUEE
+══════════════════════════════════════ -->
+<section class="py-10 border-y" style="border-color:rgba(255,255,255,.04);background:#050506">
+  <p class="text-[10px] font-bold tracking-[.5em] text-white/20 uppercase text-center mb-6">Empresas que confían en Lezac</p>
+  <div data-lezac-marquee></div>
+</section>
+
+<!-- ══════════════════════════════════════
+     SERVICES BENTO
+══════════════════════════════════════ -->
+<section class="py-24 lg:py-36 px-6 md:px-12 lg:px-20 bg-surface relative overflow-hidden" id="ecosystem">
+  <div class="glow-blob w-[600px] h-[600px] opacity-[.04] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" style="background:var(--color-accent)"></div>
+  <div class="max-w-7xl mx-auto relative z-10">
+
+    <div class="mb-14 lezac-reveal">
+      <span class="pill-badge mb-5"><span class="pill-dot"></span>Intelligence Suites</span>
+      <h2 class="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight tracking-tight mt-4 mb-3">
+        Todo lo que tu empresa<br/><span class="serif-italic font-semibold" style="color:var(--color-accent)">necesita para crecer.</span>
+      </h2>
+      <p class="text-on-surface-variant max-w-lg text-base font-light leading-relaxed">Seis soluciones de inteligencia comercial para ordenar, optimizar y escalar tu empresa B2B.</p>
+    </div>
+
+    <!-- BENTO GRID -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-4">
+
+      <!-- Smart Brújula: FEATURED 7 cols -->
+      <a href="./smart-brujula.html" class="service-card liquid-glass rounded-2xl p-8 lg:col-span-7 group flex flex-col justify-between" style="min-height:320px;border-color:rgba(255,255,255,.07)">
+        <div>
+          <div class="flex items-start justify-between mb-5">
+            <div>
+              <span class="text-[10px] font-bold uppercase tracking-widest block mb-1.5" style="color:#25F5A4">ANÁLISIS Y DIAGNÓSTICO</span>
+              <h3 class="text-2xl lg:text-3xl font-black text-white leading-tight">Smart Brújula<br/>Comercial</h3>
+            </div>
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0" style="background:rgba(37,245,164,.1)"><span class="material-symbols-outlined" style="color:#25F5A4;font-size:22px">explore</span></div>
+          </div>
+          <p class="text-on-surface-variant text-sm leading-relaxed mb-6 max-w-sm">Ordená tu operación con información clara, detectá oportunidades reales y definí el foco comercial de tu empresa.</p>
+          <div class="space-y-3">
+            <div>
+              <div class="flex justify-between text-[11px] mb-1.5"><span class="text-white/50">Eficiencia comercial</span><span class="font-bold" style="color:#25F5A4">+12%</span></div>
+              <div class="h-1 bg-white/5 rounded-full overflow-hidden"><div class="svc-bar h-full rounded-full" data-w="72%" style="background:#25F5A4"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between text-[11px] mb-1.5"><span class="text-white/50">Oportunidades detectadas</span><span class="font-bold" style="color:#25F5A4">+340</span></div>
+              <div class="h-1 bg-white/5 rounded-full overflow-hidden"><div class="svc-bar h-full rounded-full" data-w="88%" style="background:#25F5A4;opacity:.55"></div></div>
+            </div>
+          </div>
+        </div>
+        <span class="text-xs font-bold uppercase tracking-widest flex items-center gap-2 text-white/30 group-hover:text-[#25F5A4] transition-colors mt-6">Conocer más <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform" style="font-size:16px">arrow_forward</span></span>
+      </a>
+
+      <!-- WA Smart Ventas: 5 cols -->
+      <a href="./wa-smart-ventas.html" class="service-card liquid-glass rounded-2xl p-7 lg:col-span-5 group flex flex-col justify-between" style="min-height:320px;border-color:rgba(255,255,255,.07)">
+        <div>
+          <div class="flex items-start justify-between mb-4">
+            <div>
+              <span class="text-[10px] font-bold uppercase tracking-widest block mb-1.5" style="color:#25D366">AUTOMATIZACIÓN</span>
+              <h3 class="text-xl font-black text-white leading-tight">WA Smart<br/>Ventas</h3>
+            </div>
+            <div class="w-11 h-11 rounded-xl flex items-center justify-center" style="background:rgba(37,211,102,.1)"><span class="material-symbols-outlined" style="color:#25D366;font-size:20px">chat_bubble_outline</span></div>
+          </div>
+          <p class="text-on-surface-variant text-sm leading-relaxed mb-4">Transformá WhatsApp en un canal de ventas inteligente, automatizando pedidos y seguimiento.</p>
+          <!-- Chat mock -->
+          <div class="rounded-xl p-3 space-y-2" style="background:rgba(37,211,102,.05);border:1px solid rgba(37,211,102,.1)">
+            <div class="flex gap-2 items-end"><div class="w-4 h-4 rounded-full flex-shrink-0" style="background:rgba(37,211,102,.3)"></div><div class="text-[11px] rounded-2xl rounded-bl-none px-3 py-1.5 text-white/65" style="background:rgba(255,255,255,.06)">¿Tienen stock del producto X?</div></div>
+            <div class="flex gap-2 items-end justify-end"><div class="text-[11px] rounded-2xl rounded-br-none px-3 py-1.5 text-white font-medium" style="background:rgba(37,211,102,.2)">✓ Sí, 48 unidades disponibles</div></div>
+            <div class="flex gap-2 items-end"><div class="w-4 h-4 rounded-full flex-shrink-0" style="background:rgba(37,211,102,.3)"></div><div class="text-[11px] rounded-2xl rounded-bl-none px-3 py-1.5 text-white/65" style="background:rgba(255,255,255,.06)">Quiero 10 cajas</div></div>
+            <div class="flex gap-2 items-end justify-end"><div class="text-[11px] rounded-2xl rounded-br-none px-3 py-1.5 text-white font-medium" style="background:rgba(37,211,102,.2)">✓ Pedido registrado #4891</div></div>
+          </div>
+        </div>
+        <span class="text-xs font-bold uppercase tracking-widest flex items-center gap-2 text-white/30 group-hover:text-[#25D366] transition-colors mt-4">Conocer más <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform" style="font-size:16px">arrow_forward</span></span>
+      </a>
+
+      <!-- Censo: 4 cols -->
+      <a href="./censo-comercial.html" class="service-card liquid-glass rounded-2xl p-7 lg:col-span-4 group flex flex-col justify-between" style="min-height:260px;border-color:rgba(255,255,255,.07)">
+        <div>
+          <span class="text-[10px] font-bold uppercase tracking-widest block mb-1.5" style="color:#B08AFF">EXPANSIÓN TERRITORIAL</span>
+          <h3 class="text-xl font-black text-white leading-tight mb-3">Censo<br/>Comercial</h3>
+          <p class="text-on-surface-variant text-sm leading-relaxed mb-5">Identificá todos los puntos de venta reales y potenciales para crecer con información validada.</p>
+          <div class="flex items-center gap-4">
+            <div><p class="text-2xl font-black text-white">+15%</p><p class="text-[10px] text-on-surface-variant uppercase tracking-wider">Cobertura</p></div>
+            <div class="w-px h-8 bg-white/10"></div>
+            <div><p class="text-2xl font-black" style="color:#B08AFF">74%</p><p class="text-[10px] text-on-surface-variant uppercase tracking-wider">Clientes sin visitar</p></div>
+          </div>
+        </div>
+        <span class="text-xs font-bold uppercase tracking-widest flex items-center gap-2 text-white/30 group-hover:text-[#B08AFF] transition-colors mt-4">Conocer más <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform" style="font-size:16px">arrow_forward</span></span>
+      </a>
+
+      <!-- Geolocalización: 4 cols -->
+      <a href="./geolocalizacion.html" class="service-card liquid-glass rounded-2xl p-7 lg:col-span-4 group flex flex-col justify-between" style="min-height:260px;border-color:rgba(255,255,255,.07)">
+        <div>
+          <span class="text-[10px] font-bold uppercase tracking-widest block mb-1.5" style="color:#38BDF8">INTELIGENCIA TERRITORIAL</span>
+          <h3 class="text-xl font-black text-white leading-tight mb-3">Geolocalización<br/>de Clientes</h3>
+          <p class="text-on-surface-variant text-sm leading-relaxed mb-4">Visualizá tu negocio en el mapa y tomá decisiones estratégicas sobre zonas y cobertura.</p>
+          <!-- Map dots -->
+          <div class="relative h-14 rounded-lg overflow-hidden flex items-center justify-center" style="background:rgba(56,189,248,.04);border:1px solid rgba(56,189,248,.1)">
+            <div class="relative w-36 h-10">
+              <span class="absolute w-2 h-2 rounded-full animate-ping" style="background:#38BDF8;opacity:.4;top:3px;left:10px"></span><span class="absolute w-1.5 h-1.5 rounded-full" style="background:#38BDF8;top:4px;left:11px"></span>
+              <span class="absolute w-2 h-2 rounded-full animate-ping" style="background:#38BDF8;opacity:.4;top:7px;left:62px;animation-delay:.6s"></span><span class="absolute w-1.5 h-1.5 rounded-full" style="background:#38BDF8;top:8px;left:63px"></span>
+              <span class="absolute w-2 h-2 rounded-full animate-ping" style="background:#25F5A4;opacity:.4;top:0;left:98px;animation-delay:1.1s"></span><span class="absolute w-1.5 h-1.5 rounded-full" style="background:#25F5A4;top:1px;left:99px"></span>
+              <span class="absolute w-2 h-2 rounded-full animate-ping" style="background:#F97316;opacity:.4;bottom:1px;left:40px;animation-delay:1.7s"></span><span class="absolute w-1.5 h-1.5 rounded-full" style="background:#F97316;bottom:2px;left:41px"></span>
+            </div>
+          </div>
+        </div>
+        <span class="text-xs font-bold uppercase tracking-widest flex items-center gap-2 text-white/30 group-hover:text-[#38BDF8] transition-colors mt-4">Conocer más <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform" style="font-size:16px">arrow_forward</span></span>
+      </a>
+
+      <!-- Ruteo: 4 cols -->
+      <a href="./ruteo-comercial.html" class="service-card liquid-glass rounded-2xl p-7 lg:col-span-4 group flex flex-col justify-between" style="min-height:260px;border-color:rgba(255,255,255,.07)">
+        <div>
+          <span class="text-[10px] font-bold uppercase tracking-widest block mb-1.5" style="color:#F97316">OPTIMIZACIÓN DE RUTAS</span>
+          <h3 class="text-xl font-black text-white leading-tight mb-3">Ruteo<br/>Comercial</h3>
+          <p class="text-on-surface-variant text-sm leading-relaxed mb-5">Organizá recorridos eficientes para tu equipo, reduciendo costos y mejorando la cobertura.</p>
+          <div class="flex items-center gap-4">
+            <div><p class="text-2xl font-black text-white">-20%</p><p class="text-[10px] text-on-surface-variant uppercase tracking-wider">Costo logístico</p></div>
+            <div class="w-px h-8 bg-white/10"></div>
+            <div><p class="text-2xl font-black" style="color:#F97316">+18%</p><p class="text-[10px] text-on-surface-variant uppercase tracking-wider">Eficiencia campo</p></div>
+          </div>
+        </div>
+        <span class="text-xs font-bold uppercase tracking-widest flex items-center gap-2 text-white/30 group-hover:text-[#F97316] transition-colors mt-4">Conocer más <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform" style="font-size:16px">arrow_forward</span></span>
+      </a>
+
+      <!-- CRM: full width coming soon -->
+      <div class="liquid-glass rounded-2xl p-6 lg:col-span-12 flex flex-col md:flex-row items-center justify-between gap-5 opacity-50" style="border-color:rgba(255,255,255,.04)">
+        <div class="flex items-center gap-4">
+          <div class="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center"><span class="material-symbols-outlined text-on-surface-variant" style="font-size:20px">hub</span></div>
+          <div><span class="text-[10px] text-on-surface-variant uppercase tracking-widest block mb-0.5">GESTIÓN DE CLIENTES</span><h3 class="text-lg font-black text-white">CRM Smart</h3></div>
+        </div>
+        <p class="text-on-surface-variant text-sm max-w-md">Centralizá información comercial, mejorá el seguimiento y gestioná clientes y prospectos de forma profesional.</p>
+        <span class="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest border border-white/10 px-4 py-2 rounded-full text-white/40 whitespace-nowrap"><span class="w-1.5 h-1.5 rounded-full bg-white/30"></span>Próximamente</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     METODOLOGÍA
+══════════════════════════════════════ -->
+<section class="py-24 lg:py-32 px-6 md:px-12 lg:px-20 relative overflow-hidden" style="background:#050506">
+  <div class="glow-blob w-[700px] h-[280px] opacity-[.08] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" style="background:var(--color-accent)"></div>
+  <div class="max-w-7xl mx-auto relative z-10">
+    <div class="text-center mb-14 lezac-reveal">
+      <span class="pill-badge mx-auto mb-5"><span class="pill-dot"></span>Metodología Lezac</span>
+      <h2 class="text-4xl md:text-5xl font-black text-white leading-tight tracking-tight mt-4 mb-3">Cómo <span class="serif-italic font-semibold" style="color:var(--color-accent)">transformamos</span> tu empresa</h2>
+      <p class="text-on-surface-variant max-w-lg mx-auto text-base font-light">Un proceso probado en más de 100 empresas en 4 países de LATAM.</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div class="liquid-glass rounded-2xl p-7 lezac-reveal group hover:-translate-y-2 transition-transform duration-300">
+        <div class="text-5xl font-black mb-5 tracking-tighter" style="color:var(--color-accent);opacity:.25">01</div>
+        <div class="w-10 h-10 rounded-xl flex items-center justify-center mb-4" style="background:rgba(140,82,255,.1)"><span class="material-symbols-outlined" style="color:var(--color-accent);font-size:20px">search</span></div>
+        <h4 class="text-lg font-black text-white mb-2">Diagnóstico</h4>
+        <p class="text-on-surface-variant text-sm leading-relaxed">Auditamos tu operación comercial completa y mapeamos dónde están los cuellos de botella reales.</p>
+      </div>
+      <div class="liquid-glass rounded-2xl p-7 lezac-reveal group hover:-translate-y-2 transition-transform duration-300" style="transition-delay:.1s">
+        <div class="text-5xl font-black mb-5 tracking-tighter" style="color:var(--color-accent);opacity:.25">02</div>
+        <div class="w-10 h-10 rounded-xl flex items-center justify-center mb-4" style="background:rgba(140,82,255,.1)"><span class="material-symbols-outlined" style="color:var(--color-accent);font-size:20px">architecture</span></div>
+        <h4 class="text-lg font-black text-white mb-2">Diseño</h4>
+        <p class="text-on-surface-variant text-sm leading-relaxed">Construimos un plan comercial adaptado a tu industria, mercado y estructura de equipo.</p>
+      </div>
+      <div class="liquid-glass rounded-2xl p-7 lezac-reveal group hover:-translate-y-2 transition-transform duration-300" style="transition-delay:.2s">
+        <div class="text-5xl font-black mb-5 tracking-tighter" style="color:var(--color-accent);opacity:.25">03</div>
+        <div class="w-10 h-10 rounded-xl flex items-center justify-center mb-4" style="background:rgba(140,82,255,.1)"><span class="material-symbols-outlined" style="color:var(--color-accent);font-size:20px">rocket_launch</span></div>
+        <h4 class="text-lg font-black text-white mb-2">Implementación</h4>
+        <p class="text-on-surface-variant text-sm leading-relaxed">Ejecutamos con tu equipo en el campo, integrando herramientas y procesos con acompañamiento directo.</p>
+      </div>
+      <div class="liquid-glass rounded-2xl p-7 lezac-reveal group hover:-translate-y-2 transition-transform duration-300" style="transition-delay:.3s">
+        <div class="text-5xl font-black mb-5 tracking-tighter" style="color:var(--color-accent);opacity:.25">04</div>
+        <div class="w-10 h-10 rounded-xl flex items-center justify-center mb-4" style="background:rgba(140,82,255,.1)"><span class="material-symbols-outlined" style="color:var(--color-accent);font-size:20px">trending_up</span></div>
+        <h4 class="text-lg font-black text-white mb-2">Resultados</h4>
+        <p class="text-on-surface-variant text-sm leading-relaxed">Medimos el impacto con datos reales y ajustamos para garantizar crecimiento sostenido.</p>
+      </div>
+    </div>
+
+    <!-- BI Demo screenshot -->
+    <div class="mt-16 lezac-reveal" style="transition-delay:.4s">
+      <p class="text-center text-xs font-semibold tracking-widest uppercase text-on-surface-variant mb-6">Así se ve tu operación comercial con Lezac</p>
+      <div class="relative max-w-4xl mx-auto">
+        <div class="absolute -inset-4 rounded-3xl opacity-20" style="background:radial-gradient(ellipse at center,var(--color-accent) 0%,transparent 70%);filter:blur(40px);"></div>
+        <div class="relative rounded-2xl overflow-hidden" style="border:1px solid rgba(140,82,255,0.15);box-shadow:0 32px 64px rgba(0,0,0,0.6)">
+          <div class="flex items-center gap-2 px-4 py-3" style="background:#0A0A0C;border-bottom:1px solid rgba(140,82,255,0.1)">
+            <div class="w-2.5 h-2.5 rounded-full" style="background:rgba(140,82,255,0.4)"></div>
+            <div class="w-2.5 h-2.5 rounded-full" style="background:rgba(140,82,255,0.25)"></div>
+            <div class="w-2.5 h-2.5 rounded-full" style="background:rgba(140,82,255,0.15)"></div>
+            <span class="ml-2 text-xs font-medium" style="color:rgba(140,82,255,0.5)">Power BI · Dashboard Comercial Lezac</span>
+          </div>
+          <img src="inteligencia.gif" alt="Dashboard Power BI Lezac" class="w-full block" />
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     AUTHORITY
+══════════════════════════════════════ -->
+<section class="py-24 lg:py-32 px-6 md:px-12 lg:px-20 bg-surface relative overflow-hidden">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+    <div class="lezac-reveal">
+      <span class="pill-badge mb-5"><span class="pill-dot"></span>Presencia Regional</span>
+      <h2 class="text-4xl md:text-5xl font-black text-white leading-tight tracking-tight mt-4 mb-6">Experiencia real en<br/><span class="serif-italic font-semibold" style="color:var(--color-accent)">Argentina, Paraguay,<br/>Bolivia y Uruguay</span></h2>
+      <div class="flex flex-wrap gap-2 mb-8">
+        <span class="px-4 py-2 rounded-full text-[11px] font-semibold text-white/75" style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08)">Argentina</span>
+        <span class="px-4 py-2 rounded-full text-[11px] font-semibold text-white/75" style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08)">Paraguay</span>
+        <span class="px-4 py-2 rounded-full text-[11px] font-semibold text-white/75" style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08)">Bolivia</span>
+        <span class="px-4 py-2 rounded-full text-[11px] font-semibold text-white/75" style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08)">Uruguay</span>
+      </div>
+      <div class="grid grid-cols-3 gap-3">
+        <div class="liquid-glass rounded-xl p-4"><p class="text-white font-bold text-sm mb-1">Distribuidoras</p><p class="text-on-surface-variant text-xs">Optimización comercial</p></div>
+        <div class="liquid-glass rounded-xl p-4"><p class="text-white font-bold text-sm mb-1">Mayoristas</p><p class="text-on-surface-variant text-xs">Escalabilidad</p></div>
+        <div class="liquid-glass rounded-xl p-4"><p class="text-white font-bold text-sm mb-1">Fábricas</p><p class="text-on-surface-variant text-xs">Inteligencia de distribución</p></div>
+      </div>
+    </div>
+    <div class="grid grid-cols-2 gap-4 lezac-reveal">
+      <div class="liquid-glass rounded-2xl p-8 flex flex-col items-center justify-center text-center">
+        <span class="text-6xl lg:text-7xl font-black text-white tracking-tighter leading-none">+<span class="counter" data-target="100">0</span></span>
+        <p class="text-[11px] font-semibold uppercase tracking-widest text-on-surface-variant mt-3">Empresas<br/>Asesoradas</p>
+      </div>
+      <div class="liquid-glass rounded-2xl p-8 flex flex-col items-center justify-center text-center" style="border-color:rgba(140,82,255,.15)">
+        <span class="text-6xl lg:text-7xl font-black tracking-tighter leading-none" style="color:var(--color-accent)">+<span class="counter" data-target="10">0</span></span>
+        <p class="text-[11px] font-semibold uppercase tracking-widest text-on-surface-variant mt-3">Años de<br/>Trayectoria</p>
+      </div>
+      <div class="liquid-glass rounded-2xl p-8 flex flex-col items-center justify-center text-center col-span-2" style="border-color:rgba(37,245,164,.1)">
+        <span class="text-6xl lg:text-7xl font-black tracking-tighter leading-none" style="color:#25F5A4"><span class="counter" data-target="4">0</span></span>
+        <p class="text-[11px] font-semibold uppercase tracking-widest text-on-surface-variant mt-3">Países en LATAM</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PLATAFORMAS -->
+<section class="py-14 px-6 md:px-12" style="background:#050506;border-top:1px solid rgba(255,255,255,0.04);border-bottom:1px solid rgba(255,255,255,0.04)">
+  <div class="max-w-5xl mx-auto">
+    <p class="text-center text-xs font-semibold tracking-widest uppercase text-on-surface-variant mb-10">Algunas plataformas con las cuales trabajamos</p>
+    <div class="flex flex-wrap items-center justify-center gap-10 md:gap-16">
+      <img src="logos-trabajo/odo-300x167.png" alt="Odoo" class="h-14 opacity-50 hover:opacity-90 transition-opacity" style="filter:brightness(0) invert(1)">
+      <img src="logos-trabajo/sap-300x100.png" alt="SAP Business One" class="h-12 opacity-50 hover:opacity-90 transition-opacity" style="filter:brightness(0) invert(1)">
+      <img src="logos-trabajo/1200px-Power_bi_logo_black.svg_-300x300.png" alt="Power BI" class="h-16 opacity-50 hover:opacity-90 transition-opacity" style="filter:brightness(0) invert(1)">
+      <img src="logos-trabajo/auto-300x300.png" alt="Power Automate" class="h-16 opacity-50 hover:opacity-90 transition-opacity" style="filter:brightness(0) invert(1)">
+      <img src="logos-trabajo/shopi-300x169.png" alt="Shopify" class="h-14 opacity-50 hover:opacity-90 transition-opacity" style="filter:brightness(0) invert(1)">
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     FINAL CTA
+══════════════════════════════════════ -->
+<section class="py-28 lg:py-36 px-6 md:px-12 lg:px-20 relative overflow-hidden" style="background:#050506">
+  <div class="glow-blob w-[500px] h-[500px] opacity-15 top-1/2 right-0 translate-x-1/3 -translate-y-1/2" style="background:var(--color-accent)"></div>
+  <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center relative z-10">
+    <div class="lezac-reveal">
+      <h2 class="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight tracking-tight mb-6">El problema no siempre<br/><span class="serif-italic font-semibold" style="color:var(--color-accent)">es vender más.</span></h2>
+      <p class="text-on-surface-variant text-lg mb-8 leading-relaxed max-w-md font-light">Muchas veces el problema es <span class="text-white font-semibold">entender qué está pasando en tu negocio</span>. Contáctanos, sabemos cómo ayudarte.</p>
+      <div class="flex items-center gap-4 pt-6 border-t border-white/5">
+        <div class="flex -space-x-2">
+          <div class="w-8 h-8 rounded-full border-2 border-surface flex items-center justify-center text-[9px] text-white font-bold" style="background:rgba(140,82,255,.5)">AR</div>
+          <div class="w-8 h-8 rounded-full border-2 border-surface flex items-center justify-center text-[9px] text-white font-bold" style="background:rgba(37,245,164,.5)">PY</div>
+          <div class="w-8 h-8 rounded-full border-2 border-surface flex items-center justify-center text-[9px] text-white font-bold" style="background:rgba(56,189,248,.5)">BO</div>
+          <div class="w-8 h-8 rounded-full border-2 border-surface flex items-center justify-center text-[9px] text-white font-bold" style="background:rgba(249,115,22,.5)">UY</div>
+        </div>
+        <span class="text-xs text-on-surface-variant">Avalado por directivos en LATAM</span>
+      </div>
+    </div>
+    <div class="lezac-reveal">
+      <div class="liquid-glass rounded-2xl p-8 space-y-3" style="box-shadow:0 0 60px -20px var(--color-accent-glow)">
+        <a href="https://calendly.com/lezacconsultoria/asesoria-comercial" target="_blank" rel="noopener" class="flex items-center justify-center gap-3 w-full py-5 rounded-xl text-sm font-bold text-white transition-all hover:brightness-110 hover:scale-[1.01]" style="background:var(--color-accent);box-shadow:0 0 30px var(--color-accent-glow)"><span class="material-symbols-outlined" style="font-size:18px">calendar_today</span>Agendar Reunión Estratégica</a>
+        <a href="https://api.whatsapp.com/send?phone=5491154107921&text=%E2%9C%85%20Lezac%20Consultoria%20I%20Me%20interesa%20conocer%20m%C3%A1s%20de%20sus%20servicios." target="_blank" rel="noopener" class="flex items-center justify-center gap-3 w-full py-5 rounded-xl text-sm font-semibold transition-all hover:bg-[#25D366]/10" style="border:1px solid rgba(37,211,102,.3);color:#25D366">
+          <svg class="w-4 h-4 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Hablar por WhatsApp
+        </a>
+        <p class="text-center text-[9px] text-white/20 uppercase tracking-widest">Protocolo de Confidencialidad Lezac B2B</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="./shared.js"></script>
+<script>
+  // Counter animation
+  function animateCounter(el) {
+    const target = parseInt(el.dataset.target, 10);
+    const start = performance.now();
+    const tick = (now) => {
+      const p = Math.min((now - start) / 2000, 1);
+      el.textContent = Math.round((1 - Math.pow(1 - p, 3)) * target);
+      if (p < 1) requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+  }
+
+  const cObs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting && !e.target.dataset.done) {
+        e.target.dataset.done = '1';
+        animateCounter(e.target);
+      }
+    });
+  }, { threshold: 0.5 });
+  document.querySelectorAll('.counter').forEach(el => cObs.observe(el));
+
+  // Sparkline draw-on
+  const sObs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('animated'); sObs.unobserve(e.target); }
+    });
+  }, { threshold: 0.3 });
+  document.querySelectorAll('.sparkline-path').forEach(el => sObs.observe(el));
+
+  // Progress bars
+  const bObs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.querySelectorAll('.svc-bar').forEach(b => { setTimeout(() => b.style.width = b.dataset.w, 250); });
+        bObs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.3 });
+  document.querySelectorAll('.service-card').forEach(el => bObs.observe(el));
+</script>
+</body>
+</html>

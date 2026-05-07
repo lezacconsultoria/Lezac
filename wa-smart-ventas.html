@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html class="dark" lang="es" data-page="wa">
+<head>
+  <meta charset="utf-8"/>
+  <link rel="icon" type="image/png" href="logo-lezac-mini.png"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>WA Smart Ventas | Canal Comercial WhatsApp | Lezac</title>
+  <meta name="description" content="Convertí WhatsApp en un canal comercial inteligente. Sistema B2B para pedidos, leads, reclamos y seguimiento comercial automatizado."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Playfair+Display:ital,wght@1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      darkMode:"class",
+      theme:{extend:{
+        colors:{
+          "surface":"#0A0A0B","surface-dim":"#050506","surface-container":"#111112",
+          "surface-container-low":"#0D0D0E","surface-container-high":"#1A1A1B",
+          "on-surface":"#E5E2E3","on-surface-variant":"#958DA1","outline-variant":"#2A2A2B",
+          "primary":"#8C52FF","primary-container":"#7131E3","on-primary":"#FFFFFF",
+          "error":"#EC0543","success":"#25F5A4",
+          "accent":"var(--color-accent)","accent-dim":"var(--color-accent-dim)",
+        },
+        borderRadius:{"DEFAULT":"0.75rem","sm":"0.5rem","lg":"1rem","xl":"1.5rem","2xl":"2rem","full":"9999px"},
+        fontFamily:{"headline":["Montserrat","sans-serif"],"serif":["Playfair Display","serif"],"body":["Inter","sans-serif"]},
+      }},
+    }
+  </script>
+  <style>
+    :root{--color-accent:#25D366;--color-accent-dim:#128C7E;--color-accent-glow:rgba(37,211,102,0.25);}
+    body{font-family:'Inter',sans-serif;background:#0A0A0B;color:#E5E2E3;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+    h1,h2,h3,h4{font-family:'Montserrat',sans-serif;}
+    .serif-italic{font-family:'Playfair Display',serif;font-style:italic;}
+    .material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;}
+    .grid-bg{background-image:linear-gradient(rgba(255,255,255,0.02) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.02) 1px,transparent 1px);background-size:72px 72px;}
+    .glass{background:rgba(17,17,18,0.6);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,0.06);}
+    .liquid-glass{background:rgba(26,26,27,0.45);backdrop-filter:blur(28px);-webkit-backdrop-filter:blur(28px);border:1px solid rgba(255,255,255,0.07);box-shadow:0 8px 32px rgba(0,0,0,0.35),inset 0 1px 0 rgba(255,255,255,0.04);}
+    .pill-badge{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border-radius:9999px;background:rgba(37,211,102,0.08);border:1px solid rgba(37,211,102,0.25);font-size:11px;font-weight:600;letter-spacing:.05em;color:#25D366;}
+    .pill-dot{width:7px;height:7px;border-radius:50%;background:var(--color-accent);animation:pulse-dot 2s ease-in-out infinite;}
+    @keyframes pulse-dot{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.75)}}
+    .glow-blob{position:absolute;border-radius:50%;filter:blur(120px);pointer-events:none;}
+    .lezac-reveal{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s ease;}
+    .lezac-reveal.revealed{opacity:1;transform:translateY(0);}
+    /* WA Chat scroll */
+    .chat-feed{animation:chat-scroll 18s linear infinite;}
+    @keyframes chat-scroll{0%{transform:translateY(0)}100%{transform:translateY(-50%)}}
+    /* Flow step active */
+    .flow-step{transition:border-color .2s,background .2s;}
+    .flow-step:hover{border-color:rgba(37,211,102,0.5);background:rgba(37,211,102,0.04);}
+  </style>
+</head>
+<body class="bg-surface selection:bg-primary/30 selection:text-white" data-hero>
+<main>
+
+<!-- HERO -->
+<section class="relative min-h-screen flex flex-col items-center justify-center px-6 md:px-12 pt-16 pb-20 overflow-hidden grid-bg">
+  <div class="glow-blob w-[600px] h-[600px] opacity-[0.07] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" style="background:var(--color-accent)"></div>
+  <div class="glow-blob w-[200px] h-[200px] opacity-[0.06] bottom-20 left-16" style="background:#8C52FF"></div>
+  <div class="w-full max-w-5xl mx-auto text-center space-y-6 relative z-10">
+    <span class="pill-badge"><span class="pill-dot"></span>Canal Comercial Inteligente · WhatsApp B2B</span>
+    <h1 class="text-5xl md:text-6xl xl:text-7xl font-black leading-[0.95] tracking-tight text-white">
+      WA Smart Ventas<br/>
+      <span class="serif-italic font-semibold text-4xl md:text-5xl xl:text-6xl" style="color:var(--color-accent)">Más ventas. Menos caos.</span>
+    </h1>
+    <p class="text-lg md:text-xl text-on-surface-variant font-light max-w-2xl mx-auto leading-relaxed">
+      Convertí WhatsApp en un sistema comercial inteligente para pedidos, leads, reclamos y seguimiento B2B automatizado.
+    </p>
+    <!-- VSL -->
+    <div class="relative mt-4 max-w-4xl mx-auto group">
+      <div class="absolute -inset-2 rounded-2xl opacity-40" style="background:radial-gradient(ellipse at center,var(--color-accent-glow) 0%,transparent 70%);filter:blur(24px);"></div>
+      <div class="relative aspect-video liquid-glass rounded-2xl overflow-hidden flex items-center justify-center">
+        <div class="absolute inset-0" style="background:linear-gradient(135deg,rgba(37,211,102,0.04) 0%,transparent 60%)"></div>
+        <div class="z-10 flex flex-col items-center gap-4">
+          <button class="w-20 h-20 rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-300" style="background:var(--color-accent);box-shadow:0 0 50px var(--color-accent-glow)">
+            <span class="material-symbols-outlined text-black text-4xl" style="font-variation-settings:'FILL' 1">play_arrow</span>
+          </button>
+          <span class="text-xs font-bold tracking-widest uppercase" style="color:var(--color-accent)">Ver presentación estratégica</span>
+        </div>
+        <div class="absolute top-0 left-0 right-0 h-8 flex items-center px-3 gap-2" style="background:rgba(10,10,11,0.6)">
+          <div class="w-2.5 h-2.5 rounded-full bg-white/10"></div>
+          <div class="w-2.5 h-2.5 rounded-full bg-white/10"></div>
+          <div class="w-2.5 h-2.5 rounded-full bg-white/10"></div>
+        </div>
+      </div>
+    </div>
+    <div class="flex flex-col sm:flex-row gap-3 justify-center pt-2">
+      <a href="https://api.whatsapp.com/send?phone=5491154107921&text=%E2%9C%85%20Lezac%20Consultoria%20I%20Me%20interesa%20conocer%20m%C3%A1s%20de%20sus%20servicios." target="_blank" rel="noopener" class="flex items-center justify-center gap-2 px-8 py-4 rounded-full text-sm font-bold text-black transition-all hover:brightness-110 hover:scale-[1.02]" style="background:var(--color-accent);box-shadow:0 0 40px var(--color-accent-glow)">
+        Solicitar demo comercial <span class="material-symbols-outlined" style="font-size:18px">arrow_forward</span>
+      </a>
+      <a href="https://api.whatsapp.com/send?phone=5491154107921&text=%E2%9C%85%20Lezac%20Consultoria%20I%20Me%20interesa%20conocer%20m%C3%A1s%20de%20sus%20servicios." target="_blank" rel="noopener" class="flex items-center justify-center gap-2 px-8 py-4 rounded-full text-sm font-semibold text-white/70 hover:text-white transition-all" style="border:1px solid rgba(255,255,255,0.12)">
+        Ver cómo aplica a mi empresa
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<section class="py-10 border-y" style="border-color:rgba(255,255,255,0.05);background:#050506;">
+  <p class="text-center text-xs font-semibold tracking-widest uppercase text-on-surface-variant mb-6">Empresas que han confiado en nosotros</p>
+  <div data-lezac-marquee></div>
+</section>
+
+<!-- PHONE MOCKUP — signature section -->
+<section class="py-24 px-6 md:px-12 relative overflow-hidden">
+  <div class="glow-blob w-[400px] h-[400px] opacity-[0.07] top-1/2 right-0" style="background:var(--color-accent)"></div>
+  <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+
+    <div class="space-y-6 lezac-reveal order-2 lg:order-1">
+      <span class="text-xs font-semibold tracking-widest uppercase" style="color:var(--color-accent)">El sistema</span>
+      <h2 class="text-4xl md:text-5xl font-black tracking-tight leading-none text-white">
+        Tu canal de ventas,<br/>
+        <span class="serif-italic font-normal text-3xl md:text-4xl" style="color:var(--color-accent)">finalmente ordenado.</span>
+      </h2>
+      <p class="text-on-surface-variant leading-relaxed">WA Smart Ventas combina WhatsApp + AppWeb + panel administrativo. Cada contacto queda registrado, derivado y gestionado automáticamente según su intención.</p>
+      <div class="grid grid-cols-3 gap-4 pt-2">
+        <div class="glass rounded-xl p-4 text-center space-y-1">
+          <p class="text-2xl font-black text-white">+10k</p>
+          <p class="text-xs text-on-surface-variant">msjs/día gestionados</p>
+        </div>
+        <div class="glass rounded-xl p-4 text-center space-y-1">
+          <p class="text-2xl font-black" style="color:var(--color-accent)">24/7</p>
+          <p class="text-xs text-on-surface-variant">disponibilidad</p>
+        </div>
+        <div class="glass rounded-xl p-4 text-center space-y-1">
+          <p class="text-2xl font-black text-white">0</p>
+          <p class="text-xs text-on-surface-variant">datos perdidos</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Phone mockup -->
+    <div class="flex justify-center order-1 lg:order-2 lezac-reveal">
+      <div class="relative w-64">
+        <!-- Phone frame -->
+        <div class="relative rounded-[2.5rem] overflow-hidden" style="background:#0D0D0E;border:2px solid rgba(37,211,102,0.3);box-shadow:0 0 60px rgba(37,211,102,0.15),inset 0 1px 0 rgba(255,255,255,0.05);">
+          <!-- Status bar -->
+          <div class="flex items-center justify-between px-5 pt-3 pb-2" style="background:#111112;">
+            <span class="text-xs font-bold text-white/70">9:41</span>
+            <div class="flex gap-1 items-center">
+              <div class="w-4 h-2 rounded-sm border border-white/30 flex items-center px-0.5"><div class="h-1 rounded-sm flex-1" style="background:var(--color-accent)"></div></div>
+            </div>
+          </div>
+          <!-- WA header -->
+          <div class="flex items-center gap-3 px-4 py-3" style="background:#111112;border-bottom:1px solid rgba(255,255,255,0.06);">
+            <div class="w-8 h-8 rounded-full flex items-center justify-center" style="background:var(--color-accent)">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="black"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/></svg>
+            </div>
+            <div>
+              <p class="text-xs font-bold text-white">Lezac Ventas</p>
+              <p class="text-xs" style="color:var(--color-accent)">En línea</p>
+            </div>
+          </div>
+          <!-- Chat area -->
+          <div style="height:320px;overflow:hidden;background:#0A0A0B;">
+            <div class="chat-feed px-3 py-3 space-y-3" style="padding-bottom:40px;">
+              <!-- Incoming -->
+              <div class="flex gap-2 items-end"><div class="bg-surface-container rounded-2xl rounded-bl-sm px-3 py-2 max-w-[80%]"><p class="text-xs text-white">Hola! Quiero hacer un pedido</p><p class="text-[9px] text-on-surface-variant mt-1">09:41</p></div></div>
+              <!-- Outgoing (bot) -->
+              <div class="flex gap-2 items-end justify-end"><div class="rounded-2xl rounded-br-sm px-3 py-2 max-w-[80%]" style="background:rgba(37,211,102,0.15);border:1px solid rgba(37,211,102,0.2)"><p class="text-xs text-white">¡Hola! Te identificamos como cliente recurrente ✓</p><p class="text-[9px] text-on-surface-variant mt-1">09:41</p></div></div>
+              <div class="flex gap-2 items-end justify-end"><div class="rounded-2xl rounded-br-sm px-3 py-2 max-w-[80%]" style="background:rgba(37,211,102,0.15);border:1px solid rgba(37,211,102,0.2)"><p class="text-xs text-white">Accedé a tu catálogo: 👇</p><div class="mt-2 bg-surface-container rounded-lg p-2 text-center"><p class="text-[10px] font-bold" style="color:var(--color-accent)">ABRIR APPWEB →</p></div><p class="text-[9px] text-on-surface-variant mt-1">09:42</p></div></div>
+              <!-- Incoming -->
+              <div class="flex gap-2 items-end"><div class="bg-surface-container rounded-2xl rounded-bl-sm px-3 py-2 max-w-[80%]"><p class="text-xs text-white">Perfecto, voy a cargar el pedido ahí</p><p class="text-[9px] text-on-surface-variant mt-1">09:43</p></div></div>
+              <!-- System -->
+              <div class="flex justify-center"><div class="bg-surface-container-high px-3 py-1 rounded-full"><p class="text-[9px] text-on-surface-variant">Pedido #4821 recibido — pendiente aprobación</p></div></div>
+              <!-- Nuevo contacto -->
+              <div class="flex gap-2 items-end"><div class="bg-surface-container rounded-2xl rounded-bl-sm px-3 py-2 max-w-[80%]"><p class="text-xs text-white">Hola, quisiera conocer sus productos</p><p class="text-[9px] text-on-surface-variant mt-1">10:15</p></div></div>
+              <div class="flex gap-2 items-end justify-end"><div class="rounded-2xl rounded-br-sm px-3 py-2 max-w-[80%]" style="background:rgba(37,211,102,0.15);border:1px solid rgba(37,211,102,0.2)"><p class="text-xs text-white">¡Bienvenido! Sos un prospecto nuevo 🎯</p><p class="text-xs text-white mt-1">Te deriva con un asesor comercial</p><p class="text-[9px] text-on-surface-variant mt-1">10:15</p></div></div>
+              <!-- Duplicado para loop -->
+              <div class="flex gap-2 items-end"><div class="bg-surface-container rounded-2xl rounded-bl-sm px-3 py-2 max-w-[80%]"><p class="text-xs text-white">Hola! Quiero hacer un pedido</p><p class="text-[9px] text-on-surface-variant mt-1">09:41</p></div></div>
+              <div class="flex gap-2 items-end justify-end"><div class="rounded-2xl rounded-br-sm px-3 py-2 max-w-[80%]" style="background:rgba(37,211,102,0.15);border:1px solid rgba(37,211,102,0.2)"><p class="text-xs text-white">¡Hola! Te identificamos como cliente recurrente ✓</p><p class="text-[9px] text-on-surface-variant mt-1">09:41</p></div></div>
+              <div class="flex gap-2 items-end justify-end"><div class="rounded-2xl rounded-br-sm px-3 py-2 max-w-[80%]" style="background:rgba(37,211,102,0.15);border:1px solid rgba(37,211,102,0.2)"><p class="text-xs text-white">Accedé a tu catálogo: 👇</p><div class="mt-2 bg-surface-container rounded-lg p-2 text-center"><p class="text-[10px] font-bold" style="color:var(--color-accent)">ABRIR APPWEB →</p></div></div></div>
+            </div>
+          </div>
+          <!-- Input bar -->
+          <div class="flex items-center gap-2 px-3 py-2" style="background:#111112;border-top:1px solid rgba(255,255,255,0.06);">
+            <div class="flex-1 bg-surface-container rounded-full px-3 py-1.5"><p class="text-xs text-on-surface-variant">Escribe un mensaje...</p></div>
+            <div class="w-8 h-8 rounded-full flex items-center justify-center" style="background:var(--color-accent)">
+              <span class="material-symbols-outlined text-black" style="font-size:16px">send</span>
+            </div>
+          </div>
+        </div>
+        <!-- floating stat -->
+        <div class="absolute -right-16 top-20 glass rounded-xl px-4 py-3 space-y-1" style="min-width:120px">
+          <p class="text-xs text-on-surface-variant">Leads capturados</p>
+          <p class="text-lg font-black" style="color:var(--color-accent)">+2.4k</p>
+          <p class="text-xs text-on-surface-variant">este mes</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- PAIN POINTS — bento grid -->
+<section class="py-24 px-6 md:px-12" style="background:#0D0D0E;">
+  <div class="max-w-7xl mx-auto">
+    <div class="mb-12 lezac-reveal">
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase mb-4" style="background:rgba(236,5,67,0.08);color:#EC0543;border:1px solid rgba(236,5,67,0.2)">
+        <span class="w-1.5 h-1.5 rounded-full bg-error animate-pulse"></span>Diagnóstico Operativo
+      </div>
+      <h2 class="text-4xl md:text-5xl font-black tracking-tight text-white leading-tight">El caos invisible en<br/>tu canal de ventas</h2>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lezac-reveal">
+      <div class="glass rounded-2xl p-7 space-y-4 relative overflow-hidden group hover:border-red-500/20 transition-colors">
+        <div class="absolute top-0 right-0 w-24 h-24 rounded-full blur-2xl -mr-8 -mt-8 opacity-0 group-hover:opacity-100 transition-opacity" style="background:rgba(236,5,67,0.15)"></div>
+        <div class="w-11 h-11 rounded-lg flex items-center justify-center" style="background:rgba(236,5,67,0.1);border:1px solid rgba(236,5,67,0.25)"><span class="material-symbols-outlined text-error">shopping_cart_off</span></div>
+        <h3 class="font-bold text-white">Pedidos desordenados</h3>
+        <p class="text-sm text-on-surface-variant leading-relaxed">Falta de estandarización en la toma de pedidos, generando errores y demoras en la carga al sistema.</p>
+      </div>
+      <div class="glass rounded-2xl p-7 space-y-4 relative overflow-hidden group hover:border-red-500/20 transition-colors">
+        <div class="absolute top-0 right-0 w-24 h-24 rounded-full blur-2xl -mr-8 -mt-8 opacity-0 group-hover:opacity-100 transition-opacity" style="background:rgba(236,5,67,0.15)"></div>
+        <div class="w-11 h-11 rounded-lg flex items-center justify-center" style="background:rgba(236,5,67,0.1);border:1px solid rgba(236,5,67,0.25)"><span class="material-symbols-outlined text-error">person_off</span></div>
+        <h3 class="font-bold text-white">Dependencia del vendedor</h3>
+        <p class="text-sm text-on-surface-variant leading-relaxed">Si el ejecutivo no está disponible, el proceso comercial se detiene. Riesgo de pérdida de información.</p>
+      </div>
+      <div class="glass rounded-2xl p-7 space-y-4 relative overflow-hidden group hover:border-red-500/20 transition-colors">
+        <div class="absolute top-0 right-0 w-24 h-24 rounded-full blur-2xl -mr-8 -mt-8 opacity-0 group-hover:opacity-100 transition-opacity" style="background:rgba(236,5,67,0.15)"></div>
+        <div class="w-11 h-11 rounded-lg flex items-center justify-center" style="background:rgba(236,5,67,0.1);border:1px solid rgba(236,5,67,0.25)"><span class="material-symbols-outlined text-error">route</span></div>
+        <h3 class="font-bold text-white">Pérdida de trazabilidad</h3>
+        <p class="text-sm text-on-surface-variant leading-relaxed">Imposibilidad de auditar el ciclo de vida del cliente. Datos dispersos en dispositivos personales.</p>
+      </div>
+      <div class="glass rounded-2xl p-7 space-y-4 relative overflow-hidden group hover:border-red-500/20 transition-colors">
+        <div class="absolute top-0 right-0 w-24 h-24 rounded-full blur-2xl -mr-8 -mt-8 opacity-0 group-hover:opacity-100 transition-opacity" style="background:rgba(236,5,67,0.15)"></div>
+        <div class="w-11 h-11 rounded-lg flex items-center justify-center" style="background:rgba(236,5,67,0.1);border:1px solid rgba(236,5,67,0.25)"><span class="material-symbols-outlined text-error">timer_off</span></div>
+        <h3 class="font-bold text-white">Clientes inactivos</h3>
+        <p class="text-sm text-on-surface-variant leading-relaxed">Incapacidad para dar seguimiento a la frecuencia de compra y reactivar cuentas dormidas.</p>
+      </div>
+      <!-- Wide pain card -->
+      <div class="glass rounded-2xl p-7 space-y-4 md:col-span-2 relative overflow-hidden" style="background:linear-gradient(135deg,rgba(17,17,18,0.8) 0%,rgba(236,5,67,0.04) 100%);border-color:rgba(236,5,67,0.15);">
+        <div class="w-11 h-11 rounded-lg flex items-center justify-center" style="background:rgba(236,5,67,0.15);border:1px solid rgba(236,5,67,0.3)"><span class="material-symbols-outlined text-error">call_merge</span></div>
+        <h3 class="font-bold text-xl text-white">Prospección &amp; Reclamos mezclados</h3>
+        <p class="text-sm text-on-surface-variant leading-relaxed max-w-xl">El mismo canal atiende tickets de soporte, consultas frías y cuentas clave, diluyendo el esfuerzo comercial donde realmente importa.</p>
+      </div>
+    </div>
+    <!-- Quote break -->
+    <div class="mt-16 text-center py-16 border-t border-b lezac-reveal" style="border-color:rgba(255,255,255,0.06);">
+      <span class="material-symbols-outlined text-4xl mb-4 block" style="color:rgba(236,5,67,0.4)">warning</span>
+      <h3 class="text-2xl md:text-4xl font-black tracking-tight text-white leading-tight max-w-3xl mx-auto">
+        El problema no es vender por WhatsApp.<br/>
+        <span class="text-on-surface-variant font-medium mt-3 block">Es no tener un sistema que ordene lo que pasa dentro de ese canal.</span>
+      </h3>
+    </div>
+  </div>
+</section>
+
+<!-- CÓMO FUNCIONA — 6 pasos -->
+<section class="py-24 px-6 md:px-12">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-14 lezac-reveal">
+      <span class="text-xs font-semibold tracking-widest uppercase" style="color:var(--color-accent)">La Solución</span>
+      <h2 class="text-3xl md:text-4xl font-black tracking-tight text-white mt-2">Arquitectura Comercial Inteligente</h2>
+      <p class="text-on-surface-variant mt-3 max-w-xl mx-auto text-sm">Cada contacto fluye según su tipo e intención. Nada se pierde. Todo queda registrado.</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-5 lezac-reveal">
+      <div class="flow-step glass rounded-2xl p-7 space-y-4" style="border-color:rgba(37,211,102,0.15)">
+        <div class="w-12 h-12 rounded-xl flex items-center justify-center font-black text-lg" style="background:rgba(37,211,102,0.08);color:var(--color-accent);border:1px solid rgba(37,211,102,0.2)">01</div>
+        <h4 class="font-bold text-white">Contacto Inicial</h4>
+        <p class="text-sm text-on-surface-variant leading-relaxed">El usuario inicia conversación a través del número centralizado de WhatsApp.</p>
+      </div>
+      <div class="flow-step glass rounded-2xl p-7 space-y-4" style="border-color:rgba(37,211,102,0.15)">
+        <div class="w-12 h-12 rounded-xl flex items-center justify-center font-black text-lg" style="background:rgba(37,211,102,0.08);color:var(--color-accent);border:1px solid rgba(37,211,102,0.2)">02</div>
+        <h4 class="font-bold text-white">Identificación Automática</h4>
+        <p class="text-sm text-on-surface-variant leading-relaxed">El sistema cruza el número con el ERP: Cliente Existente, Recurrente o Prospecto.</p>
+      </div>
+      <!-- Highlighted step -->
+      <div class="rounded-2xl p-7 space-y-5 row-span-1" style="background:rgba(37,211,102,0.06);border:1px solid rgba(37,211,102,0.3);box-shadow:0 0 40px rgba(37,211,102,0.08);">
+        <div class="w-12 h-12 rounded-xl flex items-center justify-center font-black text-lg" style="background:rgba(37,211,102,0.15);color:var(--color-accent);border:1px solid rgba(37,211,102,0.4)">03</div>
+        <h4 class="font-bold text-white">Activación de Flujos</h4>
+        <div class="space-y-3">
+          <div><p class="text-xs font-bold tracking-widest uppercase text-on-surface-variant mb-1">CLIENTE EXISTENTE</p><p class="text-sm text-white/70">Derivación a soporte o ejecutivo de cuenta.</p></div>
+          <div class="rounded-lg p-3" style="background:rgba(37,211,102,0.08);border:1px solid rgba(37,211,102,0.2)"><p class="text-xs font-bold tracking-widest uppercase mb-1" style="color:var(--color-accent)">CLIENTE RECURRENTE</p><p class="text-sm text-white">Acceso directo a AppWeb para pedidos express.</p></div>
+          <div><p class="text-xs font-bold tracking-widest uppercase text-on-surface-variant mb-1">PROSPECTO</p><p class="text-sm text-white/70">Calificación automatizada y captura de datos.</p></div>
+        </div>
+      </div>
+      <div class="flow-step glass rounded-2xl p-7 space-y-4" style="border-color:rgba(37,211,102,0.15)">
+        <div class="w-12 h-12 rounded-xl flex items-center justify-center font-black text-lg" style="background:rgba(37,211,102,0.08);color:var(--color-accent);border:1px solid rgba(37,211,102,0.2)">04</div>
+        <h4 class="font-bold text-white">Validación de Pedidos</h4>
+        <p class="text-sm text-on-surface-variant leading-relaxed">El pedido se consolida en el panel administrativo para aprobación de crédito/stock.</p>
+      </div>
+      <div class="flow-step glass rounded-2xl p-7 space-y-4" style="border-color:rgba(37,211,102,0.15)">
+        <div class="w-12 h-12 rounded-xl flex items-center justify-center font-black text-lg" style="background:rgba(37,211,102,0.08);color:var(--color-accent);border:1px solid rgba(37,211,102,0.2)">05</div>
+        <h4 class="font-bold text-white">Registro de Leads</h4>
+        <p class="text-sm text-on-surface-variant leading-relaxed">Los prospectos calificados se inyectan en CRM para seguimiento comercial.</p>
+      </div>
+      <div class="flow-step glass rounded-2xl p-7 space-y-4" style="border-color:rgba(37,211,102,0.15)">
+        <div class="w-12 h-12 rounded-xl flex items-center justify-center font-black text-lg" style="background:rgba(37,211,102,0.08);color:var(--color-accent);border:1px solid rgba(37,211,102,0.2)">06</div>
+        <h4 class="font-bold text-white">Velocidad &amp; Control</h4>
+        <p class="text-sm text-on-surface-variant leading-relaxed">Toda la operación queda registrada. Reducción drástica del tiempo manual.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESULTADOS — 3 columnas -->
+<section class="py-24 px-6 md:px-12" style="background:#0D0D0E;">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-12 lezac-reveal">
+      <span class="text-xs font-semibold tracking-widest uppercase" style="color:var(--color-accent)">Impacto Operativo</span>
+      <h2 class="text-3xl md:text-4xl font-black tracking-tight text-white mt-2">Resultados Cuantificables</h2>
+    </div>
+    <div class="grid md:grid-cols-3 gap-px bg-outline-variant/20 rounded-2xl overflow-hidden lezac-reveal">
+      <div class="bg-surface-container-low p-10 space-y-6 hover:bg-surface-container transition-colors group relative">
+        <div class="absolute top-0 left-0 w-full h-1 opacity-0 group-hover:opacity-100 transition-opacity" style="background:linear-gradient(to right,var(--color-accent),transparent)"></div>
+        <h3 class="font-bold text-white flex items-center gap-3"><span class="material-symbols-outlined" style="color:var(--color-accent)">trending_up</span>Comercial<span class="text-on-surface-variant text-sm font-normal ml-auto">Más Ventas</span></h3>
+        <div class="space-y-5">
+          <div><div class="flex items-center gap-2 mb-2"><div class="w-7 h-7 rounded-full flex items-center justify-center" style="background:rgba(37,211,102,0.15);border:1px solid rgba(37,211,102,0.3)"><span class="material-symbols-outlined text-xs" style="color:var(--color-accent);font-size:14px">person_add</span></div><h4 class="font-bold text-sm text-white">Gestión de Leads</h4></div><p class="text-xs text-on-surface-variant pl-9">Captura automatizada 24/7 sin intervención humana.</p></div>
+          <div><div class="flex items-center gap-2 mb-2"><div class="w-7 h-7 rounded-full flex items-center justify-center" style="background:rgba(37,211,102,0.15);border:1px solid rgba(37,211,102,0.3)"><span class="material-symbols-outlined" style="color:var(--color-accent);font-size:14px">storefront</span></div><h4 class="font-bold text-sm text-white">Toma de Pedidos B2B</h4></div><p class="text-xs text-on-surface-variant pl-9">Catálogo digital para que clientes compren en segundos.</p></div>
+        </div>
+      </div>
+      <div class="bg-surface-container-low p-10 space-y-6 hover:bg-surface-container transition-colors group relative">
+        <div class="absolute top-0 left-0 w-full h-1 opacity-0 group-hover:opacity-100 transition-opacity" style="background:linear-gradient(to right,var(--color-accent),transparent)"></div>
+        <h3 class="font-bold text-white flex items-center gap-3"><span class="material-symbols-outlined" style="color:var(--color-accent)">shield</span>Operativo<span class="text-on-surface-variant text-sm font-normal ml-auto">Menos Errores</span></h3>
+        <div class="space-y-5">
+          <div><div class="flex items-center gap-2 mb-2"><div class="w-7 h-7 rounded-full flex items-center justify-center" style="background:rgba(37,211,102,0.15);border:1px solid rgba(37,211,102,0.3)"><span class="material-symbols-outlined" style="color:var(--color-accent);font-size:14px">support_agent</span></div><h4 class="font-bold text-sm text-white">Routing de Consultas</h4></div><p class="text-xs text-on-surface-variant pl-9">Derivación inteligente de reclamos fuera del flujo de ventas.</p></div>
+          <div><div class="flex items-center gap-2 mb-2"><div class="w-7 h-7 rounded-full flex items-center justify-center" style="background:rgba(37,211,102,0.15);border:1px solid rgba(37,211,102,0.3)"><span class="material-symbols-outlined" style="color:var(--color-accent);font-size:14px">dashboard</span></div><h4 class="font-bold text-sm text-white">Panel Administrativo</h4></div><p class="text-xs text-on-surface-variant pl-9">Central de control para validar pedidos y auditar conversaciones.</p></div>
+        </div>
+      </div>
+      <div class="bg-surface-container-low p-10 space-y-6 hover:bg-surface-container transition-colors group relative">
+        <div class="absolute top-0 left-0 w-full h-1 opacity-0 group-hover:opacity-100 transition-opacity" style="background:linear-gradient(to right,var(--color-accent),transparent)"></div>
+        <h3 class="font-bold text-white flex items-center gap-3"><span class="material-symbols-outlined" style="color:var(--color-accent)">analytics</span>Estratégico<span class="text-on-surface-variant text-sm font-normal ml-auto">Más Control</span></h3>
+        <div class="space-y-5">
+          <div><div class="flex items-center gap-2 mb-2"><div class="w-7 h-7 rounded-full flex items-center justify-center" style="background:rgba(37,211,102,0.15);border:1px solid rgba(37,211,102,0.3)"><span class="material-symbols-outlined" style="color:var(--color-accent);font-size:14px">timer</span></div><h4 class="font-bold text-sm text-white">Seguimiento Automático</h4></div><p class="text-xs text-on-surface-variant pl-9">Recordatorios y alertas para clientes inactivos sin esfuerzo manual.</p></div>
+          <div><div class="flex items-center gap-2 mb-2"><div class="w-7 h-7 rounded-full flex items-center justify-center" style="background:rgba(37,211,102,0.15);border:1px solid rgba(37,211,102,0.3)"><span class="material-symbols-outlined" style="color:var(--color-accent);font-size:14px">bar_chart</span></div><h4 class="font-bold text-sm text-white">Métricas de Canal</h4></div><p class="text-xs text-on-surface-variant pl-9">Conversión, tiempo de respuesta y volumen por segmento.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="py-32 px-6 md:px-12 relative overflow-hidden" id="contacto">
+  <div class="glow-blob w-[600px] h-[600px] opacity-[0.08] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" style="background:var(--color-accent)"></div>
+  <div class="max-w-4xl mx-auto text-center relative z-10 lezac-reveal">
+    <h2 class="text-4xl md:text-6xl font-black tracking-tight leading-[1.0] text-white mb-6">
+      El caos en WhatsApp<br/>
+      <span class="serif-italic font-medium text-3xl md:text-5xl" style="color:var(--color-accent)">tiene solución hoy.</span>
+    </h2>
+    <p class="text-on-surface-variant text-lg max-w-2xl mx-auto mb-10 leading-relaxed">Si tu equipo pierde tiempo con mensajes dispersos y pedidos desordenados, podemos ordenarlo con un sistema que funciona 24/7.</p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="https://api.whatsapp.com/send?phone=5491154107921&text=%E2%9C%85%20Lezac%20Consultoria%20I%20Me%20interesa%20conocer%20m%C3%A1s%20de%20sus%20servicios." target="_blank" rel="noopener" class="flex items-center justify-center gap-2 px-10 py-5 rounded-full font-bold text-sm text-black transition-all hover:brightness-110 hover:scale-[1.02]" style="background:var(--color-accent);box-shadow:0 0 60px var(--color-accent-glow)">Solicitar demo comercial</a>
+      <a href="https://api.whatsapp.com/send?phone=5491154107921&text=%E2%9C%85%20Lezac%20Consultoria%20I%20Me%20interesa%20conocer%20m%C3%A1s%20de%20sus%20servicios." target="_blank" rel="noopener" class="flex items-center justify-center gap-3 px-10 py-5 rounded-full font-semibold text-sm text-white/70 hover:text-white transition-all" style="border:1px solid rgba(255,255,255,0.12)">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="color:#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/></svg>
+        Hablar por WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+<script src="./shared.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const revObs = new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting){e.target.classList.add('revealed');revObs.unobserve(e.target);} }), {threshold:.1,rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.lezac-reveal').forEach(el => revObs.observe(el));
+});
+</script>
+</body>
+</html>

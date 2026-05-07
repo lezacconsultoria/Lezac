@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html class="dark" lang="es" data-page="censo">
+<head>
+  <meta charset="utf-8"/>
+  <link rel="icon" type="image/png" href="logo-lezac-mini.png"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Censo Comercial | Expansión de Mercado B2B | Lezac</title>
+  <meta name="description" content="Relevamiento estructurado para distribuidoras, mayoristas y fábricas. Detectá oportunidades reales de crecimiento en tu zona con inteligencia de campo."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Playfair+Display:ital,wght@1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      darkMode:"class",
+      theme:{extend:{
+        colors:{
+          "surface":"#0A0A0B","surface-dim":"#050506","surface-container":"#111112",
+          "surface-container-low":"#0D0D0E","surface-container-high":"#1A1A1B",
+          "on-surface":"#E5E2E3","on-surface-variant":"#958DA1","outline-variant":"#2A2A2B",
+          "primary":"#8C52FF","primary-container":"#7131E3","on-primary":"#FFFFFF",
+          "error":"#EC0543","success":"#25F5A4",
+          "accent":"var(--color-accent)","accent-dim":"var(--color-accent-dim)",
+        },
+        borderRadius:{"DEFAULT":"0.75rem","sm":"0.5rem","lg":"1rem","xl":"1.5rem","2xl":"2rem","full":"9999px"},
+        fontFamily:{"headline":["Montserrat","sans-serif"],"serif":["Playfair Display","serif"],"body":["Inter","sans-serif"]},
+      }},
+    }
+  </script>
+  <style>
+    :root{--color-accent:#B08AFF;--color-accent-dim:#9265F5;--color-accent-glow:rgba(176,138,255,0.25);}
+    body{font-family:'Inter',sans-serif;background:#0E0E0F;color:#E5E2E3;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+    h1,h2,h3,h4{font-family:'Montserrat',sans-serif;}
+    .serif-italic{font-family:'Playfair Display',serif;font-style:italic;}
+    .material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;}
+    .bg-network{background-image:radial-gradient(rgba(176,138,255,0.04) 1px,transparent 1px);background-size:40px 40px;}
+    .glass{background:rgba(17,17,18,0.6);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,0.06);}
+    .liquid-glass{background:rgba(26,26,27,0.45);backdrop-filter:blur(28px);-webkit-backdrop-filter:blur(28px);border:1px solid rgba(255,255,255,0.07);box-shadow:0 8px 32px rgba(0,0,0,0.35),inset 0 1px 0 rgba(255,255,255,0.04);}
+    .pill-badge{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border-radius:9999px;background:rgba(176,138,255,0.08);border:1px solid rgba(176,138,255,0.25);font-size:11px;font-weight:600;letter-spacing:.05em;color:#B08AFF;}
+    .pill-dot{width:7px;height:7px;border-radius:50%;background:var(--color-accent);animation:pulse-dot 2s ease-in-out infinite;}
+    @keyframes pulse-dot{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.75)}}
+    .glow-blob{position:absolute;border-radius:50%;filter:blur(120px);pointer-events:none;}
+    .lezac-reveal{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s ease;}
+    .lezac-reveal.revealed{opacity:1;transform:translateY(0);}
+    /* Step nodes with gradient line */
+    .step-node{position:relative;padding-left:1.5rem;}
+    .step-node::before{content:'';position:absolute;left:-1px;top:0;bottom:0;width:2px;background:linear-gradient(to bottom,#B08AFF,transparent);}
+    @media(min-width:1024px){
+      .step-node{padding-left:0;padding-top:1rem;}
+      .step-node::before{left:0;top:-1px;right:0;bottom:auto;width:100%;height:2px;background:linear-gradient(to right,#B08AFF,transparent);}
+    }
+    .stat-counter{font-variant-numeric:tabular-nums;}
+  </style>
+</head>
+<body class="bg-network selection:bg-primary/30 selection:text-white" data-hero>
+<main>
+
+<!-- HERO -->
+<section class="relative min-h-screen flex flex-col items-center justify-center px-6 md:px-12 pt-16 pb-20 overflow-hidden">
+  <div class="glow-blob w-[600px] h-[600px] opacity-[0.08] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" style="background:var(--color-accent)"></div>
+  <div class="w-full max-w-5xl mx-auto text-center space-y-6 relative z-10">
+    <span class="pill-badge"><span class="pill-dot"></span>Expansión Inteligente de Mercado · LATAM</span>
+    <h1 class="text-5xl md:text-6xl xl:text-7xl font-black leading-[0.95] tracking-tight text-white">
+      Censo Comercial<br/>
+      <span class="serif-italic font-semibold text-4xl md:text-5xl xl:text-6xl" style="color:var(--color-accent)">Tu mercado real, visible.</span>
+    </h1>
+    <p class="text-lg md:text-xl text-on-surface-variant font-light max-w-2xl mx-auto leading-relaxed">
+      Relevamiento estructurado con geolocalización de precisión para detectar oportunidades reales en tu zona.
+    </p>
+    <!-- VSL -->
+    <div class="relative mt-4 max-w-4xl mx-auto group">
+      <div class="absolute -inset-2 rounded-2xl opacity-40" style="background:radial-gradient(ellipse at center,var(--color-accent-glow) 0%,transparent 70%);filter:blur(24px);"></div>
+      <div class="relative aspect-video rounded-2xl overflow-hidden" style="box-shadow:0 0 0 1px rgba(176,138,255,0.15),0 32px 64px rgba(0,0,0,0.5)">
+        <iframe
+          src="https://www.youtube.com/embed/hhsPW2hng34?rel=0&modestbranding=1&color=white"
+          title="Censo Comercial — Cómo detectamos oportunidades"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+          class="absolute inset-0 w-full h-full"
+          style="border:none;"
+        ></iframe>
+      </div>
+    </div>
+    <div class="flex flex-col sm:flex-row gap-3 justify-center pt-2">
+      <a href="https://calendly.com/lezacconsultoria/agenda-tu-asesoria-censo-comercial" target="_blank" rel="noopener" class="flex items-center justify-center gap-2 px-8 py-4 rounded-full text-sm font-bold text-white transition-all hover:brightness-110 hover:scale-[1.02]" style="background:var(--color-accent-dim);box-shadow:0 0 40px var(--color-accent-glow)">
+        Solicitar diagnóstico de mercado <span class="material-symbols-outlined" style="font-size:18px">arrow_forward</span>
+      </a>
+      <a href="https://api.whatsapp.com/send?phone=5491154107921&text=%E2%9C%85%20Lezac%20Consultoria%20I%20Me%20interesa%20conocer%20m%C3%A1s%20de%20sus%20servicios." target="_blank" rel="noopener" class="flex items-center justify-center gap-2 px-8 py-4 rounded-full text-sm font-semibold text-white/70 hover:text-white transition-all" style="border:1px solid rgba(255,255,255,0.12)">
+        Ver cómo aplica a mi empresa
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<section class="py-10 border-y" style="border-color:rgba(255,255,255,0.05);background:#050506;">
+  <p class="text-center text-xs font-semibold tracking-widest uppercase text-on-surface-variant mb-6">Empresas que han confiado en nosotros</p>
+  <div data-lezac-marquee></div>
+</section>
+
+<!-- BIG STAT — signature section -->
+<section class="py-24 px-6 md:px-12 relative overflow-hidden">
+  <div class="glow-blob w-[500px] h-[500px] opacity-[0.06] top-1/2 right-0 -translate-y-1/2" style="background:var(--color-accent)"></div>
+  <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+
+    <!-- Left: big stat -->
+    <div class="lezac-reveal text-center lg:text-left">
+      <div class="inline-block relative">
+        <div class="text-[8rem] md:text-[11rem] font-black leading-none tracking-tighter stat-counter" id="stat-74" style="color:var(--color-accent)">0</div>
+        <div class="text-2xl font-black text-white mt-2">% de las empresas</div>
+        <div class="text-lg text-on-surface-variant font-light mt-1">subestiman su mercado real</div>
+        <div class="absolute -top-4 -right-4 text-6xl font-black text-on-surface-variant/10 font-headline select-none">%</div>
+      </div>
+      <blockquote class="mt-8 border-l-2 pl-6 italic text-lg text-white/70 leading-relaxed text-left" style="border-color:var(--color-accent)">
+        "El problema no es la falta de clientes. El problema es no tener visibilidad real del mercado."
+      </blockquote>
+    </div>
+
+    <!-- Right: description -->
+    <div class="space-y-6 lezac-reveal">
+      <span class="text-xs font-semibold tracking-widest uppercase" style="color:var(--color-accent)">Qué es el Censo Comercial</span>
+      <h2 class="text-4xl md:text-5xl font-black tracking-tight leading-none text-white">
+        No es una base de datos.<br/>
+        <span class="serif-italic font-normal text-3xl md:text-4xl" style="color:var(--color-accent)">Es inteligencia de campo.</span>
+      </h2>
+      <p class="text-on-surface-variant leading-relaxed">Nuestro equipo utiliza tecnología geoespacial y auditoría de campo para validar cada coordenada, fachada y potencial de compra de cada comercio en su territorio.</p>
+      <div class="grid grid-cols-2 gap-4">
+        <div class="glass rounded-xl p-6 space-y-2">
+          <span class="material-symbols-outlined text-2xl" style="color:var(--color-accent)">verified</span>
+          <p class="text-2xl font-black text-white">100%</p>
+          <p class="text-xs text-on-surface-variant uppercase tracking-wide">Validación Humana</p>
+        </div>
+        <div class="glass rounded-xl p-6 space-y-2">
+          <span class="material-symbols-outlined text-2xl" style="color:var(--color-accent)">my_location</span>
+          <p class="text-2xl font-black text-white">GPS</p>
+          <p class="text-xs text-on-surface-variant uppercase tracking-wide">Precisión de campo</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- PAIN POINTS -->
+<section class="py-24 px-6 md:px-12" style="background:#0D0D0E;">
+  <div class="max-w-7xl mx-auto">
+    <div class="mb-12 lezac-reveal">
+      <span class="text-xs font-semibold tracking-widest uppercase text-error">Fricción de Mercado</span>
+      <h2 class="text-3xl md:text-5xl font-black tracking-tight text-white mt-3 mb-4">Tu mercado es más grande<br/>de lo que estás viendo</h2>
+      <div class="h-1 w-24 rounded-full bg-error"></div>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lezac-reveal">
+      <div class="glass rounded-xl p-8 space-y-3 group hover:border-red-500/20 transition-colors hover:-translate-y-0.5">
+        <span class="material-symbols-outlined text-error text-3xl block">visibility_off</span>
+        <h4 class="font-bold text-white">Invisibilidad de Prospectos</h4>
+        <p class="text-sm text-on-surface-variant leading-relaxed">No sabés cuántos clientes potenciales hay realmente en cada zona.</p>
+      </div>
+      <div class="glass rounded-xl p-8 space-y-3 group hover:border-red-500/20 transition-colors hover:-translate-y-0.5">
+        <span class="material-symbols-outlined text-error text-3xl block">route</span>
+        <h4 class="font-bold text-white">Rutas Viciadas</h4>
+        <p class="text-sm text-on-surface-variant leading-relaxed">Tu equipo visita siempre los mismos puntos por costumbre, no por potencial.</p>
+      </div>
+      <div class="glass rounded-xl p-8 space-y-3 group hover:border-red-500/20 transition-colors hover:-translate-y-0.5">
+        <span class="material-symbols-outlined text-error text-3xl block">analytics</span>
+        <h4 class="font-bold text-white">Puntos Ciegos</h4>
+        <p class="text-sm text-on-surface-variant leading-relaxed">Faltan datos sobre la presencia real de la competencia local.</p>
+      </div>
+      <div class="glass rounded-xl p-8 space-y-3 group hover:border-red-500/20 transition-colors hover:-translate-y-0.5">
+        <span class="material-symbols-outlined text-error text-3xl block">map</span>
+        <h4 class="font-bold text-white">Zonas Grises</h4>
+        <p class="text-sm text-on-surface-variant leading-relaxed">Territorios donde tu marca no llega por falta de inteligencia de cobertura.</p>
+      </div>
+      <div class="glass rounded-xl p-8 space-y-3 group hover:border-red-500/20 transition-colors hover:-translate-y-0.5">
+        <span class="material-symbols-outlined text-error text-3xl block">trending_down</span>
+        <h4 class="font-bold text-white">Crecimiento Estancado</h4>
+        <p class="text-sm text-on-surface-variant leading-relaxed">Estrategia basada en suposiciones históricas en lugar de datos actuales.</p>
+      </div>
+      <div class="glass rounded-xl p-8 flex flex-col items-center justify-center text-center space-y-2">
+        <div class="text-5xl font-black text-error">74%</div>
+        <p class="text-xs uppercase tracking-widest text-on-surface-variant">De las empresas subestiman<br/>su mercado real</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESO — 6 pasos con step-node gradient -->
+<section class="py-24 px-6 md:px-12">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-16 lezac-reveal">
+      <span class="text-xs font-semibold tracking-widest uppercase" style="color:var(--color-accent)">Metodología</span>
+      <h2 class="text-3xl md:text-4xl font-black text-white uppercase tracking-tighter mt-2">Relevamiento Estratégico</h2>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-y-10 lg:gap-0 lezac-reveal">
+      <div class="px-6 step-node group">
+        <div class="w-12 h-12 rounded-full border flex items-center justify-center mb-6 group-hover:bg-purple-500/20 transition-all" style="border-color:rgba(176,138,255,0.3)"><span class="font-black" style="color:var(--color-accent)">01</span></div>
+        <h4 class="font-bold text-white mb-2">Definición</h4>
+        <p class="text-sm text-on-surface-variant leading-relaxed">Configuración de parámetros y zonas críticas de expansión.</p>
+      </div>
+      <div class="px-6 step-node group">
+        <div class="w-12 h-12 rounded-full border flex items-center justify-center mb-6 group-hover:bg-purple-500/20 transition-all" style="border-color:rgba(176,138,255,0.3)"><span class="font-black" style="color:var(--color-accent)">02</span></div>
+        <h4 class="font-bold text-white mb-2">Campo</h4>
+        <p class="text-sm text-on-surface-variant leading-relaxed">Barrido presencial masivo de zonas de interés.</p>
+      </div>
+      <div class="px-6 step-node group">
+        <div class="w-12 h-12 rounded-full border flex items-center justify-center mb-6 group-hover:bg-purple-500/20 transition-all" style="border-color:rgba(176,138,255,0.3)"><span class="font-black" style="color:var(--color-accent)">03</span></div>
+        <h4 class="font-bold text-white mb-2">Validación</h4>
+        <p class="text-sm text-on-surface-variant leading-relaxed">Filtro de integridad de datos y auditoría de veracidad.</p>
+      </div>
+      <div class="px-6 step-node group">
+        <div class="w-12 h-12 rounded-full border flex items-center justify-center mb-6 group-hover:bg-purple-500/20 transition-all" style="border-color:rgba(176,138,255,0.3)"><span class="font-black" style="color:var(--color-accent)">04</span></div>
+        <h4 class="font-bold text-white mb-2">Clasificación</h4>
+        <p class="text-sm text-on-surface-variant leading-relaxed">Segmentación por canal, tamaño y potencial de compra.</p>
+      </div>
+      <div class="px-6 step-node group">
+        <div class="w-12 h-12 rounded-full border flex items-center justify-center mb-6 group-hover:bg-purple-500/20 transition-all" style="border-color:rgba(176,138,255,0.3)"><span class="font-black" style="color:var(--color-accent)">05</span></div>
+        <h4 class="font-bold text-white mb-2">Mapeo</h4>
+        <p class="text-sm text-on-surface-variant leading-relaxed">Geolocalización dinámica y optimización de rutas.</p>
+      </div>
+      <div class="px-6 group">
+        <div class="w-12 h-12 rounded-full border flex items-center justify-center mb-6 group-hover:bg-purple-500/20 transition-all" style="border-color:rgba(176,138,255,0.3)"><span class="font-black" style="color:var(--color-accent)">06</span></div>
+        <h4 class="font-bold text-white mb-2">Entrega</h4>
+        <p class="text-sm text-on-surface-variant leading-relaxed">Inteligencia lista para tu fuerza de ventas.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ENTREGABLES -->
+<section class="py-24 px-6 md:px-12" style="background:#0D0D0E;">
+  <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center lezac-reveal">
+    <div class="space-y-8">
+      <div>
+        <span class="text-xs font-semibold tracking-widest uppercase" style="color:var(--color-accent)">Output de Valor</span>
+        <h2 class="text-4xl font-black text-white leading-tight mt-2">Entregables de<br/><span style="color:var(--color-accent)">Alto Impacto</span></h2>
+        <p class="text-on-surface-variant mt-3 text-sm leading-relaxed">Información accionable integrada directamente en su operación comercial desde el primer día.</p>
+      </div>
+      <div class="space-y-5">
+        <div class="flex items-center gap-5 group">
+          <div class="w-12 h-12 bg-surface-container rounded-xl flex items-center justify-center flex-shrink-0 group-hover:border-purple-500/40 transition-all" style="border:1px solid rgba(255,255,255,0.06)"><span class="material-symbols-outlined" style="color:var(--color-accent)">database</span></div>
+          <div><p class="font-bold text-white">Base Maestra de Leads</p><p class="text-xs text-on-surface-variant">Validada y segmentada al 100%.</p></div>
+        </div>
+        <div class="flex items-center gap-5 group">
+          <div class="w-12 h-12 bg-surface-container rounded-xl flex items-center justify-center flex-shrink-0 group-hover:border-purple-500/40 transition-all" style="border:1px solid rgba(255,255,255,0.06)"><span class="material-symbols-outlined" style="color:var(--color-accent)">layers</span></div>
+          <div><p class="font-bold text-white">Segmentación Predictiva</p><p class="text-xs text-on-surface-variant">Criterios por canal y volumen de venta estimado.</p></div>
+        </div>
+        <div class="flex items-center gap-5 group">
+          <div class="w-12 h-12 bg-surface-container rounded-xl flex items-center justify-center flex-shrink-0 group-hover:border-purple-500/40 transition-all" style="border:1px solid rgba(255,255,255,0.06)"><span class="material-symbols-outlined" style="color:var(--color-accent)">map</span></div>
+          <div><p class="font-bold text-white">Integración CRM / GIS</p><p class="text-xs text-on-surface-variant">Capas de geolocalización listas para su sistema.</p></div>
+        </div>
+      </div>
+    </div>
+    <!-- Power BI GIF -->
+    <div class="relative">
+      <div class="absolute -inset-3 rounded-3xl opacity-30" style="background:radial-gradient(ellipse at center,var(--color-accent-glow) 0%,transparent 70%);filter:blur(32px);"></div>
+      <div class="relative rounded-2xl overflow-hidden" style="border:1px solid rgba(176,138,255,0.15);box-shadow:0 24px 48px rgba(0,0,0,0.5)">
+        <!-- Barra superior estilo app -->
+        <div class="flex items-center gap-2 px-4 py-3" style="background:#0A0A0C;border-bottom:1px solid rgba(176,138,255,0.1)">
+          <div class="w-2.5 h-2.5 rounded-full" style="background:rgba(176,138,255,0.3)"></div>
+          <div class="w-2.5 h-2.5 rounded-full" style="background:rgba(176,138,255,0.2)"></div>
+          <div class="w-2.5 h-2.5 rounded-full" style="background:rgba(176,138,255,0.1)"></div>
+          <span class="ml-2 text-xs font-medium" style="color:rgba(176,138,255,0.5)">Power BI · Mapa de Clientes</span>
+        </div>
+        <img src="censogif.gif" alt="Power BI visualizando puntos de clientes en el mapa" class="w-full block" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BENEFICIOS -->
+<section class="py-24 px-6 md:px-12">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-12 lezac-reveal">
+      <span class="text-xs font-semibold tracking-widest uppercase" style="color:var(--color-accent)">Resultados Tangibles</span>
+      <h2 class="text-3xl md:text-4xl font-black text-white uppercase tracking-tight mt-2">Beneficios de la Cobertura Total</h2>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5 lezac-reveal">
+      <div class="rounded-xl p-8 space-y-4 group hover:shadow-lg transition-all" style="background:#131314;border-top:3px solid var(--color-accent)"><span class="material-symbols-outlined text-3xl block" style="color:var(--color-accent)">verified_user</span><h4 class="font-bold text-white">Cobertura Total</h4><p class="text-sm text-on-surface-variant leading-relaxed">Llegue donde su competencia aún no sabe que existe negocio.</p></div>
+      <div class="rounded-xl p-8 space-y-4 group hover:shadow-lg transition-all" style="background:#131314;border-top:3px solid var(--color-accent)"><span class="material-symbols-outlined text-3xl block" style="color:var(--color-accent)">offline_bolt</span><h4 class="font-bold text-white">Cero Desperdicio</h4><p class="text-sm text-on-surface-variant leading-relaxed">Optimice rutas con datos reales, eliminando visitas improductivas.</p></div>
+      <div class="rounded-xl p-8 space-y-4 group hover:shadow-lg transition-all" style="background:#131314;border-top:3px solid var(--color-accent)"><span class="material-symbols-outlined text-3xl block" style="color:var(--color-accent)">add_business</span><h4 class="font-bold text-white">Nuevos Clientes</h4><p class="text-sm text-on-surface-variant leading-relaxed">Detección de aperturas y puntos no censados históricamente.</p></div>
+      <div class="rounded-xl p-8 space-y-4 group hover:shadow-lg transition-all" style="background:#131314;border-top:3px solid var(--color-accent)"><span class="material-symbols-outlined text-3xl block" style="color:var(--color-accent)">insights</span><h4 class="font-bold text-white">Visión de Mercado</h4><p class="text-sm text-on-surface-variant leading-relaxed">Conozca su Market Share real barrio por barrio frente a la competencia.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- TARGET AUDIENCE -->
+<section class="py-24 px-6 md:px-12" style="background:#0D0D0E;">
+  <div class="max-w-7xl mx-auto">
+    <h2 class="font-black text-2xl text-center text-white uppercase tracking-widest mb-12 lezac-reveal">Especializado en Cadena de Valor</h2>
+    <div class="grid md:grid-cols-3 gap-6 lezac-reveal">
+      <div class="glass rounded-2xl p-10 flex flex-col items-center text-center space-y-4 hover:border-purple-500/25 transition-colors"><div class="w-16 h-16 rounded-full flex items-center justify-center" style="background:rgba(176,138,255,0.1)"><span class="material-symbols-outlined text-3xl" style="color:var(--color-accent)">local_shipping</span></div><h3 class="font-bold text-white uppercase tracking-wider">Distribuidoras</h3><p class="text-on-surface-variant text-sm leading-relaxed">Optimización de zonas de reparto y detección quirúrgica de fugas comerciales.</p></div>
+      <div class="glass rounded-2xl p-10 flex flex-col items-center text-center space-y-4 hover:border-purple-500/25 transition-colors"><div class="w-16 h-16 rounded-full flex items-center justify-center" style="background:rgba(176,138,255,0.1)"><span class="material-symbols-outlined text-3xl" style="color:var(--color-accent)">store</span></div><h3 class="font-bold text-white uppercase tracking-wider">Mayoristas</h3><p class="text-on-surface-variant text-sm leading-relaxed">Identificación de comercios de cercanía para planes de fidelización directa.</p></div>
+      <div class="glass rounded-2xl p-10 flex flex-col items-center text-center space-y-4 hover:border-purple-500/25 transition-colors"><div class="w-16 h-16 rounded-full flex items-center justify-center" style="background:rgba(176,138,255,0.1)"><span class="material-symbols-outlined text-3xl" style="color:var(--color-accent)">factory</span></div><h3 class="font-bold text-white uppercase tracking-wider">Fábricas</h3><p class="text-on-surface-variant text-sm leading-relaxed">Auditoría de presencia de marca y control estricto de canales indirectos.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- BIG STATEMENT -->
+<section class="py-40 px-6 text-center relative overflow-hidden">
+  <div class="glow-blob w-[500px] h-[500px] opacity-[0.06] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" style="background:var(--color-accent)"></div>
+  <div class="relative z-10 lezac-reveal">
+    <h2 class="text-5xl lg:text-8xl font-black text-white tracking-tighter uppercase leading-none">Dejar de buscar clientes…</h2>
+    <h2 class="text-5xl lg:text-8xl font-black tracking-tighter uppercase leading-none mt-2" style="color:var(--color-accent)">Para empezar a encontrarlos.</h2>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="pb-32 px-6 md:px-12 relative" id="contacto">
+  <div class="max-w-4xl mx-auto text-center liquid-glass rounded-2xl p-12 md:p-16 lezac-reveal">
+    <div class="absolute -top-10 left-1/2 -translate-x-1/2 w-20 h-20 rounded-full flex items-center justify-center" style="background:var(--color-accent-dim);box-shadow:0 0 40px var(--color-accent-glow)">
+      <span class="material-symbols-outlined text-white text-3xl">rocket_launch</span>
+    </div>
+    <h2 class="text-3xl md:text-4xl font-black text-white mb-6 mt-4 leading-tight">El problema no es salir a vender más.<br/>Es no saber dónde están las oportunidades.</h2>
+    <p class="text-on-surface-variant text-lg mb-10 max-w-xl mx-auto leading-relaxed">Si no tenés claridad sobre tu mercado, estás creciendo más lento de lo que podrías.</p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="https://calendly.com/lezacconsultoria/agenda-tu-asesoria-censo-comercial" target="_blank" rel="noopener" class="flex items-center justify-center gap-2 px-10 py-5 rounded-full font-bold text-sm text-white transition-all hover:brightness-110" style="background:var(--color-accent-dim);box-shadow:0 0 40px var(--color-accent-glow)">Solicitar diagnóstico de mercado</a>
+      <a href="https://api.whatsapp.com/send?phone=5491154107921&text=%E2%9C%85%20Lezac%20Consultoria%20I%20Me%20interesa%20conocer%20m%C3%A1s%20de%20sus%20servicios." target="_blank" rel="noopener" class="flex items-center justify-center gap-2 px-10 py-5 rounded-full font-semibold text-sm text-white/70 hover:text-white transition-all" style="border:1px solid rgba(255,255,255,0.12)">Ver metodología completa</a>
+    </div>
+  </div>
+</section>
+
+</main>
+<script src="./shared.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const revObs = new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting){e.target.classList.add('revealed');revObs.unobserve(e.target);} }), {threshold:.1,rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.lezac-reveal').forEach(el => revObs.observe(el));
+
+  const statEl = document.getElementById('stat-74');
+  if(statEl) {
+    const sObs = new IntersectionObserver(es => es.forEach(e => {
+      if(e.isIntersecting) {
+        const start = performance.now();
+        const tick = now => {
+          const p = Math.min((now-start)/2000,1);
+          statEl.textContent = Math.round((1-Math.pow(1-p,3))*74);
+          if(p<1) requestAnimationFrame(tick);
+        };
+        requestAnimationFrame(tick);
+        sObs.unobserve(e.target);
+      }
+    }), {threshold:.5});
+    sObs.observe(statEl);
+  }
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html class="dark" lang="es" data-page="ruteo">
+<head>
+  <meta charset="utf-8"/>
+  <link rel="icon" type="image/png" href="logo-lezac-mini.png"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ruteo Comercial | Optimización Territorial B2B | Lezac</title>
+  <meta name="description" content="Optimizamos recorridos y cobertura territorial. Transformamos rutas desordenadas en un sistema de cobertura comercial inteligente y eficiente."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Playfair+Display:ital,wght@1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      darkMode:"class",
+      theme:{extend:{
+        colors:{
+          "surface":"#0A0A0B","surface-dim":"#050506","surface-container":"#111112",
+          "surface-container-low":"#0D0D0E","surface-container-high":"#1A1A1B",
+          "on-surface":"#E5E2E3","on-surface-variant":"#958DA1","outline-variant":"#2A2A2B",
+          "primary":"#8C52FF","primary-container":"#7131E3","on-primary":"#FFFFFF",
+          "error":"#EC0543","success":"#25F5A4",
+          "accent":"var(--color-accent)","accent-dim":"var(--color-accent-dim)",
+        },
+        borderRadius:{"DEFAULT":"0.75rem","sm":"0.5rem","lg":"1rem","xl":"1.5rem","2xl":"2rem","full":"9999px"},
+        fontFamily:{"headline":["Montserrat","sans-serif"],"serif":["Playfair Display","serif"],"body":["Inter","sans-serif"]},
+      }},
+    }
+  </script>
+  <style>
+    :root{--color-accent:#F97316;--color-accent-dim:#C2570A;--color-accent-glow:rgba(249,115,22,0.25);}
+    body{font-family:'Inter',sans-serif;background:#0A0A0B;color:#E5E2E3;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+    h1,h2,h3,h4{font-family:'Montserrat',sans-serif;}
+    .serif-italic{font-family:'Playfair Display',serif;font-style:italic;}
+    .material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;}
+    /* Diagonal stripe hero background — route planning feel */
+    .route-bg{background-image:repeating-linear-gradient(-45deg,rgba(249,115,22,0.015) 0,rgba(249,115,22,0.015) 1px,transparent 0,transparent 50%);background-size:28px 28px;}
+    .glass{background:rgba(17,17,18,0.6);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,0.06);}
+    .liquid-glass{background:rgba(26,26,27,0.45);backdrop-filter:blur(28px);-webkit-backdrop-filter:blur(28px);border:1px solid rgba(255,255,255,0.07);box-shadow:0 8px 32px rgba(0,0,0,0.35),inset 0 1px 0 rgba(255,255,255,0.04);}
+    .pill-badge{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border-radius:9999px;background:rgba(249,115,22,0.08);border:1px solid rgba(249,115,22,0.25);font-size:11px;font-weight:600;letter-spacing:.05em;color:#F97316;}
+    .pill-dot{width:7px;height:7px;border-radius:50%;background:var(--color-accent);animation:pulse-dot 2s ease-in-out infinite;}
+    @keyframes pulse-dot{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.75)}}
+    .glow-blob{position:absolute;border-radius:50%;filter:blur(120px);pointer-events:none;}
+    .lezac-reveal{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s ease;}
+    .lezac-reveal.revealed{opacity:1;transform:translateY(0);}
+
+    /* Pain cards with red left-border */
+    .pain-card{position:relative;padding-left:1.5rem;overflow:hidden;transition:border-color .3s;}
+    .pain-card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:rgba(236,5,67,0.3);transition:background .3s;}
+    .pain-card:hover::before{background:#EC0543;}
+
+    /* Route comparison panels */
+    .route-panel{position:relative;background:#060606;border-radius:1rem;overflow:hidden;}
+    .route-panel-before{border:1px solid rgba(236,5,67,0.15);}
+    .route-panel-after{border:1px solid rgba(249,115,22,0.2);}
+
+    /* Bento hover */
+    .bento-card{transition:border-color .25s;}
+    .bento-card:hover{border-color:rgba(249,115,22,0.3)!important;}
+    .bento-card:hover .bento-icon{color:var(--color-accent)!important;border-color:rgba(249,115,22,0.3)!important;}
+    .bento-icon{transition:color .25s,border-color .25s;}
+
+    /* Deliverable check */
+    .deliv-row{display:flex;align-items:center;gap:1rem;padding:1.25rem 1.5rem;border-radius:1rem;background:#0D0D0E;border:1px solid rgba(255,255,255,0.04);transition:border-color .25s;}
+    .deliv-row:hover{border-color:rgba(249,115,22,0.2);}
+  </style>
+</head>
+<body class="bg-surface selection:bg-primary/30 selection:text-white" data-hero>
+<main>
+
+<!-- HERO -->
+<section class="relative min-h-screen flex flex-col items-center justify-center px-6 md:px-12 pt-16 pb-20 overflow-hidden route-bg">
+  <div class="glow-blob w-[700px] h-[500px] opacity-[0.09] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" style="background:var(--color-accent)"></div>
+  <div class="glow-blob w-[220px] h-[220px] opacity-[0.05] bottom-20 right-16" style="background:#8C52FF"></div>
+  <div class="w-full max-w-5xl mx-auto text-center space-y-6 relative z-10">
+    <span class="pill-badge"><span class="pill-dot"></span>Optimización Comercial · Fuerza de Ventas</span>
+    <h1 class="text-5xl md:text-6xl xl:text-7xl font-black leading-[0.95] tracking-tight text-white">
+      Ruteo<br/>
+      <span class="serif-italic font-semibold text-4xl md:text-5xl xl:text-6xl" style="color:var(--color-accent)">Comercial.</span>
+    </h1>
+    <p class="text-lg md:text-xl text-on-surface-variant font-light max-w-2xl mx-auto leading-relaxed">
+      Transformamos rutas desordenadas en un sistema de cobertura inteligente que maximiza cada hora de tu equipo en la calle.
+    </p>
+    <div class="flex flex-col sm:flex-row gap-3 justify-center">
+      <a href="https://calendly.com/lezacconsultoria/ruteocomercial" target="_blank" rel="noopener" class="flex items-center justify-center gap-2 px-8 py-4 rounded-full text-sm font-bold text-white transition-all hover:brightness-110 hover:scale-[1.02]" style="background:var(--color-accent);box-shadow:0 0 40px var(--color-accent-glow)">
+        Solicitar análisis de ruteo <span class="material-symbols-outlined" style="font-size:18px">arrow_forward</span>
+      </a>
+      <a href="https://api.whatsapp.com/send?phone=5491154107921&text=%E2%9C%85%20Lezac%20Consultoria%20I%20Me%20interesa%20conocer%20m%C3%A1s%20de%20sus%20servicios." target="_blank" rel="noopener" class="flex items-center justify-center gap-2 px-8 py-4 rounded-full text-sm font-semibold text-white/70 hover:text-white transition-all" style="border:1px solid rgba(255,255,255,0.12)">
+        Ver cómo aplica a mi empresa
+      </a>
+    </div>
+    <div class="relative mt-4 max-w-4xl mx-auto group">
+      <div class="absolute -inset-2 rounded-2xl opacity-40" style="background:radial-gradient(ellipse at center,var(--color-accent-glow) 0%,transparent 70%);filter:blur(24px);"></div>
+      <div class="relative aspect-video rounded-2xl overflow-hidden" style="box-shadow:0 0 0 1px rgba(249,115,22,0.15),0 32px 64px rgba(0,0,0,0.5)">
+        <iframe
+          src="https://www.youtube.com/embed/WyVC-NBnPWg?rel=0&modestbranding=1&color=white"
+          title="Ruteo Comercial — Presentación estratégica"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+          class="absolute inset-0 w-full h-full"
+          style="border:none;"
+        ></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<section class="py-10 border-y" style="border-color:rgba(255,255,255,0.05);background:#050506;">
+  <p class="text-center text-xs font-semibold tracking-widest uppercase text-on-surface-variant mb-6">Empresas que han confiado en nosotros</p>
+  <div data-lezac-marquee></div>
+</section>
+
+<!-- ROUTE OPTIMIZER — signature section -->
+<section class="py-24 px-6 md:px-12 relative overflow-hidden">
+  <div class="glow-blob w-[600px] h-[400px] opacity-[0.06] top-0 right-0" style="background:var(--color-accent)"></div>
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-12 lezac-reveal">
+      <span class="text-xs font-semibold tracking-widest uppercase mb-3 block" style="color:var(--color-accent)">Antes vs. Después</span>
+      <h2 class="text-4xl md:text-5xl font-black tracking-tight text-white">
+        Esto es lo que cambia<br/>
+        <span class="serif-italic font-normal text-3xl md:text-4xl" style="color:var(--color-accent)">cuando se aplica el sistema.</span>
+      </h2>
+    </div>
+
+    <!-- Comparison panels -->
+    <div class="grid md:grid-cols-2 gap-6 lezac-reveal" style="transition-delay:.1s">
+      <!-- ANTES -->
+      <div class="route-panel route-panel-before">
+        <div class="px-5 py-3 flex items-center justify-between" style="background:rgba(236,5,67,0.06);border-bottom:1px solid rgba(236,5,67,0.12)">
+          <span class="text-xs font-black uppercase tracking-widest text-error">Situación actual</span>
+          <span class="text-xs text-white/30 font-medium">Sin sistema de ruteo</span>
+        </div>
+        <div class="relative" style="height:280px">
+          <svg viewBox="0 0 400 280" class="absolute inset-0 w-full h-full" preserveAspectRatio="none">
+            <!-- Background grid faint -->
+            <defs>
+              <pattern id="grid-b" width="40" height="40" patternUnits="userSpaceOnUse">
+                <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+              </pattern>
+            </defs>
+            <rect width="400" height="280" fill="url(#grid-b)"/>
+            <!-- Chaotic routes — crossing lines, random order -->
+            <polyline points="40,60 200,180 80,230 320,50 160,140 360,220 60,170 280,80 180,250 100,30" fill="none" stroke="rgba(236,5,67,0.25)" stroke-width="1.5" stroke-dasharray="6,4"/>
+            <polyline points="320,50 60,170 360,220 40,60 280,80 80,230 200,180 100,30 180,250 160,140" fill="none" stroke="rgba(236,5,67,0.12)" stroke-width="1" stroke-dasharray="8,6"/>
+            <!-- Client dots — scattered, dim -->
+            <circle cx="40" cy="60" r="5" fill="rgba(236,5,67,0.5)"/>
+            <circle cx="200" cy="180" r="5" fill="rgba(236,5,67,0.5)"/>
+            <circle cx="80" cy="230" r="4" fill="rgba(236,5,67,0.4)"/>
+            <circle cx="320" cy="50" r="5" fill="rgba(236,5,67,0.5)"/>
+            <circle cx="160" cy="140" r="4" fill="rgba(236,5,67,0.4)"/>
+            <circle cx="360" cy="220" r="5" fill="rgba(236,5,67,0.5)"/>
+            <circle cx="60" cy="170" r="4" fill="rgba(236,5,67,0.4)"/>
+            <circle cx="280" cy="80" r="5" fill="rgba(236,5,67,0.5)"/>
+            <circle cx="180" cy="250" r="4" fill="rgba(236,5,67,0.4)"/>
+            <circle cx="100" cy="30" r="4" fill="rgba(236,5,67,0.4)"/>
+            <!-- Home base -->
+            <circle cx="200" cy="140" r="8" fill="none" stroke="rgba(236,5,67,0.4)" stroke-width="1.5"/>
+            <circle cx="200" cy="140" r="3" fill="rgba(236,5,67,0.6)"/>
+          </svg>
+          <!-- Overlay stat -->
+          <div class="absolute bottom-4 left-4">
+            <div class="text-error font-black text-2xl">+40%</div>
+            <div class="text-xs text-white/40 font-medium">tiempo perdido en ruta</div>
+          </div>
+          <div class="absolute top-4 right-4">
+            <div class="text-white/20 font-black text-xs uppercase tracking-widest">↑ costos logísticos</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- DESPUÉS -->
+      <div class="route-panel route-panel-after">
+        <div class="px-5 py-3 flex items-center justify-between" style="background:rgba(249,115,22,0.07);border-bottom:1px solid rgba(249,115,22,0.15)">
+          <span class="text-xs font-black uppercase tracking-widest" style="color:var(--color-accent)">Con Ruteo Lezac</span>
+          <span class="text-xs text-white/30 font-medium">Sistema optimizado</span>
+        </div>
+        <div class="relative" style="height:280px">
+          <svg viewBox="0 0 400 280" class="absolute inset-0 w-full h-full" preserveAspectRatio="none">
+            <defs>
+              <pattern id="grid-a" width="40" height="40" patternUnits="userSpaceOnUse">
+                <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+              </pattern>
+            </defs>
+            <rect width="400" height="280" fill="url(#grid-a)"/>
+            <!-- Zone A heatzone -->
+            <ellipse cx="100" cy="80" rx="70" ry="55" fill="rgba(249,115,22,0.05)"/>
+            <!-- Zone B heatzone -->
+            <ellipse cx="300" cy="90" rx="65" ry="50" fill="rgba(249,115,22,0.05)"/>
+            <!-- Zone C heatzone -->
+            <ellipse cx="200" cy="210" rx="80" ry="50" fill="rgba(249,115,22,0.05)"/>
+            <!-- Clean routes — organized, minimal crossings -->
+            <!-- Zone A internal loop -->
+            <polyline points="60,60 100,40 140,70 110,100 70,95 60,60" fill="none" stroke="rgba(249,115,22,0.45)" stroke-width="1.5"/>
+            <!-- Zone B internal loop -->
+            <polyline points="260,60 300,45 340,70 320,100 270,95 260,60" fill="none" stroke="rgba(249,115,22,0.45)" stroke-width="1.5"/>
+            <!-- Zone C internal loop -->
+            <polyline points="140,200 180,185 220,190 240,220 200,235 160,225 140,200" fill="none" stroke="rgba(249,115,22,0.45)" stroke-width="1.5"/>
+            <!-- Inter-zone connections (efficient) -->
+            <line x1="140" y1="70" x2="260" y2="60" stroke="rgba(249,115,22,0.2)" stroke-width="1" stroke-dasharray="4,4"/>
+            <line x1="100" y1="100" x2="180" y2="185" stroke="rgba(249,115,22,0.2)" stroke-width="1" stroke-dasharray="4,4"/>
+            <line x1="300" y1="100" x2="220" y2="190" stroke="rgba(249,115,22,0.2)" stroke-width="1" stroke-dasharray="4,4"/>
+            <!-- Client dots — organized in clusters, bright -->
+            <circle cx="60" cy="60" r="5" fill="#F97316"/>
+            <circle cx="100" cy="40" r="6" fill="#F97316" filter="url(#glow)"/>
+            <circle cx="140" cy="70" r="5" fill="#F97316"/>
+            <circle cx="110" cy="100" r="4" fill="rgba(249,115,22,0.7)"/>
+            <circle cx="70" cy="95" r="4" fill="rgba(249,115,22,0.7)"/>
+            <circle cx="260" cy="60" r="5" fill="#F97316"/>
+            <circle cx="300" cy="45" r="6" fill="#F97316"/>
+            <circle cx="340" cy="70" r="5" fill="#F97316"/>
+            <circle cx="320" cy="100" r="4" fill="rgba(249,115,22,0.7)"/>
+            <circle cx="270" cy="95" r="4" fill="rgba(249,115,22,0.7)"/>
+            <circle cx="180" cy="185" r="5" fill="#F97316"/>
+            <circle cx="220" cy="190" r="5" fill="#F97316"/>
+            <circle cx="200" cy="235" r="6" fill="#F97316"/>
+            <circle cx="160" cy="225" r="4" fill="rgba(249,115,22,0.7)"/>
+            <circle cx="240" cy="220" r="4" fill="rgba(249,115,22,0.7)"/>
+            <!-- Home base -->
+            <circle cx="200" cy="140" r="9" fill="none" stroke="rgba(249,115,22,0.5)" stroke-width="1.5"/>
+            <circle cx="200" cy="140" r="4" fill="rgba(249,115,22,0.8)"/>
+            <!-- Zone labels -->
+            <text x="100" y="140" text-anchor="middle" fill="rgba(249,115,22,0.3)" font-family="Montserrat" font-size="10" font-weight="900" letter-spacing="2">ZONA A</text>
+            <text x="300" y="140" text-anchor="middle" fill="rgba(249,115,22,0.3)" font-family="Montserrat" font-size="10" font-weight="900" letter-spacing="2">ZONA B</text>
+            <text x="200" y="270" text-anchor="middle" fill="rgba(249,115,22,0.3)" font-family="Montserrat" font-size="10" font-weight="900" letter-spacing="2">ZONA C</text>
+          </svg>
+          <!-- Overlay stat -->
+          <div class="absolute bottom-4 left-4">
+            <div class="font-black text-2xl" style="color:var(--color-accent)">−35%</div>
+            <div class="text-xs text-white/40 font-medium">tiempo logístico</div>
+          </div>
+          <div class="absolute top-4 right-4">
+            <div class="font-black text-xs uppercase tracking-widest" style="color:var(--color-accent)">↑ visitas efectivas</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Metrics comparison row -->
+    <div class="grid grid-cols-3 gap-4 mt-6 lezac-reveal" style="transition-delay:.2s">
+      <div class="liquid-glass rounded-xl p-5 text-center">
+        <div class="flex justify-center gap-4 items-baseline mb-1">
+          <span class="text-error font-black text-lg line-through opacity-50">62%</span>
+          <span class="text-on-surface-variant text-xs">→</span>
+          <span class="font-black text-2xl" style="color:var(--color-accent)">91%</span>
+        </div>
+        <div class="text-xs text-on-surface-variant font-medium">Cobertura efectiva</div>
+      </div>
+      <div class="liquid-glass rounded-xl p-5 text-center">
+        <div class="flex justify-center gap-4 items-baseline mb-1">
+          <span class="text-error font-black text-lg line-through opacity-50">4.2</span>
+          <span class="text-on-surface-variant text-xs">→</span>
+          <span class="font-black text-2xl" style="color:var(--color-accent)">6.8</span>
+        </div>
+        <div class="text-xs text-on-surface-variant font-medium">Visitas por día</div>
+      </div>
+      <div class="liquid-glass rounded-xl p-5 text-center">
+        <div class="flex justify-center gap-4 items-baseline mb-1">
+          <span class="text-error font-black text-lg line-through opacity-50">38%</span>
+          <span class="text-on-surface-variant text-xs">→</span>
+          <span class="font-black text-2xl" style="color:var(--color-accent)">12%</span>
+        </div>
+        <div class="text-xs text-on-surface-variant font-medium">Tiempo en tránsito</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PAIN — sticky left + scrolling right cards -->
+<section class="py-24 px-6 md:px-12 relative" style="background:#050506">
+  <div class="max-w-7xl mx-auto">
+    <div class="grid lg:grid-cols-12 gap-16 items-start">
+      <!-- Sticky left -->
+      <div class="lg:col-span-5 lg:sticky lg:top-32 lezac-reveal">
+        <span class="text-xs font-semibold tracking-widest uppercase text-error mb-3 block">El problema</span>
+        <h2 class="text-4xl md:text-5xl font-black tracking-tight leading-none text-white mb-6">
+          Tu equipo puede estar<br/>
+          <span class="text-error">perdiendo tiempo.</span>
+        </h2>
+        <p class="text-on-surface-variant text-sm leading-relaxed">El esfuerzo comercial sin estrategia territorial resulta en ineficiencia operativa y pérdida de oportunidades de venta.</p>
+      </div>
+      <!-- Scrolling right cards -->
+      <div class="lg:col-span-7 flex flex-col gap-5 lezac-reveal" style="transition-delay:.15s">
+        <div class="pain-card liquid-glass rounded-xl p-8">
+          <div class="flex gap-6 items-start">
+            <div class="w-12 h-12 rounded-full flex items-center justify-center shrink-0 text-error" style="background:rgba(236,5,67,0.07);border:1px solid rgba(236,5,67,0.15)">
+              <span class="material-symbols-outlined" style="font-size:22px">route</span>
+            </div>
+            <div>
+              <h3 class="font-black text-white text-lg mb-2 tracking-tight">Superposición de visitas</h3>
+              <p class="text-on-surface-variant text-sm leading-relaxed">Múltiples vendedores cubriendo las mismas zonas mientras áreas de alto potencial quedan <span class="text-error font-semibold">completamente desatendidas</span>.</p>
+            </div>
+          </div>
+        </div>
+        <div class="pain-card liquid-glass rounded-xl p-8">
+          <div class="flex gap-6 items-start">
+            <div class="w-12 h-12 rounded-full flex items-center justify-center shrink-0 text-error" style="background:rgba(236,5,67,0.07);border:1px solid rgba(236,5,67,0.15)">
+              <span class="material-symbols-outlined" style="font-size:22px">person_off</span>
+            </div>
+            <div>
+              <h3 class="font-black text-white text-lg mb-2 tracking-tight">Clientes mal atendidos</h3>
+              <p class="text-on-surface-variant text-sm leading-relaxed">Frecuencias de visita <span class="text-error font-semibold">erráticas</span> que no se alinean con el potencial de compra ni la necesidad real de cada cliente.</p>
+            </div>
+          </div>
+        </div>
+        <div class="pain-card liquid-glass rounded-xl p-8">
+          <div class="flex gap-6 items-start">
+            <div class="w-12 h-12 rounded-full flex items-center justify-center shrink-0 text-error" style="background:rgba(236,5,67,0.07);border:1px solid rgba(236,5,67,0.15)">
+              <span class="material-symbols-outlined" style="font-size:22px">timer_off</span>
+            </div>
+            <div>
+              <h3 class="font-black text-white text-lg mb-2 tracking-tight">Tiempos muertos logísticos</h3>
+              <p class="text-on-surface-variant text-sm leading-relaxed">Rutas trazadas <span class="text-error font-semibold">sin criterio</span> de densidad de tráfico, distancias reales o ventanas de atención óptimas.</p>
+            </div>
+          </div>
+        </div>
+        <div class="pain-card liquid-glass rounded-xl p-8">
+          <div class="flex gap-6 items-start">
+            <div class="w-12 h-12 rounded-full flex items-center justify-center shrink-0 text-error" style="background:rgba(236,5,67,0.07);border:1px solid rgba(236,5,67,0.15)">
+              <span class="material-symbols-outlined" style="font-size:22px">query_stats</span>
+            </div>
+            <div>
+              <h3 class="font-black text-white text-lg mb-2 tracking-tight">Sin métricas de cobertura</h3>
+              <p class="text-on-surface-variant text-sm leading-relaxed">No tenés forma de saber qué porcentaje de tu territorio potencial realmente está siendo <span class="text-error font-semibold">visitado y activado</span>.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUOTE BREAK -->
+<section class="py-24 px-6 md:px-12 relative overflow-hidden border-y" style="border-color:rgba(249,115,22,0.08)">
+  <div class="glow-blob w-[800px] h-[400px] opacity-[0.05] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" style="background:var(--color-accent)"></div>
+  <div class="max-w-4xl mx-auto text-center relative z-10 lezac-reveal">
+    <div class="text-6xl leading-none mb-6 opacity-20 serif-italic" style="color:var(--color-accent)">"</div>
+    <h2 class="text-3xl md:text-5xl font-black tracking-tight text-white leading-tight">
+      El problema no es salir más a la calle. Es <span style="color:var(--color-accent)">no tener una lógica comercial clara</span> para recorrer el territorio.
+    </h2>
+  </div>
+</section>
+
+<!-- PARA QUIÉN -->
+<section class="py-24 px-6 md:px-12 relative overflow-hidden" style="background:#050506">
+  <div class="max-w-6xl mx-auto">
+    <div class="grid lg:grid-cols-[1fr_auto] gap-16 items-center lezac-reveal">
+      <!-- Left: texto + lista -->
+      <div class="space-y-8">
+        <div>
+          <span class="text-xs font-semibold tracking-widest uppercase block mb-3" style="color:var(--color-accent)">¿Es para tu empresa?</span>
+          <h2 class="text-4xl md:text-5xl font-black tracking-tight leading-none text-white">Este sistema aplica<br/><span class="serif-italic font-normal text-3xl md:text-4xl" style="color:var(--color-accent)">si operás en campo.</span></h2>
+        </div>
+        <div class="space-y-3">
+          <div class="flex items-center gap-4 px-5 py-4 rounded-xl transition-colors hover:border-orange-500/20" style="background:#0D0D0E;border:1px solid rgba(255,255,255,0.05)">
+            <div class="w-7 h-7 rounded-full flex items-center justify-center shrink-0" style="background:rgba(249,115,22,0.12)">
+              <span class="material-symbols-outlined" style="color:var(--color-accent);font-size:15px;font-variation-settings:'FILL' 1">check</span>
+            </div>
+            <span class="text-white/80 text-sm font-medium">Distribuidoras y mayoristas con vendedores de calle</span>
+          </div>
+          <div class="flex items-center gap-4 px-5 py-4 rounded-xl transition-colors hover:border-orange-500/20" style="background:#0D0D0E;border:1px solid rgba(255,255,255,0.05)">
+            <div class="w-7 h-7 rounded-full flex items-center justify-center shrink-0" style="background:rgba(249,115,22,0.12)">
+              <span class="material-symbols-outlined" style="color:var(--color-accent);font-size:15px;font-variation-settings:'FILL' 1">check</span>
+            </div>
+            <span class="text-white/80 text-sm font-medium">Fábricas con fuerza de ventas directa</span>
+          </div>
+          <div class="flex items-center gap-4 px-5 py-4 rounded-xl transition-colors hover:border-orange-500/20" style="background:#0D0D0E;border:1px solid rgba(255,255,255,0.05)">
+            <div class="w-7 h-7 rounded-full flex items-center justify-center shrink-0" style="background:rgba(249,115,22,0.12)">
+              <span class="material-symbols-outlined" style="color:var(--color-accent);font-size:15px;font-variation-settings:'FILL' 1">check</span>
+            </div>
+            <span class="text-white/80 text-sm font-medium">Negocios con cobertura territorial desordenada</span>
+          </div>
+          <div class="flex items-center gap-4 px-5 py-4 rounded-xl" style="background:rgba(249,115,22,0.06);border:1px solid rgba(249,115,22,0.2)">
+            <div class="w-7 h-7 rounded-full flex items-center justify-center shrink-0" style="background:rgba(249,115,22,0.2)">
+              <span class="material-symbols-outlined" style="color:var(--color-accent);font-size:15px;font-variation-settings:'FILL' 1">star</span>
+            </div>
+            <span class="text-sm font-bold" style="color:var(--color-accent)">Equipos de 3 o más vendedores de campo</span>
+          </div>
+        </div>
+      </div>
+      <!-- Right: GIF como phone mockup -->
+      <div class="flex justify-center lg:justify-end" style="transition-delay:.2s">
+        <div class="relative" style="transform:rotate(2deg)">
+          <div class="absolute -inset-4 rounded-[3rem] opacity-20" style="background:radial-gradient(ellipse at center,var(--color-accent) 0%,transparent 70%);filter:blur(40px);"></div>
+          <div class="relative overflow-hidden" style="width:300px;border-radius:2rem;border:2px solid rgba(249,115,22,0.2);box-shadow:0 32px 64px rgba(0,0,0,0.6)">
+            <img src="gif-rc.gif" alt="Ruteo Comercial en acción" class="w-full block" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES BENTO -->
+<section class="py-24 px-6 md:px-12 relative overflow-hidden">
+  <div class="glow-blob w-[500px] h-[400px] opacity-[0.05] bottom-0 left-0" style="background:var(--color-accent)"></div>
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-14 lezac-reveal">
+      <span class="text-xs font-semibold tracking-widest uppercase mb-3 block" style="color:var(--color-accent)">Inteligencia comercial aplicada</span>
+      <h2 class="text-4xl md:text-5xl font-black tracking-tight text-white">Lo que construimos</h2>
+    </div>
+    <div class="grid md:grid-cols-3 gap-5 lezac-reveal" style="transition-delay:.1s">
+      <!-- Main feature (wide) -->
+      <div class="md:col-span-2 bento-card liquid-glass rounded-2xl p-10 flex flex-col justify-between min-h-[300px]" style="border:1px solid rgba(255,255,255,0.07)">
+        <div class="w-12 h-12 rounded-full flex items-center justify-center mb-6 bento-icon text-white/50" style="border:1px solid rgba(255,255,255,0.1)">
+          <span class="material-symbols-outlined" style="font-size:22px">hub</span>
+        </div>
+        <div>
+          <h3 class="text-2xl font-black text-white mb-3 tracking-tight">Sistema de Cobertura</h3>
+          <p class="text-on-surface-variant text-sm leading-relaxed">No trazamos líneas en un mapa; diseñamos un sistema integral donde cada cliente es asignado a la ruta <span class="text-success font-semibold">correcta</span>, con la frecuencia <span class="text-success font-semibold">adecuada</span> y el perfil de vendedor idóneo.</p>
+        </div>
+      </div>
+      <!-- Secondary feature -->
+      <div class="bento-card liquid-glass rounded-2xl p-8 flex flex-col" style="border:1px solid rgba(255,255,255,0.07)">
+        <div class="w-10 h-10 rounded-full flex items-center justify-center mb-6 bento-icon text-white/50" style="border:1px solid rgba(255,255,255,0.1)">
+          <span class="material-symbols-outlined" style="font-size:20px">data_exploration</span>
+        </div>
+        <h3 class="font-black text-white mb-3 tracking-tight">Decisiones Basadas en Datos</h3>
+        <p class="text-on-surface-variant text-sm leading-relaxed">Analizamos historial de ventas, densidad geográfica y potencial de zona para estructurar recorridos matemáticamente óptimos.</p>
+      </div>
+      <!-- Secondary feature -->
+      <div class="bento-card liquid-glass rounded-2xl p-8 flex flex-col" style="border:1px solid rgba(255,255,255,0.07)">
+        <div class="w-10 h-10 rounded-full flex items-center justify-center mb-6 bento-icon text-white/50" style="border:1px solid rgba(255,255,255,0.1)">
+          <span class="material-symbols-outlined" style="font-size:20px">tune</span>
+        </div>
+        <h3 class="font-black text-white mb-3 tracking-tight">Modelado Dinámico</h3>
+        <p class="text-on-surface-variant text-sm leading-relaxed">El territorio está vivo. Desarrollamos esquemas que se adaptan a estacionalidad, crecimiento de cartera y rotación de personal.</p>
+      </div>
+      <!-- Wide feature -->
+      <div class="md:col-span-2 bento-card liquid-glass rounded-2xl p-10 flex flex-row items-center gap-10" style="border:1px solid rgba(255,255,255,0.07)">
+        <div class="flex-grow">
+          <h3 class="text-xl font-black text-white mb-3 tracking-tight">Arquitectura Territorial</h3>
+          <p class="text-on-surface-variant text-sm leading-relaxed">Segmentamos zonas en clústeres rentables, equilibrando la carga de trabajo entre ejecutivos y <span class="text-success font-semibold">maximizando el tiempo</span> frente al cliente.</p>
+        </div>
+        <div class="shrink-0 hidden md:flex w-20 h-20 rounded-full items-center justify-center" style="border:1px solid rgba(249,115,22,0.2);background:rgba(249,115,22,0.05)">
+          <span class="material-symbols-outlined" style="color:var(--color-accent);font-size:32px">architecture</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DELIVERABLES -->
+<section class="py-24 px-6 md:px-12 relative" style="background:#050506">
+  <div class="max-w-3xl mx-auto lezac-reveal">
+    <div class="text-center mb-12">
+      <span class="text-xs font-semibold tracking-widest uppercase mb-3 block" style="color:var(--color-accent)">Resultados concretos</span>
+      <h2 class="text-4xl font-black tracking-tight text-white">Qué entregamos</h2>
+    </div>
+    <div class="grid md:grid-cols-2 gap-3">
+      <div class="deliv-row">
+        <span class="material-symbols-outlined shrink-0" style="color:var(--color-accent);font-size:22px;font-variation-settings:'FILL' 1">check_circle</span>
+        <span class="text-white font-semibold text-sm">Análisis de cobertura actual</span>
+      </div>
+      <div class="deliv-row">
+        <span class="material-symbols-outlined shrink-0" style="color:var(--color-accent);font-size:22px;font-variation-settings:'FILL' 1">check_circle</span>
+        <span class="text-white font-semibold text-sm">Reorganización territorial por zonas</span>
+      </div>
+      <div class="deliv-row">
+        <span class="material-symbols-outlined shrink-0" style="color:var(--color-accent);font-size:22px;font-variation-settings:'FILL' 1">check_circle</span>
+        <span class="text-white font-semibold text-sm">Propuesta de frecuencia de visita</span>
+      </div>
+      <div class="deliv-row">
+        <span class="material-symbols-outlined shrink-0" style="color:var(--color-accent);font-size:22px;font-variation-settings:'FILL' 1">check_circle</span>
+        <span class="text-white font-semibold text-sm">Redistribución por vendedor o zona</span>
+      </div>
+      <div class="deliv-row md:col-span-2">
+        <span class="material-symbols-outlined shrink-0" style="color:var(--color-accent);font-size:22px;font-variation-settings:'FILL' 1">check_circle</span>
+        <span class="text-white font-semibold text-sm">Criterio para mejorar productividad comercial en campo</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="py-24 px-6 md:px-12 relative overflow-hidden">
+  <div class="glow-blob w-[700px] h-[400px] opacity-[0.08] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" style="background:var(--color-accent)"></div>
+  <div class="max-w-4xl mx-auto relative z-10 lezac-reveal">
+    <div class="liquid-glass rounded-2xl p-12 md:p-16 text-center">
+      <span class="text-xs font-semibold tracking-widest uppercase mb-4 block" style="color:var(--color-accent)">¿Tu equipo recorre donde está la oportunidad?</span>
+      <h2 class="text-4xl md:text-5xl font-black tracking-tight text-white mb-4 leading-tight">
+        El problema no es salir<br/>
+        <span class="serif-italic font-normal" style="color:var(--color-accent)">más a vender.</span>
+      </h2>
+      <p class="text-on-surface-variant leading-relaxed mb-10 max-w-lg mx-auto text-sm">Podés seguir recorriendo sin foco, o podés implementar un sistema de inteligencia territorial que maximice cada hora de tu equipo en la calle.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="https://calendly.com/lezacconsultoria/ruteocomercial" target="_blank" rel="noopener" class="flex items-center justify-center gap-2 px-8 py-4 rounded-full text-sm font-bold text-white hover:brightness-110 transition-all" style="background:var(--color-accent);box-shadow:0 0 40px var(--color-accent-glow)">
+          Solicitar análisis estratégico <span class="material-symbols-outlined" style="font-size:18px">arrow_forward</span>
+        </a>
+        <a href="https://api.whatsapp.com/send?phone=5491154107921&text=%E2%9C%85%20Lezac%20Consultoria%20I%20Me%20interesa%20conocer%20m%C3%A1s%20de%20sus%20servicios." target="_blank" rel="noopener" class="flex items-center justify-center gap-2 px-8 py-4 rounded-full text-sm font-semibold text-white/70 hover:text-white transition-all" style="border:1px solid rgba(255,255,255,0.12)">
+          <svg viewBox="0 0 24 24" class="w-4 h-4 fill-current" style="color:#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Contactar por WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+<script src="shared.js"></script>
+</body>
+</html>
