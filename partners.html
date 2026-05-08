@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html class="dark" lang="es" data-page="partners">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Partners — Lezac Consultoria</title>
+  <meta name="description" content="Sumáte al programa de partners de Lezac Consultoria. Referí clientes, cobrá comisión recurrente y crecé junto a nosotros en LATAM."/>
+  <link rel="icon" type="image/png" href="logo-lezac-mini.png"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Playfair+Display:ital,wght@1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface":                "#0A0A0B",
+            "surface-dim":           "#050506",
+            "surface-container":     "#111112",
+            "surface-container-low": "#0D0D0E",
+            "surface-container-high":"#1A1A1B",
+            "on-surface":            "#E5E2E3",
+            "on-surface-variant":    "#958DA1",
+            "outline-variant":       "#2A2A2B",
+            "primary":               "#8C52FF",
+            "primary-container":     "#7131E3",
+            "on-primary":            "#FFFFFF",
+            "error":                 "#EC0543",
+            "success":               "#25F5A4",
+            "accent":                "var(--color-accent)",
+            "accent-dim":            "var(--color-accent-dim)",
+          },
+          borderRadius: {
+            "DEFAULT": "0.75rem",
+            "sm":  "0.5rem",
+            "lg":  "1rem",
+            "xl":  "1.5rem",
+            "2xl": "2rem",
+            "full":"9999px"
+          },
+          fontFamily: {
+            "headline": ["Montserrat","sans-serif"],
+            "serif":    ["Playfair Display","serif"],
+            "body":     ["Inter","sans-serif"],
+          },
+        },
+      },
+    }
+  </script>
+  <style>
+    :root {
+      --color-accent: #F5C842;
+      --color-accent-dim: #D4A017;
+      --color-accent-glow: rgba(245,200,66,0.25);
+    }
+    body { font-family:'Inter',sans-serif; background:#0A0A0B; color:#E5E2E3; -webkit-font-smoothing:antialiased; overflow-x:hidden; }
+    h1,h2,h3,h4 { font-family:'Montserrat',sans-serif; }
+    .serif-italic { font-family:'Playfair Display',serif; font-style:italic; }
+    .material-symbols-outlined { font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24; }
+
+    .grid-bg {
+      background-image:
+        linear-gradient(rgba(255,255,255,0.022) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.022) 1px, transparent 1px);
+      background-size: 72px 72px;
+    }
+    .glass { background:rgba(17,17,18,0.6); backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px); border:1px solid rgba(255,255,255,0.06); }
+    .liquid-glass { background:rgba(26,26,27,0.45); backdrop-filter:blur(28px); -webkit-backdrop-filter:blur(28px); border:1px solid rgba(255,255,255,0.07); box-shadow:0 8px 32px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.04); }
+    .pill-badge { display:inline-flex; align-items:center; gap:8px; padding:6px 14px; border-radius:9999px; background:rgba(245,200,66,0.08); border:1px solid rgba(245,200,66,0.2); font-size:11px; font-weight:600; letter-spacing:.05em; color:#F5C842; }
+    .pill-dot { width:7px; height:7px; border-radius:50%; background:var(--color-accent); animation:pulse-dot 2s ease-in-out infinite; }
+    @keyframes pulse-dot { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.5;transform:scale(.75)} }
+    .glow-blob { position:absolute; border-radius:50%; filter:blur(120px); pointer-events:none; }
+
+    /* Form styles */
+    .form-input {
+      width:100%; padding:12px 16px; border-radius:0.5rem;
+      background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.1);
+      color:#E5E2E3; font-size:14px; font-family:'Inter',sans-serif;
+      transition:border-color .2s, box-shadow .2s; outline:none;
+    }
+    .form-input:focus { border-color:var(--color-accent); box-shadow:0 0 0 3px rgba(245,200,66,0.1); }
+    .form-input::placeholder { color:#958DA1; }
+    .form-label { display:block; font-size:12px; font-weight:600; letter-spacing:.04em; color:#958DA1; text-transform:uppercase; margin-bottom:6px; }
+    .radio-card { cursor:pointer; padding:12px 16px; border-radius:0.5rem; border:1px solid rgba(255,255,255,0.1); background:rgba(255,255,255,0.03); transition:all .2s; display:flex; align-items:center; gap:10px; }
+    .radio-card:has(input:checked) { border-color:var(--color-accent); background:rgba(245,200,66,0.06); }
+    .radio-card input[type=radio] { accent-color:var(--color-accent); width:16px; height:16px; }
+
+    /* FAQ accordion */
+    .faq-answer { max-height:0; overflow:hidden; transition:max-height .35s ease; }
+    .faq-answer.open { max-height:300px; }
+    .faq-chevron { transition:transform .3s ease; }
+    .faq-chevron.rotated { transform:rotate(180deg); }
+
+    /* Step connector */
+    .step-line { position:absolute; top:50%; left:100%; width:100%; height:1px; background:linear-gradient(90deg,rgba(245,200,66,0.3),transparent); transform:translateY(-50%); }
+  </style>
+</head>
+<body class="bg-surface text-on-surface font-body antialiased">
+
+<!-- ══════════════════════════════════════
+     HERO
+══════════════════════════════════════ -->
+<section class="relative min-h-screen flex items-center px-6 md:px-12 lg:px-20 pt-32 pb-24 overflow-hidden grid-bg" data-hero>
+  <div class="glow-blob w-[600px] h-[600px] opacity-[0.07] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" style="background:var(--color-accent)"></div>
+  <div class="glow-blob w-[200px] h-[200px] opacity-15 top-24 right-20" style="background:#F5C842"></div>
+
+  <div class="w-full max-w-4xl mx-auto text-center relative z-10">
+    <span class="pill-badge mb-6 inline-flex"><span class="pill-dot"></span>Programa de Partners · LATAM</span>
+
+    <h1 class="text-5xl md:text-6xl xl:text-7xl font-black leading-[1.0] tracking-tight text-white mb-4">
+      Crezcamos<br/>
+      <span class="serif-italic font-semibold" style="color:var(--color-accent)">juntos.</span>
+    </h1>
+
+    <p class="text-lg md:text-xl text-on-surface-variant font-light max-w-2xl mx-auto leading-relaxed mb-10">
+      Referí clientes a Lezac, cobrá comisión por cada cierre y expandí tu oferta de valor con el respaldo de una consultora con más de 10 años en el mercado B2B latinoamericano.
+    </p>
+
+    <ul class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+      <li class="flex items-center gap-2 text-sm font-medium text-white/80">
+        <span class="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0" style="background:rgba(245,200,66,0.15)">
+          <span class="material-symbols-outlined" style="font-size:13px;color:var(--color-accent)">check</span>
+        </span>Sin inversión inicial
+      </li>
+      <li class="flex items-center gap-2 text-sm font-medium text-white/80">
+        <span class="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0" style="background:rgba(245,200,66,0.15)">
+          <span class="material-symbols-outlined" style="font-size:13px;color:var(--color-accent)">check</span>
+        </span>Comisiones reales por cierre
+      </li>
+      <li class="flex items-center gap-2 text-sm font-medium text-white/80">
+        <span class="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0" style="background:rgba(245,200,66,0.15)">
+          <span class="material-symbols-outlined" style="font-size:13px;color:var(--color-accent)">check</span>
+        </span>Soporte y materiales dedicados
+      </li>
+    </ul>
+
+    <a href="#registro" class="inline-flex items-center gap-2 px-10 py-5 rounded-full font-bold text-sm transition-all hover:brightness-110 hover:scale-[1.02]" style="background:var(--color-accent);color:#0A0A0B;box-shadow:0 0 40px var(--color-accent-glow)">
+      Quiero ser Partner
+      <span class="material-symbols-outlined" style="font-size:18px">arrow_downward</span>
+    </a>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     POR QUÉ SER PARTNER
+══════════════════════════════════════ -->
+<section class="py-24 px-6 md:px-12" style="background:#050506;">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-16 lezac-reveal">
+      <p class="text-xs font-semibold tracking-widest uppercase mb-3" style="color:var(--color-accent)">Beneficios</p>
+      <h2 class="text-3xl md:text-4xl font-black text-white">¿Por qué ser Partner de Lezac?</h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- Card 1 -->
+      <div class="liquid-glass rounded-2xl p-8 lezac-reveal" style="transition-delay:.1s">
+        <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6" style="background:rgba(245,200,66,0.1)">
+          <span class="material-symbols-outlined" style="color:var(--color-accent);font-size:24px">payments</span>
+        </div>
+        <h3 class="text-lg font-bold text-white mb-3">Comisión real por cierre</h3>
+        <p class="text-sm text-on-surface-variant leading-relaxed">Cobrás un porcentaje directo por cada cliente que cierra con Lezac. Sin techos artificiales, sin demoras. El seguimiento es transparente desde el primer día.</p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="liquid-glass rounded-2xl p-8 lezac-reveal" style="transition-delay:.2s">
+        <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6" style="background:rgba(245,200,66,0.1)">
+          <span class="material-symbols-outlined" style="color:var(--color-accent);font-size:24px">support_agent</span>
+        </div>
+        <h3 class="text-lg font-bold text-white mb-3">Soporte completo</h3>
+        <p class="text-sm text-on-surface-variant leading-relaxed">Recibís un kit de partner con materiales de ventas, presentaciones, casos de éxito y acceso a demos. Nunca vas a quedar sin respuesta frente a un prospecto.</p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="liquid-glass rounded-2xl p-8 lezac-reveal" style="transition-delay:.3s">
+        <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6" style="background:rgba(245,200,66,0.1)">
+          <span class="material-symbols-outlined" style="color:var(--color-accent);font-size:24px">globe</span>
+        </div>
+        <h3 class="text-lg font-bold text-white mb-3">Red en 4 países</h3>
+        <p class="text-sm text-on-surface-variant leading-relaxed">Sumáte a una red activa en Argentina, Paraguay, Bolivia y Uruguay. Tus referidos pueden estar en cualquier país de LATAM y el proceso es el mismo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     CÓMO FUNCIONA
+══════════════════════════════════════ -->
+<section class="py-24 px-6 md:px-12 bg-surface">
+  <div class="max-w-5xl mx-auto">
+    <div class="text-center mb-16 lezac-reveal">
+      <p class="text-xs font-semibold tracking-widest uppercase mb-3" style="color:var(--color-accent)">El proceso</p>
+      <h2 class="text-3xl md:text-4xl font-black text-white">Cómo funciona</h2>
+      <p class="text-on-surface-variant mt-4 max-w-lg mx-auto text-sm">Cuatro pasos simples para empezar a generar ingresos con tus contactos B2B.</p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="lezac-reveal" style="transition-delay:.1s">
+        <div class="rounded-2xl p-6 h-full" style="background:#111112;border:1px solid rgba(245,200,66,0.1)">
+          <div class="text-4xl font-black mb-4" style="color:rgba(245,200,66,0.2)">01</div>
+          <h3 class="text-sm font-bold text-white mb-2">Completás el formulario</h3>
+          <p class="text-xs text-on-surface-variant leading-relaxed">Contanos quién sos, qué hacés y cómo llegaste a Lezac.</p>
+        </div>
+      </div>
+      <div class="lezac-reveal" style="transition-delay:.2s">
+        <div class="rounded-2xl p-6 h-full" style="background:#111112;border:1px solid rgba(245,200,66,0.1)">
+          <div class="text-4xl font-black mb-4" style="color:rgba(245,200,66,0.2)">02</div>
+          <h3 class="text-sm font-bold text-white mb-2">Llamada de exploración</h3>
+          <p class="text-xs text-on-surface-variant leading-relaxed">Agendamos una llamada corta para conocernos y alinear expectativas.</p>
+        </div>
+      </div>
+      <div class="lezac-reveal" style="transition-delay:.3s">
+        <div class="rounded-2xl p-6 h-full" style="background:#111112;border:1px solid rgba(245,200,66,0.1)">
+          <div class="text-4xl font-black mb-4" style="color:rgba(245,200,66,0.2)">03</div>
+          <h3 class="text-sm font-bold text-white mb-2">Kit de partner</h3>
+          <p class="text-xs text-on-surface-variant leading-relaxed">Recibís materiales, acceso y briefing completo para empezar a referir.</p>
+        </div>
+      </div>
+      <div class="lezac-reveal" style="transition-delay:.4s">
+        <div class="rounded-2xl p-6 h-full" style="background:#111112;border:1px solid rgba(245,200,66,0.1)">
+          <div class="text-4xl font-black mb-4" style="color:rgba(245,200,66,0.2)">04</div>
+          <h3 class="text-sm font-bold text-white mb-2">Referís y cobrás</h3>
+          <p class="text-xs text-on-surface-variant leading-relaxed">Cada cierre exitoso genera tu comisión. Simple, transparente y rastreable.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     A QUIÉN ESTÁ DIRIGIDO
+══════════════════════════════════════ -->
+<section class="py-24 px-6 md:px-12" style="background:#050506;">
+  <div class="max-w-5xl mx-auto">
+    <div class="text-center mb-16 lezac-reveal">
+      <p class="text-xs font-semibold tracking-widest uppercase mb-3" style="color:var(--color-accent)">Perfiles</p>
+      <h2 class="text-3xl md:text-4xl font-black text-white">¿Este programa es para vos?</h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <!-- Consultores -->
+      <div class="liquid-glass rounded-2xl p-8 lezac-reveal" style="transition-delay:.1s">
+        <div class="flex items-center gap-3 mb-6">
+          <div class="w-10 h-10 rounded-xl flex items-center justify-center" style="background:rgba(245,200,66,0.1)">
+            <span class="material-symbols-outlined" style="color:var(--color-accent);font-size:20px">person</span>
+          </div>
+          <h3 class="text-base font-bold text-white">Consultores y Freelancers</h3>
+        </div>
+        <ul class="space-y-3">
+          <li class="flex items-start gap-3 text-sm text-on-surface-variant">
+            <span class="w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0" style="background:var(--color-accent)"></span>
+            Trabajás con empresas distribuidoras, mayoristas o fábricas
+          </li>
+          <li class="flex items-start gap-3 text-sm text-on-surface-variant">
+            <span class="w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0" style="background:var(--color-accent)"></span>
+            Asesorás en procesos comerciales, ventas o marketing
+          </li>
+          <li class="flex items-start gap-3 text-sm text-on-surface-variant">
+            <span class="w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0" style="background:var(--color-accent)"></span>
+            Querés ampliar tu oferta de valor sin más trabajo operativo
+          </li>
+          <li class="flex items-start gap-3 text-sm text-on-surface-variant">
+            <span class="w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0" style="background:var(--color-accent)"></span>
+            Tenés contactos que necesitan ordenar su operación comercial
+          </li>
+        </ul>
+      </div>
+
+      <!-- Agencias -->
+      <div class="liquid-glass rounded-2xl p-8 lezac-reveal" style="transition-delay:.2s">
+        <div class="flex items-center gap-3 mb-6">
+          <div class="w-10 h-10 rounded-xl flex items-center justify-center" style="background:rgba(245,200,66,0.1)">
+            <span class="material-symbols-outlined" style="color:var(--color-accent);font-size:20px">apartment</span>
+          </div>
+          <h3 class="text-base font-bold text-white">Agencias y Empresas</h3>
+        </div>
+        <ul class="space-y-3">
+          <li class="flex items-start gap-3 text-sm text-on-surface-variant">
+            <span class="w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0" style="background:var(--color-accent)"></span>
+            Agencias de marketing, tecnología o transformación digital
+          </li>
+          <li class="flex items-start gap-3 text-sm text-on-surface-variant">
+            <span class="w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0" style="background:var(--color-accent)"></span>
+            Empresas de software o sistemas que atienden el sector B2B
+          </li>
+          <li class="flex items-start gap-3 text-sm text-on-surface-variant">
+            <span class="w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0" style="background:var(--color-accent)"></span>
+            Buscan complementar su oferta con servicios de consultoría comercial
+          </li>
+          <li class="flex items-start gap-3 text-sm text-on-surface-variant">
+            <span class="w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0" style="background:var(--color-accent)"></span>
+            Tienen cartera de clientes que podrían beneficiarse de Lezac
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     MARQUEE CLIENTES
+══════════════════════════════════════ -->
+<section class="py-10" style="background:#0A0A0B;border-top:1px solid rgba(255,255,255,0.04);border-bottom:1px solid rgba(255,255,255,0.04);">
+  <p class="text-center text-xs font-semibold tracking-widest uppercase text-on-surface-variant mb-6">Empresas que ya confían en Lezac</p>
+  <div data-lezac-marquee></div>
+</section>
+
+<!-- ══════════════════════════════════════
+     FORMULARIO
+══════════════════════════════════════ -->
+<section id="registro" class="py-24 px-6 md:px-12 bg-surface">
+  <div class="max-w-2xl mx-auto">
+    <div class="text-center mb-12 lezac-reveal">
+      <p class="text-xs font-semibold tracking-widest uppercase mb-3" style="color:var(--color-accent)">Sumate</p>
+      <h2 class="text-3xl md:text-4xl font-black text-white mb-4">Registrate como Partner</h2>
+      <p class="text-on-surface-variant text-sm max-w-md mx-auto leading-relaxed">Completá el formulario y nos ponemos en contacto en menos de 24 horas para coordinar la llamada de exploración.</p>
+    </div>
+
+    <!-- IMPORTANTE: Para activar el formulario, creá una cuenta gratuita en formspree.io,
+         creá un nuevo form apuntando a lezacconsultoria@gmail.com,
+         y reemplazá "PLACEHOLDER" en el action de abajo con tu Form ID. -->
+    <form action="https://formspree.io/f/PLACEHOLDER" method="POST" class="space-y-6 lezac-reveal" style="transition-delay:.1s" id="partner-form">
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div>
+          <label class="form-label" for="nombre">Nombre completo *</label>
+          <input class="form-input" type="text" id="nombre" name="nombre" placeholder="Juan García" required />
+        </div>
+        <div>
+          <label class="form-label" for="empresa">Empresa / Proyecto</label>
+          <input class="form-input" type="text" id="empresa" name="empresa" placeholder="Mi Consultora S.A." />
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div>
+          <label class="form-label" for="email">Email *</label>
+          <input class="form-input" type="email" id="email" name="email" placeholder="juan@empresa.com" required />
+        </div>
+        <div>
+          <label class="form-label" for="telefono">Teléfono / WhatsApp</label>
+          <input class="form-input" type="tel" id="telefono" name="telefono" placeholder="+54 9 11 1234-5678" />
+        </div>
+      </div>
+
+      <div>
+        <label class="form-label">Tipo de partner *</label>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-1">
+          <label class="radio-card">
+            <input type="radio" name="tipo_partner" value="Consultor / Freelancer" required />
+            <div>
+              <p class="text-sm font-semibold text-white">Consultor / Freelancer</p>
+              <p class="text-xs text-on-surface-variant mt-0.5">Trabajo de forma independiente</p>
+            </div>
+          </label>
+          <label class="radio-card">
+            <input type="radio" name="tipo_partner" value="Agencia / Empresa" />
+            <div>
+              <p class="text-sm font-semibold text-white">Agencia / Empresa</p>
+              <p class="text-xs text-on-surface-variant mt-0.5">Represento una organización</p>
+            </div>
+          </label>
+        </div>
+      </div>
+
+      <div>
+        <label class="form-label" for="mensaje">¿Cómo conociste Lezac? / Mensaje (opcional)</label>
+        <textarea class="form-input" id="mensaje" name="mensaje" rows="4" placeholder="Contanos un poco sobre vos, tu trabajo y por qué te interesa el programa..."></textarea>
+      </div>
+
+      <div id="form-success" class="hidden rounded-xl px-6 py-4 text-sm font-medium text-center" style="background:rgba(37,245,164,0.08);border:1px solid rgba(37,245,164,0.2);color:#25F5A4;">
+        ¡Gracias! Recibimos tu solicitud. Te contactamos en menos de 24 horas.
+      </div>
+      <div id="form-error" class="hidden rounded-xl px-6 py-4 text-sm font-medium text-center" style="background:rgba(236,5,67,0.08);border:1px solid rgba(236,5,67,0.2);color:#EC0543;">
+        Hubo un error al enviar el formulario. Por favor intentá de nuevo o escribinos directamente por WhatsApp.
+      </div>
+
+      <button type="submit" class="w-full py-5 rounded-full font-bold text-sm transition-all hover:brightness-110 hover:scale-[1.01]" style="background:var(--color-accent);color:#0A0A0B;box-shadow:0 0 30px var(--color-accent-glow)">
+        Quiero ser Partner →
+      </button>
+
+      <p class="text-center text-xs text-on-surface-variant">
+        También podés escribirnos directamente por
+        <a href="https://api.whatsapp.com/send?phone=5491154107921&text=%E2%9C%85%20Quiero%20informaci%C3%B3n%20sobre%20el%20programa%20de%20Partners%20de%20Lezac." target="_blank" rel="noopener" class="underline hover:text-white transition-colors" style="color:var(--color-accent)">WhatsApp</a>
+      </p>
+    </form>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     FAQ
+══════════════════════════════════════ -->
+<section class="py-24 px-6 md:px-12" style="background:#050506;">
+  <div class="max-w-2xl mx-auto">
+    <div class="text-center mb-12 lezac-reveal">
+      <p class="text-xs font-semibold tracking-widest uppercase mb-3" style="color:var(--color-accent)">FAQ</p>
+      <h2 class="text-3xl font-black text-white">Preguntas frecuentes</h2>
+    </div>
+
+    <div class="space-y-3 lezac-reveal" style="transition-delay:.1s">
+
+      <div class="rounded-xl overflow-hidden" style="background:#111112;border:1px solid rgba(255,255,255,0.06)">
+        <button class="faq-btn w-full px-6 py-5 flex items-center justify-between text-left gap-4">
+          <span class="text-sm font-semibold text-white">¿Qué porcentaje de comisión recibo?</span>
+          <span class="material-symbols-outlined faq-chevron flex-shrink-0 text-on-surface-variant" style="font-size:20px">expand_more</span>
+        </button>
+        <div class="faq-answer px-6">
+          <p class="text-sm text-on-surface-variant leading-relaxed pb-5">El porcentaje se define en la llamada de exploración según el perfil del partner y el tipo de cliente referido. Lezac trabaja con estructuras transparentes: te informamos el monto exacto antes de que actives cualquier referido.</p>
+        </div>
+      </div>
+
+      <div class="rounded-xl overflow-hidden" style="background:#111112;border:1px solid rgba(255,255,255,0.06)">
+        <button class="faq-btn w-full px-6 py-5 flex items-center justify-between text-left gap-4">
+          <span class="text-sm font-semibold text-white">¿Cómo se hace el seguimiento de mis referidos?</span>
+          <span class="material-symbols-outlined faq-chevron flex-shrink-0 text-on-surface-variant" style="font-size:20px">expand_more</span>
+        </button>
+        <div class="faq-answer px-6">
+          <p class="text-sm text-on-surface-variant leading-relaxed pb-5">Cada referido queda registrado con tu nombre desde el primer contacto. Tenés visibilidad del estado del proceso en todo momento y recibís confirmación cuando se produce el cierre y el abono de tu comisión.</p>
+        </div>
+      </div>
+
+      <div class="rounded-xl overflow-hidden" style="background:#111112;border:1px solid rgba(255,255,255,0.06)">
+        <button class="faq-btn w-full px-6 py-5 flex items-center justify-between text-left gap-4">
+          <span class="text-sm font-semibold text-white">¿Puedo ser partner si ya tengo mi propia consultora?</span>
+          <span class="material-symbols-outlined faq-chevron flex-shrink-0 text-on-surface-variant" style="font-size:20px">expand_more</span>
+        </button>
+        <div class="faq-answer px-6">
+          <p class="text-sm text-on-surface-variant leading-relaxed pb-5">Sí, absolutamente. Muchos de nuestros partners son consultoras o agencias que complementan su oferta con los servicios de Lezac. No hay conflicto de interés: vos seguís siendo el punto de confianza para tu cliente.</p>
+        </div>
+      </div>
+
+      <div class="rounded-xl overflow-hidden" style="background:#111112;border:1px solid rgba(255,255,255,0.06)">
+        <button class="faq-btn w-full px-6 py-5 flex items-center justify-between text-left gap-4">
+          <span class="text-sm font-semibold text-white">¿Cuánto tarda el proceso de incorporación?</span>
+          <span class="material-symbols-outlined faq-chevron flex-shrink-0 text-on-surface-variant" style="font-size:20px">expand_more</span>
+        </button>
+        <div class="faq-answer px-6">
+          <p class="text-sm text-on-surface-variant leading-relaxed pb-5">Entre el formulario, la llamada y el envío del kit de partner, el proceso suele completarse en menos de una semana. Podés empezar a referir clientes tan pronto como recibas tu kit.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script src="./shared.js"></script>
+<script>
+  // FAQ accordion
+  document.querySelectorAll('.faq-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const answer = btn.nextElementSibling;
+      const chevron = btn.querySelector('.faq-chevron');
+      const isOpen = answer.classList.contains('open');
+      document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('open'));
+      document.querySelectorAll('.faq-chevron').forEach(c => c.classList.remove('rotated'));
+      if (!isOpen) {
+        answer.classList.add('open');
+        chevron.classList.add('rotated');
+      }
+    });
+  });
+
+  // Formspree AJAX submit
+  const form = document.getElementById('partner-form');
+  if (form) {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const btn = form.querySelector('button[type=submit]');
+      const successEl = document.getElementById('form-success');
+      const errorEl = document.getElementById('form-error');
+      btn.textContent = 'Enviando...';
+      btn.disabled = true;
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        });
+        if (res.ok) {
+          form.reset();
+          successEl.classList.remove('hidden');
+          errorEl.classList.add('hidden');
+          btn.textContent = '¡Enviado!';
+        } else {
+          throw new Error();
+        }
+      } catch {
+        errorEl.classList.remove('hidden');
+        successEl.classList.add('hidden');
+        btn.textContent = 'Quiero ser Partner →';
+        btn.disabled = false;
+      }
+    });
+  }
+</script>
+</body>
+</html>

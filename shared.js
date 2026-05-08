@@ -78,6 +78,7 @@ function getLezacFooter() {
         <div class="flex items-center">
           <img src="./Logo Lezac (500 x 500 px) (3).png" alt="Lezac Consultoría" class="h-10 w-auto" />
         </div>
+        <p class="text-[10px] font-semibold uppercase tracking-widest" style="color: rgba(255,255,255,0.25);">Consultoría Comercial B2B · LATAM</p>
         <p class="text-sm text-on-surface-variant leading-relaxed max-w-xs">
           Consultoría Comercial B2B especializada en distribuidoras, mayoristas y fábricas.
         </p>
@@ -107,6 +108,9 @@ function getLezacFooter() {
           </a></li>
           <li><a href="./ruteo-comercial.html" class="text-sm text-on-surface-variant hover:text-white transition-colors flex items-center gap-2">
             <span class="w-1.5 h-1.5 rounded-full inline-block" style="background:#F97316;"></span>Ruteo Comercial
+          </a></li>
+          <li><a href="./partners.html" class="text-sm text-on-surface-variant hover:text-white transition-colors flex items-center gap-2">
+            <span class="w-1.5 h-1.5 rounded-full inline-block" style="background:#F5C842;"></span>Partners
           </a></li>
         </ul>
       </div>
