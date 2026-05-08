@@ -11,18 +11,18 @@ function getLezacNav() {
   <div class="max-w-7xl mx-auto flex items-center justify-between h-16">
 
     <!-- Logo -->
-    <a href="./index.html" class="flex items-center group">
+    <a href="./" class="flex items-center group">
       <img src="./Logo Lezac (500 x 500 px) (3).png" alt="Lezac Consultoría" class="h-10 w-auto" />
     </a>
 
     <!-- Desktop Nav Links -->
     <div class="hidden md:flex items-center gap-1">
-      <a href="./index.html" data-nav="home" class="nav-link px-3 py-1.5 text-xs font-body font-medium tracking-wide rounded transition-all duration-200 text-on-surface-variant hover:text-white">Inicio</a>
-      <a href="./smart-brujula.html" data-nav="brujula" class="nav-link px-3 py-1.5 text-xs font-body font-medium tracking-wide rounded transition-all duration-200 text-on-surface-variant hover:text-white">Smart Brújula</a>
-      <a href="./wa-smart-ventas.html" data-nav="wa" class="nav-link px-3 py-1.5 text-xs font-body font-medium tracking-wide rounded transition-all duration-200 text-on-surface-variant hover:text-white">WA Smart Ventas</a>
-      <a href="./censo-comercial.html" data-nav="censo" class="nav-link px-3 py-1.5 text-xs font-body font-medium tracking-wide rounded transition-all duration-200 text-on-surface-variant hover:text-white">Censo</a>
-      <a href="./geolocalizacion.html" data-nav="geo" class="nav-link px-3 py-1.5 text-xs font-body font-medium tracking-wide rounded transition-all duration-200 text-on-surface-variant hover:text-white">Geolocalización</a>
-      <a href="./ruteo-comercial.html" data-nav="ruteo" class="nav-link px-3 py-1.5 text-xs font-body font-medium tracking-wide rounded transition-all duration-200 text-on-surface-variant hover:text-white">Ruteo</a>
+      <a href="./" data-nav="home" class="nav-link px-3 py-1.5 text-xs font-body font-medium tracking-wide rounded transition-all duration-200 text-on-surface-variant hover:text-white">Inicio</a>
+      <a href="./smart-brujula" data-nav="brujula" class="nav-link px-3 py-1.5 text-xs font-body font-medium tracking-wide rounded transition-all duration-200 text-on-surface-variant hover:text-white">Smart Brújula</a>
+      <a href="./wa-smart-ventas" data-nav="wa" class="nav-link px-3 py-1.5 text-xs font-body font-medium tracking-wide rounded transition-all duration-200 text-on-surface-variant hover:text-white">WA Smart Ventas</a>
+      <a href="./censo-comercial" data-nav="censo" class="nav-link px-3 py-1.5 text-xs font-body font-medium tracking-wide rounded transition-all duration-200 text-on-surface-variant hover:text-white">Censo</a>
+      <a href="./geolocalizacion" data-nav="geo" class="nav-link px-3 py-1.5 text-xs font-body font-medium tracking-wide rounded transition-all duration-200 text-on-surface-variant hover:text-white">Geolocalización</a>
+      <a href="./ruteo-comercial" data-nav="ruteo" class="nav-link px-3 py-1.5 text-xs font-body font-medium tracking-wide rounded transition-all duration-200 text-on-surface-variant hover:text-white">Ruteo</a>
     </div>
 
     <!-- Desktop CTAs -->
@@ -48,12 +48,12 @@ function getLezacNav() {
   <!-- Mobile Menu -->
   <div id="mobile-menu" class="md:hidden hidden pb-4 border-t border-white/5 mt-1">
     <div class="flex flex-col gap-1 pt-3">
-      <a href="./index.html" data-nav="home" class="nav-link mobile-nav-link px-4 py-3 text-sm font-body font-medium text-on-surface-variant hover:text-white hover:bg-surface-container rounded transition-all">Inicio</a>
-      <a href="./smart-brujula.html" data-nav="brujula" class="nav-link mobile-nav-link px-4 py-3 text-sm font-body font-medium text-on-surface-variant hover:text-white hover:bg-surface-container rounded transition-all">Smart Brújula Comercial</a>
-      <a href="./wa-smart-ventas.html" data-nav="wa" class="nav-link mobile-nav-link px-4 py-3 text-sm font-body font-medium text-on-surface-variant hover:text-white hover:bg-surface-container rounded transition-all">WA Smart Ventas</a>
-      <a href="./censo-comercial.html" data-nav="censo" class="nav-link mobile-nav-link px-4 py-3 text-sm font-body font-medium text-on-surface-variant hover:text-white hover:bg-surface-container rounded transition-all">Censo Comercial</a>
-      <a href="./geolocalizacion.html" data-nav="geo" class="nav-link mobile-nav-link px-4 py-3 text-sm font-body font-medium text-on-surface-variant hover:text-white hover:bg-surface-container rounded transition-all">Geolocalización de Clientes</a>
-      <a href="./ruteo-comercial.html" data-nav="ruteo" class="nav-link mobile-nav-link px-4 py-3 text-sm font-body font-medium text-on-surface-variant hover:text-white hover:bg-surface-container rounded transition-all">Ruteo Comercial</a>
+      <a href="./" data-nav="home" class="nav-link mobile-nav-link px-4 py-3 text-sm font-body font-medium text-on-surface-variant hover:text-white hover:bg-surface-container rounded transition-all">Inicio</a>
+      <a href="./smart-brujula" data-nav="brujula" class="nav-link mobile-nav-link px-4 py-3 text-sm font-body font-medium text-on-surface-variant hover:text-white hover:bg-surface-container rounded transition-all">Smart Brújula Comercial</a>
+      <a href="./wa-smart-ventas" data-nav="wa" class="nav-link mobile-nav-link px-4 py-3 text-sm font-body font-medium text-on-surface-variant hover:text-white hover:bg-surface-container rounded transition-all">WA Smart Ventas</a>
+      <a href="./censo-comercial" data-nav="censo" class="nav-link mobile-nav-link px-4 py-3 text-sm font-body font-medium text-on-surface-variant hover:text-white hover:bg-surface-container rounded transition-all">Censo Comercial</a>
+      <a href="./geolocalizacion" data-nav="geo" class="nav-link mobile-nav-link px-4 py-3 text-sm font-body font-medium text-on-surface-variant hover:text-white hover:bg-surface-container rounded transition-all">Geolocalización de Clientes</a>
+      <a href="./ruteo-comercial" data-nav="ruteo" class="nav-link mobile-nav-link px-4 py-3 text-sm font-body font-medium text-on-surface-variant hover:text-white hover:bg-surface-container rounded transition-all">Ruteo Comercial</a>
       <div class="mt-3 px-4">
         <a href="https://api.whatsapp.com/send?phone=5491154107921&text=%E2%9C%85%20Lezac%20Consultoria%20I%20Me%20interesa%20conocer%20m%C3%A1s%20de%20sus%20servicios." target="_blank" rel="noopener" class="block w-full text-center px-4 py-3 text-sm font-semibold rounded transition-all" style="background: var(--color-accent, #8C52FF); color: white;">
           Agendar diagnóstico
@@ -94,22 +94,22 @@ function getLezacFooter() {
       <div class="space-y-4">
         <h4 class="text-xs font-body font-semibold tracking-widest uppercase text-on-surface-variant">Servicios</h4>
         <ul class="space-y-2.5">
-          <li><a href="./smart-brujula.html" class="text-sm text-on-surface-variant hover:text-white transition-colors flex items-center gap-2">
+          <li><a href="./smart-brujula" class="text-sm text-on-surface-variant hover:text-white transition-colors flex items-center gap-2">
             <span class="w-1.5 h-1.5 rounded-full inline-block" style="background:#25F5A4;"></span>Smart Brújula Comercial
           </a></li>
-          <li><a href="./wa-smart-ventas.html" class="text-sm text-on-surface-variant hover:text-white transition-colors flex items-center gap-2">
+          <li><a href="./wa-smart-ventas" class="text-sm text-on-surface-variant hover:text-white transition-colors flex items-center gap-2">
             <span class="w-1.5 h-1.5 rounded-full inline-block" style="background:#25D366;"></span>WA Smart Ventas
           </a></li>
-          <li><a href="./censo-comercial.html" class="text-sm text-on-surface-variant hover:text-white transition-colors flex items-center gap-2">
+          <li><a href="./censo-comercial" class="text-sm text-on-surface-variant hover:text-white transition-colors flex items-center gap-2">
             <span class="w-1.5 h-1.5 rounded-full inline-block" style="background:#B08AFF;"></span>Censo Comercial
           </a></li>
-          <li><a href="./geolocalizacion.html" class="text-sm text-on-surface-variant hover:text-white transition-colors flex items-center gap-2">
+          <li><a href="./geolocalizacion" class="text-sm text-on-surface-variant hover:text-white transition-colors flex items-center gap-2">
             <span class="w-1.5 h-1.5 rounded-full inline-block" style="background:#38BDF8;"></span>Geolocalización de Clientes
           </a></li>
-          <li><a href="./ruteo-comercial.html" class="text-sm text-on-surface-variant hover:text-white transition-colors flex items-center gap-2">
+          <li><a href="./ruteo-comercial" class="text-sm text-on-surface-variant hover:text-white transition-colors flex items-center gap-2">
             <span class="w-1.5 h-1.5 rounded-full inline-block" style="background:#F97316;"></span>Ruteo Comercial
           </a></li>
-          <li><a href="./partners.html" class="text-sm text-on-surface-variant hover:text-white transition-colors flex items-center gap-2">
+          <li><a href="./partners" class="text-sm text-on-surface-variant hover:text-white transition-colors flex items-center gap-2">
             <span class="w-1.5 h-1.5 rounded-full inline-block" style="background:#F5C842;"></span>Partners
           </a></li>
         </ul>
