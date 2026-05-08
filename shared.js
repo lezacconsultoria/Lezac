@@ -263,6 +263,37 @@ function injectSharedStyles() {
   document.head.appendChild(style);
 }
 
+// ─── VSL AUTOPLAY MUTED ───────────────────────────────────────────────────────
+
+function initVSL() {
+  document.querySelectorAll('iframe[src*="youtube.com/embed"]').forEach(iframe => {
+    const url = new URL(iframe.src);
+    url.searchParams.set('autoplay', '1');
+    url.searchParams.set('mute', '1');
+    url.searchParams.set('enablejsapi', '1');
+    iframe.src = url.toString();
+
+    const container = iframe.parentElement;
+    if (!container) return;
+
+    const overlay = document.createElement('div');
+    overlay.style.cssText = 'position:absolute;inset:0;z-index:10;cursor:pointer;display:flex;align-items:flex-end;justify-content:flex-start;padding:16px;';
+    overlay.innerHTML = `
+      <div style="display:flex;align-items:center;gap:8px;background:rgba(0,0,0,0.65);backdrop-filter:blur(10px);border-radius:9999px;padding:8px 14px;border:1px solid rgba(255,255,255,0.12);transition:opacity 0.2s;">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="white" style="flex-shrink:0"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+        <span style="font-size:11px;font-weight:600;color:white;letter-spacing:0.06em;text-transform:uppercase;font-family:Inter,sans-serif;">Activar sonido</span>
+      </div>`;
+
+    overlay.addEventListener('click', () => {
+      overlay.remove();
+      iframe.contentWindow.postMessage(JSON.stringify({ event: 'command', func: 'unMute', args: [] }), '*');
+      iframe.contentWindow.postMessage(JSON.stringify({ event: 'command', func: 'setVolume', args: [100] }), '*');
+    });
+
+    container.appendChild(overlay);
+  });
+}
+
 // ─── BOOTSTRAP ───────────────────────────────────────────────────────────────
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -296,4 +327,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initHamburger();
   initMarquees();
   initScrollReveal();
+  initVSL();
 });
