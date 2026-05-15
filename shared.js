@@ -295,19 +295,19 @@ function injectSharedStyles() {
 
     /* ── Lezac Chatbot Widget ── */
     @keyframes lz-pulse {
-      0%,100% { box-shadow: 0 8px 24px rgba(140,82,255,0.45), 0 0 0 0 rgba(140,82,255,0.4); }
-      50%      { box-shadow: 0 8px 24px rgba(140,82,255,0.45), 0 0 0 10px rgba(140,82,255,0); }
+      0%,100% { box-shadow: 0 8px 24px rgba(37,245,164,0.45), 0 0 0 0 rgba(37,245,164,0.4); }
+      50%      { box-shadow: 0 8px 24px rgba(37,245,164,0.45), 0 0 0 10px rgba(37,245,164,0); }
     }
     #lz-chat-bubble {
       position:fixed;bottom:28px;right:28px;z-index:9999;
       width:auto;height:52px;border-radius:9999px;padding:0 22px;gap:10px;
-      background:#8C52FF;border:none;cursor:pointer;
-      box-shadow:0 8px 24px rgba(140,82,255,0.45);
+      background:#25F5A4;border:none;cursor:pointer;
+      box-shadow:0 8px 24px rgba(37,245,164,0.45);
       display:flex;align-items:center;justify-content:center;
       animation:lz-pulse 2.2s ease-in-out infinite;
       transition:transform 0.2s,box-shadow 0.2s;
     }
-    #lz-chat-bubble:hover{transform:scale(1.06);animation:none;box-shadow:0 12px 36px rgba(140,82,255,0.65);}
+    #lz-chat-bubble:hover{transform:scale(1.06);animation:none;box-shadow:0 12px 36px rgba(37,245,164,0.6);}
     #lz-chat-panel {
       position:fixed;bottom:92px;right:24px;z-index:9998;
       width:360px;height:680px;max-height:calc(100vh - 120px);border-radius:12px;
@@ -342,7 +342,7 @@ function injectSharedStyles() {
       word-break:break-word;
     }
     .lz-msg-bot{align-self:flex-start;background:#1A1A1B;color:#E5E2E3;border-bottom-left-radius:3px;}
-    .lz-msg-user{align-self:flex-end;background:#8C52FF;color:#fff;border-bottom-right-radius:3px;}
+    .lz-msg-user{align-self:flex-end;background:#25F5A4;color:#0A0A0B;border-bottom-right-radius:3px;}
     .lz-msg img{max-width:100%;border-radius:6px;margin-top:6px;display:block;}
     .lz-typing{display:inline-flex;align-items:center;gap:5px;padding:11px 14px;background:#1A1A1B;border-radius:10px;border-bottom-left-radius:3px;align-self:flex-start;}
     .lz-dot{width:6px;height:6px;border-radius:9999px;background:#958DA1;animation:lz-blink 1.3s infinite;}
@@ -363,7 +363,7 @@ function injectSharedStyles() {
       padding:9px 12px;resize:none;max-height:96px;min-height:38px;
       line-height:1.45;overflow-y:auto;
     }
-    #lz-chat-input:focus{outline:none;border-color:rgba(140,82,255,0.5);}
+    #lz-chat-input:focus{outline:none;border-color:rgba(37,245,164,0.5);}
     #lz-chat-input::placeholder{color:#958DA1;}
     #lz-attach-label{
       cursor:pointer;color:#958DA1;display:flex;align-items:center;
@@ -372,13 +372,13 @@ function injectSharedStyles() {
     #lz-attach-label:hover{color:#E5E2E3;background:rgba(255,255,255,0.05);}
     #lz-attach-input{display:none;}
     #lz-chat-send{
-      background:#8C52FF;border:none;border-radius:8px;color:#fff;
+      background:#25F5A4;border:none;border-radius:8px;color:#0A0A0B;
       width:36px;height:36px;cursor:pointer;flex-shrink:0;
       display:flex;align-items:center;justify-content:center;
       transition:background 0.15s;padding:0;
     }
-    #lz-chat-send:hover{background:#7131E3;}
-    #lz-chat-send:disabled{background:rgba(140,82,255,0.35);cursor:not-allowed;}
+    #lz-chat-send:hover{background:#00C87E;}
+    #lz-chat-send:disabled{background:rgba(37,245,164,0.35);cursor:not-allowed;}
     @media(max-width:480px){
       #lz-chat-panel{width:calc(100vw - 16px);right:8px;bottom:82px;max-height:calc(100vh - 100px);}
       #lz-chat-bubble{bottom:16px;right:16px;padding:0 14px;}
@@ -423,10 +423,10 @@ function initVSL() {
 function getLezacChatbotHTML() {
   return `
 <button id="lz-chat-bubble" aria-label="Abrir asistente" aria-expanded="false">
-  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;">
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0A0A0B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;">
     <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
   </svg>
-  <span style="font-family:Montserrat,sans-serif;font-size:13px;font-weight:700;color:white;letter-spacing:0.05em;">Asistente</span>
+  <span style="font-family:Montserrat,sans-serif;font-size:13px;font-weight:700;color:#0A0A0B;letter-spacing:0.05em;">Asistente Comercial</span>
 </button>
 <div id="lz-chat-panel" role="dialog" aria-label="Asistente Lezac">
   <div id="lz-chat-header">
@@ -543,7 +543,7 @@ function initChatbot() {
       initialized = true;
       const session = getSession();
       if (session.messages.length === 0) {
-        const welcome = '¡Hola! Soy el asistente de Lezac 👋 ¿En qué puedo ayudarte hoy?';
+        const welcome = 'Soy Lezac, tu asistente comercial 👋 si deseas me puedes contar en que te gustaría que te ayude en tu negocio.';
         appendMsg('bot', welcome);
         session.messages.push({ role: 'bot', content: welcome });
         saveSession(session);
