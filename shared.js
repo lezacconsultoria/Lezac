@@ -380,7 +380,7 @@ function injectSharedStyles() {
     #lz-chat-send:hover{background:#00C87E;}
     #lz-chat-send:disabled{background:rgba(37,245,164,0.35);cursor:not-allowed;}
     @media(max-width:480px){
-      #lz-chat-panel{width:calc(100vw - 16px);right:8px;bottom:82px;max-height:calc(100vh - 100px);}
+      #lz-chat-panel{width:calc(100vw - 16px);right:8px;bottom:82px;height:auto;max-height:70vh;}
       #lz-chat-bubble{bottom:16px;right:16px;padding:0 14px;}
     }
   `;
