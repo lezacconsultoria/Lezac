@@ -380,8 +380,17 @@ function injectSharedStyles() {
     #lz-chat-send:hover{background:#00C87E;}
     #lz-chat-send:disabled{background:rgba(37,245,164,0.35);cursor:not-allowed;}
     @media(max-width:480px){
-      #lz-chat-panel{width:calc(100vw - 16px);right:8px;bottom:82px;height:auto;max-height:70vh;}
+      #lz-chat-panel{
+        width:calc(100vw - 16px);
+        right:8px;
+        bottom:8px;
+        height:calc(100vh - 16px);
+        height:calc(100dvh - 16px);
+        max-height:550px;
+        border-radius:12px;
+      }
       #lz-chat-bubble{bottom:16px;right:16px;padding:0 14px;}
+      body.lz-chat-open #lz-chat-bubble{display:none !important;}
     }
   `;
   document.head.appendChild(style);
@@ -538,6 +547,7 @@ function initChatbot() {
   function openChat() {
     isOpen = true;
     panel.classList.add('lz-open');
+    document.body.classList.add('lz-chat-open');
     bubble.setAttribute('aria-expanded', 'true');
     if (!initialized) {
       initialized = true;
@@ -557,6 +567,7 @@ function initChatbot() {
   function closeChat() {
     isOpen = false;
     panel.classList.remove('lz-open');
+    document.body.classList.remove('lz-chat-open');
     bubble.setAttribute('aria-expanded', 'false');
   }
 
