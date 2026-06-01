@@ -569,12 +569,20 @@ function initChatbot() {
     panel.classList.remove('lz-open');
     document.body.classList.remove('lz-chat-open');
     bubble.setAttribute('aria-expanded', 'false');
+    try {
+      localStorage.setItem('lz_chat_dismissed', 'true');
+    } catch (e) {}
   }
 
   bubble.addEventListener('click', () => isOpen ? closeChat() : openChat());
   closeBtn.addEventListener('click', closeChat);
 
-  setTimeout(openChat, 10000);
+  setTimeout(() => {
+    try {
+      if (localStorage.getItem('lz_chat_dismissed') === 'true') return;
+    } catch (e) {}
+    openChat();
+  }, 10000);
 
   async function sendMessage() {
     const text = inputEl.value.trim();
