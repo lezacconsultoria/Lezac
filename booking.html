@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html class="dark" lang="es" data-page="booking">
+<head>
+  <meta charset="utf-8"/>
+  <link rel="icon" type="image/png" href="logo-lezac-mini.png"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Agendar Asesoría Comercial | Lezac Consultoria</title>
+  <meta name="description" content="Elija el mejor momento para su asesoría estratégica. Sesión de 45 minutos para diagnosticar su situación comercial y trazar un plan de acción."/>
+  <meta property="og:type" content="website"/>
+  <link rel="canonical" href="https://lezacconsultoria.com/booking"/>
+  <meta property="og:url" content="https://lezacconsultoria.com/booking"/>
+  <meta property="og:title" content="Agendar Asesoría Comercial | Lezac Consultoria"/>
+  <meta property="og:description" content="Elija el mejor momento para su asesoría estratégica. Sesión de 45 minutos para diagnosticar su situación comercial y trazar un plan de acción."/>
+  <meta property="og:image" content="https://lezacconsultoria.com/opengrap.jpeg"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:image" content="https://lezacconsultoria.com/opengrap.jpeg"/>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://lezacconsultoria.com/"},{"@type":"ListItem","position":2,"name":"Agendar","item":"https://lezacconsultoria.com/booking"}]}
+  </script>
+  <script src="/analytics.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Playfair+Display:ital,wght@1,400;1,600&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      darkMode:"class",
+      theme:{extend:{
+        colors:{
+          "surface":"#0A0A0B","surface-dim":"#050506","surface-container":"#111112",
+          "surface-container-low":"#0D0D0E","surface-container-high":"#1A1A1B",
+          "on-surface":"#E5E2E3","on-surface-variant":"#958DA1","outline-variant":"#2A2A2B",
+          "primary":"#8C52FF","primary-container":"#7131E3","on-primary":"#FFFFFF",
+          "error":"#EC0543","success":"#25F5A4",
+          "accent":"var(--color-accent)","accent-dim":"var(--color-accent-dim)",
+        },
+        borderRadius:{"DEFAULT":"0.75rem","sm":"0.5rem","lg":"1rem","xl":"1.5rem","2xl":"2rem","full":"9999px"},
+        fontFamily:{"headline":["Montserrat","sans-serif"],"serif":["Playfair Display","serif"],"body":["Inter","sans-serif"]},
+      }},
+    }
+  </script>
+  <style>
+    :root{--color-accent:#25F5A4;--color-accent-dim:#00C87E;--color-accent-glow:rgba(37,245,164,0.25);}
+    body{font-family:'Inter',sans-serif;background:#0A0A0B;color:#E5E2E3;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+    h1,h2,h3,h4{font-family:'Montserrat',sans-serif;}
+    .serif-italic{font-family:'Playfair Display',serif;font-style:italic;}
+    .material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;}
+    .glass{background:rgba(17,17,18,0.6);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,0.06);}
+    .card{background:#111112;border:1px solid rgba(255,255,255,0.06);}
+    ::-webkit-scrollbar{width:8px;}
+    ::-webkit-scrollbar-track{background:transparent;}
+    ::-webkit-scrollbar-thumb{background:#2A2A2B;border-radius:20px;}
+    details summary::-webkit-details-marker{display:none;}
+    details[open] .faq-chevron{transform:rotate(180deg);}
+  </style>
+</head>
+<body class="bg-surface selection:bg-primary/30 selection:text-white">
+
+<!-- HEADER -->
+<header class="w-full border-b border-white/[0.06] glass sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-6 lg:px-12 py-4 flex items-center justify-between">
+    <a href="/" class="flex items-center group">
+      <img src="logo-lezac.png" alt="Lezac Consultoria" class="h-7 md:h-10 group-hover:scale-105 transition-transform"/>
+    </a>
+    <div class="flex items-center gap-6">
+      <div class="hidden md:flex items-center gap-2 text-xs font-semibold text-on-surface-variant uppercase tracking-widest">
+        <span class="material-symbols-outlined text-sm">lock</span>
+        Confidencial
+      </div>
+      <a href="/bio" class="text-[10px] md:text-xs font-bold px-4 md:px-6 py-2 md:py-2.5 bg-primary text-white rounded-full hover:bg-primary-container transition-all shadow-lg shadow-primary/20 uppercase tracking-wider whitespace-nowrap">
+        Volver
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO / CALENDLY -->
+<section class="py-12 lg:py-24 px-6 lg:px-12 max-w-[1400px] mx-auto">
+  <div class="grid grid-cols-1 lg:grid-cols-[1fr_1.3fr] gap-12 lg:gap-24 items-start">
+
+    <!-- Left Column: Copy -->
+    <div class="flex flex-col gap-10 max-w-xl">
+      <div>
+        <h1 class="text-4xl lg:text-6xl font-black leading-tight tracking-tight text-white">
+          Elija el mejor momento para su <span class="serif-italic font-semibold" style="color:var(--color-accent)">Asesoría Estratégica.</span>
+        </h1>
+        <p class="mt-8 text-xl text-on-surface-variant leading-relaxed font-light">
+          Una sesión de 45 minutos para diagnosticar su situación comercial y trazar un plan de acción real para su fábrica o distribuidora.
+        </p>
+      </div>
+
+      <div class="flex flex-col gap-8">
+        <div class="flex items-start gap-5 group">
+          <div class="mt-1 rounded-full p-2 transition-colors" style="background:rgba(140,82,255,0.10)">
+            <span class="material-symbols-outlined text-2xl fill-1" style="color:#8C52FF">check_circle</span>
+          </div>
+          <div>
+            <p class="text-lg font-black text-white">Diagnóstico de 360°</p>
+            <p class="text-base text-on-surface-variant font-light">Análisis profundo de sus procesos actuales.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-5 group">
+          <div class="mt-1 rounded-full p-2 transition-colors" style="background:rgba(140,82,255,0.10)">
+            <span class="material-symbols-outlined text-2xl fill-1" style="color:#8C52FF">check_circle</span>
+          </div>
+          <div>
+            <p class="text-lg font-black text-white">Identificación de fugas de ventas</p>
+            <p class="text-base text-on-surface-variant font-light">Localizamos dónde está perdiendo oportunidades de cierre.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-5 group">
+          <div class="mt-1 rounded-full p-2 transition-colors" style="background:rgba(140,82,255,0.10)">
+            <span class="material-symbols-outlined text-2xl fill-1" style="color:#8C52FF">check_circle</span>
+          </div>
+          <div>
+            <p class="text-lg font-black text-white">Hoja de ruta personalizada</p>
+            <p class="text-base text-on-surface-variant font-light">Pasos concretos para escalar su facturación B2B.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="pt-12 border-t border-white/[0.08]">
+        <div class="flex items-center gap-6">
+          <div class="relative">
+            <div class="size-24 rounded-2xl bg-center bg-cover border-4 border-white/10 shadow-2xl" style="background-image:url('perfil-leandro.jpg')"></div>
+            <div class="absolute -bottom-2 -right-2 bg-primary text-white text-[10px] font-black px-3 py-1.5 rounded-xl uppercase tracking-widest shadow-xl">Expert</div>
+          </div>
+          <div>
+            <p class="text-2xl font-black tracking-tight text-white">Leandro Zacaría</p>
+            <p class="font-bold text-base tracking-wide" style="color:var(--color-accent)">Consultor Senior B2B</p>
+            <div class="flex items-center gap-1 mt-2">
+              <span class="material-symbols-outlined text-amber-400 text-base fill-1">star</span>
+              <span class="material-symbols-outlined text-amber-400 text-base fill-1">star</span>
+              <span class="material-symbols-outlined text-amber-400 text-base fill-1">star</span>
+              <span class="material-symbols-outlined text-amber-400 text-base fill-1">star</span>
+              <span class="material-symbols-outlined text-amber-400 text-base fill-1">star</span>
+              <span class="text-sm text-on-surface-variant font-black ml-2 uppercase tracking-tighter">(150+ asesorías)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Column: Calendly Widget -->
+    <div class="rounded-2xl overflow-hidden flex flex-col bg-white">
+      <div class="calendly-inline-widget w-full" data-url="https://calendly.com/lezacconsultoria/asesoria-comercial?hide_event_type_details=1&hide_gdpr_banner=1" style="min-width:320px;height:800px"></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="py-32 bg-surface-dim border-y border-white/[0.06]">
+  <div class="max-w-4xl mx-auto px-6">
+    <div class="text-center mb-20">
+      <h2 class="text-5xl font-black tracking-tight mb-6 text-white">Preguntas Frecuentes</h2>
+      <p class="text-on-surface-variant font-bold text-xl">Todo lo que necesita saber sobre nuestra metodología de trabajo.</p>
+    </div>
+
+    <div class="flex flex-col gap-6">
+      <details class="group border-b border-white/[0.08] pb-10">
+        <summary class="flex items-center justify-between cursor-pointer list-none py-6 outline-none">
+          <span class="text-2xl font-black text-white transition-colors pr-8" style="color:inherit">¿Tiene algún costo la asesoría?</span>
+          <div class="size-10 rounded-full border border-white/10 flex items-center justify-center transition-all shrink-0">
+            <span class="material-symbols-outlined faq-chevron text-on-surface-variant transition-transform duration-300">expand_more</span>
+          </div>
+        </summary>
+        <div class="mt-4 text-on-surface-variant leading-relaxed font-bold pr-16 text-lg">
+          La sesión inicial es bonificada para empresas que califiquen. Nuestro objetivo es validar si nuestra consultoría puede generar un retorno significativo antes de cualquier compromiso comercial.
+        </div>
+      </details>
+
+      <details class="group border-b border-white/[0.08] pb-10">
+        <summary class="flex items-center justify-between cursor-pointer list-none py-6 outline-none">
+          <span class="text-2xl font-black text-white transition-colors pr-8">¿Quién lidera la reunión?</span>
+          <div class="size-10 rounded-full border border-white/10 flex items-center justify-center transition-all shrink-0">
+            <span class="material-symbols-outlined faq-chevron text-on-surface-variant transition-transform duration-300">expand_more</span>
+          </div>
+        </summary>
+        <div class="mt-4 text-on-surface-variant leading-relaxed font-bold pr-16 text-lg">
+          La sesión es dirigida personalmente por Leandro Zacaría. No delegamos el diagnóstico estratégico en perfiles junior para garantizar la máxima calidad en el análisis B2B.
+        </div>
+      </details>
+
+      <details class="group border-b border-white/[0.08] pb-10">
+        <summary class="flex items-center justify-between cursor-pointer list-none py-6 outline-none">
+          <span class="text-2xl font-black text-white transition-colors pr-8">¿Qué necesito tener a mano?</span>
+          <div class="size-10 rounded-full border border-white/10 flex items-center justify-center transition-all shrink-0">
+            <span class="material-symbols-outlined faq-chevron text-on-surface-variant transition-transform duration-300">expand_more</span>
+          </div>
+        </summary>
+        <div class="mt-4 text-on-surface-variant leading-relaxed font-bold pr-16 text-lg">
+          No requiere preparación técnica exhaustiva ni presentaciones previas. Solo necesitamos que conozca bien sus desafíos comerciales actuales y sus objetivos de facturación para el próximo semestre.
+        </div>
+      </details>
+
+      <details class="group border-b border-white/[0.08] pb-10">
+        <summary class="flex items-center justify-between cursor-pointer list-none py-6 outline-none">
+          <span class="text-2xl font-black text-white transition-colors pr-8">¿Es 100% confidencial?</span>
+          <div class="size-10 rounded-full border border-white/10 flex items-center justify-center transition-all shrink-0">
+            <span class="material-symbols-outlined faq-chevron text-on-surface-variant transition-transform duration-300">expand_more</span>
+          </div>
+        </summary>
+        <div class="mt-4 text-on-surface-variant leading-relaxed font-bold pr-16 text-lg">
+          Absolutamente. Toda la información compartida está protegida por secreto profesional. Entendemos el valor estratégico de sus datos comerciales en el sector industrial.
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="w-full py-12 border-t border-white/[0.06] bg-surface-dim">
+  <div class="max-w-7xl mx-auto px-6 text-center">
+    <p class="text-sm text-on-surface-variant font-bold uppercase tracking-[0.2em] mb-4">Consultoría Privada. 100% Confidencial.</p>
+    <div class="flex justify-center gap-6 mb-8">
+      <a href="/" class="text-xs text-on-surface-variant hover:text-white transition underline underline-offset-4 decoration-white/20">Inicio</a>
+      <a href="/bio" class="text-xs text-on-surface-variant hover:text-white transition underline underline-offset-4 decoration-white/20">Bio</a>
+      <a href="/smart-brujula" class="text-xs text-on-surface-variant hover:text-white transition underline underline-offset-4 decoration-white/20">Servicios</a>
+    </div>
+    <p class="text-[10px] text-on-surface-variant/50 font-medium">
+      © 2026 Lezac Consultoria. Inteligencia que vende. Todos los derechos reservados.
+    </p>
+  </div>
+</footer>
+
+<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+</body>
+</html>
