@@ -1,6 +1,11 @@
 Options -MultiViews
 RewriteEngine On
 
+# Force /bio to the main-site page: a bio/ directory exists here as the
+# docroot for the consultor.lezacconsultoria.com subdomain, so the generic
+# rule below (which skips real directories) would never reach bio.html.
+RewriteRule ^bio/?$ bio.html [L]
+
 # Redirect .html URLs to clean URLs (301 permanent)
 RewriteCond %{THE_REQUEST} \s/+(.+?)\.html[\s?] [NC]
 RewriteRule ^ /%1 [R=301,L]
