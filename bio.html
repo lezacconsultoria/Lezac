@@ -72,31 +72,33 @@
 </head>
 <body class="bg-surface selection:bg-primary/30 selection:text-white">
 
-<main class="mx-auto flex w-full max-w-[1100px] flex-col gap-24 px-6 py-16 pb-32">
+<main class="mx-auto flex w-full max-w-[1100px] flex-col gap-12 md:gap-24 px-6 py-16 pb-32">
 
   <!-- INTRO -->
   <section class="flex flex-col items-center text-center gap-6 relative grid-bg">
     <div class="glow-blob w-[500px] h-[300px] opacity-[0.10] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" style="background:var(--color-accent)"></div>
     <div class="flex flex-col items-center relative z-10">
-      <div class="w-64 max-w-full mb-8">
+      <div class="w-64 max-w-full mb-8 hidden md:block">
         <img alt="Lezac Consultoria" class="w-full h-auto" src="/logo-lezac-completo.png"/>
       </div>
-      <div class="flex items-center gap-2 mb-4">
-        <span class="text-[10px] font-black tracking-[0.4em] text-on-surface-variant uppercase">LEZAC CONSULTORIA — CONSULTORÍA COMERCIAL B2B</span>
+      <div class="flex flex-col items-center gap-1.5 mb-6 md:hidden">
+        <span class="h-px w-10 mb-1" style="background:rgba(37,245,164,0.4)"></span>
+        <span class="text-xl font-black text-white tracking-tight">Lezac Consultoria</span>
+        <span class="text-xs font-light text-on-surface-variant tracking-wide">Al cuidado de tu negocio</span>
       </div>
       <span class="pill-badge mb-4"><span class="pill-dot"></span>METODOLOGÍA EXCLUSIVA</span>
       <h1 class="text-4xl md:text-7xl font-black text-white leading-[1.1] mt-4 tracking-tighter">
         <span class="serif-italic font-semibold mr-4" style="color:var(--color-accent)">Inteligencia</span>Comercial
       </h1>
-      <p class="text-xl text-on-surface-variant font-light max-w-2xl mx-auto mt-6 leading-relaxed">
+      <p class="text-base md:text-xl text-on-surface-variant font-light max-w-xs md:max-w-3xl mx-auto mt-4 md:mt-6 leading-relaxed">
         En Lezac Consultoria transformamos el caos operativo en precisión estratégica para distribuidores y fábricas. De la información a la decisión.
       </p>
     </div>
   </section>
 
   <!-- MARQUEE -->
-  <section class="py-12 border-y border-white/[0.06] overflow-hidden">
-    <div class="flex flex-col items-center gap-10">
+  <section class="py-6 md:py-12 border-y border-white/[0.06] overflow-hidden">
+    <div class="flex flex-col items-center gap-5 md:gap-10">
       <h3 class="text-[9px] font-black uppercase tracking-[0.5em] text-on-surface-variant/60 text-center">CONFIARON EN NUESTRA METODOLOGÍA</h3>
       <div class="w-full overflow-hidden relative">
         <div class="flex whitespace-nowrap animate-marquee items-center gap-20" id="logo-marquee"></div>
@@ -251,7 +253,7 @@
   @media(max-width:640px){#lz-whatsapp-btn{left:50%;right:auto;bottom:calc(24px + env(safe-area-inset-bottom, 0px));transform:translateX(-50%);}}
 </style>
 
-<a id="lz-whatsapp-btn" href="https://api.whatsapp.com/send?phone=5491154107921&text=Lezac%20Consultoria%20I%20Me%20interesa%20conocer%20m%C3%A1s" target="_blank" rel="noopener">
+<a id="lz-whatsapp-btn" href="https://wa.me/5491154107921?text=Lezac%20Consultoria%20I%20Me%20interesa%20conocer%20m%C3%A1s" target="_blank" rel="noopener">
   <svg width="22" height="22" viewBox="0 0 24 24" fill="#0A0A0B"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.29-1.39a9.9 9.9 0 0 0 4.75 1.21h.01c5.46 0 9.9-4.45 9.9-9.91C21.96 6.45 17.5 2 12.04 2zm5.83 14.02c-.24.68-1.4 1.3-1.93 1.36-.5.06-1.09.08-1.76-.11-.4-.12-.92-.28-1.58-.55-2.78-1.2-4.6-4.02-4.74-4.2-.14-.19-1.13-1.5-1.13-2.86 0-1.36.71-2.03.96-2.3.24-.28.54-.35.71-.35h.5c.16 0 .38-.03.58.44.24.56.8 1.93.87 2.07.07.14.11.3.02.48-.08.19-.13.3-.26.46-.13.16-.27.36-.39.48-.13.13-.26.27-.11.53.14.27.62 1.03 1.34 1.66.92.82 1.7 1.08 1.96 1.2.27.13.42.11.58-.06.16-.17.66-.77.84-1.03.18-.27.35-.22.59-.13.24.09 1.53.72 1.79.85.27.13.44.19.51.3.07.11.07.63-.17 1.31z"/></svg>
   <span>WhatsApp</span>
 </a>
