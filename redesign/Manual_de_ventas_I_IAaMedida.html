@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manual de Referencia — IA a Medida</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --violet:#8C52FF;
+    --violet-dark:#7B2FBE;
+    --violet-mid:#9B4FDE;
+    --green:#25F5A4;
+    --red:#EC0543;
+    --bg:#0D0D0D;
+    --bg-panel:#151318;
+    --bg-panel-2:#1B181F;
+    --line:#2A2630;
+    --text:#F2EFF6;
+    --text-dim:#A79FB3;
+    --text-dimmer:#726B7D;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:'DM Sans', sans-serif;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,h4{font-family:'Syne', sans-serif; letter-spacing:-0.01em;}
+  .mono{font-family:'DM Mono', monospace;}
+  a{color:inherit;}
+
+  /* ---------- layout ---------- */
+  .shell{display:flex; min-height:100vh;}
+  .sidebar{
+    width:280px; flex-shrink:0;
+    background:var(--bg-panel);
+    border-right:1px solid var(--line);
+    padding:28px 20px 40px;
+    position:sticky; top:0; height:100vh; overflow-y:auto;
+  }
+  .content{flex:1; min-width:0;}
+  .section{
+    padding:64px 56px;
+    border-bottom:1px solid var(--line);
+    max-width:920px;
+  }
+  .section:last-child{border-bottom:none;}
+
+  /* ---------- sidebar ---------- */
+  .brand{display:flex; align-items:center; gap:10px; margin-bottom:6px;}
+  .brand-mark{
+    width:34px; height:34px; border-radius:9px;
+    background:linear-gradient(135deg,var(--violet),var(--violet-dark));
+    display:flex; align-items:center; justify-content:center;
+    font-family:'Syne',sans-serif; font-weight:800; font-size:15px; color:#fff;
+    flex-shrink:0;
+  }
+  .brand-name{font-family:'Syne',sans-serif; font-weight:700; font-size:15.5px;}
+  .brand-sub{font-size:11.5px; color:var(--text-dimmer); margin-bottom:26px; padding-left:44px;}
+  .nav-group-label{
+    font-size:10.5px; text-transform:uppercase; letter-spacing:0.09em;
+    color:var(--text-dimmer); margin:22px 0 8px; padding-left:4px;
+  }
+  .nav-group-label:first-of-type{margin-top:4px;}
+  nav a{
+    display:flex; gap:10px; align-items:baseline;
+    padding:7px 10px; border-radius:8px;
+    font-size:13.5px; color:var(--text-dim); text-decoration:none;
+    transition:background .15s, color .15s;
+  }
+  nav a:hover{background:var(--bg-panel-2); color:var(--text);}
+  nav a.active{background:rgba(140,82,255,0.14); color:var(--violet-mid); font-weight:500;}
+  nav a .num{font-family:'DM Mono',monospace; font-size:11px; color:var(--text-dimmer); width:16px; flex-shrink:0;}
+  nav a.active .num{color:var(--violet-mid);}
+
+  /* ---------- hero ---------- */
+  .hero{padding:72px 56px 56px; max-width:920px;}
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:8px;
+    font-family:'DM Mono',monospace; font-size:11.5px; letter-spacing:0.06em;
+    color:var(--violet-mid); text-transform:uppercase;
+    border:1px solid rgba(140,82,255,0.35); border-radius:999px;
+    padding:6px 14px; margin-bottom:22px;
+  }
+  .eyebrow::before{content:""; width:6px; height:6px; border-radius:50%; background:var(--green);}
+  .hero h1{font-size:clamp(30px,4vw,44px); font-weight:800; line-height:1.1; max-width:15ch; margin-bottom:18px;}
+  .hero .lede{font-size:17px; color:var(--text-dim); max-width:58ch; margin-bottom:32px;}
+  .hero-meta{display:flex; gap:28px; margin-top:36px; flex-wrap:wrap;}
+  .hero-meta div{font-size:12px; color:var(--text-dimmer);}
+  .hero-meta b{display:block; color:var(--text-dim); font-size:13px; font-family:'DM Mono',monospace; margin-bottom:2px;}
+
+  /* ---------- section chrome ---------- */
+  .section-tag{
+    font-family:'DM Mono',monospace; font-size:12px; color:var(--violet-mid);
+    margin-bottom:10px; display:block;
+  }
+  .section h2{font-size:26px; font-weight:700; margin-bottom:16px;}
+  .section > p.intro{color:var(--text-dim); font-size:15px; margin-bottom:28px; max-width:62ch;}
+
+  /* ---------- generic components ---------- */
+  .card{
+    background:var(--bg-panel);
+    border:1px solid var(--line);
+    border-radius:12px;
+    padding:22px 24px;
+    margin-bottom:14px;
+  }
+  .card h4{font-size:14.5px; font-weight:700; margin-bottom:6px; color:#fff;}
+  .card p{font-size:13.5px; color:var(--text-dim);}
+
+  .two-col{display:grid; grid-template-columns:1fr 1fr; gap:16px;}
+  @media (max-width:760px){.two-col{grid-template-columns:1fr;}}
+
+  .yes-card{border-left:3px solid var(--green);}
+  .no-card{border-left:3px solid var(--red);}
+  .yes-card h4::before{content:"✓  "; color:var(--green);}
+  .no-card h4::before{content:"✕  "; color:var(--red);}
+
+  ul.plain{list-style:none;}
+  ul.plain li{
+    position:relative; padding-left:20px; margin-bottom:10px;
+    font-size:14.5px; color:var(--text-dim);
+  }
+  ul.plain li::before{
+    content:""; position:absolute; left:0; top:9px;
+    width:6px; height:6px; border-radius:50%; background:var(--violet-mid);
+  }
+
+  /* flujograma */
+  .flow{
+    background:var(--bg-panel); border:1px solid var(--line); border-radius:14px;
+    padding:28px 26px; margin-bottom:30px;
+  }
+  .flow-row{
+    display:flex; align-items:stretch; gap:10px; flex-wrap:wrap;
+  }
+  .flow-row.cycle{gap:14px;}
+  .flow-step{
+    flex:1; min-width:150px;
+    background:var(--bg-panel-2); border:1px solid var(--line); border-radius:10px;
+    padding:16px 14px; text-align:center;
+  }
+  .flow-step.highlight{border-color:rgba(140,82,255,0.5); background:rgba(140,82,255,0.08);}
+  .flow-step .flow-icon{font-size:20px; display:block; margin-bottom:8px; font-style:normal;}
+  .flow-step h5{font-family:'Syne',sans-serif; font-size:13.5px; font-weight:700; color:#fff; margin-bottom:5px;}
+  .flow-step p{font-size:12px; color:var(--text-dim); line-height:1.4;}
+  .flow-arrow{
+    display:flex; align-items:center; justify-content:center;
+    color:var(--text-dimmer); font-size:18px; flex:0 0 auto; padding:0 2px;
+  }
+  .flow-cycle-label{
+    display:flex; align-items:center; gap:8px; justify-content:center;
+    font-family:'DM Mono',monospace; font-size:11.5px; color:var(--green);
+    margin:22px 0 16px; text-transform:uppercase; letter-spacing:0.03em;
+  }
+  .flow-cycle-label span{font-size:15px;}
+  .cycle-step{border-left:2px solid var(--green);}
+  @media (max-width:700px){
+    .flow-row{flex-direction:column;}
+    .flow-arrow{transform:rotate(90deg); padding:4px 0;}
+  }
+
+  .phase{
+    display:grid; grid-template-columns:64px 1fr; gap:18px;
+    margin-bottom:26px;
+  }
+  .phase .dot{
+    width:64px; height:64px; border-radius:14px;
+    background:var(--bg-panel); border:1px solid var(--line);
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
+    font-family:'DM Mono',monospace;
+  }
+  .phase .dot .label{font-size:9px; color:var(--text-dimmer); text-transform:uppercase;}
+  .phase .dot .val{font-size:14px; color:var(--violet-mid); font-weight:700;}
+  .phase h3{font-size:16.5px; margin-bottom:6px;}
+  .phase p{font-size:14px; color:var(--text-dim); margin-bottom:10px;}
+  .guarantee{
+    display:inline-flex; align-items:center; gap:8px;
+    background:rgba(37,245,164,0.09); border:1px solid rgba(37,245,164,0.3);
+    border-radius:8px; padding:9px 14px; font-size:13px; color:var(--green);
+    margin-top:4px;
+  }
+
+  table{width:100%; border-collapse:collapse; margin-bottom:8px;}
+  table td, table th{
+    text-align:left; padding:12px 14px; font-size:13.5px;
+    border-bottom:1px solid var(--line); vertical-align:top;
+  }
+  table th{color:var(--text-dimmer); font-weight:500; font-size:11.5px; text-transform:uppercase; letter-spacing:0.04em;}
+  table tr:last-child td{border-bottom:none;}
+
+  .case-card{
+    background:var(--bg-panel); border:1px solid var(--line); border-radius:12px;
+    padding:20px 22px; margin-bottom:12px;
+  }
+  .case-card .tag{
+    font-family:'DM Mono',monospace; font-size:11px; color:var(--violet-mid);
+    text-transform:uppercase; letter-spacing:0.04em; margin-bottom:8px; display:block;
+  }
+  .case-card p{font-size:14px; color:var(--text-dim); margin-bottom:8px;}
+  .case-card .result{font-size:13px; color:var(--green);}
+
+  .pain-grid{display:grid; grid-template-columns:1fr 1fr; gap:12px;}
+  @media (max-width:760px){.pain-grid{grid-template-columns:1fr;}}
+  .pain{
+    background:var(--bg-panel); border:1px solid var(--line); border-radius:10px;
+    padding:14px 16px; font-size:13.5px; color:var(--text-dim);
+  }
+  .pain b{color:#fff; display:block; font-size:13.5px; margin-bottom:3px;}
+
+  .quote{
+    border-left:2px solid var(--violet-mid);
+    padding:4px 0 4px 18px; margin:20px 0;
+    font-style:italic; color:var(--text-dim); font-size:15px;
+  }
+
+  /* objections */
+  .obj{
+    background:var(--bg-panel); border:1px solid var(--line); border-radius:12px;
+    padding:20px 22px; margin-bottom:14px; overflow:hidden;
+  }
+  .obj-top{display:flex; align-items:flex-start; gap:12px; margin-bottom:10px;}
+  .pill{
+    flex-shrink:0; font-family:'DM Mono',monospace; font-size:10.5px; font-weight:500;
+    padding:4px 10px; border-radius:999px; text-transform:uppercase; letter-spacing:0.03em;
+    margin-top:2px;
+  }
+  .pill-go{background:rgba(37,245,164,0.12); color:var(--green); border:1px solid rgba(37,245,164,0.35);}
+  .pill-stop{background:rgba(236,5,67,0.12); color:#ff6b8f; border:1px solid rgba(236,5,67,0.35);}
+  .obj-top h4{font-size:15px; font-weight:500; color:#fff; font-style:italic;}
+  .obj-answer{font-size:14px; color:var(--text-dim); padding-left:0;}
+  .obj-answer .label{font-family:'DM Mono',monospace; font-size:10.5px; text-transform:uppercase; color:var(--text-dimmer); display:block; margin-bottom:5px; letter-spacing:0.04em;}
+  .obj-script{
+    background:var(--bg-panel-2); border-radius:8px; padding:12px 14px; margin-top:8px;
+    font-size:13.5px; color:var(--text); font-style:italic;
+  }
+
+  .faq{border-bottom:1px solid var(--line); padding:16px 0;}
+  .faq:last-child{border-bottom:none;}
+  .faq h4{font-size:14.5px; color:#fff; margin-bottom:6px; font-weight:500;}
+  .faq p{font-size:13.5px; color:var(--text-dim);}
+
+  .rule-list{list-style:none;}
+  .rule-list li{
+    display:flex; gap:14px; padding:16px 0; border-bottom:1px solid var(--line);
+  }
+  .rule-list li:last-child{border-bottom:none;}
+  .rule-list .no{
+    flex-shrink:0; width:26px; height:26px; border-radius:50%;
+    background:rgba(236,5,67,0.12); color:#ff6b8f; border:1px solid rgba(236,5,67,0.35);
+    display:flex; align-items:center; justify-content:center; font-size:13px; margin-top:1px;
+  }
+  .rule-list div p{font-size:14px; color:var(--text-dim); margin-top:3px;}
+  .rule-list div b{font-size:14.5px; color:#fff;}
+
+  .handoff-path{
+    display:grid; grid-template-columns:1fr 1fr; gap:16px; margin:22px 0;
+  }
+  @media (max-width:760px){.handoff-path{grid-template-columns:1fr;}}
+  .path-card{
+    border-radius:12px; padding:22px; border:1px solid var(--line); background:var(--bg-panel);
+  }
+  .path-card .tag{font-family:'DM Mono',monospace; font-size:11px; text-transform:uppercase; letter-spacing:0.04em; margin-bottom:10px; display:block;}
+  .path-card.warm .tag{color:var(--violet-mid);}
+  .path-card.hot .tag{color:var(--green);}
+  .path-card h4{font-size:16px; margin-bottom:8px;}
+  .path-card p{font-size:13.5px; color:var(--text-dim); margin-bottom:12px;}
+  .path-card .link{
+    font-family:'DM Mono',monospace; font-size:13px; color:#fff;
+    background:var(--bg-panel-2); padding:8px 12px; border-radius:7px; display:inline-block;
+  }
+
+  .contact-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:14px; margin-top:20px;}
+  @media (max-width:600px){.contact-grid{grid-template-columns:1fr;}}
+  .contact-item{
+    background:var(--bg-panel); border:1px solid var(--line); border-radius:10px;
+    padding:16px 18px;
+  }
+  .contact-item .k{font-size:11px; color:var(--text-dimmer); text-transform:uppercase; letter-spacing:0.04em; margin-bottom:5px;}
+  .contact-item .v{font-family:'DM Mono',monospace; font-size:14px; color:#fff;}
+
+  .stat-row{display:flex; gap:32px; flex-wrap:wrap; margin:22px 0;}
+  .stat{max-width:220px;}
+  .stat .n{font-family:'Syne',sans-serif; font-size:28px; font-weight:800; color:var(--violet-mid);}
+  .stat .l{font-size:12px; color:var(--text-dimmer); max-width:22ch;}
+
+  .clients{display:flex; flex-wrap:wrap; gap:8px; margin-top:6px;}
+  .clients span{
+    font-family:'DM Mono',monospace; font-size:12px; color:var(--text-dim);
+    border:1px solid var(--line); padding:6px 12px; border-radius:999px;
+  }
+
+  .draft-note{
+    display:flex; gap:10px; align-items:flex-start;
+    background:rgba(236,5,67,0.07); border:1px solid rgba(236,5,67,0.28);
+    border-radius:10px; padding:14px 16px; margin-bottom:22px;
+    font-size:13px; color:var(--text-dim);
+  }
+  .draft-note b{color:#ff6b8f;}
+
+  footer{padding:40px 56px 60px; max-width:920px;}
+  footer p{font-size:12px; color:var(--text-dimmer);}
+
+  ::-webkit-scrollbar{width:9px;}
+  ::-webkit-scrollbar-track{background:transparent;}
+  ::-webkit-scrollbar-thumb{background:#2A2630; border-radius:8px;}
+
+  @media (max-width:900px){
+    .shell{flex-direction:column;}
+    .sidebar{width:100%; height:auto; position:relative; border-right:none; border-bottom:1px solid var(--line);}
+    .section, .hero, footer{padding-left:24px; padding-right:24px;}
+  }
+</style>
+</head>
+<body>
+
+<div class="shell">
+
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-mark">IA</div>
+      <div class="brand-name">IA a Medida</div>
+    </div>
+    <div class="brand-sub">Manual de referencia · Lezac</div>
+
+    <div class="nav-group-label">Orientación</div>
+    <nav>
+      <a href="#que-es"><span class="num">01</span>Qué es</a>
+      <a href="#para-quien"><span class="num">02</span>A quién le sirve</a>
+    </nav>
+
+    <div class="nav-group-label">El servicio</div>
+    <nav>
+      <a href="#como-funciona"><span class="num">03</span>Cómo funciona</a>
+      <a href="#que-incluye"><span class="num">04</span>Qué incluye</a>
+      <a href="#diferencial"><span class="num">05</span>Qué lo hace distinto</a>
+      <a href="#relacion-servicios"><span class="num">06</span>Relación con Brújula y +Clientes</a>
+      <a href="#casos"><span class="num">07</span>Resultados y ejemplos</a>
+    </nav>
+
+    <div class="nav-group-label">En la conversación</div>
+    <nav>
+      <a href="#dolores"><span class="num">08</span>Dolores a reconocer</a>
+      <a href="#objeciones"><span class="num">09</span>Objeciones frecuentes</a>
+      <a href="#faq"><span class="num">10</span>Preguntas operativas</a>
+      <a href="#reglas"><span class="num">11</span>Reglas de oro</a>
+    </nav>
+
+    <div class="nav-group-label">Cierre</div>
+    <nav>
+      <a href="#derivacion"><span class="num">12</span>Cómo derivar</a>
+      <a href="#contacto"><span class="num">13</span>Datos y contacto</a>
+    </nav>
+  </aside>
+
+  <main class="content">
+
+    <div class="hero">
+      <span class="eyebrow">Manual para socios y referidores</span>
+      <h1>Hablá de IA a Medida con criterio real.</h1>
+      <p class="lede">Este documento te da todo lo que necesitás para entender el servicio, reconocer a quién le sirve, y sostener una conversación genuina con un potencial cliente — sin improvisar y sin comprometer nada que no te corresponda a vos.</p>
+
+      <div class="hero-meta">
+        <div><b>Versión</b>Septiembre 2026</div>
+        <div><b>Servicio</b>IA a Medida</div>
+        <div><b>Consultora</b>Lezac Consultoría</div>
+        <div><b>Uso</b>Interno — socios y referidores</div>
+      </div>
+    </div>
+
+    <!-- 01 -->
+    <section class="section" id="que-es">
+      <span class="section-tag">01 / Orientación</span>
+      <h2>Qué es IA a Medida</h2>
+      <p class="intro">La frase que tenés que tener instalada antes de cualquier otra cosa.</p>
+
+      <div class="quote">
+        "No vendemos IA. Resolvemos lo que te está costando plata o tiempo todos los meses, usando IA como herramienta — nunca como el mensaje central."
+      </div>
+
+      <p style="color:var(--text-dim); font-size:14.5px; margin-bottom:20px;">
+        IA a Medida es un servicio de diagnóstico y desarrollo a medida: primero nos sentamos con el dueño a entender cómo opera su empresa, después identificamos el cuello de botella operativo más urgente (facturación, ventas, stock, cobranzas, logística, o cualquier proceso puntual) y lo resolvemos con una solución construida específicamente para esa operación — no una plataforma genérica que la empresa tiene que aprender a usar.
+      </p>
+
+      <div class="two-col">
+        <div class="card yes-card">
+          <h4>Es</h4>
+          <p>Un servicio boutique: diagnóstico personalizado + desarrollo a medida, con un consultor real detrás de cada solución, adaptado al proceso real de la empresa.</p>
+        </div>
+        <div class="card no-card">
+          <h4>No es</h4>
+          <p>Una consultoría de IA genérica ni la venta de una herramienta de por sí ("implementá IA en tu empresa"). No es una plataforma estandarizada que la empresa tiene que adaptar a su forma de trabajar.</p>
+        </div>
+      </div>
+
+      <p style="color:var(--text-dim); font-size:14.5px; margin-top:18px;">
+        <b style="color:#fff;">Diferenciador central:</b> nosotros nos adaptamos al proceso de la empresa — no al revés. Por eso arrancamos siempre con una reunión de relevamiento, no con una demo de producto.
+      </p>
+    </section>
+
+    <!-- 02 -->
+    <section class="section" id="para-quien">
+      <span class="section-tag">02 / Orientación</span>
+      <h2>A quién le sirve — y a quién no</h2>
+      <p class="intro">Mismo perfil de empresa que Brújula Comercial y +Clientes Activos — pero acá el filtro no pasa por facturación ni volumen de cartera, sino por tener un proceso puntual que hoy consume tiempo o plata de forma evitable.</p>
+
+      <div class="card" style="margin-bottom:18px;">
+        <h4 style="margin-bottom:12px;">Perfil que encaja</h4>
+        <table>
+          <tr><td style="color:var(--text-dimmer); width:180px;">Tipo de empresa</td><td>Distribuidoras, mayoristas, fábricas PyME</td></tr>
+          <tr><td style="color:var(--text-dimmer);">Facturación habitual</td><td>Entre USD 100.000 y 500.000 al mes (mismo ICP que Brújula y +Clientes Activos)</td></tr>
+          <tr><td style="color:var(--text-dimmer);">Aplica a</td><td>Cualquier área con un proceso manual o repetitivo: facturación, ventas, stock, cobranzas, logística, atención al cliente</td></tr>
+          <tr><td style="color:var(--text-dimmer);">Geografía</td><td>Argentina (foco principal), Paraguay, Bolivia, Uruguay</td></tr>
+          <tr><td style="color:var(--text-dimmer);">Quién decide</td><td>Dueño o gerente/responsable de área, 35–60 años (mayoría 40–55)</td></tr>
+          <tr><td style="color:var(--text-dimmer);">Situación</td><td>Tiene un proceso puntual que consume horas todas las semanas y nadie se sentó a resolver — no necesariamente comercial</td></tr>
+        </table>
+      </div>
+
+      <div class="two-col">
+        <div class="card yes-card">
+          <h4>Buena señal</h4>
+          <p>Puede nombrar con precisión un proceso repetitivo que le consume tiempo o plata ("cargamos pedidos a mano", "no sabemos en qué estado de cobranza está cada cliente"). No necesita tener equipo técnico propio.</p>
+        </div>
+        <div class="card no-card">
+          <h4>No es para</h4>
+          <p>Alguien que busca "tener IA" sin un problema concreto detrás, o que espera una herramienta de mercado lista para usar sin ningún desarrollo a medida.</p>
+        </div>
+      </div>
+
+      <p style="color:var(--text-dim); font-size:13.5px; margin-top:16px;">
+        Importante sobre el perfil del decisor: igual que en los otros dos servicios, no le hables en tecnicismos. Hablale del proceso puntual que hoy le consume tiempo o plata, no de "inteligencia artificial" en abstracto.
+      </p>
+    </section>
+
+    <!-- 03 -->
+    <section class="section" id="como-funciona">
+      <span class="section-tag">03 / El servicio</span>
+      <h2>Cómo funciona</h2>
+      <p class="intro">Dos velocidades. La reunión y el diagnóstico son gratis. La primera victoria rápida se ve en 15 días, con garantía a 20 días hábiles como margen de seguridad. Si el problema lo justifica, hay un segundo tramo de mayor alcance.</p>
+
+      <!-- flujograma -->
+      <div class="flow">
+        <div class="flow-row">
+          <div class="flow-step">
+            <span class="flow-icon">①</span>
+            <h5>Relevamiento — sin costo</h5>
+            <p>Reunión con el dueño, se entiende cómo opera la empresa</p>
+          </div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-step">
+            <span class="flow-icon">②</span>
+            <h5>Diagnóstico + propuesta</h5>
+            <p>Documento visual con 3 victorias rápidas</p>
+          </div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-step highlight">
+            <span class="flow-icon">③</span>
+            <h5>Victoria rápida — 15 días</h5>
+            <p>Ejecución del primer quick win, con garantía</p>
+          </div>
+        </div>
+
+        <div class="flow-cycle-label"><span>↻</span> si el problema lo justifica</div>
+
+        <div class="flow-row cycle">
+          <div class="flow-step cycle-step">
+            <span class="flow-icon">🛠️</span>
+            <h5>Proyecto de mayor alcance</h5>
+            <p>30–60 días: app, formulario o sistema a medida</p>
+          </div>
+          <div class="flow-step cycle-step">
+            <span class="flow-icon">🔌</span>
+            <h5>Puesta en marcha</h5>
+            <p>Lezac se conecta al servidor del cliente y deja la solución funcionando</p>
+          </div>
+          <div class="flow-step cycle-step">
+            <span class="flow-icon">📘</span>
+            <h5>Capacitación + manual</h5>
+            <p>Buenas prácticas y manual de funcionalidad de lo implementado</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="phase">
+        <div class="dot"><span class="label">Sin costo</span><span class="val">Días 1+</span></div>
+        <div>
+          <h3>Fase 1 — Relevamiento y diagnóstico</h3>
+          <p>Reunión con el dueño de la empresa para entender su metodología de trabajo y detectar cuellos de botella. Ese relevamiento se procesa a través de un proyecto de IA propio de Lezac, que detalla qué herramienta y qué acciones concretas resolverían el problema puntual. De ahí salen 3 victorias rápidas propuestas, entregadas en un documento visual (HTML/web) junto con el camino hacia un proyecto de mayor alcance si hace falta. Esta fase no tiene costo.</p>
+        </div>
+      </div>
+
+      <div class="phase">
+        <div class="dot"><span class="label">Días</span><span class="val">1–15</span></div>
+        <div>
+          <h3>Fase 2 — Ejecución de la primera victoria rápida</h3>
+          <p>Se resuelve el punto de dolor más urgente de corto plazo. Recién acá empieza a cobrarse, si la empresa decide avanzar con la propuesta.</p>
+          <div class="guarantee">🛡️ Garantía: si en 20 días hábiles no resolvemos el dolor más urgente identificado en el relevamiento, no cobramos esa etapa.</div>
+        </div>
+      </div>
+
+      <div class="phase">
+        <div class="dot"><span class="label">Días</span><span class="val">30–60</span></div>
+        <div>
+          <h3>Fase 3 — Proyecto de mayor alcance (si corresponde)</h3>
+          <p>Cuando el problema lo justifica: una app web, un bot inteligente, un formulario a medida o un sistema completo. Se cotiza aparte, una vez definido el alcance junto con el cliente. Se cierra con Lezac conectándose al servidor del cliente, dejando la solución funcionando, más capacitación y manual de funcionalidad.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 -->
+    <section class="section" id="que-incluye">
+      <span class="section-tag">04 / El servicio</span>
+      <h2>Qué incluye (value stack)</h2>
+      <p class="intro">Todo lo que un cliente de IA a Medida recibe, para cuando te pregunten "¿y qué recibo exactamente?"</p>
+
+      <ul class="plain">
+        <li>Reunión de relevamiento con el dueño de la empresa, sin costo</li>
+        <li>Análisis vía proyecto de IA propio de Lezac, con selección de 3 victorias rápidas</li>
+        <li>Documento visual (HTML/web) con el diagnóstico y la propuesta de solución</li>
+        <li>Ejecución de la primera victoria rápida en 15 días, con garantía de 20 días hábiles</li>
+        <li>Proyecto de mayor alcance (30–60 días) si el problema lo justifica — app, formulario o sistema a medida</li>
+        <li>Conexión al servidor del cliente y puesta en marcha de la solución funcional</li>
+        <li>Capacitación de buenas prácticas + manual de funcionalidad de lo implementado</li>
+      </ul>
+    </section>
+
+    <!-- 05 -->
+    <section class="section" id="diferencial">
+      <span class="section-tag">05 / El servicio</span>
+      <h2>Qué lo hace distinto</h2>
+      <p class="intro">Hoy hay mucho ruido de oferta genérica de IA. Por eso conviene explicarlo por contraste.</p>
+
+      <div class="card" style="margin-bottom:12px;">
+        <h4>vs. oferta genérica de IA ("implementá IA en tu empresa")</h4>
+        <p>No arrancamos con una herramienta y vemos dónde encaja. Arrancamos con tu proceso real y elegimos qué herramienta lo resuelve — la reunión de relevamiento es siempre el primer paso, no una demo de producto.</p>
+      </div>
+      <div class="card" style="margin-bottom:12px;">
+        <h4>vs. una plataforma estandarizada de mercado</h4>
+        <p>Una plataforma genérica te obliga a adaptar tu empresa a su estandarización. Acá es al revés: nosotros nos adaptamos a tu proceso, y por eso escala mejor a medida que tu empresa lo necesita.</p>
+      </div>
+      <div class="card" style="margin-bottom:12px;">
+        <h4>vs. contratar un desarrollador freelance</h4>
+        <p>Un desarrollador conoce tecnología. Nosotros conocemos tecnología y procesos operativos, comerciales, administrativos y logísticos de PyMEs — con más de 10 años trabajando puntualmente con este tipo de empresa.</p>
+      </div>
+
+      <div class="card" style="border-left:3px solid var(--green);">
+        <h4>El estándar del servicio</h4>
+        <p>Tomamos proyectos de cualquier escala: desde algo chico como automatizar el envío de un correo, hasta algo grande como un CRM, un bot inteligente o un sistema completo de análisis administrativo-contable o logístico. El criterio siempre es el mismo — resolver lo que la empresa necesita, no lo que está de moda.</p>
+      </div>
+    </section>
+
+    <!-- 06 -->
+    <section class="section" id="relacion-servicios">
+      <span class="section-tag">06 / El servicio</span>
+      <h2>Relación con Brújula Comercial y +Clientes Activos</h2>
+      <p class="intro">De los tres servicios, IA a Medida es el más transversal — puede aplicarse solo o en paralelo a los otros dos. Nunca se venden como si fueran lo mismo.</p>
+
+      <div class="card">
+        <h4>Tres preguntas, un mismo negocio</h4>
+        <p>Brújula Comercial responde "¿cómo estoy vendiendo?". +Clientes Activos responde "¿a quién le puedo vender que hoy no le vendo?". IA a Medida responde "¿qué proceso puntual me está frenando y cómo lo resuelvo rápido?" — no tiene por qué ser un problema comercial: puede ser administrativo, logístico o de cobranzas.</p>
+      </div>
+
+      <div class="card" style="border-left:3px solid var(--red);">
+        <h4>Regla de comunicación</h4>
+        <p>Nunca mezcles los ángulos de los tres servicios en una misma conversación de venta. Cada uno tiene su propia palabra clave y su propio flujo de ManyChat — cero cruce de leads.</p>
+      </div>
+
+      <div class="card" style="margin-top:8px;">
+        <h4>Puede ser puerta de entrada o complemento paralelo</h4>
+        <p>A diferencia de +Clientes Activos (que casi siempre deriva a Brújula), IA a Medida puede vendérsele a cualquier empresa, incluso fuera del ciclo Brújula / +Clientes Activos. Si el cliente ya tiene Brújula o +Clientes Activos, IA a Medida corre en paralelo, sobre un proceso distinto.</p>
+      </div>
+    </section>
+
+    <!-- 07 -->
+    <section class="section" id="casos">
+      <span class="section-tag">07 / El servicio</span>
+      <h2>Resultados y ejemplos</h2>
+      <p class="intro">Todavía no hay un proyecto cerrado bajo el nombre IA a Medida — es un lanzamiento nuevo, y por eso no comunicamos cifras de resultado. Lo que sí existe es un historial real de desarrollos a medida de Lezac, que sirven como ejemplo concreto de lo que se puede construir con este enfoque.</p>
+
+      <div class="case-card">
+        <span class="tag">Canal de pedidos por WhatsApp con cobro integrado</span>
+        <p>Plataforma propia desarrollada por Lezac para que empresas del rubro alimenticio reciban y gestionen pedidos directo por WhatsApp, con cobro integrado vía Mercado Pago. Implementada para una empresa de distribución de bebidas.</p>
+      </div>
+      <div class="case-card">
+        <span class="tag">Landing page con bot conversacional</span>
+        <p>Plataforma nativa de inteligencia de datos comercial con landing page propia: cuando un visitante interactúa y consulta sobre el servicio, un bot le responde en el momento, directo en la página.</p>
+      </div>
+      <div class="case-card">
+        <span class="tag">Análisis de cuentas corrientes y cobranza</span>
+        <p>Sistema de indicadores para determinar en qué estadio de cobranza está cada cliente, a partir del análisis de sus cuentas corrientes.</p>
+      </div>
+      <div class="case-card">
+        <span class="tag">Notificación automática de entregas logísticas</span>
+        <p>Formularios de frecuencia para registrar cada entrega de pedidos, con notificación automática del día y horario en que se entregó cada uno.</p>
+      </div>
+
+      <div class="card" style="border-left:3px solid var(--violet-mid);">
+        <h4>Dato de mercado para reforzar confianza</h4>
+        <p>Un diagnóstico o auditoría de oportunidades de IA para una PyME chica cuesta en el mercado entre USD 2.000 y 8.000. La reunión de relevamiento y la propuesta de las 3 victorias rápidas en Lezac no tienen costo.</p>
+      </div>
+    </section>
+
+    <!-- 08 -->
+    <section class="section" id="dolores">
+      <span class="section-tag">08 / En la conversación</span>
+      <h2>Los dolores que tenés que saber reconocer</h2>
+      <p class="intro">Si escuchás dos o tres de estas frases en una charla, tenés un buen prospecto adelante. No hace falta que las digan textual — reconocelas aunque vengan disfrazadas.</p>
+
+      <div class="pain-grid">
+        <div class="pain"><b>"No sé por dónde empezar con IA"</b>Hay ruido de oferta genérica que no resuelve nada concreto.</div>
+        <div class="pain"><b>"Esto lo hacemos siempre a mano"</b>Procesos manuales repetitivos (facturación, carga de pedidos, control de stock) que consumen horas todas las semanas.</div>
+        <div class="pain"><b>"No sé si la IA aplica a mi negocio"</b>Desconfianza o escepticismo — cree que es cosa de empresas tech, no de una PyME.</div>
+        <div class="pain"><b>"Ya probé algo genérico y no sirvió"</b>Miedo a invertir en una solución que no se adapte a su operación real.</div>
+        <div class="pain"><b>"No tengo equipo técnico propio"</b>No sabe cómo evaluar herramientas ni quién se las va a implementar y mantener.</div>
+      </div>
+
+      <div class="quote" style="margin-top:22px;">
+        "Mientras vos seguís haciendo un proceso a mano, tu competencia ya lo automatizó." — el ángulo que mejor conecta con la urgencia de este dolor.
+      </div>
+    </section>
+
+    <!-- 09 -->
+    <section class="section" id="objeciones">
+      <span class="section-tag">09 / En la conversación</span>
+      <h2>Objeciones frecuentes</h2>
+
+      <div class="draft-note">
+        <span>⚠️</span>
+        <div><b>Sección en borrador.</b> IA a Medida es un lanzamiento nuevo — todavía no hay objeciones reales registradas en conversación. Las que siguen son hipótesis construidas sobre los dolores del perfil y la lógica del servicio. Hay que ajustarlas con las conversaciones reales de los primeros proyectos antes de darlas por definitivas.</div>
+      </div>
+
+      <p class="intro" style="margin-top:-4px;"><span class="pill pill-go" style="vertical-align:middle;">Podés responder</span> son informativas, respondelas con confianza. <span class="pill pill-stop" style="vertical-align:middle;">Derivar</span> son las que tocan precio, alcance o condiciones — nunca las cierres vos, pasá a la sección 12.</p>
+
+      <div class="obj">
+        <div class="obj-top"><span class="pill pill-go">Podés responder</span><h4>"¿Qué pasa con la seguridad de mi información?"</h4></div>
+        <div class="obj-answer"><span class="label">Por qué pasa</span>Se conectan al servidor del cliente — es lógico que surja la duda.</div>
+        <div class="obj-script">Toda la información que se procesa queda alojada en nuestros propios servidores en la nube — eso le da sostenibilidad y confiabilidad al proyecto. No se comparte ni se usa para otra cosa que no sea resolver tu proceso.</div>
+      </div>
+
+      <div class="obj">
+        <div class="obj-top"><span class="pill pill-go">Podés responder</span><h4>"¿Esto no es lo mismo que contratar a un programador freelance?"</h4></div>
+        <div class="obj-answer"><span class="label">Por qué pasa</span>Confunden desarrollo técnico con entendimiento de negocio.</div>
+        <div class="obj-script">Un freelance conoce tecnología. Nosotros conocemos tecnología y más de 10 años de procesos reales de PyMEs — comerciales, administrativos y logísticos. Por eso la solución no es genérica, se adapta a cómo trabajás vos.</div>
+      </div>
+
+      <div class="obj">
+        <div class="obj-top"><span class="pill pill-go">Podés responder</span><h4>"No sé nada de tecnología, ¿me sirve igual?"</h4></div>
+        <div class="obj-answer"><span class="label">Por qué pasa</span>Cree que necesita conocimiento técnico propio para poder avanzar.</div>
+        <div class="obj-script">No hace falta. Nosotros nos conectamos, desarrollamos y dejamos la solución funcionando — vos solo tenés que contarnos cómo trabajás hoy.</div>
+      </div>
+
+      <div class="obj">
+        <div class="obj-top"><span class="pill pill-go">Podés responder</span><h4>"¿Y si mi problema no se puede resolver con IA?"</h4></div>
+        <div class="obj-answer"><span class="label">Por qué pasa</span>No sabe si su caso puntual aplica.</div>
+        <div class="obj-script">Para eso es la reunión de relevamiento, que no tiene costo — ahí se ve con claridad si aplica y qué victorias rápidas tienen sentido para tu caso.</div>
+      </div>
+
+      <div class="obj">
+        <div class="obj-top"><span class="pill pill-stop">Derivar</span><h4>"¿Cuánto cuesta?" / "¿Me hacen un descuento?"</h4></div>
+        <div class="obj-answer"><span class="label">Respuesta</span>Cada proyecto se cotiza de forma independiente, desde USD 1.000 sin techo — depende del alcance.</div>
+        <div class="obj-script">Eso lo conversa Leandro directamente con vos, una vez que sepamos qué necesitás resolver. Te paso su contacto.</div>
+      </div>
+
+      <div class="obj">
+        <div class="obj-top"><span class="pill pill-stop">Derivar</span><h4>"¿Puedo pagar en cuotas o de otra forma?"</h4></div>
+        <div class="obj-answer"><span class="label">Respuesta</span>La modalidad de pago se define por proyecto, no hay una condición única.</div>
+        <div class="obj-script">Eso se conversa directo con Leandro cuando esté definido el alcance del proyecto.</div>
+      </div>
+
+      <div class="card" style="margin-top:8px; border-left:3px solid var(--violet-mid);">
+        <h4>¿Objeción que no está acá?</h4>
+        <p>No la improvises. Contestá con honestidad que lo vas a confirmar, avisale a Leandro y esperá antes de comprometer algo con el prospecto — y de paso, sumala como borrador a esta sección.</p>
+      </div>
+    </section>
+
+    <!-- 10 -->
+    <section class="section" id="faq">
+      <span class="section-tag">10 / En la conversación</span>
+      <h2>Preguntas operativas frecuentes</h2>
+      <p class="intro">Logística del servicio — todas seguras de responder directo.</p>
+
+      <div class="faq">
+        <h4>¿Cuánto cuesta la reunión de relevamiento?</h4>
+        <p>Nada — es sin costo, igual que la propuesta con las 3 victorias rápidas. Recién se cobra si la empresa decide avanzar.</p>
+      </div>
+      <div class="faq">
+        <h4>¿En cuánto tiempo veo el primer resultado?</h4>
+        <p>La primera victoria rápida se resuelve en 15 días. La garantía formal es a 20 días hábiles, como margen de seguridad — si no se cumple, esa etapa no se cobra.</p>
+      </div>
+      <div class="faq">
+        <h4>¿Qué pasa si necesito algo más grande que una victoria rápida?</h4>
+        <p>Se cotiza aparte como proyecto de mayor alcance (app, bot, sistema completo), con un plazo de 30 a 60 días.</p>
+      </div>
+      <div class="faq">
+        <h4>¿Dónde queda alojada la información que procesan?</h4>
+        <p>En servidores propios de Lezac, en la nube — eso le da sostenibilidad y confiabilidad al proyecto.</p>
+      </div>
+      <div class="faq">
+        <h4>¿Necesito tener sistemas digitales para poder arrancar?</h4>
+        <p>No es un requisito excluyente — se evalúa en la reunión de relevamiento según el proceso puntual que se quiera resolver.</p>
+      </div>
+      <div class="faq">
+        <h4>¿Qué pasa después de que dejan la solución funcionando?</h4>
+        <p>Se incluye capacitación de buenas prácticas y se entrega un manual de funcionalidad de lo implementado.</p>
+      </div>
+    </section>
+
+    <!-- 11 -->
+    <section class="section" id="reglas">
+      <span class="section-tag">11 / En la conversación</span>
+      <h2>Reglas de oro — lo que nunca hay que decir</h2>
+      <p class="intro">Seis límites que protegen tanto al prospecto como a la relación con Lezac.</p>
+
+      <ul class="rule-list">
+        <li>
+          <div class="no">✕</div>
+          <div><b>El precio se conversa con Leandro</b><p>Si preguntan por un número, derivá el contacto — no hace falta que lo manejes vos.</p></div>
+        </li>
+        <li>
+          <div class="no">✕</div>
+          <div><b>Nunca vendas "IA" como el mensaje central</b><p>El mensaje siempre es el problema puntual que se resuelve — la IA es la herramienta, no el producto.</p></div>
+        </li>
+        <li>
+          <div class="no">✕</div>
+          <div><b>Nunca prometas un resultado o cifra específica</b><p>Todavía no hay caso propio con métricas bajo este nombre — usá la garantía y el dato de mercado, nunca un número inventado.</p></div>
+        </li>
+        <li>
+          <div class="no">✕</div>
+          <div><b>Nunca mezcles los ángulos de los tres servicios</b><p>Brújula, +Clientes Activos e IA a Medida son proyectos con lógica distinta — cada uno con su propia palabra clave.</p></div>
+        </li>
+        <li>
+          <div class="no">✕</div>
+          <div><b>Nunca cierres la venta vos</b><p>Tu trabajo es generar interés genuino y derivar bien. El cierre lo hace Leandro, siempre.</p></div>
+        </li>
+        <li>
+          <div class="no">✕</div>
+          <div><b>Nunca inventes una respuesta técnica que no tenés</b><p>Si no está en este manual — sobre todo en la sección de objeciones, que todavía es borrador — no la improvises, derivá la pregunta.</p></div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- 12 -->
+    <section class="section" id="derivacion">
+      <span class="section-tag">12 / Cierre</span>
+      <h2>Cómo derivar un contacto</h2>
+      <p class="intro">Acá el primer paso ya es gratuito por diseño del servicio — no hace falta un diagnóstico intermedio como en los otros dos. Apenas el prospecto nombre un proceso puntual que le consume tiempo o plata, es momento de derivar.</p>
+
+      <div class="handoff-path">
+        <div class="path-card warm">
+          <span class="tag">Prospecto tibio</span>
+          <h4>Reunión de relevamiento</h4>
+          <p>Todavía no tiene claro si su problema se puede resolver con esto. El paso natural es agendar la reunión de relevamiento sin costo — ahí Lezac diagnostica y propone las 3 victorias rápidas.</p>
+          <span class="link">calendly.com/lezacconsultoria/asesoria-comercial</span>
+        </div>
+        <div class="path-card hot">
+          <span class="tag">Prospecto caliente</span>
+          <h4>Contacto directo con Leandro</h4>
+          <p>Ya nombró con precisión el proceso que quiere resolver, preguntó precio, o dijo que quiere avanzar. No lo hagas esperar por un formulario — pasalo directo.</p>
+          <span class="link">+54 9 11 5410-7921</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <h4>Script sugerido para el traspaso</h4>
+        <div class="obj-script" style="margin-top:8px;">
+          "Te paso el contacto directo de Leandro Zacaria, que lleva IA a Medida personalmente: [WhatsApp / Calendly]. Contale qué proceso te está consumiendo tiempo así arranca directo con contexto de tu negocio, sin tener que explicar todo de nuevo."
+        </div>
+      </div>
+    </section>
+
+    <!-- 13 -->
+    <section class="section" id="contacto">
+      <span class="section-tag">13 / Cierre</span>
+      <h2>Datos institucionales y contacto</h2>
+
+      <div class="stat-row">
+        <div class="stat"><div class="n">+100</div><div class="l">empresas asesoradas</div></div>
+        <div class="stat"><div class="n">10+</div><div class="l">años de experiencia</div></div>
+        <div class="stat"><div class="n">4</div><div class="l">países con presencia consolidada en LATAM</div></div>
+      </div>
+
+      <p style="font-size:13.5px; color:var(--text-dim); margin-bottom:6px;">Clientes de referencia (mencionar preferentemente Bacardi, Vitalcan y Weilen — son las de mayor peso institucional):</p>
+      <div class="clients">
+        <span>Bacardi</span><span>Vitalcan</span><span>Weilen</span><span>Proquim</span><span>Madersa</span><span>Vaca Fría</span><span>Gloria</span><span>Alco</span><span>Indega</span><span>Pluscar</span>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-item"><div class="k">WhatsApp Lezac</div><div class="v">+54 9 11 5410-7921</div></div>
+        <div class="contact-item"><div class="k">Calendly Leandro</div><div class="v">calendly.com/lezacconsultoria/asesoria-comercial</div></div>
+        <div class="contact-item"><div class="k">Diagnóstico gratuito</div><div class="v">dg.lezacconsultoria.com</div></div>
+        <div class="contact-item"><div class="k">Web</div><div class="v">lezacconsultoria.com</div></div>
+        <div class="contact-item"><div class="k">LinkedIn empresa</div><div class="v">linkedin.com/company/lezac-consultoria</div></div>
+        <div class="contact-item"><div class="k">Instagram</div><div class="v">instagram.com/lezacconsultoria</div></div>
+      </div>
+
+      <p style="font-size:12px; color:var(--text-dimmer); margin-top:20px;">Todo lo referido a precio se conversa directamente con Leandro, caso por caso.</p>
+    </section>
+
+    <footer>
+      <p>Manual de referencia interno · IA a Medida · Lezac Consultoría · Versión septiembre 2026 · No reemplaza el contacto directo con Leandro para definiciones de precio o condiciones comerciales.</p>
+    </footer>
+
+  </main>
+</div>
+
+<script>
+  const links = document.querySelectorAll('nav a');
+  const sections = Array.from(links).map(l => document.querySelector(l.getAttribute('href')));
+
+  function setActive(){
+    let idx = 0;
+    const y = window.scrollY + 140;
+    sections.forEach((sec, i) => { if(sec && sec.offsetTop <= y) idx = i; });
+    links.forEach(l => l.classList.remove('active'));
+    links[idx].classList.add('active');
+  }
+  window.addEventListener('scroll', setActive, {passive:true});
+  setActive();
+</script>
+
+</body>
+</html>

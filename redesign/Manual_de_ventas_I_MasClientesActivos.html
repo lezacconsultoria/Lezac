@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manual de Referencia — +Clientes Activos</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --violet:#8C52FF;
+    --violet-dark:#7B2FBE;
+    --violet-mid:#9B4FDE;
+    --green:#25F5A4;
+    --red:#EC0543;
+    --bg:#0D0D0D;
+    --bg-panel:#151318;
+    --bg-panel-2:#1B181F;
+    --line:#2A2630;
+    --text:#F2EFF6;
+    --text-dim:#A79FB3;
+    --text-dimmer:#726B7D;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:'DM Sans', sans-serif;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,h4{font-family:'Syne', sans-serif; letter-spacing:-0.01em;}
+  .mono{font-family:'DM Mono', monospace;}
+  a{color:inherit;}
+
+  /* ---------- layout ---------- */
+  .shell{display:flex; min-height:100vh;}
+  .sidebar{
+    width:280px; flex-shrink:0;
+    background:var(--bg-panel);
+    border-right:1px solid var(--line);
+    padding:28px 20px 40px;
+    position:sticky; top:0; height:100vh; overflow-y:auto;
+  }
+  .content{flex:1; min-width:0;}
+  .section{
+    padding:64px 56px;
+    border-bottom:1px solid var(--line);
+    max-width:920px;
+  }
+  .section:last-child{border-bottom:none;}
+
+  /* ---------- sidebar ---------- */
+  .brand{display:flex; align-items:center; gap:10px; margin-bottom:6px;}
+  .brand-mark{
+    width:34px; height:34px; border-radius:9px;
+    background:linear-gradient(135deg,var(--violet),var(--violet-dark));
+    display:flex; align-items:center; justify-content:center;
+    font-family:'Syne',sans-serif; font-weight:800; font-size:15px; color:#fff;
+    flex-shrink:0;
+  }
+  .brand-name{font-family:'Syne',sans-serif; font-weight:700; font-size:15.5px;}
+  .brand-sub{font-size:11.5px; color:var(--text-dimmer); margin-bottom:26px; padding-left:44px;}
+  .nav-group-label{
+    font-size:10.5px; text-transform:uppercase; letter-spacing:0.09em;
+    color:var(--text-dimmer); margin:22px 0 8px; padding-left:4px;
+  }
+  .nav-group-label:first-of-type{margin-top:4px;}
+  nav a{
+    display:flex; gap:10px; align-items:baseline;
+    padding:7px 10px; border-radius:8px;
+    font-size:13.5px; color:var(--text-dim); text-decoration:none;
+    transition:background .15s, color .15s;
+  }
+  nav a:hover{background:var(--bg-panel-2); color:var(--text);}
+  nav a.active{background:rgba(140,82,255,0.14); color:var(--violet-mid); font-weight:500;}
+  nav a .num{font-family:'DM Mono',monospace; font-size:11px; color:var(--text-dimmer); width:16px; flex-shrink:0;}
+  nav a.active .num{color:var(--violet-mid);}
+
+  /* ---------- hero ---------- */
+  .hero{padding:72px 56px 56px; max-width:920px;}
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:8px;
+    font-family:'DM Mono',monospace; font-size:11.5px; letter-spacing:0.06em;
+    color:var(--violet-mid); text-transform:uppercase;
+    border:1px solid rgba(140,82,255,0.35); border-radius:999px;
+    padding:6px 14px; margin-bottom:22px;
+  }
+  .eyebrow::before{content:""; width:6px; height:6px; border-radius:50%; background:var(--green);}
+  .hero h1{font-size:clamp(30px,4vw,44px); font-weight:800; line-height:1.1; max-width:15ch; margin-bottom:18px;}
+  .hero .lede{font-size:17px; color:var(--text-dim); max-width:58ch; margin-bottom:32px;}
+  .hero-meta{display:flex; gap:28px; margin-top:36px; flex-wrap:wrap;}
+  .hero-meta div{font-size:12px; color:var(--text-dimmer);}
+  .hero-meta b{display:block; color:var(--text-dim); font-size:13px; font-family:'DM Mono',monospace; margin-bottom:2px;}
+
+  /* ---------- section chrome ---------- */
+  .section-tag{
+    font-family:'DM Mono',monospace; font-size:12px; color:var(--violet-mid);
+    margin-bottom:10px; display:block;
+  }
+  .section h2{font-size:26px; font-weight:700; margin-bottom:16px;}
+  .section > p.intro{color:var(--text-dim); font-size:15px; margin-bottom:28px; max-width:62ch;}
+
+  /* ---------- generic components ---------- */
+  .card{
+    background:var(--bg-panel);
+    border:1px solid var(--line);
+    border-radius:12px;
+    padding:22px 24px;
+    margin-bottom:14px;
+  }
+  .card h4{font-size:14.5px; font-weight:700; margin-bottom:6px; color:#fff;}
+  .card p{font-size:13.5px; color:var(--text-dim);}
+
+  .two-col{display:grid; grid-template-columns:1fr 1fr; gap:16px;}
+  @media (max-width:760px){.two-col{grid-template-columns:1fr;}}
+
+  .yes-card{border-left:3px solid var(--green);}
+  .no-card{border-left:3px solid var(--red);}
+  .yes-card h4::before{content:"✓  "; color:var(--green);}
+  .no-card h4::before{content:"✕  "; color:var(--red);}
+
+  ul.plain{list-style:none;}
+  ul.plain li{
+    position:relative; padding-left:20px; margin-bottom:10px;
+    font-size:14.5px; color:var(--text-dim);
+  }
+  ul.plain li::before{
+    content:""; position:absolute; left:0; top:9px;
+    width:6px; height:6px; border-radius:50%; background:var(--violet-mid);
+  }
+
+  /* flujograma */
+  .flow{
+    background:var(--bg-panel); border:1px solid var(--line); border-radius:14px;
+    padding:28px 26px; margin-bottom:30px;
+  }
+  .flow-row{
+    display:flex; align-items:stretch; gap:10px; flex-wrap:wrap;
+  }
+  .flow-row.cycle{gap:14px;}
+  .flow-step{
+    flex:1; min-width:150px;
+    background:var(--bg-panel-2); border:1px solid var(--line); border-radius:10px;
+    padding:16px 14px; text-align:center;
+  }
+  .flow-step.highlight{border-color:rgba(140,82,255,0.5); background:rgba(140,82,255,0.08);}
+  .flow-step .flow-icon{font-size:20px; display:block; margin-bottom:8px; font-style:normal;}
+  .flow-step h5{font-family:'Syne',sans-serif; font-size:13.5px; font-weight:700; color:#fff; margin-bottom:5px;}
+  .flow-step p{font-size:12px; color:var(--text-dim); line-height:1.4;}
+  .flow-arrow{
+    display:flex; align-items:center; justify-content:center;
+    color:var(--text-dimmer); font-size:18px; flex:0 0 auto; padding:0 2px;
+  }
+  .flow-cycle-label{
+    display:flex; align-items:center; gap:8px; justify-content:center;
+    font-family:'DM Mono',monospace; font-size:11.5px; color:var(--green);
+    margin:22px 0 16px; text-transform:uppercase; letter-spacing:0.03em;
+  }
+  .flow-cycle-label span{font-size:15px;}
+  .cycle-step{border-left:2px solid var(--green);}
+  @media (max-width:700px){
+    .flow-row{flex-direction:column;}
+    .flow-arrow{transform:rotate(90deg); padding:4px 0;}
+  }
+
+  .phase{
+    display:grid; grid-template-columns:64px 1fr; gap:18px;
+    margin-bottom:26px;
+  }
+  .phase .dot{
+    width:64px; height:64px; border-radius:14px;
+    background:var(--bg-panel); border:1px solid var(--line);
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
+    font-family:'DM Mono',monospace;
+  }
+  .phase .dot .label{font-size:9px; color:var(--text-dimmer); text-transform:uppercase;}
+  .phase .dot .val{font-size:15px; color:var(--violet-mid); font-weight:700;}
+  .phase h3{font-size:16.5px; margin-bottom:6px;}
+  .phase p{font-size:14px; color:var(--text-dim); margin-bottom:10px;}
+  .guarantee{
+    display:inline-flex; align-items:center; gap:8px;
+    background:rgba(37,245,164,0.09); border:1px solid rgba(37,245,164,0.3);
+    border-radius:8px; padding:9px 14px; font-size:13px; color:var(--green);
+    margin-top:4px;
+  }
+
+  table{width:100%; border-collapse:collapse; margin-bottom:8px;}
+  table td, table th{
+    text-align:left; padding:12px 14px; font-size:13.5px;
+    border-bottom:1px solid var(--line); vertical-align:top;
+  }
+  table th{color:var(--text-dimmer); font-weight:500; font-size:11.5px; text-transform:uppercase; letter-spacing:0.04em;}
+  table tr:last-child td{border-bottom:none;}
+
+  .case-card{
+    background:var(--bg-panel); border:1px solid var(--line); border-radius:12px;
+    padding:20px 22px; margin-bottom:12px;
+  }
+  .case-card .tag{
+    font-family:'DM Mono',monospace; font-size:11px; color:var(--violet-mid);
+    text-transform:uppercase; letter-spacing:0.04em; margin-bottom:8px; display:block;
+  }
+  .case-card p{font-size:14px; color:var(--text-dim); margin-bottom:8px;}
+  .case-card .result{font-size:13px; color:var(--green);}
+
+  .pain-grid{display:grid; grid-template-columns:1fr 1fr; gap:12px;}
+  @media (max-width:760px){.pain-grid{grid-template-columns:1fr;}}
+  .pain{
+    background:var(--bg-panel); border:1px solid var(--line); border-radius:10px;
+    padding:14px 16px; font-size:13.5px; color:var(--text-dim);
+  }
+  .pain b{color:#fff; display:block; font-size:13.5px; margin-bottom:3px;}
+
+  .quote{
+    border-left:2px solid var(--violet-mid);
+    padding:4px 0 4px 18px; margin:20px 0;
+    font-style:italic; color:var(--text-dim); font-size:15px;
+  }
+
+  /* objections */
+  .obj{
+    background:var(--bg-panel); border:1px solid var(--line); border-radius:12px;
+    padding:20px 22px; margin-bottom:14px; overflow:hidden;
+  }
+  .obj-top{display:flex; align-items:flex-start; gap:12px; margin-bottom:10px;}
+  .pill{
+    flex-shrink:0; font-family:'DM Mono',monospace; font-size:10.5px; font-weight:500;
+    padding:4px 10px; border-radius:999px; text-transform:uppercase; letter-spacing:0.03em;
+    margin-top:2px;
+  }
+  .pill-go{background:rgba(37,245,164,0.12); color:var(--green); border:1px solid rgba(37,245,164,0.35);}
+  .pill-stop{background:rgba(236,5,67,0.12); color:#ff6b8f; border:1px solid rgba(236,5,67,0.35);}
+  .obj-top h4{font-size:15px; font-weight:500; color:#fff; font-style:italic;}
+  .obj-answer{font-size:14px; color:var(--text-dim); padding-left:0;}
+  .obj-answer .label{font-family:'DM Mono',monospace; font-size:10.5px; text-transform:uppercase; color:var(--text-dimmer); display:block; margin-bottom:5px; letter-spacing:0.04em;}
+  .obj-script{
+    background:var(--bg-panel-2); border-radius:8px; padding:12px 14px; margin-top:8px;
+    font-size:13.5px; color:var(--text); font-style:italic;
+  }
+
+  .faq{border-bottom:1px solid var(--line); padding:16px 0;}
+  .faq:last-child{border-bottom:none;}
+  .faq h4{font-size:14.5px; color:#fff; margin-bottom:6px; font-weight:500;}
+  .faq p{font-size:13.5px; color:var(--text-dim);}
+
+  .rule-list{list-style:none;}
+  .rule-list li{
+    display:flex; gap:14px; padding:16px 0; border-bottom:1px solid var(--line);
+  }
+  .rule-list li:last-child{border-bottom:none;}
+  .rule-list .no{
+    flex-shrink:0; width:26px; height:26px; border-radius:50%;
+    background:rgba(236,5,67,0.12); color:#ff6b8f; border:1px solid rgba(236,5,67,0.35);
+    display:flex; align-items:center; justify-content:center; font-size:13px; margin-top:1px;
+  }
+  .rule-list div p{font-size:14px; color:var(--text-dim); margin-top:3px;}
+  .rule-list div b{font-size:14.5px; color:#fff;}
+
+  .handoff-path{
+    display:grid; grid-template-columns:1fr 1fr; gap:16px; margin:22px 0;
+  }
+  @media (max-width:760px){.handoff-path{grid-template-columns:1fr;}}
+  .path-card{
+    border-radius:12px; padding:22px; border:1px solid var(--line); background:var(--bg-panel);
+  }
+  .path-card .tag{font-family:'DM Mono',monospace; font-size:11px; text-transform:uppercase; letter-spacing:0.04em; margin-bottom:10px; display:block;}
+  .path-card.warm .tag{color:var(--violet-mid);}
+  .path-card.hot .tag{color:var(--green);}
+  .path-card h4{font-size:16px; margin-bottom:8px;}
+  .path-card p{font-size:13.5px; color:var(--text-dim); margin-bottom:12px;}
+  .path-card .link{
+    font-family:'DM Mono',monospace; font-size:13px; color:#fff;
+    background:var(--bg-panel-2); padding:8px 12px; border-radius:7px; display:inline-block;
+  }
+
+  .contact-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:14px; margin-top:20px;}
+  @media (max-width:600px){.contact-grid{grid-template-columns:1fr;}}
+  .contact-item{
+    background:var(--bg-panel); border:1px solid var(--line); border-radius:10px;
+    padding:16px 18px;
+  }
+  .contact-item .k{font-size:11px; color:var(--text-dimmer); text-transform:uppercase; letter-spacing:0.04em; margin-bottom:5px;}
+  .contact-item .v{font-family:'DM Mono',monospace; font-size:14px; color:#fff;}
+
+  .stat-row{display:flex; gap:32px; flex-wrap:wrap; margin:22px 0;}
+  .stat{max-width:220px;}
+  .stat .n{font-family:'Syne',sans-serif; font-size:28px; font-weight:800; color:var(--violet-mid);}
+  .stat .l{font-size:12px; color:var(--text-dimmer); max-width:22ch;}
+
+  .clients{display:flex; flex-wrap:wrap; gap:8px; margin-top:6px;}
+  .clients span{
+    font-family:'DM Mono',monospace; font-size:12px; color:var(--text-dim);
+    border:1px solid var(--line); padding:6px 12px; border-radius:999px;
+  }
+
+  .draft-note{
+    display:flex; gap:10px; align-items:flex-start;
+    background:rgba(236,5,67,0.07); border:1px solid rgba(236,5,67,0.28);
+    border-radius:10px; padding:14px 16px; margin-bottom:22px;
+    font-size:13px; color:var(--text-dim);
+  }
+  .draft-note b{color:#ff6b8f;}
+
+  footer{padding:40px 56px 60px; max-width:920px;}
+  footer p{font-size:12px; color:var(--text-dimmer);}
+
+  ::-webkit-scrollbar{width:9px;}
+  ::-webkit-scrollbar-track{background:transparent;}
+  ::-webkit-scrollbar-thumb{background:#2A2630; border-radius:8px;}
+
+  @media (max-width:900px){
+    .shell{flex-direction:column;}
+    .sidebar{width:100%; height:auto; position:relative; border-right:none; border-bottom:1px solid var(--line);}
+    .section, .hero, footer{padding-left:24px; padding-right:24px;}
+  }
+</style>
+</head>
+<body>
+
+<div class="shell">
+
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-mark">CA</div>
+      <div class="brand-name">+Clientes Activos</div>
+    </div>
+    <div class="brand-sub">Manual de referencia · Lezac</div>
+
+    <div class="nav-group-label">Orientación</div>
+    <nav>
+      <a href="#que-es"><span class="num">01</span>Qué es</a>
+      <a href="#para-quien"><span class="num">02</span>A quién le sirve</a>
+    </nav>
+
+    <div class="nav-group-label">El servicio</div>
+    <nav>
+      <a href="#como-funciona"><span class="num">03</span>Cómo funciona</a>
+      <a href="#que-incluye"><span class="num">04</span>Qué incluye</a>
+      <a href="#diferencial"><span class="num">05</span>Qué lo hace distinto</a>
+      <a href="#relacion-brujula"><span class="num">06</span>Relación con Brújula</a>
+      <a href="#casos"><span class="num">07</span>Resultados y ejemplos</a>
+    </nav>
+
+    <div class="nav-group-label">En la conversación</div>
+    <nav>
+      <a href="#dolores"><span class="num">08</span>Dolores a reconocer</a>
+      <a href="#objeciones"><span class="num">09</span>Objeciones frecuentes</a>
+      <a href="#faq"><span class="num">10</span>Preguntas operativas</a>
+      <a href="#reglas"><span class="num">11</span>Reglas de oro</a>
+    </nav>
+
+    <div class="nav-group-label">Cierre</div>
+    <nav>
+      <a href="#derivacion"><span class="num">12</span>Cómo derivar</a>
+      <a href="#contacto"><span class="num">13</span>Datos y contacto</a>
+    </nav>
+  </aside>
+
+  <main class="content">
+
+    <div class="hero">
+      <span class="eyebrow">Manual para socios y referidores</span>
+      <h1>Hablá de +Clientes Activos con criterio real.</h1>
+      <p class="lede">Este documento te da todo lo que necesitás para entender el servicio, reconocer a quién le sirve, y sostener una conversación genuina con un potencial cliente — sin improvisar y sin comprometer nada que no te corresponda a vos.</p>
+
+      <div class="hero-meta">
+        <div><b>Versión</b>Septiembre 2026</div>
+        <div><b>Servicio</b>+Clientes Activos</div>
+        <div><b>Consultora</b>Lezac Consultoría</div>
+        <div><b>Uso</b>Interno — socios y referidores</div>
+      </div>
+    </div>
+
+    <!-- 01 -->
+    <section class="section" id="que-es">
+      <span class="section-tag">01 / Orientación</span>
+      <h2>Qué es +Clientes Activos</h2>
+      <p class="intro">La frase que tenés que tener instalada antes de cualquier otra cosa.</p>
+
+      <div class="quote">
+        "Sabé qué clientes de tu cartera dejaron de comprarte y qué parte de tu zona todavía no estás cubriendo — con un mapa accionable y una ruta asignada, no una lista de nombres sueltos."
+      </div>
+
+      <p style="color:var(--text-dim); font-size:14.5px; margin-bottom:20px;">
+        +Clientes Activos es un proyecto de expansión territorial de 2 meses, construido sobre la base histórica de ventas de la empresa y su zona de influencia. Cruza esa información con el territorio y la convierte en un mapa accionable: qué clientes dejaron de comprar, y qué puntos de venta nuevos hay para sumar. El objetivo no es "conseguir clientes nuevos" en abstracto — es tener más clientes activos comprando cada mes.
+      </p>
+
+      <div class="two-col">
+        <div class="card yes-card">
+          <h4>Es</h4>
+          <p>Un proyecto puntual, con fecha de cierre y meta compartida — mapa, ruta y seguimiento quincenal, con un consultor real detrás, no una lista de contactos fría.</p>
+        </div>
+        <div class="card no-card">
+          <h4>No es</h4>
+          <p>Prospección en frío tradicional, ni un censo manual sin metodología ni seguimiento. No termina en una planilla de nombres sin acción — cada punto releva­do queda con ruta asignada.</p>
+        </div>
+      </div>
+
+      <p style="color:var(--text-dim); font-size:14.5px; margin-top:18px;">
+        <b style="color:#fff;">Diferenciador central:</b> nada se releva "a ojo" — todo sale de la base de ventas real de la empresa cruzada con el territorio. El cliente solo define qué tipo de cliente busca y la zona; Lezac releva todo (nombre, dirección, teléfono, geoubicación).
+      </p>
+    </section>
+
+    <!-- 02 -->
+    <section class="section" id="para-quien">
+      <span class="section-tag">02 / Orientación</span>
+      <h2>A quién le sirve — y a quién no</h2>
+      <p class="intro">Calificar bien antes de entusiasmarte es lo que evita conversaciones que no van a ningún lado. Acá el filtro es más concreto que en Brújula: hay un piso numérico claro.</p>
+
+      <div class="card" style="margin-bottom:18px;">
+        <h4 style="margin-bottom:12px;">Perfil que encaja</h4>
+        <table>
+          <tr><td style="color:var(--text-dimmer); width:180px;">Tipo de empresa</td><td>Distribuidoras, mayoristas, fábricas PyME</td></tr>
+          <tr><td style="color:var(--text-dimmer);">Elegibilidad mínima</td><td>300 puntos de venta en la base histórica de clientes (Excel o el sistema que ya usen)</td></tr>
+          <tr><td style="color:var(--text-dimmer);">Facturación habitual</td><td>Entre USD 100.000 y 500.000 al mes (el perfil más frecuente hoy factura USD 200.000–400.000)</td></tr>
+          <tr><td style="color:var(--text-dimmer);">Equipo comercial</td><td>Con equipo de ventas activo en territorio — el ruteo se arma según cómo esté estructurado hoy, no hace falta que sea grande</td></tr>
+          <tr><td style="color:var(--text-dimmer);">Geografía</td><td>Argentina (foco principal), Paraguay, Bolivia, Uruguay</td></tr>
+          <tr><td style="color:var(--text-dimmer);">Quién decide</td><td>Dueño o gerente/responsable comercial, 35–60 años (mayoría 40–55)</td></tr>
+          <tr><td style="color:var(--text-dimmer);">Situación</td><td>Tiene equipo vendiendo, pero no sabe con precisión qué parte de su cartera dejó de comprar ni qué zona no está cubriendo</td></tr>
+        </table>
+      </div>
+
+      <div class="two-col">
+        <div class="card yes-card">
+          <h4>Buena señal</h4>
+          <p>Tiene al menos 12 meses de historial de ventas en algún lado (Excel o sistema) y al menos 300 puntos de venta en esa base — no importa si está desordenada.</p>
+        </div>
+        <div class="card no-card">
+          <h4>No es para</h4>
+          <p>Empresas con menos de 300 PDV en su base histórica, negocios sin equipo comercial que ejecute en territorio, o alguien que busca una lista de contactos sin metodología de activación detrás.</p>
+        </div>
+      </div>
+
+      <p style="color:var(--text-dim); font-size:13.5px; margin-top:16px;">
+        Importante sobre el perfil del decisor: igual que en Brújula, son buenos gestores del día a día, no perfiles técnicos. No les hables en términos de "cobertura" o "leads" sin traducir — hablales en plata que entra y plata que se va.
+      </p>
+    </section>
+
+    <!-- 03 -->
+    <section class="section" id="como-funciona">
+      <span class="section-tag">03 / El servicio</span>
+      <h2>Cómo funciona</h2>
+      <p class="intro">Un proyecto de 8 semanas. Los primeros 7 días tienen garantía dura — es tu mejor argumento para bajar el riesgo percibido de arrancar. Después corre en un ciclo fijo de seguimiento hasta el informe de cierre.</p>
+
+      <!-- flujograma -->
+      <div class="flow">
+        <div class="flow-row">
+          <div class="flow-step">
+            <span class="flow-icon">①</span>
+            <h5>Diagnóstico de cartera</h5>
+            <p>Activos vs. inactivos, últimos 12 meses</p>
+          </div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-step highlight">
+            <span class="flow-icon">②</span>
+            <h5>Garantía — 7 días</h5>
+            <p>Cartera geolocalizada + censo de 100 PDV</p>
+          </div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-step">
+            <span class="flow-icon">③</span>
+            <h5>Ruteo y ejecución</h5>
+            <p>8 semanas, con seguimiento quincenal</p>
+          </div>
+        </div>
+
+        <div class="flow-cycle-label"><span>↻</span> ciclo de seguimiento durante las 8 semanas</div>
+
+        <div class="flow-row cycle">
+          <div class="flow-step cycle-step">
+            <span class="flow-icon">📲</span>
+            <h5>Semanal</h5>
+            <p>Panel actualizado + mensaje corto: rutas cumplidas y clientes activados en la semana</p>
+          </div>
+          <div class="flow-step cycle-step">
+            <span class="flow-icon">🤝</span>
+            <h5>Quincenal</h5>
+            <p>Reunión en vivo 15–20 min: repaso de tablero, rutas cumplidas vs. no cumplidas, próximas acciones</p>
+          </div>
+          <div class="flow-step cycle-step">
+            <span class="flow-icon">📋</span>
+            <h5>Cierre — semana 8</h5>
+            <p>Informe final: clientes reactivados + nuevos, cobertura lograda vs. meta</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="phase">
+        <div class="dot"><span class="label">Días</span><span class="val">1–7</span></div>
+        <div>
+          <h3>Fase 1 — Diagnóstico y garantía</h3>
+          <p>Se procesa la base de ventas de los últimos 12 meses para identificar clientes activos vs. inactivos (compró o no compró, no cuánto compró). En paralelo se hace el censo digital de 100 puntos de venta en la zona de influencia. Se entrega el mapa geolocalizado completo del 100% de la cartera.</p>
+          <div class="guarantee">🛡️ Garantía: en 7 días, cartera 100% geolocalizada (activos/inactivos) + censo digital de 100 PDV. Si no lo cumplimos, esa etapa no se cobra.</div>
+        </div>
+      </div>
+
+      <div class="phase">
+        <div class="dot"><span class="label">Desde</span><span class="val">Sem. 2</span></div>
+        <div>
+          <h3>Fase 2 — Ruteo y ejecución con seguimiento</h3>
+          <p>Se arma el ruteo comercial para el equipo del cliente, cubriendo clientes activos, inactivos reactivables y los prospectos relevados en el censo. El panel se actualiza cada semana con aviso corto de estatus, y cada 15 días hay una reunión en vivo enfocada en rutas cumplidas y próximos pasos (4 reuniones en total: semanas 2, 4, 6 y cierre en semana 8).</p>
+        </div>
+      </div>
+
+      <div class="card" style="border-left:3px solid var(--violet-mid);">
+        <h4>Escasez real</h4>
+        <p>Trabajamos un máximo de 4 proyectos nuevos por mes, para poder sostener el nivel de seguimiento semanal en cada uno sin perder calidad.</p>
+      </div>
+    </section>
+
+    <!-- 04 -->
+    <section class="section" id="que-incluye">
+      <span class="section-tag">04 / El servicio</span>
+      <h2>Qué incluye (value stack)</h2>
+      <p class="intro">Todo lo que un cliente de +Clientes Activos tiene durante las 8 semanas, para cuando te pregunten "¿y qué recibo exactamente?"</p>
+
+      <ul class="plain">
+        <li>Diagnóstico de cartera de los últimos 12 meses (clientes activos vs. inactivos)</li>
+        <li>Geolocalización del 100% de la cartera histórica + censo digital de 100 puntos de venta en la zona de influencia, garantizado en 7 días</li>
+        <li>Ruteo comercial armado para el equipo de ventas del cliente, con frecuencia de visita definida</li>
+        <li>Panel online actualizado cada semana + mensaje corto de estatus (rutas cumplidas, clientes activados)</li>
+        <li>Reunión quincenal en vivo (4 en total) con foco en rutas cumplidas y próximas acciones concretas</li>
+        <li>Informe de cierre en semana 8: clientes reactivados + clientes nuevos, cobertura lograda vs. meta</li>
+        <li>Bonus incluido: Manual de buenas prácticas de venta para el equipo comercial</li>
+      </ul>
+    </section>
+
+    <!-- 05 -->
+    <section class="section" id="diferencial">
+      <span class="section-tag">05 / El servicio</span>
+      <h2>Qué lo hace distinto</h2>
+      <p class="intro">Es fácil que un prospecto lo confunda con cosas que ya conoce. Por eso conviene explicarlo por contraste.</p>
+
+      <div class="card" style="margin-bottom:12px;">
+        <h4>vs. un censo o relevamiento manual</h4>
+        <p>No es una lista de nombres sin acción. Cada punto relevado queda geolocalizado, priorizado por potencial y con ruta asignada al vendedor correcto — la diferencia está en qué se hace con el dato, no solo en juntarlo.</p>
+      </div>
+      <div class="card" style="margin-bottom:12px;">
+        <h4>vs. sumar más vendedores a la estructura</h4>
+        <p>Antes de agrandar el equipo, primero se mide si el que ya tenés está cubriendo bien su zona. Muchas veces el problema no es de cantidad de gente — es de ruta y de foco.</p>
+      </div>
+      <div class="card" style="margin-bottom:12px;">
+        <h4>vs. prospección en frío tradicional</h4>
+        <p>No se trata de salir a buscar clientes nuevos sin criterio. Primero se activa lo que ya es tuyo (clientes inactivos) y después se suma lo nuevo sobre la misma zona, con el mismo relevamiento.</p>
+      </div>
+
+      <div class="card" style="border-left:3px solid var(--green);">
+        <h4>El estándar del servicio</h4>
+        <p>Es un proyecto con fecha de cierre y meta compartida, no una promesa abierta. Todo lo que se releva y se rutea sale de datos reales de la empresa y del territorio — no de supuestos. Eso es lo que le da autoridad frente a cualquier objeción.</p>
+      </div>
+    </section>
+
+    <!-- 06 -->
+    <section class="section" id="relacion-brujula">
+      <span class="section-tag">06 / El servicio</span>
+      <h2>Relación con Brújula Comercial</h2>
+      <p class="intro">+Clientes Activos y Brújula Comercial son dos productos de la misma familia, pero responden preguntas distintas. Nunca se venden como si fueran lo mismo.</p>
+
+      <div class="card">
+        <h4>Dos preguntas, un mismo negocio</h4>
+        <p>Brújula Comercial responde "¿cómo estoy vendiendo?" — es una relación continua, de decisión diaria. +Clientes Activos responde "¿a quién le puedo vender que hoy no le vendo?" — es un proyecto puntual, con fecha de cierre. +Clientes Activos suele ser la puerta de entrada natural a Brújula, no al revés.</p>
+      </div>
+
+      <div class="card" style="border-left:3px solid var(--red);">
+        <h4>Regla de comunicación</h4>
+        <p>Nunca mezcles los ángulos de +Clientes Activos y Brújula Comercial en la misma conversación de venta. Son dos proyectos con lógica distinta — si el prospecto pregunta por el otro servicio, respondé con claridad cuál es cuál, sin combinarlos en una sola propuesta.</p>
+      </div>
+
+      <div class="card" style="margin-top:8px;">
+        <h4>El paso natural después del cierre</h4>
+        <p>Al terminar la semana 8, el cliente ya vio el panel funcionando y los resultados del proyecto. Ahí es cuando se conversa la continuidad: pase a Brújula Comercial (relación continua) o un fee mensual de mantenimiento del panel, si todavía no está listo para el salto completo.</p>
+      </div>
+    </section>
+
+    <!-- 07 -->
+    <section class="section" id="casos">
+      <span class="section-tag">07 / El servicio</span>
+      <h2>Resultados y ejemplos</h2>
+      <p class="intro">Todavía no hay un proyecto cerrado bajo el nombre +Clientes Activos — es un lanzamiento nuevo. Pero la metodología que lo compone (geolocalización, censo y ruteo sobre la misma zona) ya se aplicó dentro de otros proyectos de Lezac. Estos son ejemplos reales de lo que logra este enfoque.</p>
+
+      <div class="case-card">
+        <span class="tag">Distribución de consumo masivo · Buenos Aires</span>
+        <p>1.250 puntos de venta sin geolocalizar. Relevamiento y validación completa de cartera en 10 días.</p>
+        <div class="result">Resultado: +20% de productividad del equipo comercial, −15% de costo logístico.</div>
+      </div>
+      <div class="case-card">
+        <span class="tag">Fábrica de alimento balanceado · Buenos Aires</span>
+        <p>Más de 15 vendedores cubriendo Capital y Gran Buenos Aires, sin saber a cuántos clientes potenciales llegaban sin venderles. Geolocalización de cartera, censo de potenciales desatendidos y ruteo comercial con frecuencia de visita definida.</p>
+        <div class="result">Resultado: +15% en ventas con la misma estructura de equipo, −20% de costo logístico.</div>
+      </div>
+
+      <div class="stat-row">
+        <div class="stat"><div class="n">15–30%</div><div class="l">incremento de clientes activos en 60 días — resultado histórico ya logrado con esta metodología</div></div>
+        <div class="stat"><div class="n">10–15%</div><div class="l">meta orientativa que se compromete en cada proyecto nuevo, en 2 meses</div></div>
+      </div>
+
+      <div class="card" style="border-left:3px solid var(--violet-mid);">
+        <h4>Ojo con esta distinción</h4>
+        <p>El 15–30% es prueba social (ya se logró, en otras empresas). El 10–15% es la meta que se compromete en cada proyecto nuevo — más conservadora, para no prometer de más. La garantía de 7 días cubre solo la entrega de datos (100% controlable por Lezac); el objetivo de clientes activados es una meta conjunta, porque la ejecución final en el territorio depende del equipo comercial del cliente.</p>
+      </div>
+    </section>
+
+    <!-- 08 -->
+    <section class="section" id="dolores">
+      <span class="section-tag">08 / En la conversación</span>
+      <h2>Los dolores que tenés que saber reconocer</h2>
+      <p class="intro">Si escuchás dos o tres de estas frases en una charla, tenés un buen prospecto adelante. No hace falta que las digan textual — reconocelas aunque vengan disfrazadas.</p>
+
+      <div class="pain-grid">
+        <div class="pain"><b>"No sé cuántos clientes me dejaron de comprar este mes"</b>Foco solo en el objetivo del mes, sin mirada retrospectiva contra el año.</div>
+        <div class="pain"><b>"Crecer es conseguir clientes nuevos"</b>No ve que buena parte del crecimiento ya está dormido en su propia base.</div>
+        <div class="pain"><b>"Mi vendedor visita por costumbre"</b>Sin ruta ni frecuencia formalizada — se pierden zonas enteras sin que nadie lo note.</div>
+        <div class="pain"><b>"No tengo un censo actualizado de mi zona"</b>No sabe qué hay para vender que hoy no atiende.</div>
+        <div class="pain"><b>"Se fue un vendedor y cayó la venta"</b>Dependencia de la memoria individual sobre cartera y territorio.</div>
+        <div class="pain"><b>"Sumamos vendedores y no repunta"</b>El problema no era de cantidad de gente, sino de cobertura y ruta.</div>
+      </div>
+
+      <div class="quote" style="margin-top:22px;">
+        "En la mayoría de las distribuidoras, los clientes con compra activa en un mes dado representan entre el 30% y el 60% de la base total de clientes activos del año — casi nunca llega al 70–80%." — dato propio de Lezac. Si el prospecto se sorprende al escucharlo, es una señal clara de que calificó.
+      </div>
+    </section>
+
+    <!-- 09 -->
+    <section class="section" id="objeciones">
+      <span class="section-tag">09 / En la conversación</span>
+      <h2>Objeciones frecuentes</h2>
+
+      <div class="draft-note">
+        <span>⚠️</span>
+        <div><b>Sección en borrador.</b> +Clientes Activos es un lanzamiento nuevo — todavía no hay objeciones reales registradas en conversación. Las que siguen son hipótesis construidas sobre los dolores del perfil y la lógica del servicio (que ya está probada por separado en geolocalización, censo y ruteo dentro de Brújula). Hay que ajustarlas con las conversaciones reales de los primeros proyectos antes de darlas por definitivas.</div>
+      </div>
+
+      <p class="intro" style="margin-top:-4px;"><span class="pill pill-go" style="vertical-align:middle;">Podés responder</span> son informativas, respondelas con confianza. <span class="pill pill-stop" style="vertical-align:middle;">Derivar</span> son las que tocan precio, alcance o condiciones — nunca las cierres vos, pasá a la sección 12.</p>
+
+      <div class="obj">
+        <div class="obj-top"><span class="pill pill-go">Podés responder</span><h4>"¿Cómo van a censar 100 puntos de venta en solo 7 días?"</h4></div>
+        <div class="obj-answer"><span class="label">Por qué pasa</span>Duda razonable sobre el tiempo — asumen relevamiento puerta a puerta.</div>
+        <div class="obj-script">Es un censo digital, no un relevamiento caminando la calle — por eso es un plazo 100% controlable por nosotros, sin depender de logística de campo.</div>
+      </div>
+
+      <div class="obj">
+        <div class="obj-top"><span class="pill pill-go">Podés responder</span><h4>"¿Esto no es lo mismo que contratar a alguien para que recorra la zona?"</h4></div>
+        <div class="obj-answer"><span class="label">Por qué pasa</span>Confunden el relevamiento con el servicio completo.</div>
+        <div class="obj-script">No es solo juntar contactos: cada punto queda geolocalizado, priorizado por potencial y con ruta asignada a tu vendedor. La diferencia está en qué se hace con el dato, no en relevarlo.</div>
+      </div>
+
+      <div class="obj">
+        <div class="obj-top"><span class="pill pill-go">Podés responder</span><h4>"Ya tengo vendedores cubriendo mi zona, ¿para qué necesito esto?"</h4></div>
+        <div class="obj-answer"><span class="label">Por qué pasa</span>Asume que tener equipo en territorio ya es cobertura real.</div>
+        <div class="obj-script">Justamente por eso sirve: la mayoría de los equipos cubren por costumbre, no por ruta formal. Esto mide si de verdad están llegando a todo lo que hay para vender en la zona.</div>
+      </div>
+
+      <div class="obj">
+        <div class="obj-top"><span class="pill pill-go">Podés responder</span><h4>"Ya trabajé con una consultora de prospección y no sirvió"</h4></div>
+        <div class="obj-answer"><span class="label">Por qué pasa</span>Experiencia previa con prospección genérica, sin datos propios detrás.</div>
+        <div class="obj-script">Esto no es prospección en frío ni relevamiento sin criterio. Cada acción sale de tu base de ventas real y de tu zona específica, con ruta y seguimiento — no de una lista genérica que le aplican a cualquiera.</div>
+      </div>
+
+      <div class="obj">
+        <div class="obj-top"><span class="pill pill-stop">Derivar</span><h4>"¿Qué pasa si mi base tiene menos de 300 puntos de venta?"</h4></div>
+        <div class="obj-answer"><span class="label">Respuesta</span>El proyecto arranca en ese piso porque es el volumen donde el análisis y el censo tienen sentido económico. Puede evaluarse caso por caso con Leandro.</div>
+        <div class="obj-script">Eso lo conversa Leandro directamente con vos, para ver si tiene sentido armar algo a medida.</div>
+      </div>
+
+      <div class="obj">
+        <div class="obj-top"><span class="pill pill-stop">Derivar</span><h4>"¿Puedo contratar solo la geolocalización, sin el ruteo?"</h4></div>
+        <div class="obj-answer"><span class="label">Respuesta</span>Se vende como proyecto único. Cualquier ajuste de alcance lo define Leandro.</div>
+        <div class="obj-script">Eso se conversa directo con Leandro, que arma el proyecto según lo que necesites.</div>
+      </div>
+
+      <div class="obj">
+        <div class="obj-top"><span class="pill pill-stop">Derivar</span><h4>"¿Cuánto cuesta?" / "¿Me hacen un descuento?"</h4></div>
+        <div class="obj-answer"><span class="label">Respuesta</span>Todo lo que tiene que ver con precio se conversa directo con Leandro.</div>
+        <div class="obj-script">Eso lo conversa Leandro directamente con vos. Te paso su contacto para que lo vean juntos.</div>
+      </div>
+
+      <div class="card" style="margin-top:8px; border-left:3px solid var(--violet-mid);">
+        <h4>¿Objeción que no está acá?</h4>
+        <p>No la improvises. Contestá con honestidad que lo vas a confirmar, avisale a Leandro y esperá antes de comprometer algo con el prospecto — y de paso, sumala como borrador a esta sección.</p>
+      </div>
+    </section>
+
+    <!-- 10 -->
+    <section class="section" id="faq">
+      <span class="section-tag">10 / En la conversación</span>
+      <h2>Preguntas operativas frecuentes</h2>
+      <p class="intro">Logística del servicio — todas seguras de responder directo.</p>
+
+      <div class="faq">
+        <h4>¿En cuánto tiempo tengo el primer resultado?</h4>
+        <p>En 7 días: cartera 100% geolocalizada (activos/inactivos) + censo digital de 100 puntos de venta.</p>
+      </div>
+      <div class="faq">
+        <h4>¿Cuánto dura el proyecto completo?</h4>
+        <p>8 semanas (2 meses), desde el diagnóstico inicial hasta el informe de cierre.</p>
+      </div>
+      <div class="faq">
+        <h4>¿Qué pasa si mi rubro es estacional (agro, construcción, indumentaria)?</h4>
+        <p>La base de comparación se toma contra el mismo trimestre del año anterior en vez del trimestre inmediato anterior, para no sesgar el resultado por estacionalidad. Se define en el diagnóstico inicial.</p>
+      </div>
+      <div class="faq">
+        <h4>¿En qué plataforma veo el panel?</h4>
+        <p>Power BI, igual que en Brújula Comercial, con acceso personalizado.</p>
+      </div>
+      <div class="faq">
+        <h4>¿Funciona si la empresa vende en más de un país?</h4>
+        <p>Sí — Lezac tiene presencia consolidada en Argentina, Paraguay, Bolivia y Uruguay.</p>
+      </div>
+      <div class="faq">
+        <h4>¿Qué pasa si mi equipo no cumple las rutas asignadas?</h4>
+        <p>Se ve reflejado en el panel semanal y se ajusta en la reunión quincenal — nada se cae por falta de visibilidad.</p>
+      </div>
+      <div class="faq">
+        <h4>¿Qué pasa después de la semana 8?</h4>
+        <p>Se entrega el informe de cierre y se conversa la continuidad: pase a Brújula Comercial o un fee mensual de mantenimiento del panel.</p>
+      </div>
+    </section>
+
+    <!-- 11 -->
+    <section class="section" id="reglas">
+      <span class="section-tag">11 / En la conversación</span>
+      <h2>Reglas de oro — lo que nunca hay que decir</h2>
+      <p class="intro">Seis límites que protegen tanto al prospecto como a la relación con Lezac.</p>
+
+      <ul class="rule-list">
+        <li>
+          <div class="no">✕</div>
+          <div><b>El precio se conversa con Leandro</b><p>Si preguntan por un número, derivá el contacto — no hace falta que lo manejes vos.</p></div>
+        </li>
+        <li>
+          <div class="no">✕</div>
+          <div><b>Nunca prometas un número exacto de clientes activados</b><p>El 10–15% en 2 meses es una meta orientativa, no una garantía. La única garantía dura es la entrega de datos en 7 días.</p></div>
+        </li>
+        <li>
+          <div class="no">✕</div>
+          <div><b>Nunca lo llames "prospección en frío" ni "censo puerta a puerta"</b><p>No lo es, y prometer eso genera una expectativa que después no se cumple.</p></div>
+        </li>
+        <li>
+          <div class="no">✕</div>
+          <div><b>Nunca mezcles los ángulos de +Clientes Activos y Brújula Comercial</b><p>Son dos proyectos con lógica distinta — si preguntan por el otro servicio, respondé con claridad cuál es cuál.</p></div>
+        </li>
+        <li>
+          <div class="no">✕</div>
+          <div><b>Nunca cierres la venta vos</b><p>Tu trabajo es generar interés genuino y derivar bien. El cierre lo hace Leandro, siempre.</p></div>
+        </li>
+        <li>
+          <div class="no">✕</div>
+          <div><b>Nunca inventes una respuesta técnica que no tenés</b><p>Si no está en este manual — sobre todo en la sección de objeciones, que todavía es borrador — no la improvises, derivá la pregunta.</p></div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- 12 -->
+    <section class="section" id="derivacion">
+      <span class="section-tag">12 / Cierre</span>
+      <h2>Cómo derivar un contacto</h2>
+      <p class="intro">Apenas haya interés real — pregunta por precio, pide más detalle técnico, quiere confirmar si su base califica, dice que quiere avanzar — es momento de derivar. Hay dos caminos según qué tan caliente esté.</p>
+
+      <div class="handoff-path">
+        <div class="path-card warm">
+          <span class="tag">Prospecto tibio</span>
+          <h4>Diagnóstico Gratuito</h4>
+          <p>Todavía está curioseando o no sabe si su base llega a los 300 PDV. Es el paso natural: 12 preguntas, resultado personalizado a su email, incluye 30 minutos de asesoría sin cargo — ahí mismo se confirma si el volumen de cartera califica.</p>
+          <span class="link">dg.lezacconsultoria.com</span>
+        </div>
+        <div class="path-card hot">
+          <span class="tag">Prospecto caliente</span>
+          <h4>Contacto directo con Leandro</h4>
+          <p>Ya preguntó precio, confirmó que tiene el volumen de cartera, o dijo que quiere avanzar. No lo hagas esperar por un formulario — pasalo directo.</p>
+          <span class="link">+54 9 11 5410-7921</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <h4>Script sugerido para el traspaso</h4>
+        <div class="obj-script" style="margin-top:8px;">
+          "Te paso el contacto directo de Leandro Zacaria, que lleva +Clientes Activos personalmente: [WhatsApp / Calendly]. Contale que hablamos de esto así arranca directo con contexto de tu negocio, sin tener que explicar todo de nuevo."
+        </div>
+      </div>
+    </section>
+
+    <!-- 13 -->
+    <section class="section" id="contacto">
+      <span class="section-tag">13 / Cierre</span>
+      <h2>Datos institucionales y contacto</h2>
+
+      <div class="stat-row">
+        <div class="stat"><div class="n">+100</div><div class="l">empresas asesoradas</div></div>
+        <div class="stat"><div class="n">10+</div><div class="l">años de experiencia</div></div>
+        <div class="stat"><div class="n">4</div><div class="l">países con presencia consolidada en LATAM</div></div>
+      </div>
+
+      <p style="font-size:13.5px; color:var(--text-dim); margin-bottom:6px;">Clientes de referencia (mencionar preferentemente Bacardi, Vitalcan y Weilen — son las de mayor peso institucional):</p>
+      <div class="clients">
+        <span>Bacardi</span><span>Vitalcan</span><span>Weilen</span><span>Proquim</span><span>Madersa</span><span>Vaca Fría</span><span>Gloria</span><span>Alco</span><span>Indega</span><span>Pluscar</span>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-item"><div class="k">WhatsApp Lezac</div><div class="v">+54 9 11 5410-7921</div></div>
+        <div class="contact-item"><div class="k">Calendly Leandro</div><div class="v">calendly.com/lezacconsultoria/asesoria-comercial</div></div>
+        <div class="contact-item"><div class="k">Diagnóstico gratuito</div><div class="v">dg.lezacconsultoria.com</div></div>
+        <div class="contact-item"><div class="k">Web</div><div class="v">lezacconsultoria.com</div></div>
+        <div class="contact-item"><div class="k">LinkedIn empresa</div><div class="v">linkedin.com/company/lezac-consultoria</div></div>
+        <div class="contact-item"><div class="k">Instagram</div><div class="v">instagram.com/lezacconsultoria</div></div>
+      </div>
+
+      <p style="font-size:12px; color:var(--text-dimmer); margin-top:20px;">Todo lo referido a precio se conversa directamente con Leandro, caso por caso.</p>
+    </section>
+
+    <footer>
+      <p>Manual de referencia interno · +Clientes Activos · Lezac Consultoría · Versión septiembre 2026 · No reemplaza el contacto directo con Leandro para definiciones de precio o condiciones comerciales.</p>
+    </footer>
+
+  </main>
+</div>
+
+<script>
+  const links = document.querySelectorAll('nav a');
+  const sections = Array.from(links).map(l => document.querySelector(l.getAttribute('href')));
+
+  function setActive(){
+    let idx = 0;
+    const y = window.scrollY + 140;
+    sections.forEach((sec, i) => { if(sec && sec.offsetTop <= y) idx = i; });
+    links.forEach(l => l.classList.remove('active'));
+    links[idx].classList.add('active');
+  }
+  window.addEventListener('scroll', setActive, {passive:true});
+  setActive();
+</script>
+
+</body>
+</html>
