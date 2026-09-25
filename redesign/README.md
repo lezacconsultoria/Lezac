@@ -1,6 +1,6 @@
 # Rediseño — Home + Servicios + Partners
 
-Carpeta de trabajo para el rediseño de:
+Carpeta de trabajo para el rediseño desde cero de:
 
 - `index.html` (Home)
 - `smart-brujula.html`
@@ -11,10 +11,12 @@ Carpeta de trabajo para el rediseño de:
 - `partners.html`
 - `shared.js` (nav + footer + JS compartido a esas páginas)
 
+Arranca vacía a propósito — el rediseño se construye desde cero, sin
+partir del markup actual.
+
 **No está conectada a ninguna URL del sitio.** Los archivos que hoy sirven
 `lezacconsultoria.com/`, `/smart-brujula`, etc. son los que están en la raíz
-del repo — esta carpeta es una copia de trabajo, se puede romper y probar
-libremente sin riesgo.
+del repo — esta carpeta se puede romper y probar libremente sin riesgo.
 
 El estado de la raíz previo al rediseño quedó etiquetado en git como
 `home-actual-pre-rediseno`.
