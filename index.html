@@ -93,7 +93,7 @@
   <!-- Dashboard image: absolute, tamaño real proporcional, desvanece hacia la derecha -->
   <div class="hidden lg:block absolute z-0" style="top:50%;right:-6rem;width:50%;transform:translateY(-50%);">
     <div class="absolute -inset-10 rounded-3xl opacity-25 pointer-events-none" style="background:radial-gradient(ellipse at center,var(--color-accent-glow) 0%,transparent 70%);filter:blur(48px);"></div>
-    <video data-speed="1.5" autoplay muted loop playsinline preload="auto" aria-label="Tablero de inteligencia comercial de Lezac" class="relative w-full h-auto rounded-2xl" style="box-shadow:0 0 100px -20px var(--color-accent-glow),0 40px 80px rgba(0,0,0,0.6);border:1px solid rgba(255,255,255,0.08);-webkit-mask-image:linear-gradient(to right,#000 55%,transparent 100%);mask-image:linear-gradient(to right,#000 55%,transparent 100%);"><source src="/Bi%20I%20Actualizado%20video.mp4" type="video/mp4"></video>
+    <video data-speed="1.5" autoplay muted loop playsinline preload="auto" aria-label="Tablero de inteligencia comercial de Lezac" class="relative w-full h-auto rounded-2xl" style="box-shadow:0 0 100px -20px var(--color-accent-glow),0 40px 80px rgba(0,0,0,0.6);border:1px solid rgba(255,255,255,0.08);-webkit-mask-image:linear-gradient(to right,#000 55%,transparent 100%);mask-image:linear-gradient(to right,#000 55%,transparent 100%);"><source src="/bi-hero.mp4" type="video/mp4"></video>
   </div>
 
   <div class="w-full grid grid-cols-12 gap-8 lg:gap-16 items-start relative z-10">
@@ -133,7 +133,7 @@
 
     <!-- Mobile: imagen normal -->
     <div class="block lg:hidden col-span-12 pb-12">
-      <video data-speed="1.5" autoplay muted loop playsinline preload="auto" aria-label="Tablero de inteligencia comercial de Lezac" class="w-full h-auto rounded-2xl" style="box-shadow:0 0 60px -10px var(--color-accent-glow);border:1px solid rgba(255,255,255,0.07);"><source src="/Bi%20I%20Actualizado%20video.mp4" type="video/mp4"></video>
+      <video data-speed="1.5" autoplay muted loop playsinline preload="auto" aria-label="Tablero de inteligencia comercial de Lezac" class="w-full h-auto rounded-2xl" style="box-shadow:0 0 60px -10px var(--color-accent-glow);border:1px solid rgba(255,255,255,0.07);"><source src="/bi-hero.mp4" type="video/mp4"></video>
     </div>
   </div>
 </section>
@@ -456,7 +456,7 @@
   </div>
 </section>
 
-<script src="./shared.js"></script>
+<script src="/shared.js?v=20261009"></script>
 <script>
 document.addEventListener('DOMContentLoaded', () => {
   const revObs = new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting){e.target.classList.add('revealed');revObs.unobserve(e.target);} }), {threshold:.1,rootMargin:'0px 0px -40px 0px'});

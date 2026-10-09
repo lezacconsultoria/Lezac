@@ -328,7 +328,7 @@
 </section>
 
 </main>
-<script src="./shared.js"></script>
+<script src="/shared.js?v=20261009"></script>
 <script>
 document.addEventListener('DOMContentLoaded', () => {
   const revObs = new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting){e.target.classList.add('revealed');revObs.unobserve(e.target);} }), {threshold:.1,rootMargin:'0px 0px -40px 0px'});
