@@ -6,12 +6,15 @@ RewriteEngine On
 # rule below (which skips real directories) would never reach bio.html.
 RewriteRule ^bio/?$ bio.html [L]
 
-# Páginas del sitio anterior -> nueva estructura (301)
-RewriteRule ^smart-brujula(\.html)?/?$      /brujula-comercial   [R=301,L]
+# URLs anteriores -> URL final (301, un solo salto; acepta con y sin .html)
+RewriteRule ^brujula-comercial(\.html)?/?$  /consultoria-inteligencia-comercial [R=301,L]
+RewriteRule ^smart-brujula(\.html)?/?$      /consultoria-inteligencia-comercial [R=301,L]
+RewriteRule ^ia-aplicada(\.html)?/?$        /ia-a-medida [R=301,L]
+RewriteRule ^wa-smart-ventas(\.html)?/?$    /wa-ventas [R=301,L]
 RewriteRule ^censo-comercial(\.html)?/?$    /mas-clientes-activos [R=301,L]
 RewriteRule ^geolocalizacion(\.html)?/?$    /mas-clientes-activos [R=301,L]
 RewriteRule ^ruteo-comercial(\.html)?/?$    /mas-clientes-activos [R=301,L]
-RewriteRule ^partners(\.html)?/?$           /partner             [R=301,L]
+RewriteRule ^partners(\.html)?/?$           /partner [R=301,L]
 
 # Redirect .html URLs to clean URLs (301 permanent)
 RewriteCond %{THE_REQUEST} \s/+(.+?)\.html[\s?] [NC]
@@ -22,3 +25,6 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME}.html -f
 RewriteRule ^(.+?)/?$ /$1.html [L]
+
+# Página 404 con enlaces a los servicios
+ErrorDocument 404 /404.html

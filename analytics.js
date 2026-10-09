@@ -33,6 +33,9 @@ var GA4_ID = 'G-ESN0ZJP0GN';
         window.gtag('event', 'contacto_whatsapp', { pagina: page, ubicacion: a.textContent.trim().slice(0, 40) });
       } else if (href.indexOf('calendly.com') !== -1) {
         window.gtag('event', 'agendar_reunion', { pagina: page, ubicacion: a.textContent.trim().slice(0, 40) });
+      } else if (/^\/(consultoria-inteligencia-comercial|mas-clientes-activos|ia-a-medida|wa-ventas|partner)\/?$/.test(href) || href.indexOf('diagnostico.lezacconsultoria.com') !== -1) {
+        var zona = a.closest('#lezac-nav') ? 'menu' : (a.closest('#lezac-footer') ? 'footer' : 'contenido');
+        window.gtag('event', 'click_servicio', { pagina_origen: page, servicio: href.replace(/^https?:\/\/[^/]+/, '').replace(/^\/|\/$/g, '') || 'diagnostico', ubicacion: zona });
       }
     }, true);
 

@@ -1,0 +1,14 @@
+# Lezac Consultoría
+
+> Consultora de inteligencia comercial para pymes, distribuidoras y mayoristas de Argentina, Paraguay, Bolivia y Uruguay. Trabaja online y uno a uno, con metodología propia. 10+ años, 100+ empresas asesoradas, 4 países.
+
+## Servicios
+- [Consultoría de inteligencia comercial (método Brújula Comercial)](https://lezacconsultoria.com/consultoria-inteligencia-comercial): análisis de los datos de venta y acompañamiento mensual para decidir sobre clientes, productos, vendedores y rentabilidad.
+- [+Clientes Activos](https://lezacconsultoria.com/mas-clientes-activos): geolocalización, censo y ruteo comercial para ampliar la cantidad de clientes que compran.
+- [IA a Medida](https://lezacconsultoria.com/ia-a-medida): desarrollo a medida y automatización de procesos, con inteligencia artificial cuando aporta valor.
+- [WA Ventas](https://lezacconsultoria.com/wa-ventas): pedidos, consultas y prospectos por WhatsApp (API oficial) ordenados en un solo canal.
+
+## Más
+- [Programa de Partners](https://lezacconsultoria.com/partner): alianza para profesionales que asesoran a distribuidoras, mayoristas y fábricas.
+- [Diagnóstico comercial online](https://diagnostico.lezacconsultoria.com/)
+- [Inicio](https://lezacconsultoria.com/)

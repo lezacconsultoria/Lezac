@@ -1,283 +1,363 @@
 <!DOCTYPE html>
-<html class="dark" lang="es" data-page="clientes">
+<html class="dark" lang="es-AR" data-page="clientes">
 <head>
-  <meta charset="utf-8"/>
-  <link rel="icon" type="image/png" href="/logo-lezac-mini.png"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>+Clientes Activos: geolocalización, censo y ruteo comercial | Lezac</title>
-  <meta name="description" content="En 2 meses mapeamos tu base de clientes, censamos 100 PDV en 7 días y rediseñamos rutas. Históricamente, +15-30% de clientes activos en 60 días. Requiere 300+ PDV."/>
-  <meta property="og:type" content="website"/>
-  <link rel="canonical" href="https://lezacconsultoria.com/mas-clientes-activos"/>
-  <meta property="og:url" content="https://lezacconsultoria.com/mas-clientes-activos"/>
-  <meta property="og:title" content="+Clientes Activos | Lezac Consultoria"/>
-  <meta property="og:description" content="En 2 meses mapeamos tu base de clientes, censamos 100 PDV en 7 días y rediseñamos rutas. +15-30% clientes activos en 60 días."/>
-  <meta property="og:image" content="https://lezacconsultoria.com/opengrap.jpeg"/>
-  <meta name="twitter:card" content="summary_large_image"/>
-  <meta name="twitter:image" content="https://lezacconsultoria.com/opengrap.jpeg"/>
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Service","name":"+Clientes Activos","description":"Proyecto de 2 meses. Geolocalizamos la base de clientes, censamos 100 puntos de venta en 7 días y rediseñamos rutas comerciales. +15-30% de clientes activos en 60 días.","url":"https://lezacconsultoria.com/mas-clientes-activos","serviceType":"Consultoría comercial B2B","provider":{"@type":"Organization","name":"Lezac Consultoria","url":"https://lezacconsultoria.com/"},"areaServed":["Argentina","Paraguay","Bolivia","Uruguay"]}
-  </script>
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://lezacconsultoria.com/"},{"@type":"ListItem","position":2,"name":"+Clientes Activos","item":"https://lezacconsultoria.com/mas-clientes-activos"}]}
-  </script>
-  <script src="/analytics.js"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Playfair+Display:ital,wght@1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-  <script>
-    tailwind.config = {
-      darkMode:"class",
-      theme:{extend:{
-        colors:{
-          "surface":"#0A0A0B","surface-dim":"#050506","surface-container":"#111112",
-          "surface-container-low":"#0D0D0E","surface-container-high":"#1A1A1B",
-          "on-surface":"#E5E2E3","on-surface-variant":"#958DA1","outline-variant":"#2A2A2B",
-          "primary":"#8C52FF","primary-container":"#7131E3","on-primary":"#FFFFFF",
-          "error":"#EC0543","success":"#25F5A4",
-          "accent":"var(--color-accent)","accent-dim":"var(--color-accent-dim)",
-        },
-        borderRadius:{"DEFAULT":"0.75rem","sm":"0.5rem","lg":"1rem","xl":"1.5rem","2xl":"2rem","full":"9999px"},
-        fontFamily:{"headline":["Montserrat","sans-serif"],"serif":["Playfair Display","serif"],"body":["Inter","sans-serif"]},
-      }},
+<meta charset="utf-8"/>
+<link rel="icon" type="image/png" href="/logo-lezac-mini.png"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Geolocalización, censo y ruteo comercial | +Clientes Activos</title>
+<meta name="description" content="Recuperamos clientes dormidos y sumamos puntos de venta sin atender. Geolocalización, censo y ruteo comercial para distribuidoras y mayoristas. 100% online."/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://lezacconsultoria.com/mas-clientes-activos"/>
+<meta property="og:type" content="website"/>
+<meta property="og:locale" content="es_AR"/>
+<meta property="og:site_name" content="Lezac Consultoría"/>
+<meta property="og:url" content="https://lezacconsultoria.com/mas-clientes-activos"/>
+<meta property="og:title" content="Geolocalización, censo y ruteo comercial | +Clientes Activos"/>
+<meta property="og:description" content="Recuperamos clientes dormidos y sumamos puntos de venta sin atender. Geolocalización, censo y ruteo comercial para distribuidoras y mayoristas. 100% online."/>
+<meta property="og:image" content="https://lezacconsultoria.com/opengrap.jpeg"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Geolocalización, censo y ruteo comercial | +Clientes Activos"/>
+<meta name="twitter:description" content="Recuperamos clientes dormidos y sumamos puntos de venta sin atender. Geolocalización, censo y ruteo comercial para distribuidoras y mayoristas. 100% online."/>
+<meta name="twitter:image" content="https://lezacconsultoria.com/opengrap.jpeg"/>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Organization",
+   "@id": "https://lezacconsultoria.com/#organization",
+   "name": "Lezac Consultoría",
+   "url": "https://lezacconsultoria.com/",
+   "logo": "https://lezacconsultoria.com/logo-lezac-completo.png"
+  },
+  {
+   "@type": "Service",
+   "@id": "https://lezacconsultoria.com/mas-clientes-activos#service",
+   "name": "+Clientes Activos: geolocalización, censo y ruteo comercial",
+   "serviceType": "Consultoría de cobertura de clientes, geolocalización y ruteo comercial",
+   "description": "Servicio online uno a uno para distribuidoras, mayoristas y fábricas que geolocaliza la base de clientes, censa los puntos de venta de la zona de influencia y rediseña las rutas comerciales para aumentar la cantidad de clientes activos.",
+   "provider": {
+    "@type": "Organization",
+    "@id": "https://lezacconsultoria.com/#organization",
+    "name": "Lezac Consultoría",
+    "url": "https://lezacconsultoria.com/",
+    "logo": "https://lezacconsultoria.com/logo-lezac-completo.png"
+   },
+   "areaServed": [
+    "AR",
+    "PY",
+    "BO",
+    "UY"
+   ],
+   "audience": {
+    "@type": "BusinessAudience",
+    "audienceType": "Distribuidoras, mayoristas y fábricas"
+   },
+   "url": "https://lezacconsultoria.com/mas-clientes-activos"
+  },
+  {
+   "@type": "FAQPage",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "¿Qué es +Clientes Activos?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "+Clientes Activos es el método de Lezac Consultoría para que distribuidoras, mayoristas y fábricas vendan más ampliando la cantidad de clientes que realmente compran. Geolocalizamos tu base, censamos los puntos de venta de tu zona de influencia y rediseñamos las rutas de tu equipo. Se trabaja uno a uno y 100% online."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "¿Cuánto tarda en dar resultados?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "El proyecto dura alrededor de 2 meses. Nuestra proyección es de entre +15% y +30% de clientes activos en ese plazo, en las empresas donde aplicamos el método. La meta de tu proyecto la definimos juntos, a partir de la base real de tu empresa."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "¿Qué diferencia hay con un software de rutas?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Un software de rutas ordena las visitas que ya hacés. +Clientes Activos encuentra los clientes que no estás visitando: recupera los que dejaron de comprar y suma puntos de venta sin atender. Además, lo implementa un consultor con vos, en lugar de dejarte la configuración a tu cargo."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "¿Cómo se cobra?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Cobramos por punto de venta censado, con un pago único que se ajusta al rubro de tu empresa, a su actividad y a la amplitud de zona que quieras desarrollar. Escribinos y lo vemos en una conversación."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "¿Funciona para fábricas y mayoristas, o solo para distribuidoras?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Funciona para distribuidoras, mayoristas y fábricas que venden a través de una red de vendedores o de reparto. Lo que cambia es el foco: en algunas empresas pesa más reactivar clientes inactivos y en otras, ampliar la cobertura en zonas nuevas."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "¿Necesito cambiar mi sistema de gestión?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No. Trabajamos con los datos de venta que ya tenés, sea cual sea el sistema que uses. Si hace falta una herramienta a medida, ya sea administrativa, logística o comercial, también podemos desarrollarla."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "¿Se puede hacer 100% online?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Sí. La mayoría de nuestros clientes trabaja con nosotros de forma online: reuniones por videollamada, seguimiento por WhatsApp y un panel con los avances. La distancia no es una limitación en Argentina, Paraguay, Bolivia ni Uruguay."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "¿Qué pasa si mi base tiene menos de 300 clientes?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Lo ideal es contar con una base de unos 300 clientes o más para que el análisis tenga volumen. Si tenés menos, escribinos y vemos si el proyecto se adapta a tu caso."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "¿Cuánto tiempo me demanda a mí y a mi equipo?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Poco. Tenés una reunión cada 15 días con tu consultor y seguimiento por WhatsApp. Lo único que necesitamos de tu parte es la información de tu base de clientes; el análisis, el mapa, el censo y las rutas los hacemos nosotros."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "¿Qué compromiso tienen con los plazos?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Acordamos los plazos desde el inicio. Si no cumplimos con el censo inicial, esa etapa no se cobra. Para eso necesitamos contar con la información de tu base de clientes en tiempo y forma."
+     }
     }
-  </script>
-  <style>
-    :root{--color-accent:#38BDF8;--color-accent-dim:#0EA5E9;--color-accent-glow:rgba(56,189,248,0.25);}
-    html{font-size:clamp(14px, 13px + 0.23vw, 19px);}
-    body{font-family:'Inter',sans-serif;background:#0A0A0B;color:#E5E2E3;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
-    h1,h2,h3,h4{font-family:'Montserrat',sans-serif;}
-    .serif-italic{font-family:'Playfair Display',serif;font-style:italic;}
-    .material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;}
-    .grid-bg{background-image:linear-gradient(rgba(255,255,255,0.02) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.02) 1px,transparent 1px);background-size:72px 72px;}
-    .glass{background:rgba(17,17,18,0.6);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,0.06);}
-    .liquid-glass{background:rgba(26,26,27,0.45);backdrop-filter:blur(28px);-webkit-backdrop-filter:blur(28px);border:1px solid rgba(255,255,255,0.07);box-shadow:0 8px 32px rgba(0,0,0,0.35),inset 0 1px 0 rgba(255,255,255,0.04);}
-    .pill-badge{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border-radius:9999px;background:rgba(56,189,248,0.08);border:1px solid rgba(56,189,248,0.25);font-size:11px;font-weight:600;letter-spacing:.05em;color:#38BDF8;}
-    .pill-dot{width:7px;height:7px;border-radius:50%;background:var(--color-accent);animation:pulse-dot 2s ease-in-out infinite;}
-    @keyframes pulse-dot{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.75)}}
-    .glow-blob{position:absolute;border-radius:50%;filter:blur(120px);pointer-events:none;}
-    .lezac-reveal{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s ease;}
-    .lezac-reveal.revealed{opacity:1;transform:translateY(0);}
-    .faq-answer{max-height:0;overflow:hidden;transition:max-height .4s ease;}
-    .faq-answer.open{max-height:220px;}
-    .faq-chevron{transition:transform .3s ease;}
-    .faq-chevron.rotated{transform:rotate(180deg);}
-    .step-connector::after{content:'';position:absolute;top:27px;left:calc(50% + 28px);width:calc(100% - 56px);height:1px;background:linear-gradient(to right,rgba(56,189,248,0.3),rgba(56,189,248,0.05));}
-    @media(max-width:1023px){.step-connector::after{display:none;}}
-  </style>
+   ]
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Inicio",
+     "item": "https://lezacconsultoria.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "+Clientes Activos",
+     "item": "https://lezacconsultoria.com/mas-clientes-activos"
+    }
+   ]
+  }
+ ]
+}
+</script>
+<script src="/analytics.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Playfair+Display:ital,wght@1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+tailwind.config = {
+  darkMode:"class",
+  theme:{extend:{
+    colors:{
+      "surface":"#0A0A0B","surface-dim":"#050506","surface-container":"#111112",
+      "surface-container-low":"#0D0D0E","surface-container-high":"#1A1A1B",
+      "on-surface":"#E5E2E3","on-surface-variant":"#958DA1","outline-variant":"#2A2A2B",
+      "primary":"#8C52FF","primary-container":"#7131E3","on-primary":"#FFFFFF",
+      "error":"#EC0543","success":"#25F5A4",
+      "accent":"var(--color-accent)","accent-dim":"var(--color-accent-dim)",
+    },
+    borderRadius:{"DEFAULT":"0.75rem","sm":"0.5rem","lg":"1rem","xl":"1.5rem","2xl":"2rem","full":"9999px"},
+    fontFamily:{"headline":["Montserrat","sans-serif"],"serif":["Playfair Display","serif"],"body":["Inter","sans-serif"]},
+  }},
+}
+</script>
+<style>
+:root{--color-accent:#38BDF8;--color-accent-dim:#0EA5E9;--color-accent-glow:rgba(56,189,248,0.25);--accent-ink:#0A0A0B;}
+html{font-size:clamp(14px,13px + .23vw,19px);scroll-behavior:smooth;}
+body{font-family:'Inter',sans-serif;background:#0A0A0B;color:#E5E2E3;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+h1,h2,h3,h4{font-family:'Montserrat',sans-serif;}
+.serif-italic{font-family:'Playfair Display',serif;font-style:italic;}
+.material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;}
+.material-symbols-outlined[data-i]::before{content:attr(data-i);}
+.grid-bg{background-image:linear-gradient(rgba(255,255,255,0.02) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.02) 1px,transparent 1px);background-size:72px 72px;}
+.glass{background:rgba(17,17,18,0.6);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,0.06);}
+.liquid-glass{background:rgba(26,26,27,0.45);backdrop-filter:blur(28px);-webkit-backdrop-filter:blur(28px);border:1px solid rgba(255,255,255,0.07);box-shadow:0 8px 32px rgba(0,0,0,0.35),inset 0 1px 0 rgba(255,255,255,0.04);}
+.pill-badge{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border-radius:9999px;background:color-mix(in srgb,var(--color-accent) 9%,transparent);border:1px solid color-mix(in srgb,var(--color-accent) 30%,transparent);font-size:11px;font-weight:600;letter-spacing:.05em;color:var(--color-accent);}
+.pill-dot{width:7px;height:7px;border-radius:50%;background:var(--color-accent);animation:pulse-dot 2s ease-in-out infinite;flex-shrink:0;}
+@keyframes pulse-dot{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.75)}}
+.glow-blob{position:absolute;border-radius:50%;filter:blur(120px);pointer-events:none;}
+.btn-accent{background:var(--color-accent);color:var(--accent-ink);box-shadow:0 0 40px var(--color-accent-glow);}
+.accent{color:var(--color-accent);}
+.lezac-reveal{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s ease;}
+.lezac-reveal.revealed{opacity:1;transform:translateY(0);}
+.faq-answer{max-height:0;overflow:hidden;transition:max-height .4s ease;}
+.faq-answer.open{max-height:700px;}
+.faq-chevron{transition:transform .3s ease;}
+.faq-chevron.rotated{transform:rotate(180deg);}
+.cmp-table th,.cmp-table td{padding:14px 18px;text-align:left;font-size:.9rem;vertical-align:top;}
+.cmp-table thead th{font-family:'Montserrat',sans-serif;font-weight:800;color:#fff;background:rgba(255,255,255,0.04);}
+.cmp-table thead th:last-child{color:var(--color-accent);}
+.cmp-table tbody tr{border-top:1px solid rgba(255,255,255,0.06);}
+.cmp-table tbody td{color:#958DA1;}
+.cmp-table tbody td:last-child{color:#E5E2E3;font-weight:500;}
+</style>
 </head>
 <body class="bg-surface selection:bg-primary/30 selection:text-white">
+<!--lz:nav--><nav id="lezac-nav" class="fixed top-0 left-0 right-0 z-50 px-4 md:px-8 lg:px-12" style="background: rgba(10,10,11,0.85); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(255,255,255,0.05);">
+  <div class="max-w-7xl mx-auto flex items-center justify-between h-16">
+
+    <!-- Logo -->
+    <a href="/" class="flex items-center group">
+      <img src="/Logo Lezac (500 x 500 px) (3).png" alt="Lezac Consultoría" class="h-10 w-auto" />
+    </a>
+
+    <!-- Desktop Nav Links -->
+    <div class="hidden md:flex items-center gap-1">
+      <a href="/" data-nav="home" class="nav-link px-3 py-1.5 text-xs font-body font-medium tracking-wide rounded transition-all duration-200 text-on-surface-variant hover:text-white">Inicio</a>
+      <a href="/consultoria-inteligencia-comercial" data-nav="brujula" class="nav-link px-3 py-1.5 text-xs font-body font-medium tracking-wide rounded transition-all duration-200 text-on-surface-variant hover:text-white">Consultoría de Inteligencia Comercial</a>
+      <a href="/mas-clientes-activos" data-nav="clientes" class="nav-link px-3 py-1.5 text-xs font-body font-medium tracking-wide rounded transition-all duration-200 text-on-surface-variant hover:text-white">+Clientes Activos</a>
+      <a href="/ia-a-medida" data-nav="ia" class="nav-link px-3 py-1.5 text-xs font-body font-medium tracking-wide rounded transition-all duration-200 text-on-surface-variant hover:text-white">IA a Medida</a>
+      <a href="/wa-ventas" data-nav="wa" class="nav-link px-3 py-1.5 text-xs font-body font-medium tracking-wide rounded transition-all duration-200 text-on-surface-variant hover:text-white">WA Ventas</a>
+      <a href="/partner" data-nav="partner" class="nav-link px-3 py-1.5 text-xs font-body font-medium tracking-wide rounded transition-all duration-200 hover:text-white" style="color:#F5C842">Partner</a>
+    </div>
+
+    <!-- Desktop CTAs -->
+    <div class="hidden md:flex items-center gap-3">
+      <a href="https://calendly.com/lezacconsultoria/asesoria-comercial" target="_blank" rel="noopener" class="flex items-center gap-2 px-4 py-2 text-xs font-body font-semibold tracking-wide rounded transition-all duration-200 text-on-surface-variant hover:text-white" style="border: 1px solid rgba(255,255,255,0.1);">
+        Agendar Reunión
+      </a>
+      <a href="https://api.whatsapp.com/send?phone=5491154107921&text=%E2%9C%85%20Lezac%20Consultoria%20I%20Me%20interesa%20conocer%20m%C3%A1s%20de%20sus%20servicios." target="_blank" rel="noopener" class="flex items-center justify-center w-9 h-9 rounded-full transition-all duration-200 hover:scale-110" style="background: rgba(37,211,102,0.15); color: #25D366;" title="WhatsApp">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+      </a>
+    </div>
+
+    <!-- Mobile Hamburger -->
+    <button id="nav-toggle" class="md:hidden flex flex-col gap-1.5 p-2" aria-label="Menú">
+      <span class="hamburger-line block w-5 h-0.5 bg-white transition-all duration-300"></span>
+      <span class="hamburger-line block w-5 h-0.5 bg-white transition-all duration-300"></span>
+      <span class="hamburger-line block w-5 h-0.5 bg-white transition-all duration-300"></span>
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="md:hidden hidden pb-4 border-t border-white/5 mt-1">
+    <div class="flex flex-col gap-1 pt-3">
+      <a href="/" data-nav="home" class="nav-link mobile-nav-link px-4 py-3 text-sm font-body font-medium text-on-surface-variant hover:text-white hover:bg-surface-container rounded transition-all">Inicio</a>
+      <a href="/consultoria-inteligencia-comercial" data-nav="brujula" class="nav-link mobile-nav-link px-4 py-3 text-sm font-body font-medium text-on-surface-variant hover:text-white hover:bg-surface-container rounded transition-all">Consultoría de Inteligencia Comercial</a>
+      <a href="/mas-clientes-activos" data-nav="clientes" class="nav-link mobile-nav-link px-4 py-3 text-sm font-body font-medium text-on-surface-variant hover:text-white hover:bg-surface-container rounded transition-all">+Clientes Activos</a>
+      <a href="/ia-a-medida" data-nav="ia" class="nav-link mobile-nav-link px-4 py-3 text-sm font-body font-medium text-on-surface-variant hover:text-white hover:bg-surface-container rounded transition-all">IA a Medida</a>
+      <a href="/wa-ventas" data-nav="wa" class="nav-link mobile-nav-link px-4 py-3 text-sm font-body font-medium text-on-surface-variant hover:text-white hover:bg-surface-container rounded transition-all">WA Ventas</a>
+      <a href="/partner" data-nav="partner" class="nav-link mobile-nav-link px-4 py-3 text-sm font-body font-medium hover:bg-surface-container rounded transition-all" style="color:#F5C842">Partner</a>
+      <div class="mt-3 px-4">
+        <a href="https://calendly.com/lezacconsultoria/asesoria-comercial" target="_blank" rel="noopener" class="block w-full text-center px-4 py-3 text-sm font-semibold rounded transition-all" style="background: var(--color-accent, #8C52FF); color: white;">
+          Agendar Reunión
+        </a>
+      </div>
+    </div>
+  </div>
+</nav><!--/lz:nav-->
 <main>
-
-<!-- HERO -->
-<section class="relative min-h-screen flex flex-col items-center justify-center px-6 md:px-12 pt-16 pb-20 overflow-hidden grid-bg">
-  <div class="glow-blob w-[700px] h-[700px] opacity-[0.06] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" style="background:var(--color-accent)"></div>
-  <div class="glow-blob w-[300px] h-[300px] opacity-[0.05] top-20 right-10" style="background:#8C52FF"></div>
-  <div class="w-full max-w-5xl mx-auto text-center space-y-6 relative z-10">
-    <span class="pill-badge"><span class="pill-dot"></span>Proyecto 2 Meses · Expansión Territorial</span>
-    <h1 class="text-4xl md:text-5xl xl:text-[3.5rem] font-black leading-[1.05] tracking-tight text-white">
-      +Clientes Activos:<br/>
-      más clientes comprando en 60 días,<br/>
-      <span class="serif-italic font-semibold text-3xl md:text-4xl xl:text-5xl" style="color:var(--color-accent)">con tu misma estructura.</span>
-    </h1>
-    <p class="text-lg md:text-xl text-on-surface-variant font-light max-w-2xl mx-auto leading-relaxed">
-      Geolocalizamos tu base de clientes histórica, censamos 100 puntos de venta nuevos en tu zona en 7 días (garantizado) y rediseñamos las rutas de tus vendedores para que reactiven clientes inactivos y sumen los nuevos que hoy no atienden.
-    </p>
-    <div class="flex items-center justify-center gap-8 py-4">
-      <div class="text-center"><p class="text-3xl font-black text-white">+15-30%</p><p class="text-xs text-on-surface-variant uppercase tracking-wider mt-1">Clientes activos</p></div>
-      <div class="w-px h-10 bg-white/10"></div>
-      <div class="text-center"><p class="text-3xl font-black" style="color:var(--color-accent)">60 días</p><p class="text-xs text-on-surface-variant uppercase tracking-wider mt-1">Histórico</p></div>
-      <div class="w-px h-10 bg-white/10"></div>
-      <div class="text-center"><p class="text-3xl font-black text-white">100 PDV</p><p class="text-xs text-on-surface-variant uppercase tracking-wider mt-1">En 7 días garantizado</p></div>
-    </div>
-    <!-- VSL -->
-    <div class="relative mt-4 max-w-4xl mx-auto">
-      <div class="absolute -inset-2 rounded-2xl opacity-40" style="background:radial-gradient(ellipse at center,var(--color-accent-glow) 0%,transparent 70%);filter:blur(24px);"></div>
-      <div class="relative aspect-video rounded-2xl overflow-hidden" style="box-shadow:0 0 0 1px rgba(56,189,248,0.15),0 32px 64px rgba(0,0,0,0.5)">
-        <video data-vsl controls autoplay muted playsinline preload="auto" class="absolute inset-0 w-full h-full" style="background:#000;"><source src="/Web%20VSL%20I%20Mas%20Clientes%20Activos.mp4" type="video/mp4"></video>
-      </div>
-    </div>
-    <div class="flex flex-col sm:flex-row gap-3 justify-center pt-2">
-      <a href="https://calendly.com/lezacconsultoria/asesoria-comercial" target="_blank" rel="noopener" class="flex items-center justify-center gap-2 px-8 py-4 rounded-full text-sm font-bold transition-all hover:brightness-110 hover:scale-[1.02]" style="background:var(--color-accent);color:#0A0A0B;box-shadow:0 0 40px var(--color-accent-glow)">Agendar diagnóstico <span class="material-symbols-outlined" style="font-size:18px">arrow_forward</span></a>
-      <a href="https://api.whatsapp.com/send?phone=5491154107921&text=%E2%9C%85%20Lezac%20Consultoria%20I%20Me%20interesa%20conocer%20%2BClientes%20Activos." target="_blank" rel="noopener" class="flex items-center justify-center gap-2 px-8 py-4 rounded-full text-sm font-semibold text-white/70 hover:text-white transition-all" style="border:1px solid rgba(255,255,255,0.12)">Ver cómo aplica a mi empresa</a>
-    </div>
-  </div>
-</section>
-
-<!-- MARQUEE -->
-<section class="py-10 border-y" style="border-color:rgba(255,255,255,0.05);background:#050506;">
-  <p class="text-center text-sm font-bold tracking-widest uppercase mb-8" style="color:#38BDF8;">Empresas que confían en Lezac</p>
-  <div data-lezac-marquee></div>
-</section>
-
-<!-- RESULTADO HISTÓRICO -->
-<section class="py-20 px-6 md:px-12 relative overflow-hidden" style="background:#050506">
-  <div class="max-w-5xl mx-auto lezac-reveal">
-    <div class="liquid-glass rounded-2xl p-10 grid md:grid-cols-2 gap-10 items-center">
-      <div>
-        <span class="text-xs font-semibold tracking-widest uppercase block mb-3" style="color:var(--color-accent)">Resultado histórico y meta del proyecto</span>
-        <h2 class="text-3xl font-black text-white mb-4 leading-tight">Un resultado ya alcanzado,<br/><span class="serif-italic font-normal" style="color:var(--color-accent)">no una promesa.</span></h2>
-        <p class="text-on-surface-variant text-sm leading-relaxed">Empresas que ya aplicaron esta metodología lograron entre <strong class="text-white">15% y 30% de incremento de clientes activos en 60 días</strong>. Para cada proyecto nuevo nos comprometemos a una meta orientativa de <strong class="text-white">10% a 15% en 2 meses</strong> — más conservadora a propósito, porque parte de la ejecución final depende de tu equipo de ventas.</p>
-      </div>
-      <div class="grid grid-cols-2 gap-4">
-        <div class="rounded-xl p-5 text-center" style="background:#111112"><p class="text-3xl font-black text-white mb-1">+30%</p><p class="text-xs text-on-surface-variant uppercase tracking-wider">Máximo histórico</p></div>
-        <div class="rounded-xl p-5 text-center" style="background:#111112"><p class="text-3xl font-black mb-1" style="color:var(--color-accent)">+15%</p><p class="text-xs text-on-surface-variant uppercase tracking-wider">Mínimo histórico</p></div>
-        <div class="rounded-xl p-5 text-center col-span-2" style="background:rgba(56,189,248,0.06);border:1px solid rgba(56,189,248,0.2)"><p class="text-2xl font-black mb-1" style="color:var(--color-accent)">10–15%</p><p class="text-xs text-on-surface-variant uppercase tracking-wider">Meta orientativa por proyecto</p></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CÓMO FUNCIONA EN 3 PASOS -->
-<section class="py-24 px-6 md:px-12 bg-surface">
-  <div class="max-w-6xl mx-auto">
-    <div class="mb-14 lezac-reveal text-center">
-      <span class="text-xs font-semibold tracking-widest uppercase" style="color:var(--color-accent)">Metodología</span>
-      <h2 class="text-4xl md:text-5xl font-black tracking-tight text-white mt-3">Cómo funciona<br/><span class="serif-italic font-normal text-3xl md:text-4xl" style="color:var(--color-accent)">en 3 pasos.</span></h2>
-    </div>
-    <div class="grid lg:grid-cols-3 gap-6 relative lezac-reveal">
-      <div class="liquid-glass rounded-2xl p-8 relative overflow-hidden step-connector">
-        <div class="absolute top-4 right-5 text-7xl font-black leading-none select-none" style="color:rgba(56,189,248,0.05);font-family:'Montserrat',sans-serif">01</div>
-        <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-5" style="background:rgba(56,189,248,0.1)"><span class="material-symbols-outlined" style="color:var(--color-accent);font-size:24px">location_on</span></div>
-        <h3 class="text-lg font-black text-white mb-3">Geolocalización de tu base de clientes histórica</h3>
-        <p class="text-sm text-on-surface-variant leading-relaxed">Mapeamos el 100% de tu base: quién compra, quién dejó de comprar y dónde está cada uno. El mapa que nunca tuviste.</p>
-      </div>
-      <div class="liquid-glass rounded-2xl p-8 relative overflow-hidden step-connector">
-        <div class="absolute top-4 right-5 text-7xl font-black leading-none select-none" style="color:rgba(56,189,248,0.05);font-family:'Montserrat',sans-serif">02</div>
-        <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-5" style="background:rgba(56,189,248,0.1)"><span class="material-symbols-outlined" style="color:var(--color-accent);font-size:24px">fact_check</span></div>
-        <h3 class="text-lg font-black text-white mb-3">Censo digital de 100 PDV, garantizado en 7 días</h3>
-        <p class="text-sm text-on-surface-variant leading-relaxed">Relevamos 100 puntos de venta nuevos en tu zona de influencia. <strong class="text-white">Garantía real:</strong> si no lo cumplimos en 7 días, no te cobramos esa etapa.</p>
-      </div>
-      <div class="liquid-glass rounded-2xl p-8 relative overflow-hidden">
-        <div class="absolute top-4 right-5 text-7xl font-black leading-none select-none" style="color:rgba(56,189,248,0.05);font-family:'Montserrat',sans-serif">03</div>
-        <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-5" style="background:rgba(56,189,248,0.1)"><span class="material-symbols-outlined" style="color:var(--color-accent);font-size:24px">route</span></div>
-        <h3 class="text-lg font-black text-white mb-3">Ruteo comercial</h3>
-        <p class="text-sm text-on-surface-variant leading-relaxed">Rediseñamos las rutas de tus vendedores para que cubran mejor la zona — no necesariamente para que visiten más, sino para que <strong class="text-white">visiten mejor</strong>.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CASOS REALES -->
-<section class="py-24 px-6 md:px-12 relative overflow-hidden" style="background:#050506">
-  <div class="max-w-5xl mx-auto">
-    <div class="mb-12 lezac-reveal">
-      <span class="text-xs font-semibold tracking-widest uppercase block mb-3" style="color:var(--color-accent)">Casos reales de clientes</span>
-      <h2 class="text-4xl font-black text-white">Lo que ya pasó<br/><span class="serif-italic font-normal text-3xl" style="color:var(--color-accent)">con otras empresas.</span></h2>
-      <p class="text-on-surface-variant mt-3 text-sm">Actualizado septiembre 2026</p>
-    </div>
-    <div class="grid md:grid-cols-2 gap-6 lezac-reveal">
-      <div class="liquid-glass rounded-2xl p-8">
-        <p class="text-xs font-bold uppercase tracking-widest mb-4" style="color:var(--color-accent)">Distribución de consumo masivo · Buenos Aires</p>
-        <p class="text-sm text-on-surface-variant leading-relaxed mb-6">Más de 1.250 puntos de venta sin geolocalizar. Relevamiento y validación completa de la base de clientes en 10 días.</p>
-        <div class="flex gap-6">
-          <div><p class="text-3xl font-black text-white">+20%</p><p class="text-xs text-on-surface-variant mt-1">Productividad equipo comercial</p></div>
-          <div class="w-px bg-white/10"></div>
-          <div><p class="text-3xl font-black" style="color:var(--color-accent)">−15%</p><p class="text-xs text-on-surface-variant mt-1">Costo logístico</p></div>
-        </div>
-      </div>
-      <div class="liquid-glass rounded-2xl p-8">
-        <p class="text-xs font-bold uppercase tracking-widest mb-4" style="color:var(--color-accent)">Fábrica de alimento balanceado · Buenos Aires</p>
-        <p class="text-sm text-on-surface-variant leading-relaxed mb-6">Más de 15 vendedores cubriendo Capital y Gran Buenos Aires sin saber a cuántos clientes potenciales llegaban. Geolocalización, censo de potenciales desatendidos y ruteo comercial con frecuencia de visita definida.</p>
-        <div class="flex gap-6">
-          <div><p class="text-3xl font-black text-white">+15%</p><p class="text-xs text-on-surface-variant mt-1">Ventas misma estructura</p></div>
-          <div class="w-px bg-white/10"></div>
-          <div><p class="text-3xl font-black" style="color:var(--color-accent)">−20%</p><p class="text-xs text-on-surface-variant mt-1">Costo logístico</p></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CRONOGRAMA -->
-<section class="py-24 px-6 md:px-12 bg-surface">
-  <div class="max-w-4xl mx-auto lezac-reveal">
-    <div class="mb-10">
-      <span class="text-xs font-semibold tracking-widest uppercase block mb-3" style="color:var(--color-accent)">Cronograma de los 2 meses</span>
-      <h2 class="text-3xl font-black text-white">Proyecto con fecha de cierre.</h2>
-    </div>
-    <div class="space-y-4">
-      <div class="flex gap-6 items-start liquid-glass rounded-xl p-6">
-        <div class="flex-shrink-0 w-14 h-14 rounded-xl flex items-center justify-center font-black text-sm" style="background:rgba(56,189,248,0.1);color:var(--color-accent)">D1–7</div>
-        <div><p class="font-bold text-white text-sm mb-1">Geolocalización completa + censo de 100 PDV</p><p class="text-xs text-on-surface-variant">Garantizado. Si no lo cumplimos en 7 días, no te cobramos esa etapa.</p></div>
-      </div>
-      <div class="flex gap-6 items-start liquid-glass rounded-xl p-6">
-        <div class="flex-shrink-0 w-14 h-14 rounded-xl flex items-center justify-center font-black text-sm text-center leading-tight" style="background:rgba(56,189,248,0.1);color:var(--color-accent)">S2+</div>
-        <div><p class="font-bold text-white text-sm mb-1">Ruteo comercial en ejecución</p><p class="text-xs text-on-surface-variant">Panel actualizado cada semana + reunión en vivo cada 15 días con tu equipo.</p></div>
-      </div>
-      <div class="flex gap-6 items-start liquid-glass rounded-xl p-6" style="border-color:rgba(56,189,248,0.2)">
-        <div class="flex-shrink-0 w-14 h-14 rounded-xl flex items-center justify-center font-black text-sm" style="background:rgba(56,189,248,0.15);color:var(--color-accent)">S8</div>
-        <div><p class="font-bold text-white text-sm mb-1">Informe de cierre</p><p class="text-xs text-on-surface-variant">Clientes reactivados, clientes nuevos y cobertura lograda vs. meta comprometida.</p></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CALIFICA -->
-<section class="py-20 px-6 md:px-12" style="background:#050506">
-  <div class="max-w-4xl mx-auto lezac-reveal">
-    <div class="liquid-glass rounded-2xl p-10 flex flex-col md:flex-row gap-10 items-start">
-      <div class="flex-1">
-        <span class="text-xs font-semibold tracking-widest uppercase block mb-3" style="color:var(--color-accent)">¿Mi empresa califica?</span>
-        <h2 class="text-3xl font-black text-white mb-4">El piso son <span style="color:var(--color-accent)">300 puntos<br/>de venta históricos.</span></h2>
-        <p class="text-on-surface-variant text-sm leading-relaxed">Si facturás más, no hay techo. Si tu empresa está por debajo de ese piso, hablanos igual — se evalúa caso por caso.</p>
-      </div>
-      <div class="flex-1 space-y-3">
-        <div class="flex items-center gap-3 text-sm text-white/80 p-3 rounded-xl" style="background:#111112"><span class="w-2 h-2 rounded-full flex-shrink-0" style="background:var(--color-accent)"></span>Distribuidoras</div>
-        <div class="flex items-center gap-3 text-sm text-white/80 p-3 rounded-xl" style="background:#111112"><span class="w-2 h-2 rounded-full flex-shrink-0" style="background:var(--color-accent)"></span>Mayoristas</div>
-        <div class="flex items-center gap-3 text-sm text-white/80 p-3 rounded-xl" style="background:#111112"><span class="w-2 h-2 rounded-full flex-shrink-0" style="background:var(--color-accent)"></span>Fábricas pyme con red de ventas propia</div>
-        <div class="flex items-center gap-3 text-sm text-white/80 p-3 rounded-xl" style="background:#111112"><span class="w-2 h-2 rounded-full flex-shrink-0" style="background:var(--color-accent)"></span>Argentina, Paraguay, Bolivia y Uruguay</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FAQ -->
-<section class="py-24 px-6 md:px-12 bg-surface">
-  <div class="max-w-3xl mx-auto lezac-reveal">
-    <h2 class="text-3xl font-black text-center text-white uppercase tracking-tight mb-10">Preguntas frecuentes</h2>
-    <div class="space-y-3">
-
-      <div class="glass rounded-xl overflow-hidden"><button class="faq-btn w-full flex items-center justify-between p-6 text-left gap-4"><span class="font-bold text-white text-sm">¿Qué resultado puedo esperar?</span><span class="material-symbols-outlined faq-chevron text-on-surface-variant flex-shrink-0">keyboard_arrow_down</span></button><div class="faq-answer px-6 text-sm text-on-surface-variant leading-relaxed"><p class="pb-5">Históricamente, nuestros clientes aumentaron entre 15% y 30% sus clientes activos en 60 días. En cada proyecto nuevo nos proponemos una meta orientativa de 10% a 15% en 2 meses (no es una garantía).</p></div></div>
-
-      <div class="glass rounded-xl overflow-hidden"><button class="faq-btn w-full flex items-center justify-between p-6 text-left gap-4"><span class="font-bold text-white text-sm">¿Qué es un censo de puntos de venta y para qué me sirve?</span><span class="material-symbols-outlined faq-chevron text-on-surface-variant flex-shrink-0">keyboard_arrow_down</span></button><div class="faq-answer px-6 text-sm text-on-surface-variant leading-relaxed"><p class="pb-5">Es relevar comercio por comercio lo que hay en una zona: quién te compra, quién podría comprarte y quién le compra a la competencia. Nosotros censamos 100 PDV en 7 días, garantizado.</p></div></div>
-
-      <div class="glass rounded-xl overflow-hidden"><button class="faq-btn w-full flex items-center justify-between p-6 text-left gap-4"><span class="font-bold text-white text-sm">¿Mi empresa califica?</span><span class="material-symbols-outlined faq-chevron text-on-surface-variant flex-shrink-0">keyboard_arrow_down</span></button><div class="faq-answer px-6 text-sm text-on-surface-variant leading-relaxed"><p class="pb-5">Necesitás al menos 300 puntos de venta en tu base histórica de clientes. Si estás por debajo, hablanos igual.</p></div></div>
-
-      <div class="glass rounded-xl overflow-hidden"><button class="faq-btn w-full flex items-center justify-between p-6 text-left gap-4"><span class="font-bold text-white text-sm">¿Tengo que cambiar a mis vendedores?</span><span class="material-symbols-outlined faq-chevron text-on-surface-variant flex-shrink-0">keyboard_arrow_down</span></button><div class="faq-answer px-6 text-sm text-on-surface-variant leading-relaxed"><p class="pb-5">No. Les rediseñamos la ruta para que visiten mejor, no más.</p></div></div>
-
-      <div class="glass rounded-xl overflow-hidden"><button class="faq-btn w-full flex items-center justify-between p-6 text-left gap-4"><span class="font-bold text-white text-sm">¿Qué pasa con el costo logístico?</span><span class="material-symbols-outlined faq-chevron text-on-surface-variant flex-shrink-0">keyboard_arrow_down</span></button><div class="faq-answer px-6 text-sm text-on-surface-variant leading-relaxed"><p class="pb-5">En los casos reales, el costo logístico bajó entre 15% y 20% con la misma estructura.</p></div></div>
-
-      <div class="glass rounded-xl overflow-hidden"><button class="faq-btn w-full flex items-center justify-between p-6 text-left gap-4"><span class="font-bold text-white text-sm">¿Cuánto dura?</span><span class="material-symbols-outlined faq-chevron text-on-surface-variant flex-shrink-0">keyboard_arrow_down</span></button><div class="faq-answer px-6 text-sm text-on-surface-variant leading-relaxed"><p class="pb-5">Dos meses, con fecha de cierre.</p></div></div>
-
-      <div class="glass rounded-xl overflow-hidden"><button class="faq-btn w-full flex items-center justify-between p-6 text-left gap-4"><span class="font-bold text-white text-sm">¿Sirve para Paraguay, Bolivia o Uruguay?</span><span class="material-symbols-outlined faq-chevron text-on-surface-variant flex-shrink-0">keyboard_arrow_down</span></button><div class="faq-answer px-6 text-sm text-on-surface-variant leading-relaxed"><p class="pb-5">Sí, trabajamos en los cuatro países.</p></div></div>
-
-    </div>
-  </div>
-</section>
-
-<!-- CTA -->
-<section class="py-24 px-6 md:px-12 relative overflow-hidden" style="background:#050506">
-  <div class="glow-blob w-[600px] h-[600px] opacity-[0.05] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" style="background:var(--color-accent)"></div>
-  <div class="max-w-3xl mx-auto text-center relative z-10 lezac-reveal">
-    <h2 class="text-4xl md:text-5xl font-black text-white mb-6">Contanos cuántos puntos de venta<br/><span class="serif-italic font-normal" style="color:var(--color-accent)">tenés en tu base.</span></h2>
-    <p class="text-on-surface-variant mb-8 max-w-xl mx-auto leading-relaxed">Vemos si +Clientes Activos aplica y calculamos la meta orientativa para tu empresa.</p>
-    <a href="https://calendly.com/lezacconsultoria/asesoria-comercial" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-10 py-4 rounded-full font-bold text-sm transition-all hover:brightness-110 hover:scale-[1.02]" style="background:var(--color-accent);color:#0A0A0B;box-shadow:0 0 40px var(--color-accent-glow)">Agendar diagnóstico <span class="material-symbols-outlined" style="font-size:18px">arrow_forward</span></a>
-  </div>
-</section>
-
+<section class="relative flex flex-col items-center justify-center px-6 md:px-12 pt-28 md:pt-32 pb-16 overflow-hidden grid-bg"><div class="glow-blob w-[600px] h-[600px] opacity-[0.07] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" style="background:var(--color-accent)"></div><div class="w-full max-w-5xl mx-auto text-center space-y-6 relative z-10"><nav aria-label="Breadcrumb" class="text-xs text-on-surface-variant"><ol class="flex items-center justify-center gap-2"><li><a href="/" class="hover:text-white transition-colors">Inicio</a></li><li aria-hidden="true">›</li><li aria-current="page" class="text-white/80">+Clientes Activos</li></ol></nav><span class="pill-badge"><span class="pill-dot"></span>Consultoría comercial · Cobertura de clientes · Método +Clientes Activos</span><h1 class="text-3xl md:text-5xl font-black leading-[1.1] tracking-tight text-white">Más clientes activos para tu empresa, <span class="serif-italic font-semibold accent">con geolocalización, censo y ruteo comercial.</span></h1><p class="text-base md:text-lg text-on-surface-variant font-light max-w-3xl mx-auto leading-relaxed">Recuperamos a los clientes que dejaron de comprarte, sumamos puntos de venta que hoy nadie atiende y rediseñamos las rutas de tu equipo. +Clientes Activos es el método de Lezac Consultoría para distribuidoras, mayoristas y fábricas: en 2 meses, con un consultor trabajando uno a uno con tu empresa y sin quitarte tiempo. Proyección: entre +15% y +30% de clientes activos en 60 días.</p><p class="serif-italic text-2xl md:text-3xl font-semibold accent">Más clientes, más ventas.</p><ul class="flex flex-wrap justify-center gap-x-6 gap-y-2"><li class="flex items-center gap-2 text-sm text-white/80"><span class="w-5 h-5 rounded-full flex-shrink-0 flex items-center justify-center" style="background:color-mix(in srgb,var(--color-accent) 15%,transparent);color:var(--color-accent)"><span class="material-symbols-outlined" style="font-size:13px" aria-hidden="true" data-i="check"></span></span>100% online</li><li class="flex items-center gap-2 text-sm text-white/80"><span class="w-5 h-5 rounded-full flex-shrink-0 flex items-center justify-center" style="background:color-mix(in srgb,var(--color-accent) 15%,transparent);color:var(--color-accent)"><span class="material-symbols-outlined" style="font-size:13px" aria-hidden="true" data-i="check"></span></span>Trabajo uno a uno</li><li class="flex items-center gap-2 text-sm text-white/80"><span class="w-5 h-5 rounded-full flex-shrink-0 flex items-center justify-center" style="background:color-mix(in srgb,var(--color-accent) 15%,transparent);color:var(--color-accent)"><span class="material-symbols-outlined" style="font-size:13px" aria-hidden="true" data-i="check"></span></span>Sin contrato inicial</li><li class="flex items-center gap-2 text-sm text-white/80"><span class="w-5 h-5 rounded-full flex-shrink-0 flex items-center justify-center" style="background:color-mix(in srgb,var(--color-accent) 15%,transparent);color:var(--color-accent)"><span class="material-symbols-outlined" style="font-size:13px" aria-hidden="true" data-i="check"></span></span>Pago único según la cantidad de puntos de venta</li></ul><div class="flex flex-col sm:flex-row gap-3 justify-center"><a href="https://wa.me/5491154107921?text=Hola%2C%20quiero%20consultar%20por%20%2BClientes%20Activos.%20Mi%20empresa%20tiene%20aproximadamente%20___%20puntos%20de%20venta." target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full text-sm transition-all hover:scale-[1.02] font-bold btn-accent hover:brightness-110"><span class="material-symbols-outlined" style="font-size:18px" aria-hidden="true" data-i="chat"></span>Contanos cuántos puntos de venta tiene tu empresa</a><a href="#como-funciona" class="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full text-sm transition-all hover:scale-[1.02] font-semibold text-white/85 hover:text-white hover:bg-white/5" style="border:1px solid rgba(255,255,255,0.15)">Ver cómo funciona</a></div><div class="relative mt-8 max-w-4xl mx-auto"><div class="absolute -inset-2 rounded-2xl opacity-40" style="background:radial-gradient(ellipse at center,var(--color-accent-glow) 0%,transparent 70%);filter:blur(24px);"></div><div class="relative aspect-video rounded-2xl overflow-hidden" style="box-shadow:0 0 0 1px color-mix(in srgb,var(--color-accent) 20%,transparent),0 32px 64px rgba(0,0,0,0.5)"><video data-vsl controls autoplay muted playsinline preload="auto" aria-label="+Clientes Activos: presentación del método" class="absolute inset-0 w-full h-full" style="background:#000;"><source src="/Web%20VSL%20I%20Mas%20Clientes%20Activos.mp4" type="video/mp4"></video></div></div></div></section><section class="py-20 md:py-24 px-6 md:px-12 relative overflow-hidden " style="background:#050506"><div class="max-w-6xl mx-auto lezac-reveal"><div class="text-center"><h2 class="text-3xl md:text-4xl font-black text-white leading-tight tracking-tight mb-6 text-center ">Más de 100 empresas asesoradas en 4 países</h2><p class="text-sm font-semibold tracking-wide text-white/80 mb-8">10+ años · 100+ empresas asesoradas · Argentina, Paraguay, Bolivia y Uruguay</p></div><div data-lezac-marquee></div></div></section><section class="py-20 md:py-24 px-6 md:px-12 relative overflow-hidden " style="background:#050506"><div class="max-w-5xl mx-auto lezac-reveal"><h2 class="text-3xl md:text-4xl font-black text-white leading-tight tracking-tight mb-6 ">¿Te suena alguna de estas situaciones?</h2><ul class="grid grid-cols-1 md:grid-cols-2 gap-4"><li class="liquid-glass rounded-xl p-5"><p class="text-white font-bold mb-1">Clientes que compraban y dejaron de comprar.</p><p class="text-sm text-on-surface-variant leading-relaxed">Nadie los llamó, nadie los visitó. Pasaron meses y ya se los dieron por perdidos.</p></li><li class="liquid-glass rounded-xl p-5"><p class="text-white font-bold mb-1">Salís a buscar clientes nuevos mientras los tuyos están dormidos.</p><p class="text-sm text-on-surface-variant leading-relaxed">Es más caro y más lento que reactivar a los que ya te conocen.</p></li><li class="liquid-glass rounded-xl p-5"><p class="text-white font-bold mb-1">Tus vendedores visitan por costumbre, no por estrategia.</p><p class="text-sm text-on-surface-variant leading-relaxed">Recorren los mismos lugares que hace años, sin saber qué zonas tienen potencial.</p></li><li class="liquid-glass rounded-xl p-5"><p class="text-white font-bold mb-1">Tomar pedidos no es vender.</p><p class="text-sm text-on-surface-variant leading-relaxed">Tu equipo atiende al que llama y descuida al que podría comprar más.</p></li><li class="liquid-glass rounded-xl p-5"><p class="text-white font-bold mb-1">No sabés cuántos puntos de venta hay en tu zona.</p><p class="text-sm text-on-surface-variant leading-relaxed">Ni cuántos te compran y cuántos le compran a la competencia.</p></li><li class="liquid-glass rounded-xl p-5"><p class="text-white font-bold mb-1">Se va un vendedor y se cae la venta de su zona.</p><p class="text-sm text-on-surface-variant leading-relaxed">Los clientes eran de él, no de la empresa.</p></li><li class="liquid-glass rounded-xl p-5"><p class="text-white font-bold mb-1">Las ventas se estancaron y cada visita cuesta más.</p><p class="text-sm text-on-surface-variant leading-relaxed">Más combustible, más horas, mismos resultados.</p></li></ul><div class="mt-8 rounded-2xl p-6" style="background:color-mix(in srgb,var(--color-accent) 8%,transparent);border:1px solid color-mix(in srgb,var(--color-accent) 25%,transparent)"><p class="text-white leading-relaxed">En la mayoría de las empresas con las que trabajamos, entre el 30% y el 60% de la base de clientes está inactiva.</p></div><p class="mt-8 text-white font-bold text-lg">Si te pasa algo de esto, no tenés un problema de vendedores. Tenés un problema de cobertura.</p></div></section><section class="py-20 md:py-24 px-6 md:px-12 relative overflow-hidden bg-surface" id="como-funciona"><div class="max-w-4xl mx-auto lezac-reveal"><h2 class="text-3xl md:text-4xl font-black text-white leading-tight tracking-tight mb-6 ">Un método en 3 pasos para sumar clientes que realmente te compran</h2><ol class="space-y-4"><li class="flex gap-5 items-start liquid-glass rounded-xl p-6"><div class="flex-shrink-0 w-11 h-11 rounded-xl flex items-center justify-center font-black accent" style="background:color-mix(in srgb,var(--color-accent) 12%,transparent)">1</div><div><p class="text-white font-bold mb-1">Geolocalizamos tu base.</p><p class="text-sm text-on-surface-variant leading-relaxed">Ubicamos en el mapa a todos tus clientes y vemos quién compra, quién bajó y quién dejó de comprar.</p></div></li><li class="flex gap-5 items-start liquid-glass rounded-xl p-6"><div class="flex-shrink-0 w-11 h-11 rounded-xl flex items-center justify-center font-black accent" style="background:color-mix(in srgb,var(--color-accent) 12%,transparent)">2</div><div><p class="text-white font-bold mb-1">Censamos tu zona.</p><p class="text-sm text-on-surface-variant leading-relaxed">Identificamos los puntos de venta que hoy no atendés dentro de tu zona de influencia.</p></div></li><li class="flex gap-5 items-start liquid-glass rounded-xl p-6"><div class="flex-shrink-0 w-11 h-11 rounded-xl flex items-center justify-center font-black accent" style="background:color-mix(in srgb,var(--color-accent) 12%,transparent)">3</div><div><p class="text-white font-bold mb-1">Rediseñamos tus rutas.</p><p class="text-sm text-on-surface-variant leading-relaxed">Reordenamos las visitas de tu equipo para llegar a más clientes con el mismo esfuerzo.</p></div></li></ol><p class="mt-6 text-sm text-on-surface-variant">Compromiso de entrega: acordamos los plazos desde el inicio y, si no cumplimos con el censo inicial, esa etapa no se cobra.</p></div></section><section class="py-20 md:py-24 px-6 md:px-12 relative overflow-hidden " style="background:#050506"><div class="max-w-5xl mx-auto lezac-reveal"><h2 class="text-3xl md:text-4xl font-black text-white leading-tight tracking-tight mb-6 ">Lo que buscamos lograr</h2><p class="text-on-surface-variant leading-relaxed">Nuestra proyección es de entre +15% y +30% de clientes activos en 60 días, en las empresas donde aplicamos el método. El objetivo de tu proyecto lo definimos juntos, a partir de la base real de tu empresa.</p><div class="grid grid-cols-1 md:grid-cols-2 gap-5 mt-8"><div class="liquid-glass rounded-2xl p-7"><h3 class="text-lg font-black text-white mb-3">Distribuidora de la provincia de Buenos Aires</h3><p class="text-sm text-on-surface-variant leading-relaxed mb-3">Necesitaba más clientes. Al analizar su base de ventas, solo el 35% de sus clientes había comprado en el último año. Enfocamos el trabajo en reactivar a los clientes inactivos.</p><p class="text-sm text-white leading-relaxed"><strong>Resultado:</strong> más de 15% de clientes activos. Después, el equipo continuó con la metodología por su cuenta.</p></div><div class="liquid-glass rounded-2xl p-7"><h3 class="text-lg font-black text-white mb-3">Empresa de la provincia de Santa Fe</h3><p class="text-sm text-on-surface-variant leading-relaxed mb-3">Además de reactivar clientes, buscamos nuevos clientes potenciales en su zona de influencia.</p><p class="text-sm text-white leading-relaxed"><strong>Resultado:</strong> +25% de cobertura de clientes con compra, mejor capilaridad, una fuerza de venta más productiva y menor costo de entrega en la logística.</p></div></div></div></section><section class="py-20 md:py-24 px-6 md:px-12 relative overflow-hidden bg-surface"><div class="max-w-5xl mx-auto lezac-reveal"><h2 class="text-3xl md:text-4xl font-black text-white leading-tight tracking-tight mb-6 ">Qué incluye +Clientes Activos</h2><ul class="grid grid-cols-1 md:grid-cols-2 gap-3"><li class="liquid-glass rounded-xl p-4 flex items-center gap-3 text-sm text-white/90"><span class="material-symbols-outlined accent" style="font-size:20px" aria-hidden="true" data-i="map"></span>Mapa geolocalizado de tus clientes</li><li class="liquid-glass rounded-xl p-4 flex items-center gap-3 text-sm text-white/90"><span class="material-symbols-outlined accent" style="font-size:20px" aria-hidden="true" data-i="fact_check"></span>Censo digital de los puntos de venta de tu zona de influencia</li><li class="liquid-glass rounded-xl p-4 flex items-center gap-3 text-sm text-white/90"><span class="material-symbols-outlined accent" style="font-size:20px" aria-hidden="true" data-i="route"></span>Rutas rediseñadas para tu equipo</li><li class="liquid-glass rounded-xl p-4 flex items-center gap-3 text-sm text-white/90"><span class="material-symbols-outlined accent" style="font-size:20px" aria-hidden="true" data-i="monitoring"></span>Panel de seguimiento semanal</li><li class="liquid-glass rounded-xl p-4 flex items-center gap-3 text-sm text-white/90"><span class="material-symbols-outlined accent" style="font-size:20px" aria-hidden="true" data-i="groups"></span>Reunión cada 15 días con tu consultor</li><li class="liquid-glass rounded-xl p-4 flex items-center gap-3 text-sm text-white/90"><span class="material-symbols-outlined accent" style="font-size:20px" aria-hidden="true" data-i="summarize"></span>Informe de cierre en la semana 8</li><li class="liquid-glass rounded-xl p-4 flex items-center gap-3 text-sm text-white/90"><span class="material-symbols-outlined accent" style="font-size:20px" aria-hidden="true" data-i="menu_book"></span>Manual de la metodología para que tu equipo continúe solo</li></ul></div></section><section class="py-20 md:py-24 px-6 md:px-12 relative overflow-hidden " style="background:#050506"><div class="max-w-5xl mx-auto lezac-reveal"><h2 class="text-3xl md:text-4xl font-black text-white leading-tight tracking-tight mb-6 ">Un servicio concreto, que no te ocupa tiempo</h2><p class="text-on-surface-variant mb-8">Vos seguís vendiendo. Nosotros hacemos el trabajo pesado.</p><ul class="grid grid-cols-1 md:grid-cols-2 gap-4"><li class="liquid-glass rounded-xl p-5"><p class="text-white font-bold mb-1">Tu tiempo, cuidado.</p><p class="text-sm text-on-surface-variant leading-relaxed">Una reunión cada 15 días y seguimiento por WhatsApp. El análisis, el mapa, el censo y el rediseño de rutas los hacemos nosotros.</p></li><li class="liquid-glass rounded-xl p-5"><p class="text-white font-bold mb-1">Un servicio concreto.</p><p class="text-sm text-on-surface-variant leading-relaxed">Entregables definidos: mapa, censo, rutas, panel semanal, informe de cierre y manual. Sabés qué recibís y cuándo.</p></li><li class="liquid-glass rounded-xl p-5"><p class="text-white font-bold mb-1">Un consultor a tu lado.</p><p class="text-sm text-on-surface-variant leading-relaxed">Un consultor trabaja uno a uno con tu empresa de principio a fin.</p></li><li class="liquid-glass rounded-xl p-5"><p class="text-white font-bold mb-1">Experiencia en empresas como la tuya.</p><p class="text-sm text-on-surface-variant leading-relaxed">Más de 10 años y 100+ empresas asesoradas, de distintos rubros y tamaños, en Argentina, Paraguay, Bolivia y Uruguay.</p></li><li class="liquid-glass rounded-xl p-5"><p class="text-white font-bold mb-1">Sin cambiar tu forma de trabajar.</p><p class="text-sm text-on-surface-variant leading-relaxed">Usamos los datos que ya tenés, sin cambiar de sistema.</p></li><li class="liquid-glass rounded-xl p-5"><p class="text-white font-bold mb-1">Tu equipo queda preparado.</p><p class="text-sm text-on-surface-variant leading-relaxed">Te dejamos el manual de la metodología para que puedan continuar solos.</p></li><li class="liquid-glass rounded-xl p-5"><p class="text-white font-bold mb-1">Se adapta a tu presupuesto.</p><p class="text-sm text-on-surface-variant leading-relaxed">Pago único según la cantidad de puntos de venta y sin contrato inicial.</p></li></ul></div></section><section class="py-20 md:py-24 px-6 md:px-12 relative overflow-hidden bg-surface"><div class="max-w-4xl mx-auto lezac-reveal"><h2 class="text-3xl md:text-4xl font-black text-white leading-tight tracking-tight mb-6 ">¿Por qué no alcanza con un software de rutas?</h2><div class="overflow-x-auto rounded-2xl liquid-glass"><table class="cmp-table w-full min-w-[520px]"><thead><tr><th scope="col">Software de rutas</th><th scope="col">+Clientes Activos</th></tr></thead><tbody><tr><td>Ordena las visitas que ya hacés</td><td>Encuentra los clientes que no estás visitando</td></tr><tr><td>Optimiza lo que tenés</td><td>Amplía lo que tenés</td></tr><tr><td>Lo configurás vos</td><td>Lo implementa un consultor con vos</td></tr><tr><td>Tu equipo sigue decidiendo a ciegas</td><td>Decisiones con datos reales de tu zona</td></tr></tbody></table></div></div></section><section class="py-20 md:py-24 px-6 md:px-12 relative overflow-hidden " style="background:#050506"><div class="max-w-5xl mx-auto lezac-reveal"><h2 class="text-3xl md:text-4xl font-black text-white leading-tight tracking-tight mb-6 ">Para quién es</h2><p class="text-on-surface-variant leading-relaxed">Distribuidoras, mayoristas y fábricas con red de vendedores y una base de clientes de unos 300 o más. Se trabaja 100% online, en Argentina, Paraguay, Bolivia y Uruguay.</p><div class="mt-10"></div><h2 class="text-3xl md:text-4xl font-black text-white leading-tight tracking-tight mb-6 ">A tu medida, también en presupuesto</h2><p class="text-on-surface-variant leading-relaxed">Cobramos por punto de venta censado, con un pago único que se adapta al rubro de tu empresa, a su actividad y a la amplitud de zona que quieras desarrollar. Sin contrato inicial. Escribinos y lo vemos en una conversación.</p><p class="mt-6 text-xs text-on-surface-variant">¿Primero querés entender tus datos de venta? Conocé nuestra <a href="/consultoria-inteligencia-comercial" class="underline accent hover:text-white">consultoría de inteligencia comercial</a>.</p></div></section><section class="py-20 md:py-24 px-6 md:px-12 relative overflow-hidden bg-surface"><div class="max-w-3xl mx-auto lezac-reveal"><h2 class="text-3xl md:text-4xl font-black text-white leading-tight tracking-tight mb-6 text-center ">Preguntas frecuentes</h2><div class="space-y-3"><div class="glass rounded-xl overflow-hidden"><h3 class="m-0"><button type="button" class="faq-btn w-full flex items-center justify-between p-6 text-left gap-4" aria-expanded="false"><span class="font-bold text-white text-sm md:text-base">¿Qué es +Clientes Activos?</span><span class="material-symbols-outlined faq-chevron text-on-surface-variant flex-shrink-0" aria-hidden="true" data-i="keyboard_arrow_down"></span></button></h3><div class="faq-answer px-6 text-sm text-on-surface-variant leading-relaxed"><p class="pb-5">+Clientes Activos es el método de Lezac Consultoría para que distribuidoras, mayoristas y fábricas vendan más ampliando la cantidad de clientes que realmente compran. Geolocalizamos tu base, censamos los puntos de venta de tu zona de influencia y rediseñamos las rutas de tu equipo. Se trabaja uno a uno y 100% online.</p></div></div><div class="glass rounded-xl overflow-hidden"><h3 class="m-0"><button type="button" class="faq-btn w-full flex items-center justify-between p-6 text-left gap-4" aria-expanded="false"><span class="font-bold text-white text-sm md:text-base">¿Cuánto tarda en dar resultados?</span><span class="material-symbols-outlined faq-chevron text-on-surface-variant flex-shrink-0" aria-hidden="true" data-i="keyboard_arrow_down"></span></button></h3><div class="faq-answer px-6 text-sm text-on-surface-variant leading-relaxed"><p class="pb-5">El proyecto dura alrededor de 2 meses. Nuestra proyección es de entre +15% y +30% de clientes activos en ese plazo, en las empresas donde aplicamos el método. La meta de tu proyecto la definimos juntos, a partir de la base real de tu empresa.</p></div></div><div class="glass rounded-xl overflow-hidden"><h3 class="m-0"><button type="button" class="faq-btn w-full flex items-center justify-between p-6 text-left gap-4" aria-expanded="false"><span class="font-bold text-white text-sm md:text-base">¿Qué diferencia hay con un software de rutas?</span><span class="material-symbols-outlined faq-chevron text-on-surface-variant flex-shrink-0" aria-hidden="true" data-i="keyboard_arrow_down"></span></button></h3><div class="faq-answer px-6 text-sm text-on-surface-variant leading-relaxed"><p class="pb-5">Un software de rutas ordena las visitas que ya hacés. +Clientes Activos encuentra los clientes que no estás visitando: recupera los que dejaron de comprar y suma puntos de venta sin atender. Además, lo implementa un consultor con vos, en lugar de dejarte la configuración a tu cargo.</p></div></div><div class="glass rounded-xl overflow-hidden"><h3 class="m-0"><button type="button" class="faq-btn w-full flex items-center justify-between p-6 text-left gap-4" aria-expanded="false"><span class="font-bold text-white text-sm md:text-base">¿Cómo se cobra?</span><span class="material-symbols-outlined faq-chevron text-on-surface-variant flex-shrink-0" aria-hidden="true" data-i="keyboard_arrow_down"></span></button></h3><div class="faq-answer px-6 text-sm text-on-surface-variant leading-relaxed"><p class="pb-5">Cobramos por punto de venta censado, con un pago único que se ajusta al rubro de tu empresa, a su actividad y a la amplitud de zona que quieras desarrollar. Escribinos y lo vemos en una conversación.</p></div></div><div class="glass rounded-xl overflow-hidden"><h3 class="m-0"><button type="button" class="faq-btn w-full flex items-center justify-between p-6 text-left gap-4" aria-expanded="false"><span class="font-bold text-white text-sm md:text-base">¿Funciona para fábricas y mayoristas, o solo para distribuidoras?</span><span class="material-symbols-outlined faq-chevron text-on-surface-variant flex-shrink-0" aria-hidden="true" data-i="keyboard_arrow_down"></span></button></h3><div class="faq-answer px-6 text-sm text-on-surface-variant leading-relaxed"><p class="pb-5">Funciona para distribuidoras, mayoristas y fábricas que venden a través de una red de vendedores o de reparto. Lo que cambia es el foco: en algunas empresas pesa más reactivar clientes inactivos y en otras, ampliar la cobertura en zonas nuevas.</p></div></div><div class="glass rounded-xl overflow-hidden"><h3 class="m-0"><button type="button" class="faq-btn w-full flex items-center justify-between p-6 text-left gap-4" aria-expanded="false"><span class="font-bold text-white text-sm md:text-base">¿Necesito cambiar mi sistema de gestión?</span><span class="material-symbols-outlined faq-chevron text-on-surface-variant flex-shrink-0" aria-hidden="true" data-i="keyboard_arrow_down"></span></button></h3><div class="faq-answer px-6 text-sm text-on-surface-variant leading-relaxed"><p class="pb-5">No. Trabajamos con los datos de venta que ya tenés, sea cual sea el sistema que uses. Si hace falta una herramienta a medida, ya sea administrativa, logística o comercial, también podemos desarrollarla.</p></div></div><div class="glass rounded-xl overflow-hidden"><h3 class="m-0"><button type="button" class="faq-btn w-full flex items-center justify-between p-6 text-left gap-4" aria-expanded="false"><span class="font-bold text-white text-sm md:text-base">¿Se puede hacer 100% online?</span><span class="material-symbols-outlined faq-chevron text-on-surface-variant flex-shrink-0" aria-hidden="true" data-i="keyboard_arrow_down"></span></button></h3><div class="faq-answer px-6 text-sm text-on-surface-variant leading-relaxed"><p class="pb-5">Sí. La mayoría de nuestros clientes trabaja con nosotros de forma online: reuniones por videollamada, seguimiento por WhatsApp y un panel con los avances. La distancia no es una limitación en Argentina, Paraguay, Bolivia ni Uruguay.</p></div></div><div class="glass rounded-xl overflow-hidden"><h3 class="m-0"><button type="button" class="faq-btn w-full flex items-center justify-between p-6 text-left gap-4" aria-expanded="false"><span class="font-bold text-white text-sm md:text-base">¿Qué pasa si mi base tiene menos de 300 clientes?</span><span class="material-symbols-outlined faq-chevron text-on-surface-variant flex-shrink-0" aria-hidden="true" data-i="keyboard_arrow_down"></span></button></h3><div class="faq-answer px-6 text-sm text-on-surface-variant leading-relaxed"><p class="pb-5">Lo ideal es contar con una base de unos 300 clientes o más para que el análisis tenga volumen. Si tenés menos, escribinos y vemos si el proyecto se adapta a tu caso.</p></div></div><div class="glass rounded-xl overflow-hidden"><h3 class="m-0"><button type="button" class="faq-btn w-full flex items-center justify-between p-6 text-left gap-4" aria-expanded="false"><span class="font-bold text-white text-sm md:text-base">¿Cuánto tiempo me demanda a mí y a mi equipo?</span><span class="material-symbols-outlined faq-chevron text-on-surface-variant flex-shrink-0" aria-hidden="true" data-i="keyboard_arrow_down"></span></button></h3><div class="faq-answer px-6 text-sm text-on-surface-variant leading-relaxed"><p class="pb-5">Poco. Tenés una reunión cada 15 días con tu consultor y seguimiento por WhatsApp. Lo único que necesitamos de tu parte es la información de tu base de clientes; el análisis, el mapa, el censo y las rutas los hacemos nosotros.</p></div></div><div class="glass rounded-xl overflow-hidden"><h3 class="m-0"><button type="button" class="faq-btn w-full flex items-center justify-between p-6 text-left gap-4" aria-expanded="false"><span class="font-bold text-white text-sm md:text-base">¿Qué compromiso tienen con los plazos?</span><span class="material-symbols-outlined faq-chevron text-on-surface-variant flex-shrink-0" aria-hidden="true" data-i="keyboard_arrow_down"></span></button></h3><div class="faq-answer px-6 text-sm text-on-surface-variant leading-relaxed"><p class="pb-5">Acordamos los plazos desde el inicio. Si no cumplimos con el censo inicial, esa etapa no se cobra. Para eso necesitamos contar con la información de tu base de clientes en tiempo y forma.</p></div></div></div></div></section><section class="py-24 px-6 md:px-12 relative overflow-hidden" style="background:#050506"><div class="glow-blob w-[600px] h-[600px] opacity-[0.06] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" style="background:var(--color-accent)"></div><div class="max-w-3xl mx-auto lezac-reveal"><div class="text-center relative z-10"><h2 class="text-3xl md:text-4xl font-black text-white leading-tight tracking-tight mb-6 text-center ">¿Cuántos clientes más podría tener tu empresa?</h2><p class="text-on-surface-variant max-w-xl mx-auto mb-8 leading-relaxed">Más clientes, más ventas. Contanos cuántos puntos de venta tiene tu empresa y te mostramos por dónde empezar.</p><div class="flex flex-col sm:flex-row gap-3 justify-center"><a href="https://wa.me/5491154107921?text=Hola%2C%20quiero%20consultar%20por%20%2BClientes%20Activos.%20Mi%20empresa%20tiene%20aproximadamente%20___%20puntos%20de%20venta." target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full text-sm transition-all hover:scale-[1.02] font-bold btn-accent hover:brightness-110"><span class="material-symbols-outlined" style="font-size:18px" aria-hidden="true" data-i="chat"></span>Contanos cuántos puntos de venta tiene tu empresa</a></div><p class="mt-6 text-xs text-on-surface-variant">+54 9 11 5410-7921 · 100% online · Sin contrato inicial</p></div></div></section>
 </main>
-<script src="/shared.js?v=20261009"></script>
+<!--lz:footer--><footer id="lezac-footer" class="relative mt-20 border-t border-white/5" style="background: #050506;">
+  <div class="max-w-7xl mx-auto px-5 md:px-8 lg:px-12 py-12 md:py-16">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12 mb-10 md:mb-12">
+
+      <!-- Brand Column -->
+      <div class="space-y-3 md:space-y-4">
+        <div class="flex items-center">
+          <img src="/Logo Lezac (500 x 500 px) (3).png" alt="Lezac Consultoría" class="h-10 w-auto" />
+        </div>
+        <p class="text-[10px] font-semibold uppercase tracking-widest" style="color: rgba(255,255,255,0.25);">Al cuidado de tu negocio · LATAM</p>
+        <p class="text-sm text-on-surface-variant leading-relaxed max-w-xs">
+          Consultoría de inteligencia comercial para distribuidoras, mayoristas y fábricas pyme en Argentina, Paraguay, Bolivia y Uruguay.
+        </p>
+        <div class="hidden md:flex flex-wrap gap-2 pt-2">
+          <span class="text-xs text-on-surface-variant px-2 py-1 rounded" style="background: rgba(255,255,255,0.04);">Argentina</span>
+          <span class="text-xs text-on-surface-variant px-2 py-1 rounded" style="background: rgba(255,255,255,0.04);">Paraguay</span>
+          <span class="text-xs text-on-surface-variant px-2 py-1 rounded" style="background: rgba(255,255,255,0.04);">Bolivia</span>
+          <span class="text-xs text-on-surface-variant px-2 py-1 rounded" style="background: rgba(255,255,255,0.04);">Uruguay</span>
+        </div>
+      </div>
+
+      <!-- Services Column -->
+      <div class="space-y-3 md:space-y-4 order-3 md:order-2 border-t border-white/5 pt-8 md:border-0 md:pt-0">
+        <h4 class="text-xs font-body font-semibold tracking-widest uppercase text-on-surface-variant">Servicios</h4>
+        <ul class="grid grid-cols-2 md:grid-cols-1 gap-x-4 md:gap-y-0 md:space-y-2.5">
+          <li><a href="/consultoria-inteligencia-comercial" class="text-sm text-on-surface-variant hover:text-white transition-colors flex items-center gap-2 min-h-[44px] md:min-h-0">
+            <span class="w-1.5 h-1.5 rounded-full inline-block flex-shrink-0" style="background:#25F5A4;"></span>Consultoría de Inteligencia Comercial
+          </a></li>
+          <li><a href="/mas-clientes-activos" class="text-sm text-on-surface-variant hover:text-white transition-colors flex items-center gap-2 min-h-[44px] md:min-h-0">
+            <span class="w-1.5 h-1.5 rounded-full inline-block flex-shrink-0" style="background:#38BDF8;"></span>+Clientes Activos
+          </a></li>
+          <li><a href="/ia-a-medida" class="text-sm text-on-surface-variant hover:text-white transition-colors flex items-center gap-2 min-h-[44px] md:min-h-0">
+            <span class="w-1.5 h-1.5 rounded-full inline-block flex-shrink-0" style="background:#8C52FF;"></span>IA a Medida
+          </a></li>
+          <li><a href="/wa-ventas" class="text-sm text-on-surface-variant hover:text-white transition-colors flex items-center gap-2 min-h-[44px] md:min-h-0">
+            <span class="w-1.5 h-1.5 rounded-full inline-block flex-shrink-0" style="background:#25D366;"></span>WA Ventas
+          </a></li>
+          <li><a href="/partner" class="text-sm text-on-surface-variant hover:text-white transition-colors flex items-center gap-2 min-h-[44px] md:min-h-0">
+            <span class="w-1.5 h-1.5 rounded-full inline-block flex-shrink-0" style="background:#F5C842;"></span>Partner
+          </a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Column -->
+      <div class="space-y-3 md:space-y-4 order-2 md:order-3 border-t border-white/5 pt-8 md:border-0 md:pt-0" id="contacto">
+        <h4 class="text-xs font-body font-semibold tracking-widest uppercase text-on-surface-variant">Contacto</h4>
+        <p class="text-sm text-on-surface-variant">¿Listo para ordenar tu gestión comercial?</p>
+        <div class="space-y-3">
+          <a href="https://calendly.com/lezacconsultoria/asesoria-comercial" target="_blank" rel="noopener" class="flex items-center justify-center md:justify-start gap-3 px-4 py-3 min-h-[48px] md:min-h-0 rounded-xl md:rounded text-sm font-semibold text-black transition-all hover:opacity-90" style="background: var(--color-accent, #8C52FF); color: white;">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+            Agendar Reunión
+          </a>
+          <a href="https://api.whatsapp.com/send?phone=5491154107921&text=%E2%9C%85%20Lezac%20Consultoria%20I%20Me%20interesa%20conocer%20m%C3%A1s%20de%20sus%20servicios." target="_blank" rel="noopener" class="flex items-center justify-center md:justify-start gap-3 px-4 py-3 min-h-[48px] md:min-h-0 rounded-xl md:rounded text-sm font-medium text-white transition-all hover:bg-white/5" style="border: 1px solid rgba(255,255,255,0.1);">
+            <svg class="w-4 h-4" style="color:#25D366;" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Hablar por WhatsApp
+          </a>
+        </div>
+        <a href="https://www.linkedin.com/company/lezac-consultoria" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-xs text-on-surface-variant hover:text-white transition-colors md:mt-2 min-h-[44px] md:min-h-0">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          LinkedIn
+        </a>
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="pt-6 md:pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-3 md:gap-4 text-center">
+      <p class="text-xs text-on-surface-variant">© 2026 Lezac Consultoria. Todos los derechos reservados.</p>
+      <div class="flex items-center justify-center gap-6">
+        <a href="#" class="text-xs text-on-surface-variant hover:text-white transition-colors">Privacidad</a>
+        <a href="#" class="text-xs text-on-surface-variant hover:text-white transition-colors">Términos</a>
+      </div>
+    </div>
+  </div>
+</footer><!--/lz:footer-->
+<script src="/shared.js?v=20261011"></script>
 <script>
 document.addEventListener('DOMContentLoaded', () => {
-  const revObs = new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting){e.target.classList.add('revealed');revObs.unobserve(e.target);} }), {threshold:.1,rootMargin:'0px 0px -40px 0px'});
+  const revObs = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('revealed'); revObs.unobserve(e.target); } }), { threshold: .08, rootMargin: '0px 0px -40px 0px' });
   document.querySelectorAll('.lezac-reveal').forEach(el => revObs.observe(el));
+
   document.querySelectorAll('.faq-btn').forEach(btn => {
     btn.addEventListener('click', () => {
-      const ans = btn.nextElementSibling, chev = btn.querySelector('.faq-chevron'), open = ans.classList.contains('open');
-      document.querySelectorAll('.faq-answer.open').forEach(a => { a.classList.remove('open'); a.previousElementSibling.querySelector('.faq-chevron').classList.remove('rotated'); });
-      if(!open) { ans.classList.add('open'); chev.classList.add('rotated'); }
+      const ans = btn.closest('h3').nextElementSibling, chev = btn.querySelector('.faq-chevron'), open = ans.classList.contains('open');
+      document.querySelectorAll('.faq-answer.open').forEach(a => { a.classList.remove('open'); const b = a.previousElementSibling.querySelector('.faq-btn'); b.setAttribute('aria-expanded', 'false'); b.querySelector('.faq-chevron').classList.remove('rotated'); });
+      if (!open) { ans.classList.add('open'); chev.classList.add('rotated'); btn.setAttribute('aria-expanded', 'true'); }
     });
   });
 });
