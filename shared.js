@@ -1,6 +1,6 @@
 /**
  * Lezac Consultoria — Shared Components
- * Nav, Footer y utilidades comunes para todas las páginas
+ * Nav, Footer y utilidades comunes — 5 servicios nuevos
  */
 
 // ─── NAV HTML ────────────────────────────────────────────────────────────────
@@ -11,19 +11,18 @@ function getLezacNav() {
   <div class="max-w-7xl mx-auto flex items-center justify-between h-16">
 
     <!-- Logo -->
-    <a href="./" class="flex items-center group">
-      <img src="./Logo Lezac (500 x 500 px) (3).png" alt="Lezac Consultoría" class="h-10 w-auto" />
+    <a href="/" class="flex items-center group">
+      <img src="/Logo Lezac (500 x 500 px) (3).png" alt="Lezac Consultoría" class="h-10 w-auto" />
     </a>
 
     <!-- Desktop Nav Links -->
     <div class="hidden md:flex items-center gap-1">
-      <a href="./" data-nav="home" class="nav-link px-3 py-1.5 text-xs font-body font-medium tracking-wide rounded transition-all duration-200 text-on-surface-variant hover:text-white">Inicio</a>
-      <a href="./smart-brujula" data-nav="brujula" class="nav-link px-3 py-1.5 text-xs font-body font-medium tracking-wide rounded transition-all duration-200 text-on-surface-variant hover:text-white">Brújula Comercial</a>
-      <a href="./wa-smart-ventas" data-nav="wa" class="nav-link px-3 py-1.5 text-xs font-body font-medium tracking-wide rounded transition-all duration-200 text-on-surface-variant hover:text-white">WA Ventas</a>
-      <a href="./censo-comercial" data-nav="censo" class="nav-link px-3 py-1.5 text-xs font-body font-medium tracking-wide rounded transition-all duration-200 text-on-surface-variant hover:text-white">Censo</a>
-      <a href="./geolocalizacion" data-nav="geo" class="nav-link px-3 py-1.5 text-xs font-body font-medium tracking-wide rounded transition-all duration-200 text-on-surface-variant hover:text-white">Geolocalización</a>
-      <a href="./ruteo-comercial" data-nav="ruteo" class="nav-link px-3 py-1.5 text-xs font-body font-medium tracking-wide rounded transition-all duration-200 text-on-surface-variant hover:text-white">Ruteo</a>
-      <a href="./partners" data-nav="partners" class="nav-link px-3 py-1.5 text-xs font-body font-medium tracking-wide rounded transition-all duration-200 hover:text-white" style="color:#F5C842">Partners</a>
+      <a href="/" data-nav="home" class="nav-link px-3 py-1.5 text-xs font-body font-medium tracking-wide rounded transition-all duration-200 text-on-surface-variant hover:text-white">Inicio</a>
+      <a href="/brujula-comercial" data-nav="brujula" class="nav-link px-3 py-1.5 text-xs font-body font-medium tracking-wide rounded transition-all duration-200 text-on-surface-variant hover:text-white">Brújula Comercial</a>
+      <a href="/mas-clientes-activos" data-nav="clientes" class="nav-link px-3 py-1.5 text-xs font-body font-medium tracking-wide rounded transition-all duration-200 text-on-surface-variant hover:text-white">+Clientes Activos</a>
+      <a href="/ia-aplicada" data-nav="ia" class="nav-link px-3 py-1.5 text-xs font-body font-medium tracking-wide rounded transition-all duration-200 text-on-surface-variant hover:text-white">IA Aplicada</a>
+      <a href="/wa-smart-ventas" data-nav="wa" class="nav-link px-3 py-1.5 text-xs font-body font-medium tracking-wide rounded transition-all duration-200 text-on-surface-variant hover:text-white">WA Ventas</a>
+      <a href="/partner" data-nav="partner" class="nav-link px-3 py-1.5 text-xs font-body font-medium tracking-wide rounded transition-all duration-200 hover:text-white" style="color:#F5C842">Partner</a>
     </div>
 
     <!-- Desktop CTAs -->
@@ -49,13 +48,12 @@ function getLezacNav() {
   <!-- Mobile Menu -->
   <div id="mobile-menu" class="md:hidden hidden pb-4 border-t border-white/5 mt-1">
     <div class="flex flex-col gap-1 pt-3">
-      <a href="./" data-nav="home" class="nav-link mobile-nav-link px-4 py-3 text-sm font-body font-medium text-on-surface-variant hover:text-white hover:bg-surface-container rounded transition-all">Inicio</a>
-      <a href="./smart-brujula" data-nav="brujula" class="nav-link mobile-nav-link px-4 py-3 text-sm font-body font-medium text-on-surface-variant hover:text-white hover:bg-surface-container rounded transition-all">Brújula Comercial</a>
-      <a href="./wa-smart-ventas" data-nav="wa" class="nav-link mobile-nav-link px-4 py-3 text-sm font-body font-medium text-on-surface-variant hover:text-white hover:bg-surface-container rounded transition-all">WA Ventas</a>
-      <a href="./censo-comercial" data-nav="censo" class="nav-link mobile-nav-link px-4 py-3 text-sm font-body font-medium text-on-surface-variant hover:text-white hover:bg-surface-container rounded transition-all">Censo Comercial</a>
-      <a href="./geolocalizacion" data-nav="geo" class="nav-link mobile-nav-link px-4 py-3 text-sm font-body font-medium text-on-surface-variant hover:text-white hover:bg-surface-container rounded transition-all">Geolocalización de Clientes</a>
-      <a href="./ruteo-comercial" data-nav="ruteo" class="nav-link mobile-nav-link px-4 py-3 text-sm font-body font-medium text-on-surface-variant hover:text-white hover:bg-surface-container rounded transition-all">Ruteo Comercial</a>
-      <a href="./partners" data-nav="partners" class="nav-link mobile-nav-link px-4 py-3 text-sm font-body font-medium hover:bg-surface-container rounded transition-all" style="color:#F5C842">Partners</a>
+      <a href="/" data-nav="home" class="nav-link mobile-nav-link px-4 py-3 text-sm font-body font-medium text-on-surface-variant hover:text-white hover:bg-surface-container rounded transition-all">Inicio</a>
+      <a href="/brujula-comercial" data-nav="brujula" class="nav-link mobile-nav-link px-4 py-3 text-sm font-body font-medium text-on-surface-variant hover:text-white hover:bg-surface-container rounded transition-all">Brújula Comercial</a>
+      <a href="/mas-clientes-activos" data-nav="clientes" class="nav-link mobile-nav-link px-4 py-3 text-sm font-body font-medium text-on-surface-variant hover:text-white hover:bg-surface-container rounded transition-all">+Clientes Activos</a>
+      <a href="/ia-aplicada" data-nav="ia" class="nav-link mobile-nav-link px-4 py-3 text-sm font-body font-medium text-on-surface-variant hover:text-white hover:bg-surface-container rounded transition-all">IA Aplicada</a>
+      <a href="/wa-smart-ventas" data-nav="wa" class="nav-link mobile-nav-link px-4 py-3 text-sm font-body font-medium text-on-surface-variant hover:text-white hover:bg-surface-container rounded transition-all">WA Ventas</a>
+      <a href="/partner" data-nav="partner" class="nav-link mobile-nav-link px-4 py-3 text-sm font-body font-medium hover:bg-surface-container rounded transition-all" style="color:#F5C842">Partner</a>
       <div class="mt-3 px-4">
         <a href="https://calendly.com/lezacconsultoria/asesoria-comercial" target="_blank" rel="noopener" class="block w-full text-center px-4 py-3 text-sm font-semibold rounded transition-all" style="background: var(--color-accent, #8C52FF); color: white;">
           Agendar Reunión
@@ -78,11 +76,11 @@ function getLezacFooter() {
       <!-- Brand Column -->
       <div class="space-y-4">
         <div class="flex items-center">
-          <img src="./Logo Lezac (500 x 500 px) (3).png" alt="Lezac Consultoría" class="h-10 w-auto" />
+          <img src="/Logo Lezac (500 x 500 px) (3).png" alt="Lezac Consultoría" class="h-10 w-auto" />
         </div>
-        <p class="text-[10px] font-semibold uppercase tracking-widest" style="color: rgba(255,255,255,0.25);">Consultoría Comercial B2B · LATAM</p>
+        <p class="text-[10px] font-semibold uppercase tracking-widest" style="color: rgba(255,255,255,0.25);">Al cuidado de tu negocio · LATAM</p>
         <p class="text-sm text-on-surface-variant leading-relaxed max-w-xs">
-          Consultoría Comercial B2B especializada en distribuidoras, mayoristas y fábricas.
+          Consultoría de inteligencia comercial para distribuidoras, mayoristas y fábricas pyme en Argentina, Paraguay, Bolivia y Uruguay.
         </p>
         <div class="flex flex-wrap gap-2 pt-2">
           <span class="text-xs text-on-surface-variant px-2 py-1 rounded" style="background: rgba(255,255,255,0.04);">Argentina</span>
@@ -96,23 +94,20 @@ function getLezacFooter() {
       <div class="space-y-4">
         <h4 class="text-xs font-body font-semibold tracking-widest uppercase text-on-surface-variant">Servicios</h4>
         <ul class="space-y-2.5">
-          <li><a href="./smart-brujula" class="text-sm text-on-surface-variant hover:text-white transition-colors flex items-center gap-2">
+          <li><a href="/brujula-comercial" class="text-sm text-on-surface-variant hover:text-white transition-colors flex items-center gap-2">
             <span class="w-1.5 h-1.5 rounded-full inline-block" style="background:#25F5A4;"></span>Brújula Comercial
           </a></li>
-          <li><a href="./wa-smart-ventas" class="text-sm text-on-surface-variant hover:text-white transition-colors flex items-center gap-2">
-            <span class="w-1.5 h-1.5 rounded-full inline-block" style="background:#25D366;"></span>WA Smart Ventas
+          <li><a href="/mas-clientes-activos" class="text-sm text-on-surface-variant hover:text-white transition-colors flex items-center gap-2">
+            <span class="w-1.5 h-1.5 rounded-full inline-block" style="background:#38BDF8;"></span>+Clientes Activos
           </a></li>
-          <li><a href="./censo-comercial" class="text-sm text-on-surface-variant hover:text-white transition-colors flex items-center gap-2">
-            <span class="w-1.5 h-1.5 rounded-full inline-block" style="background:#B08AFF;"></span>Censo Comercial
+          <li><a href="/ia-aplicada" class="text-sm text-on-surface-variant hover:text-white transition-colors flex items-center gap-2">
+            <span class="w-1.5 h-1.5 rounded-full inline-block" style="background:#8C52FF;"></span>IA Aplicada
           </a></li>
-          <li><a href="./geolocalizacion" class="text-sm text-on-surface-variant hover:text-white transition-colors flex items-center gap-2">
-            <span class="w-1.5 h-1.5 rounded-full inline-block" style="background:#38BDF8;"></span>Geolocalización de Clientes
+          <li><a href="/wa-smart-ventas" class="text-sm text-on-surface-variant hover:text-white transition-colors flex items-center gap-2">
+            <span class="w-1.5 h-1.5 rounded-full inline-block" style="background:#25D366;"></span>WA Ventas
           </a></li>
-          <li><a href="./ruteo-comercial" class="text-sm text-on-surface-variant hover:text-white transition-colors flex items-center gap-2">
-            <span class="w-1.5 h-1.5 rounded-full inline-block" style="background:#F97316;"></span>Ruteo Comercial
-          </a></li>
-          <li><a href="./partners" class="text-sm text-on-surface-variant hover:text-white transition-colors flex items-center gap-2">
-            <span class="w-1.5 h-1.5 rounded-full inline-block" style="background:#F5C842;"></span>Partners
+          <li><a href="/partner" class="text-sm text-on-surface-variant hover:text-white transition-colors flex items-center gap-2">
+            <span class="w-1.5 h-1.5 rounded-full inline-block" style="background:#F5C842;"></span>Partner
           </a></li>
         </ul>
       </div>
@@ -140,7 +135,7 @@ function getLezacFooter() {
 
     <!-- Bottom Bar -->
     <div class="pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4">
-      <p class="text-xs text-on-surface-variant">© 2025 Lezac Consultoria. Todos los derechos reservados.</p>
+      <p class="text-xs text-on-surface-variant">© 2026 Lezac Consultoria. Todos los derechos reservados.</p>
       <div class="flex items-center gap-6">
         <a href="#" class="text-xs text-on-surface-variant hover:text-white transition-colors">Privacidad</a>
         <a href="#" class="text-xs text-on-surface-variant hover:text-white transition-colors">Términos</a>
@@ -154,21 +149,21 @@ function getLezacFooter() {
 // ─── TOOLS MARQUEE DATA ───────────────────────────────────────────────────────
 
 const LEZAC_TOOLS = [
-  { name: 'Power BI',     file: 'logos-trabajo/1200px-Power_bi_logo_black.svg_-300x300.png' },
-  { name: 'SAP',          file: 'logos-trabajo/sap-300x100.png' },
-  { name: 'Meta',         file: 'logos-trabajo/Meta_logo.png' },
-  { name: 'Odoo',         file: 'logos-trabajo/odo-300x167.png' },
-  { name: 'n8n',          file: 'logos-trabajo/n8n-color.png' },
-  { name: 'Shopify',      file: 'logos-trabajo/shopi-300x169.png' },
-  { name: 'Contabilium',  file: 'logos-trabajo/logo_contabilium.png' },
-  { name: 'Auto',         file: 'logos-trabajo/auto-300x300.png' },
-  { name: 'Hostinger',    file: 'logos-trabajo/Hostinger_Logo.png' },
+  { name: 'Power BI',     file: '/logos-trabajo/1200px-Power_bi_logo_black.svg_-300x300.png' },
+  { name: 'SAP',          file: '/logos-trabajo/sap-300x100.png' },
+  { name: 'Meta',         file: '/logos-trabajo/Meta_logo.png' },
+  { name: 'Odoo',         file: '/logos-trabajo/odo-300x167.png' },
+  { name: 'n8n',          file: '/logos-trabajo/n8n-color.png' },
+  { name: 'Shopify',      file: '/logos-trabajo/shopi-300x169.png' },
+  { name: 'Contabilium',  file: '/logos-trabajo/logo_contabilium.png' },
+  { name: 'Auto',         file: '/logos-trabajo/auto-300x300.png' },
+  { name: 'Hostinger',    file: '/logos-trabajo/Hostinger_Logo.png' },
 ];
 
 function getToolsMarqueeHTML() {
   const items = [...LEZAC_TOOLS, ...LEZAC_TOOLS]
     .map(t => `<span class="flex items-center gap-2 px-4">
-      <img src="./${t.file}" alt="${t.name}" title="${t.name}"
+      <img src="${t.file}" alt="${t.name}" title="${t.name}"
         style="height:28px;max-width:90px;object-fit:contain;filter:grayscale(1) brightness(2) opacity(0.45);" />
     </span>`)
     .join('');
@@ -185,10 +180,9 @@ function getToolsMarqueeHTML() {
 // ─── CLIENTES MARQUEE DATA ────────────────────────────────────────────────────
 
 const LEZAC_CLIENTS = [
-  'Bacardi', 'Distribuidora Gloria', 'Codisa', 'Indega', 'Pluscar',
-  'McCain', 'Vaca Fría', 'Iglú', 'Vitalcan', 'Madersa',
-  'Transporte Bogdan', 'Comercial Baci', 'Termoplástica', 'Alco Distribuciones',
-  'Proquim', 'Weilen'
+  'Bacardi', 'Vitalcan', 'Weilen', 'Proquim', 'Madersa',
+  'Vaca Fría', 'Distribuidora Gloria', 'Alco', 'Indega', 'Pluscar',
+  'McCain', 'Iglú', 'Transporte Bogdan', 'Comercial Baci'
 ];
 
 function getMarqueeHTML() {
@@ -399,6 +393,37 @@ function injectSharedStyles() {
 // ─── VSL AUTOPLAY MUTED ───────────────────────────────────────────────────────
 
 function initVSL() {
+  if (!document.getElementById('lezac-unmute-style')) {
+    const st = document.createElement('style');
+    st.id = 'lezac-unmute-style';
+    st.textContent = '@keyframes lezac-unmute-pulse{0%,100%{opacity:1;transform:translate(-50%,-50%) scale(1)}50%{opacity:.45;transform:translate(-50%,-50%) scale(1.08)}}';
+    document.head.appendChild(st);
+  }
+
+  document.querySelectorAll('video[data-vsl]').forEach(video => {
+    const container = video.parentElement;
+    if (!container) return;
+
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.setAttribute('aria-label', 'Activar sonido');
+    btn.style.cssText = 'position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:10;display:flex;align-items:center;gap:16px;background:rgba(0,0,0,0.7);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:2px solid var(--color-accent);border-radius:9999px;padding:26px 52px;cursor:pointer;box-shadow:0 0 40px var(--color-accent-glow);animation:lezac-unmute-pulse 1.4s ease-in-out infinite;';
+    btn.innerHTML = `
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="white" style="flex-shrink:0"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+      <span style="font-size:22px;font-weight:700;color:white;letter-spacing:0.06em;text-transform:uppercase;font-family:Inter,sans-serif;">Activar sonido</span>`;
+
+    const unmute = () => {
+      video.muted = false;
+      video.volume = 1;
+      if (video.paused) video.play().catch(() => {});
+      btn.remove();
+    };
+    btn.addEventListener('click', unmute);
+    video.addEventListener('volumechange', () => { if (!video.muted) btn.remove(); });
+
+    container.appendChild(btn);
+  });
+
   document.querySelectorAll('iframe[src*="youtube.com/embed"]').forEach(iframe => {
     const url = new URL(iframe.src);
     url.searchParams.set('autoplay', '1');

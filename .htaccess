@@ -6,6 +6,13 @@ RewriteEngine On
 # rule below (which skips real directories) would never reach bio.html.
 RewriteRule ^bio/?$ bio.html [L]
 
+# Páginas del sitio anterior -> nueva estructura (301)
+RewriteRule ^smart-brujula(\.html)?/?$      /brujula-comercial   [R=301,L]
+RewriteRule ^censo-comercial(\.html)?/?$    /mas-clientes-activos [R=301,L]
+RewriteRule ^geolocalizacion(\.html)?/?$    /mas-clientes-activos [R=301,L]
+RewriteRule ^ruteo-comercial(\.html)?/?$    /mas-clientes-activos [R=301,L]
+RewriteRule ^partners(\.html)?/?$           /partner             [R=301,L]
+
 # Redirect .html URLs to clean URLs (301 permanent)
 RewriteCond %{THE_REQUEST} \s/+(.+?)\.html[\s?] [NC]
 RewriteRule ^ /%1 [R=301,L]

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html class="dark" lang="es" data-page="clientes">
+<head>
+  <meta charset="utf-8"/>
+  <link rel="icon" type="image/png" href="/logo-lezac-mini.png"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>+Clientes Activos: geolocalización, censo y ruteo comercial | Lezac</title>
+  <meta name="description" content="En 2 meses mapeamos tu base de clientes, censamos 100 PDV en 7 días y rediseñamos rutas. Históricamente, +15-30% de clientes activos en 60 días. Requiere 300+ PDV."/>
+  <meta property="og:type" content="website"/>
+  <link rel="canonical" href="https://lezacconsultoria.com/mas-clientes-activos"/>
+  <meta property="og:url" content="https://lezacconsultoria.com/mas-clientes-activos"/>
+  <meta property="og:title" content="+Clientes Activos | Lezac Consultoria"/>
+  <meta property="og:description" content="En 2 meses mapeamos tu base de clientes, censamos 100 PDV en 7 días y rediseñamos rutas. +15-30% clientes activos en 60 días."/>
+  <meta property="og:image" content="https://lezacconsultoria.com/opengrap.jpeg"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:image" content="https://lezacconsultoria.com/opengrap.jpeg"/>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Service","name":"+Clientes Activos","description":"Proyecto de 2 meses. Geolocalizamos la base de clientes, censamos 100 puntos de venta en 7 días y rediseñamos rutas comerciales. +15-30% de clientes activos en 60 días.","url":"https://lezacconsultoria.com/mas-clientes-activos","serviceType":"Consultoría comercial B2B","provider":{"@type":"Organization","name":"Lezac Consultoria","url":"https://lezacconsultoria.com/"},"areaServed":["Argentina","Paraguay","Bolivia","Uruguay"]}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://lezacconsultoria.com/"},{"@type":"ListItem","position":2,"name":"+Clientes Activos","item":"https://lezacconsultoria.com/mas-clientes-activos"}]}
+  </script>
+  <script src="/analytics.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Playfair+Display:ital,wght@1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      darkMode:"class",
+      theme:{extend:{
+        colors:{
+          "surface":"#0A0A0B","surface-dim":"#050506","surface-container":"#111112",
+          "surface-container-low":"#0D0D0E","surface-container-high":"#1A1A1B",
+          "on-surface":"#E5E2E3","on-surface-variant":"#958DA1","outline-variant":"#2A2A2B",
+          "primary":"#8C52FF","primary-container":"#7131E3","on-primary":"#FFFFFF",
+          "error":"#EC0543","success":"#25F5A4",
+          "accent":"var(--color-accent)","accent-dim":"var(--color-accent-dim)",
+        },
+        borderRadius:{"DEFAULT":"0.75rem","sm":"0.5rem","lg":"1rem","xl":"1.5rem","2xl":"2rem","full":"9999px"},
+        fontFamily:{"headline":["Montserrat","sans-serif"],"serif":["Playfair Display","serif"],"body":["Inter","sans-serif"]},
+      }},
+    }
+  </script>
+  <style>
+    :root{--color-accent:#38BDF8;--color-accent-dim:#0EA5E9;--color-accent-glow:rgba(56,189,248,0.25);}
+    html{font-size:clamp(14px, 13px + 0.23vw, 19px);}
+    body{font-family:'Inter',sans-serif;background:#0A0A0B;color:#E5E2E3;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+    h1,h2,h3,h4{font-family:'Montserrat',sans-serif;}
+    .serif-italic{font-family:'Playfair Display',serif;font-style:italic;}
+    .material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;}
+    .grid-bg{background-image:linear-gradient(rgba(255,255,255,0.02) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.02) 1px,transparent 1px);background-size:72px 72px;}
+    .glass{background:rgba(17,17,18,0.6);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,0.06);}
+    .liquid-glass{background:rgba(26,26,27,0.45);backdrop-filter:blur(28px);-webkit-backdrop-filter:blur(28px);border:1px solid rgba(255,255,255,0.07);box-shadow:0 8px 32px rgba(0,0,0,0.35),inset 0 1px 0 rgba(255,255,255,0.04);}
+    .pill-badge{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border-radius:9999px;background:rgba(56,189,248,0.08);border:1px solid rgba(56,189,248,0.25);font-size:11px;font-weight:600;letter-spacing:.05em;color:#38BDF8;}
+    .pill-dot{width:7px;height:7px;border-radius:50%;background:var(--color-accent);animation:pulse-dot 2s ease-in-out infinite;}
+    @keyframes pulse-dot{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.75)}}
+    .glow-blob{position:absolute;border-radius:50%;filter:blur(120px);pointer-events:none;}
+    .lezac-reveal{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s ease;}
+    .lezac-reveal.revealed{opacity:1;transform:translateY(0);}
+    .faq-answer{max-height:0;overflow:hidden;transition:max-height .4s ease;}
+    .faq-answer.open{max-height:220px;}
+    .faq-chevron{transition:transform .3s ease;}
+    .faq-chevron.rotated{transform:rotate(180deg);}
+    .step-connector::after{content:'';position:absolute;top:27px;left:calc(50% + 28px);width:calc(100% - 56px);height:1px;background:linear-gradient(to right,rgba(56,189,248,0.3),rgba(56,189,248,0.05));}
+    @media(max-width:1023px){.step-connector::after{display:none;}}
+  </style>
+</head>
+<body class="bg-surface selection:bg-primary/30 selection:text-white">
+<main>
+
+<!-- HERO -->
+<section class="relative min-h-screen flex flex-col items-center justify-center px-6 md:px-12 pt-16 pb-20 overflow-hidden grid-bg">
+  <div class="glow-blob w-[700px] h-[700px] opacity-[0.06] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" style="background:var(--color-accent)"></div>
+  <div class="glow-blob w-[300px] h-[300px] opacity-[0.05] top-20 right-10" style="background:#8C52FF"></div>
+  <div class="w-full max-w-5xl mx-auto text-center space-y-6 relative z-10">
+    <span class="pill-badge"><span class="pill-dot"></span>Proyecto 2 Meses · Expansión Territorial</span>
+    <h1 class="text-4xl md:text-5xl xl:text-[3.5rem] font-black leading-[1.05] tracking-tight text-white">
+      +Clientes Activos:<br/>
+      más clientes comprando en 60 días,<br/>
+      <span class="serif-italic font-semibold text-3xl md:text-4xl xl:text-5xl" style="color:var(--color-accent)">con tu misma estructura.</span>
+    </h1>
+    <p class="text-lg md:text-xl text-on-surface-variant font-light max-w-2xl mx-auto leading-relaxed">
+      Geolocalizamos tu base de clientes histórica, censamos 100 puntos de venta nuevos en tu zona en 7 días (garantizado) y rediseñamos las rutas de tus vendedores para que reactiven clientes inactivos y sumen los nuevos que hoy no atienden.
+    </p>
+    <div class="flex items-center justify-center gap-8 py-4">
+      <div class="text-center"><p class="text-3xl font-black text-white">+15-30%</p><p class="text-xs text-on-surface-variant uppercase tracking-wider mt-1">Clientes activos</p></div>
+      <div class="w-px h-10 bg-white/10"></div>
+      <div class="text-center"><p class="text-3xl font-black" style="color:var(--color-accent)">60 días</p><p class="text-xs text-on-surface-variant uppercase tracking-wider mt-1">Histórico</p></div>
+      <div class="w-px h-10 bg-white/10"></div>
+      <div class="text-center"><p class="text-3xl font-black text-white">100 PDV</p><p class="text-xs text-on-surface-variant uppercase tracking-wider mt-1">En 7 días garantizado</p></div>
+    </div>
+    <!-- VSL -->
+    <div class="relative mt-4 max-w-4xl mx-auto">
+      <div class="absolute -inset-2 rounded-2xl opacity-40" style="background:radial-gradient(ellipse at center,var(--color-accent-glow) 0%,transparent 70%);filter:blur(24px);"></div>
+      <div class="relative aspect-video rounded-2xl overflow-hidden" style="box-shadow:0 0 0 1px rgba(56,189,248,0.15),0 32px 64px rgba(0,0,0,0.5)">
+        <video data-vsl controls autoplay muted playsinline preload="auto" class="absolute inset-0 w-full h-full" style="background:#000;"><source src="/Web%20VSL%20I%20Mas%20Clientes%20Activos.mp4" type="video/mp4"></video>
+      </div>
+    </div>
+    <div class="flex flex-col sm:flex-row gap-3 justify-center pt-2">
+      <a href="https://calendly.com/lezacconsultoria/asesoria-comercial" target="_blank" rel="noopener" class="flex items-center justify-center gap-2 px-8 py-4 rounded-full text-sm font-bold transition-all hover:brightness-110 hover:scale-[1.02]" style="background:var(--color-accent);color:#0A0A0B;box-shadow:0 0 40px var(--color-accent-glow)">Agendar diagnóstico <span class="material-symbols-outlined" style="font-size:18px">arrow_forward</span></a>
+      <a href="https://api.whatsapp.com/send?phone=5491154107921&text=%E2%9C%85%20Lezac%20Consultoria%20I%20Me%20interesa%20conocer%20%2BClientes%20Activos." target="_blank" rel="noopener" class="flex items-center justify-center gap-2 px-8 py-4 rounded-full text-sm font-semibold text-white/70 hover:text-white transition-all" style="border:1px solid rgba(255,255,255,0.12)">Ver cómo aplica a mi empresa</a>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<section class="py-10 border-y" style="border-color:rgba(255,255,255,0.05);background:#050506;">
+  <p class="text-center text-sm font-bold tracking-widest uppercase mb-8" style="color:#38BDF8;">Empresas que confían en Lezac</p>
+  <div data-lezac-marquee></div>
+</section>
+
+<!-- RESULTADO HISTÓRICO -->
+<section class="py-20 px-6 md:px-12 relative overflow-hidden" style="background:#050506">
+  <div class="max-w-5xl mx-auto lezac-reveal">
+    <div class="liquid-glass rounded-2xl p-10 grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <span class="text-xs font-semibold tracking-widest uppercase block mb-3" style="color:var(--color-accent)">Resultado histórico y meta del proyecto</span>
+        <h2 class="text-3xl font-black text-white mb-4 leading-tight">Un resultado ya alcanzado,<br/><span class="serif-italic font-normal" style="color:var(--color-accent)">no una promesa.</span></h2>
+        <p class="text-on-surface-variant text-sm leading-relaxed">Empresas que ya aplicaron esta metodología lograron entre <strong class="text-white">15% y 30% de incremento de clientes activos en 60 días</strong>. Para cada proyecto nuevo nos comprometemos a una meta orientativa de <strong class="text-white">10% a 15% en 2 meses</strong> — más conservadora a propósito, porque parte de la ejecución final depende de tu equipo de ventas.</p>
+      </div>
+      <div class="grid grid-cols-2 gap-4">
+        <div class="rounded-xl p-5 text-center" style="background:#111112"><p class="text-3xl font-black text-white mb-1">+30%</p><p class="text-xs text-on-surface-variant uppercase tracking-wider">Máximo histórico</p></div>
+        <div class="rounded-xl p-5 text-center" style="background:#111112"><p class="text-3xl font-black mb-1" style="color:var(--color-accent)">+15%</p><p class="text-xs text-on-surface-variant uppercase tracking-wider">Mínimo histórico</p></div>
+        <div class="rounded-xl p-5 text-center col-span-2" style="background:rgba(56,189,248,0.06);border:1px solid rgba(56,189,248,0.2)"><p class="text-2xl font-black mb-1" style="color:var(--color-accent)">10–15%</p><p class="text-xs text-on-surface-variant uppercase tracking-wider">Meta orientativa por proyecto</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CÓMO FUNCIONA EN 3 PASOS -->
+<section class="py-24 px-6 md:px-12 bg-surface">
+  <div class="max-w-6xl mx-auto">
+    <div class="mb-14 lezac-reveal text-center">
+      <span class="text-xs font-semibold tracking-widest uppercase" style="color:var(--color-accent)">Metodología</span>
+      <h2 class="text-4xl md:text-5xl font-black tracking-tight text-white mt-3">Cómo funciona<br/><span class="serif-italic font-normal text-3xl md:text-4xl" style="color:var(--color-accent)">en 3 pasos.</span></h2>
+    </div>
+    <div class="grid lg:grid-cols-3 gap-6 relative lezac-reveal">
+      <div class="liquid-glass rounded-2xl p-8 relative overflow-hidden step-connector">
+        <div class="absolute top-4 right-5 text-7xl font-black leading-none select-none" style="color:rgba(56,189,248,0.05);font-family:'Montserrat',sans-serif">01</div>
+        <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-5" style="background:rgba(56,189,248,0.1)"><span class="material-symbols-outlined" style="color:var(--color-accent);font-size:24px">location_on</span></div>
+        <h3 class="text-lg font-black text-white mb-3">Geolocalización de tu base de clientes histórica</h3>
+        <p class="text-sm text-on-surface-variant leading-relaxed">Mapeamos el 100% de tu base: quién compra, quién dejó de comprar y dónde está cada uno. El mapa que nunca tuviste.</p>
+      </div>
+      <div class="liquid-glass rounded-2xl p-8 relative overflow-hidden step-connector">
+        <div class="absolute top-4 right-5 text-7xl font-black leading-none select-none" style="color:rgba(56,189,248,0.05);font-family:'Montserrat',sans-serif">02</div>
+        <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-5" style="background:rgba(56,189,248,0.1)"><span class="material-symbols-outlined" style="color:var(--color-accent);font-size:24px">fact_check</span></div>
+        <h3 class="text-lg font-black text-white mb-3">Censo digital de 100 PDV, garantizado en 7 días</h3>
+        <p class="text-sm text-on-surface-variant leading-relaxed">Relevamos 100 puntos de venta nuevos en tu zona de influencia. <strong class="text-white">Garantía real:</strong> si no lo cumplimos en 7 días, no te cobramos esa etapa.</p>
+      </div>
+      <div class="liquid-glass rounded-2xl p-8 relative overflow-hidden">
+        <div class="absolute top-4 right-5 text-7xl font-black leading-none select-none" style="color:rgba(56,189,248,0.05);font-family:'Montserrat',sans-serif">03</div>
+        <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-5" style="background:rgba(56,189,248,0.1)"><span class="material-symbols-outlined" style="color:var(--color-accent);font-size:24px">route</span></div>
+        <h3 class="text-lg font-black text-white mb-3">Ruteo comercial</h3>
+        <p class="text-sm text-on-surface-variant leading-relaxed">Rediseñamos las rutas de tus vendedores para que cubran mejor la zona — no necesariamente para que visiten más, sino para que <strong class="text-white">visiten mejor</strong>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CASOS REALES -->
+<section class="py-24 px-6 md:px-12 relative overflow-hidden" style="background:#050506">
+  <div class="max-w-5xl mx-auto">
+    <div class="mb-12 lezac-reveal">
+      <span class="text-xs font-semibold tracking-widest uppercase block mb-3" style="color:var(--color-accent)">Casos reales de clientes</span>
+      <h2 class="text-4xl font-black text-white">Lo que ya pasó<br/><span class="serif-italic font-normal text-3xl" style="color:var(--color-accent)">con otras empresas.</span></h2>
+      <p class="text-on-surface-variant mt-3 text-sm">Actualizado septiembre 2026</p>
+    </div>
+    <div class="grid md:grid-cols-2 gap-6 lezac-reveal">
+      <div class="liquid-glass rounded-2xl p-8">
+        <p class="text-xs font-bold uppercase tracking-widest mb-4" style="color:var(--color-accent)">Distribución de consumo masivo · Buenos Aires</p>
+        <p class="text-sm text-on-surface-variant leading-relaxed mb-6">Más de 1.250 puntos de venta sin geolocalizar. Relevamiento y validación completa de la base de clientes en 10 días.</p>
+        <div class="flex gap-6">
+          <div><p class="text-3xl font-black text-white">+20%</p><p class="text-xs text-on-surface-variant mt-1">Productividad equipo comercial</p></div>
+          <div class="w-px bg-white/10"></div>
+          <div><p class="text-3xl font-black" style="color:var(--color-accent)">−15%</p><p class="text-xs text-on-surface-variant mt-1">Costo logístico</p></div>
+        </div>
+      </div>
+      <div class="liquid-glass rounded-2xl p-8">
+        <p class="text-xs font-bold uppercase tracking-widest mb-4" style="color:var(--color-accent)">Fábrica de alimento balanceado · Buenos Aires</p>
+        <p class="text-sm text-on-surface-variant leading-relaxed mb-6">Más de 15 vendedores cubriendo Capital y Gran Buenos Aires sin saber a cuántos clientes potenciales llegaban. Geolocalización, censo de potenciales desatendidos y ruteo comercial con frecuencia de visita definida.</p>
+        <div class="flex gap-6">
+          <div><p class="text-3xl font-black text-white">+15%</p><p class="text-xs text-on-surface-variant mt-1">Ventas misma estructura</p></div>
+          <div class="w-px bg-white/10"></div>
+          <div><p class="text-3xl font-black" style="color:var(--color-accent)">−20%</p><p class="text-xs text-on-surface-variant mt-1">Costo logístico</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CRONOGRAMA -->
+<section class="py-24 px-6 md:px-12 bg-surface">
+  <div class="max-w-4xl mx-auto lezac-reveal">
+    <div class="mb-10">
+      <span class="text-xs font-semibold tracking-widest uppercase block mb-3" style="color:var(--color-accent)">Cronograma de los 2 meses</span>
+      <h2 class="text-3xl font-black text-white">Proyecto con fecha de cierre.</h2>
+    </div>
+    <div class="space-y-4">
+      <div class="flex gap-6 items-start liquid-glass rounded-xl p-6">
+        <div class="flex-shrink-0 w-14 h-14 rounded-xl flex items-center justify-center font-black text-sm" style="background:rgba(56,189,248,0.1);color:var(--color-accent)">D1–7</div>
+        <div><p class="font-bold text-white text-sm mb-1">Geolocalización completa + censo de 100 PDV</p><p class="text-xs text-on-surface-variant">Garantizado. Si no lo cumplimos en 7 días, no te cobramos esa etapa.</p></div>
+      </div>
+      <div class="flex gap-6 items-start liquid-glass rounded-xl p-6">
+        <div class="flex-shrink-0 w-14 h-14 rounded-xl flex items-center justify-center font-black text-sm text-center leading-tight" style="background:rgba(56,189,248,0.1);color:var(--color-accent)">S2+</div>
+        <div><p class="font-bold text-white text-sm mb-1">Ruteo comercial en ejecución</p><p class="text-xs text-on-surface-variant">Panel actualizado cada semana + reunión en vivo cada 15 días con tu equipo.</p></div>
+      </div>
+      <div class="flex gap-6 items-start liquid-glass rounded-xl p-6" style="border-color:rgba(56,189,248,0.2)">
+        <div class="flex-shrink-0 w-14 h-14 rounded-xl flex items-center justify-center font-black text-sm" style="background:rgba(56,189,248,0.15);color:var(--color-accent)">S8</div>
+        <div><p class="font-bold text-white text-sm mb-1">Informe de cierre</p><p class="text-xs text-on-surface-variant">Clientes reactivados, clientes nuevos y cobertura lograda vs. meta comprometida.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CALIFICA -->
+<section class="py-20 px-6 md:px-12" style="background:#050506">
+  <div class="max-w-4xl mx-auto lezac-reveal">
+    <div class="liquid-glass rounded-2xl p-10 flex flex-col md:flex-row gap-10 items-start">
+      <div class="flex-1">
+        <span class="text-xs font-semibold tracking-widest uppercase block mb-3" style="color:var(--color-accent)">¿Mi empresa califica?</span>
+        <h2 class="text-3xl font-black text-white mb-4">El piso son <span style="color:var(--color-accent)">300 puntos<br/>de venta históricos.</span></h2>
+        <p class="text-on-surface-variant text-sm leading-relaxed">Si facturás más, no hay techo. Si tu empresa está por debajo de ese piso, hablanos igual — se evalúa caso por caso.</p>
+      </div>
+      <div class="flex-1 space-y-3">
+        <div class="flex items-center gap-3 text-sm text-white/80 p-3 rounded-xl" style="background:#111112"><span class="w-2 h-2 rounded-full flex-shrink-0" style="background:var(--color-accent)"></span>Distribuidoras</div>
+        <div class="flex items-center gap-3 text-sm text-white/80 p-3 rounded-xl" style="background:#111112"><span class="w-2 h-2 rounded-full flex-shrink-0" style="background:var(--color-accent)"></span>Mayoristas</div>
+        <div class="flex items-center gap-3 text-sm text-white/80 p-3 rounded-xl" style="background:#111112"><span class="w-2 h-2 rounded-full flex-shrink-0" style="background:var(--color-accent)"></span>Fábricas pyme con red de ventas propia</div>
+        <div class="flex items-center gap-3 text-sm text-white/80 p-3 rounded-xl" style="background:#111112"><span class="w-2 h-2 rounded-full flex-shrink-0" style="background:var(--color-accent)"></span>Argentina, Paraguay, Bolivia y Uruguay</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="py-24 px-6 md:px-12 bg-surface">
+  <div class="max-w-3xl mx-auto lezac-reveal">
+    <h2 class="text-3xl font-black text-center text-white uppercase tracking-tight mb-10">Preguntas frecuentes</h2>
+    <div class="space-y-3">
+
+      <div class="glass rounded-xl overflow-hidden"><button class="faq-btn w-full flex items-center justify-between p-6 text-left gap-4"><span class="font-bold text-white text-sm">¿Qué resultado puedo esperar?</span><span class="material-symbols-outlined faq-chevron text-on-surface-variant flex-shrink-0">keyboard_arrow_down</span></button><div class="faq-answer px-6 text-sm text-on-surface-variant leading-relaxed"><p class="pb-5">Históricamente, nuestros clientes aumentaron entre 15% y 30% sus clientes activos en 60 días. En cada proyecto nuevo nos proponemos una meta orientativa de 10% a 15% en 2 meses (no es una garantía).</p></div></div>
+
+      <div class="glass rounded-xl overflow-hidden"><button class="faq-btn w-full flex items-center justify-between p-6 text-left gap-4"><span class="font-bold text-white text-sm">¿Qué es un censo de puntos de venta y para qué me sirve?</span><span class="material-symbols-outlined faq-chevron text-on-surface-variant flex-shrink-0">keyboard_arrow_down</span></button><div class="faq-answer px-6 text-sm text-on-surface-variant leading-relaxed"><p class="pb-5">Es relevar comercio por comercio lo que hay en una zona: quién te compra, quién podría comprarte y quién le compra a la competencia. Nosotros censamos 100 PDV en 7 días, garantizado.</p></div></div>
+
+      <div class="glass rounded-xl overflow-hidden"><button class="faq-btn w-full flex items-center justify-between p-6 text-left gap-4"><span class="font-bold text-white text-sm">¿Mi empresa califica?</span><span class="material-symbols-outlined faq-chevron text-on-surface-variant flex-shrink-0">keyboard_arrow_down</span></button><div class="faq-answer px-6 text-sm text-on-surface-variant leading-relaxed"><p class="pb-5">Necesitás al menos 300 puntos de venta en tu base histórica de clientes. Si estás por debajo, hablanos igual.</p></div></div>
+
+      <div class="glass rounded-xl overflow-hidden"><button class="faq-btn w-full flex items-center justify-between p-6 text-left gap-4"><span class="font-bold text-white text-sm">¿Tengo que cambiar a mis vendedores?</span><span class="material-symbols-outlined faq-chevron text-on-surface-variant flex-shrink-0">keyboard_arrow_down</span></button><div class="faq-answer px-6 text-sm text-on-surface-variant leading-relaxed"><p class="pb-5">No. Les rediseñamos la ruta para que visiten mejor, no más.</p></div></div>
+
+      <div class="glass rounded-xl overflow-hidden"><button class="faq-btn w-full flex items-center justify-between p-6 text-left gap-4"><span class="font-bold text-white text-sm">¿Qué pasa con el costo logístico?</span><span class="material-symbols-outlined faq-chevron text-on-surface-variant flex-shrink-0">keyboard_arrow_down</span></button><div class="faq-answer px-6 text-sm text-on-surface-variant leading-relaxed"><p class="pb-5">En los casos reales, el costo logístico bajó entre 15% y 20% con la misma estructura.</p></div></div>
+
+      <div class="glass rounded-xl overflow-hidden"><button class="faq-btn w-full flex items-center justify-between p-6 text-left gap-4"><span class="font-bold text-white text-sm">¿Cuánto dura?</span><span class="material-symbols-outlined faq-chevron text-on-surface-variant flex-shrink-0">keyboard_arrow_down</span></button><div class="faq-answer px-6 text-sm text-on-surface-variant leading-relaxed"><p class="pb-5">Dos meses, con fecha de cierre.</p></div></div>
+
+      <div class="glass rounded-xl overflow-hidden"><button class="faq-btn w-full flex items-center justify-between p-6 text-left gap-4"><span class="font-bold text-white text-sm">¿Sirve para Paraguay, Bolivia o Uruguay?</span><span class="material-symbols-outlined faq-chevron text-on-surface-variant flex-shrink-0">keyboard_arrow_down</span></button><div class="faq-answer px-6 text-sm text-on-surface-variant leading-relaxed"><p class="pb-5">Sí, trabajamos en los cuatro países.</p></div></div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="py-24 px-6 md:px-12 relative overflow-hidden" style="background:#050506">
+  <div class="glow-blob w-[600px] h-[600px] opacity-[0.05] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" style="background:var(--color-accent)"></div>
+  <div class="max-w-3xl mx-auto text-center relative z-10 lezac-reveal">
+    <h2 class="text-4xl md:text-5xl font-black text-white mb-6">Contanos cuántos puntos de venta<br/><span class="serif-italic font-normal" style="color:var(--color-accent)">tenés en tu base.</span></h2>
+    <p class="text-on-surface-variant mb-8 max-w-xl mx-auto leading-relaxed">Vemos si +Clientes Activos aplica y calculamos la meta orientativa para tu empresa.</p>
+    <a href="https://calendly.com/lezacconsultoria/asesoria-comercial" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-10 py-4 rounded-full font-bold text-sm transition-all hover:brightness-110 hover:scale-[1.02]" style="background:var(--color-accent);color:#0A0A0B;box-shadow:0 0 40px var(--color-accent-glow)">Agendar diagnóstico <span class="material-symbols-outlined" style="font-size:18px">arrow_forward</span></a>
+  </div>
+</section>
+
+</main>
+<script src="./shared.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const revObs = new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting){e.target.classList.add('revealed');revObs.unobserve(e.target);} }), {threshold:.1,rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.lezac-reveal').forEach(el => revObs.observe(el));
+  document.querySelectorAll('.faq-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const ans = btn.nextElementSibling, chev = btn.querySelector('.faq-chevron'), open = ans.classList.contains('open');
+      document.querySelectorAll('.faq-answer.open').forEach(a => { a.classList.remove('open'); a.previousElementSibling.querySelector('.faq-chevron').classList.remove('rotated'); });
+      if(!open) { ans.classList.add('open'); chev.classList.add('rotated'); }
+    });
+  });
+});
+</script>
+</body>
+</html>

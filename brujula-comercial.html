@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html class="dark" lang="es" data-page="brujula">
+<head>
+  <meta charset="utf-8"/>
+  <link rel="icon" type="image/png" href="/logo-lezac-mini.png"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Brújula Comercial: inteligencia comercial para pymes | Lezac</title>
+  <meta name="description" content="Sistema de inteligencia comercial sobre tu historial de ventas: qué clientes dejaron de comprar, quién rinde y dónde está la plata. Relación continua, no un informe."/>
+  <meta property="og:type" content="website"/>
+  <link rel="canonical" href="https://lezacconsultoria.com/brujula-comercial"/>
+  <meta property="og:url" content="https://lezacconsultoria.com/brujula-comercial"/>
+  <meta property="og:title" content="Brújula Comercial | Lezac Consultoria"/>
+  <meta property="og:description" content="Sistema de inteligencia comercial sobre tu historial de ventas: qué clientes dejaron de comprar, quién rinde y dónde está la plata."/>
+  <meta property="og:image" content="https://lezacconsultoria.com/opengrap.jpeg"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:image" content="https://lezacconsultoria.com/opengrap.jpeg"/>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Service","name":"Brújula Comercial","description":"Sistema de inteligencia comercial construido sobre el historial real de ventas de tu empresa. Relación continua mensual, no un informe que se lee una vez.","url":"https://lezacconsultoria.com/brujula-comercial","serviceType":"Inteligencia comercial B2B","provider":{"@type":"Organization","name":"Lezac Consultoria","url":"https://lezacconsultoria.com/"},"areaServed":["Argentina","Paraguay","Bolivia","Uruguay"],"audience":{"@type":"BusinessAudience","name":"Distribuidoras, mayoristas y fábricas pyme"}}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://lezacconsultoria.com/"},{"@type":"ListItem","position":2,"name":"Brújula Comercial","item":"https://lezacconsultoria.com/brujula-comercial"}]}
+  </script>
+  <script src="/analytics.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Playfair+Display:ital,wght@1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      darkMode:"class",
+      theme:{extend:{
+        colors:{
+          "surface":"#0A0A0B","surface-dim":"#050506","surface-container":"#111112",
+          "surface-container-low":"#0D0D0E","surface-container-high":"#1A1A1B",
+          "on-surface":"#E5E2E3","on-surface-variant":"#958DA1","outline-variant":"#2A2A2B",
+          "primary":"#8C52FF","primary-container":"#7131E3","on-primary":"#FFFFFF",
+          "error":"#EC0543","success":"#25F5A4",
+          "accent":"var(--color-accent)","accent-dim":"var(--color-accent-dim)",
+        },
+        borderRadius:{"DEFAULT":"0.75rem","sm":"0.5rem","lg":"1rem","xl":"1.5rem","2xl":"2rem","full":"9999px"},
+        fontFamily:{"headline":["Montserrat","sans-serif"],"serif":["Playfair Display","serif"],"body":["Inter","sans-serif"]},
+      }},
+    }
+  </script>
+  <style>
+    :root{--color-accent:#25F5A4;--color-accent-dim:#00C87E;--color-accent-glow:rgba(37,245,164,0.25);}
+    html{font-size:clamp(14px, 13px + 0.23vw, 19px);}
+    body{font-family:'Inter',sans-serif;background:#0A0A0B;color:#E5E2E3;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+    h1,h2,h3,h4{font-family:'Montserrat',sans-serif;}
+    .serif-italic{font-family:'Playfair Display',serif;font-style:italic;}
+    .material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;}
+    .grid-bg{background-image:linear-gradient(rgba(255,255,255,0.02) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.02) 1px,transparent 1px);background-size:72px 72px;}
+    .glass{background:rgba(17,17,18,0.6);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,0.06);}
+    .liquid-glass{background:rgba(26,26,27,0.45);backdrop-filter:blur(28px);-webkit-backdrop-filter:blur(28px);border:1px solid rgba(255,255,255,0.07);box-shadow:0 8px 32px rgba(0,0,0,0.35),inset 0 1px 0 rgba(255,255,255,0.04);}
+    .pill-badge{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border-radius:9999px;background:rgba(37,245,164,0.08);border:1px solid rgba(37,245,164,0.25);font-size:11px;font-weight:600;letter-spacing:.05em;color:#25F5A4;}
+    .pill-dot{width:7px;height:7px;border-radius:50%;background:var(--color-accent);animation:pulse-dot 2s ease-in-out infinite;}
+    @keyframes pulse-dot{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.75)}}
+    .glow-blob{position:absolute;border-radius:50%;filter:blur(120px);pointer-events:none;}
+    .lezac-reveal{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s ease;}
+    .lezac-reveal.revealed{opacity:1;transform:translateY(0);}
+    .bi-bar{width:0;transition:width 1.4s cubic-bezier(.25,1,.5,1);}
+    .feed-inner{animation:feed-scroll 14s linear infinite;}
+    @keyframes feed-scroll{0%{transform:translateY(0)}100%{transform:translateY(-50%)}}
+    .faq-answer{max-height:0;overflow:hidden;transition:max-height .4s ease;}
+    .faq-answer.open{max-height:200px;}
+    .faq-chevron{transition:transform .3s ease;}
+    .faq-chevron.rotated{transform:rotate(180deg);}
+    .float-shot{border-radius:8px;animation:lezac-float 7s ease-in-out infinite;will-change:transform;}
+    .float-shot[data-f="0"]{animation-duration:7s;animation-delay:-1s;}
+    .float-shot[data-f="1"]{animation-duration:8.5s;animation-delay:-4s;}
+    .float-shot[data-f="2"]{animation-duration:7.5s;animation-delay:-2.5s;}
+    @media (min-width:768px){
+      .rs-wrap{position:relative;display:block;padding-top:22%;}
+      .rs-slide{position:absolute;cursor:pointer;transition:left .9s cubic-bezier(.4,0,.2,1),top .9s cubic-bezier(.4,0,.2,1),width .9s cubic-bezier(.4,0,.2,1),filter .9s ease,opacity .9s ease;}
+      .rs-slide[data-p="0"]{left:0;top:3.9%;width:32%;z-index:1;filter:brightness(.8);}
+      .rs-slide[data-p="1"]{left:29%;top:0;width:42.5%;z-index:10;filter:none;}
+      .rs-slide[data-p="2"]{left:65.8%;top:3.9%;width:34%;z-index:1;filter:brightness(.8);}
+      .rs-slide[data-p="1"] img{box-shadow:0 30px 80px rgba(0,0,0,.7),0 0 80px -30px var(--color-accent-glow);}
+      .rs-slide:not([data-p="1"]) img{box-shadow:0 24px 60px rgba(0,0,0,.55);}
+    }
+    @keyframes lezac-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+  </style>
+</head>
+<body class="bg-surface selection:bg-primary/30 selection:text-white">
+<main>
+
+<!-- HERO -->
+<section class="relative min-h-screen flex flex-col items-center justify-center px-6 md:px-12 pt-16 pb-20 overflow-hidden grid-bg">
+  <div class="glow-blob w-[600px] h-[600px] opacity-[0.07] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" style="background:var(--color-accent)"></div>
+  <div class="glow-blob w-[250px] h-[250px] opacity-[0.05] top-20 right-20" style="background:#8C52FF"></div>
+  <div class="w-full max-w-5xl mx-auto text-center space-y-6 relative z-10">
+    <span class="pill-badge"><span class="pill-dot"></span>Inteligencia Comercial Continua · Distribuidoras &amp; Fábricas</span>
+    <h1 class="text-4xl md:text-5xl xl:text-[3.5rem] font-black leading-[1.05] tracking-tight text-white">
+      Brújula Comercial: sabé qué clientes,<br class="hidden md:block"/>
+      productos y vendedores<br/>
+      <span class="serif-italic font-semibold text-3xl md:text-4xl xl:text-5xl" style="color:var(--color-accent)">te hacen ganar plata.</span>
+    </h1>
+    <p class="text-lg md:text-xl text-on-surface-variant font-light max-w-2xl mx-auto leading-relaxed">
+      Sistema de inteligencia comercial construido sobre el historial real de ventas de tu empresa. Te decimos qué clientes dejaron de comprarte, qué vendedor sostiene la base y qué productos te hacen ganar o perder plata — con datos, no con la sensación de "algo anda mal".
+    </p>
+    <!-- VSL -->
+    <div class="relative mt-4 max-w-4xl mx-auto">
+      <div class="absolute -inset-2 rounded-2xl opacity-40" style="background:radial-gradient(ellipse at center,var(--color-accent-glow) 0%,transparent 70%);filter:blur(24px);"></div>
+      <div class="relative aspect-video rounded-2xl overflow-hidden" style="box-shadow:0 0 0 1px rgba(37,245,164,0.15),0 32px 64px rgba(0,0,0,0.5)">
+        <video data-vsl controls autoplay muted playsinline preload="auto" class="absolute inset-0 w-full h-full" style="background:#000;"><source src="/Web%20VSL%20I%20Br%C3%BAjula%20Comercial.mp4" type="video/mp4"></video>
+      </div>
+    </div>
+    <div class="flex flex-col sm:flex-row gap-3 justify-center pt-2">
+      <a href="https://calendly.com/lezacconsultoria/asesoria-comercial" target="_blank" rel="noopener" class="flex items-center justify-center gap-2 px-8 py-4 rounded-full text-sm font-bold text-black transition-all hover:brightness-110 hover:scale-[1.02]" style="background:var(--color-accent);box-shadow:0 0 40px var(--color-accent-glow)">Agendar una charla <span class="material-symbols-outlined" style="font-size:18px">arrow_forward</span></a>
+      <a href="https://api.whatsapp.com/send?phone=5491154107921&text=%E2%9C%85%20Lezac%20Consultoria%20I%20Me%20interesa%20Br%C3%BAjula%20Comercial." target="_blank" rel="noopener" class="flex items-center justify-center gap-2 px-8 py-4 rounded-full text-sm font-semibold text-white/70 hover:text-white transition-all" style="border:1px solid rgba(255,255,255,0.12)">Ver cómo aplica a mi empresa</a>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<section class="py-10 border-y" style="border-color:rgba(255,255,255,0.05);background:#050506;">
+  <p class="text-center text-sm font-bold tracking-widest uppercase mb-8" style="color:#25F5A4;">Empresas que confían en Lezac</p>
+  <div data-lezac-marquee></div>
+</section>
+
+<!-- QUÉ ES -->
+<section class="py-24 px-6 md:px-12 relative overflow-hidden">
+  <div class="glow-blob w-[500px] h-[500px] opacity-[0.06] bottom-0 right-0" style="background:var(--color-accent)"></div>
+  <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+    <div class="space-y-6 lezac-reveal">
+      <span class="text-xs font-semibold tracking-widest uppercase" style="color:var(--color-accent)">Qué es Brújula Comercial</span>
+      <h2 class="text-4xl md:text-5xl font-black tracking-tight leading-none text-white">
+        No es un informe.<br/>
+        <span class="serif-italic font-normal text-3xl md:text-4xl" style="color:var(--color-accent)">Es una relación de trabajo continua.</span>
+      </h2>
+      <p class="text-on-surface-variant leading-relaxed">No es un software que instalás ni un dashboard que mirás solo. Todos los meses procesamos tus datos de ventas y te traducimos lo que dicen en decisiones concretas para vos y tu equipo.</p>
+      <p class="text-on-surface-variant leading-relaxed">Brújula Comercial no es un CRM ni un ERP — no reemplaza tu sistema de gestión, <strong class="text-white">lo interpreta</strong>.</p>
+      <ul class="space-y-3">
+        <li class="flex items-center gap-3 text-sm text-white/75"><span class="w-5 h-5 rounded-full flex-shrink-0 flex items-center justify-center" style="background:rgba(37,245,164,.12);color:var(--color-accent)"><span class="material-symbols-outlined" style="font-size:13px">check</span></span>Clientes inactivos detectados a tiempo — no meses después</li>
+        <li class="flex items-center gap-3 text-sm text-white/75"><span class="w-5 h-5 rounded-full flex-shrink-0 flex items-center justify-center" style="background:rgba(37,245,164,.12);color:var(--color-accent)"><span class="material-symbols-outlined" style="font-size:13px">check</span></span>Rentabilidad real por producto, cruzada con ventas</li>
+        <li class="flex items-center gap-3 text-sm text-white/75"><span class="w-5 h-5 rounded-full flex-shrink-0 flex items-center justify-center" style="background:rgba(37,245,164,.12);color:var(--color-accent)"><span class="material-symbols-outlined" style="font-size:13px">check</span></span>Exposición al riesgo por vendedor — si uno se va, ¿qué pasa?</li>
+        <li class="flex items-center gap-3 text-sm text-white/75"><span class="w-5 h-5 rounded-full flex-shrink-0 flex items-center justify-center" style="background:rgba(37,245,164,.12);color:var(--color-accent)"><span class="material-symbols-outlined" style="font-size:13px">check</span></span>Reunión mensual con datos reales arriba de la mesa</li>
+      </ul>
+    </div>
+    <!-- BI Panel -->
+    <div class="liquid-glass rounded-2xl p-6 space-y-5 lezac-reveal" id="bi-panel">
+      <div class="flex items-center justify-between mb-1">
+        <div>
+          <p class="text-xs text-on-surface-variant tracking-widest uppercase">Tablero Comercial</p>
+          <p class="text-sm font-bold text-white mt-0.5">Indicadores en tiempo real</p>
+        </div>
+        <div class="flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold" style="background:rgba(37,245,164,0.1);color:var(--color-accent);border:1px solid rgba(37,245,164,0.2)">
+          <span class="w-1.5 h-1.5 rounded-full animate-pulse" style="background:var(--color-accent)"></span>Live
+        </div>
+      </div>
+      <div class="grid grid-cols-2 gap-3">
+        <div class="bg-surface-container rounded-xl p-4 space-y-2"><p class="text-xs text-on-surface-variant">Base activa</p><p class="text-2xl font-black text-white"><span class="bi-counter" data-target="68">0</span><span class="text-sm text-on-surface-variant ml-0.5">%</span></p><div class="h-1.5 bg-surface-container-high rounded-full overflow-hidden"><div class="bi-bar h-full rounded-full" data-w="68%" style="background:var(--color-accent)"></div></div></div>
+        <div class="bg-surface-container rounded-xl p-4 space-y-2"><p class="text-xs text-on-surface-variant">Inactividad detectada</p><p class="text-2xl font-black text-error"><span class="bi-counter" data-target="23">0</span><span class="text-sm text-on-surface-variant ml-0.5">%</span></p><div class="h-1.5 bg-surface-container-high rounded-full overflow-hidden"><div class="bi-bar h-full rounded-full bg-error" data-w="23%"></div></div></div>
+        <div class="bg-surface-container rounded-xl p-4 space-y-2"><p class="text-xs text-on-surface-variant">Segmento A</p><p class="text-2xl font-black text-white"><span class="bi-counter" data-target="31">0</span><span class="text-sm text-on-surface-variant ml-0.5">%</span></p><div class="h-1.5 bg-surface-container-high rounded-full overflow-hidden"><div class="bi-bar h-full rounded-full" data-w="31%" style="background:#8C52FF"></div></div></div>
+        <div class="bg-surface-container rounded-xl p-4 space-y-2"><p class="text-xs text-on-surface-variant">Oportunidad latente</p><p class="text-2xl font-black text-white"><span class="bi-counter" data-target="42">0</span><span class="text-sm text-on-surface-variant ml-0.5">%</span></p><div class="h-1.5 bg-surface-container-high rounded-full overflow-hidden"><div class="bi-bar h-full rounded-full" data-w="42%" style="background:#F97316"></div></div></div>
+      </div>
+      <div class="bg-surface-container rounded-xl overflow-hidden" style="height:108px">
+        <div class="px-4 py-2 border-b border-white/5 flex items-center justify-between">
+          <p class="text-xs font-semibold text-on-surface-variant">Alertas de base de clientes</p>
+          <span class="w-2 h-2 rounded-full bg-error animate-pulse"></span>
+        </div>
+        <div style="height:80px;overflow:hidden">
+          <div class="feed-inner flex flex-col divide-y divide-white/5">
+            <div class="flex items-center gap-3 px-4 py-2"><span class="w-1.5 h-1.5 rounded-full bg-error flex-shrink-0"></span><span class="text-xs text-white/70">Distribuidora Omega · sin pedido 45 días</span></div>
+            <div class="flex items-center gap-3 px-4 py-2"><span class="w-1.5 h-1.5 rounded-full flex-shrink-0" style="background:var(--color-accent)"></span><span class="text-xs text-white/70">Segmento B → A · +38% volumen mensual</span></div>
+            <div class="flex items-center gap-3 px-4 py-2"><span class="w-1.5 h-1.5 rounded-full bg-error flex-shrink-0"></span><span class="text-xs text-white/70">Zona Norte · cobertura 61% · -12% vs. mes anterior</span></div>
+            <div class="flex items-center gap-3 px-4 py-2"><span class="w-1.5 h-1.5 rounded-full flex-shrink-0" style="background:#F97316"></span><span class="text-xs text-white/70">Rentabilidad bajo objetivo en 8%</span></div>
+            <div class="flex items-center gap-3 px-4 py-2"><span class="w-1.5 h-1.5 rounded-full bg-error flex-shrink-0"></span><span class="text-xs text-white/70">Distribuidora Omega · sin pedido 45 días</span></div>
+            <div class="flex items-center gap-3 px-4 py-2"><span class="w-1.5 h-1.5 rounded-full flex-shrink-0" style="background:var(--color-accent)"></span><span class="text-xs text-white/70">Segmento B → A · +38% volumen mensual</span></div>
+            <div class="flex items-center gap-3 px-4 py-2"><span class="w-1.5 h-1.5 rounded-full bg-error flex-shrink-0"></span><span class="text-xs text-white/70">Zona Norte · cobertura 61% · -12% vs. mes anterior</span></div>
+            <div class="flex items-center gap-3 px-4 py-2"><span class="w-1.5 h-1.5 rounded-full flex-shrink-0" style="background:#F97316"></span><span class="text-xs text-white/70">Rentabilidad bajo objetivo en 8%</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUÉ PREGUNTAS RESPONDE -->
+<section class="py-24 px-6 md:px-12" style="background:#0D0D0E;">
+  <div class="max-w-5xl mx-auto">
+    <div class="mb-12 lezac-reveal text-center">
+      <span class="text-xs font-semibold tracking-widest uppercase" style="color:var(--color-accent)">Qué preguntas responde</span>
+      <h2 class="text-4xl md:text-5xl font-black tracking-tight text-white mt-3">Las preguntas que el dueño<br/><span class="serif-italic font-normal text-3xl md:text-4xl" style="color:var(--color-accent)">debería poder responder hoy.</span></h2>
+    </div>
+    <div class="grid md:grid-cols-3 gap-6 lezac-reveal">
+      <div class="liquid-glass rounded-2xl p-8 relative overflow-hidden">
+        <div class="absolute top-3 right-5 text-7xl font-black leading-none select-none" style="color:rgba(37,245,164,0.04);font-family:'Montserrat',sans-serif">01</div>
+        <div class="w-10 h-10 rounded-xl flex items-center justify-center mb-4" style="background:rgba(37,245,164,0.1)"><span class="material-symbols-outlined" style="color:var(--color-accent);font-size:20px">person_off</span></div>
+        <h3 class="text-base font-black text-white mb-2">¿Qué clientes dejaron de comprarme?</h3>
+        <p class="text-sm text-on-surface-variant leading-relaxed">Detectamos a tiempo la inactividad — no meses después, cuando ya se lo llevó la competencia.</p>
+      </div>
+      <div class="liquid-glass rounded-2xl p-8 relative overflow-hidden">
+        <div class="absolute top-3 right-5 text-7xl font-black leading-none select-none" style="color:rgba(37,245,164,0.04);font-family:'Montserrat',sans-serif">02</div>
+        <div class="w-10 h-10 rounded-xl flex items-center justify-center mb-4" style="background:rgba(37,245,164,0.1)"><span class="material-symbols-outlined" style="color:var(--color-accent);font-size:20px">supervised_user_circle</span></div>
+        <h3 class="text-base font-black text-white mb-2">¿Qué vendedor sostiene la base de clientes?</h3>
+        <p class="text-sm text-on-surface-variant leading-relaxed">Vemos qué parte de la venta depende de un solo vendedor, y qué pasa con esa base si esa persona se va mañana.</p>
+      </div>
+      <div class="liquid-glass rounded-2xl p-8 relative overflow-hidden">
+        <div class="absolute top-3 right-5 text-7xl font-black leading-none select-none" style="color:rgba(37,245,164,0.04);font-family:'Montserrat',sans-serif">03</div>
+        <div class="w-10 h-10 rounded-xl flex items-center justify-center mb-4" style="background:rgba(37,245,164,0.1)"><span class="material-symbols-outlined" style="color:var(--color-accent);font-size:20px">trending_down</span></div>
+        <h3 class="text-base font-black text-white mb-2">¿Qué productos arrastran margen?</h3>
+        <p class="text-sm text-on-surface-variant leading-relaxed">Cruzamos ventas con rentabilidad real, no con lo que "se vende mucho".</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUÉ DATOS NECESITAMOS -->
+<section class="py-20 px-6 md:px-12">
+  <div class="max-w-4xl mx-auto lezac-reveal">
+    <div class="liquid-glass rounded-2xl p-10 grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <span class="text-xs font-semibold tracking-widest uppercase block mb-3" style="color:var(--color-accent)">Qué datos necesitamos</span>
+        <h2 class="text-3xl font-black text-white mb-4">Solo lo que ya tenés.</h2>
+        <p class="text-on-surface-variant text-sm leading-relaxed">El historial de ventas de tu sistema de facturación o de gestión: clientes, productos, fechas, montos y vendedor. No hace falta que esté ordenado — <strong class="text-white">ordenarlo es parte del trabajo.</strong></p>
+      </div>
+      <div class="space-y-3">
+        <div class="flex items-center gap-3 text-sm p-3 rounded-xl" style="background:#111112;border:1px solid rgba(37,245,164,0.1)"><span class="w-2 h-2 rounded-full flex-shrink-0" style="background:var(--color-accent)"></span><span class="text-white/80">Historial de ventas</span></div>
+        <div class="flex items-center gap-3 text-sm p-3 rounded-xl" style="background:#111112;border:1px solid rgba(37,245,164,0.1)"><span class="w-2 h-2 rounded-full flex-shrink-0" style="background:var(--color-accent)"></span><span class="text-white/80">Base de clientes</span></div>
+        <div class="flex items-center gap-3 text-sm p-3 rounded-xl" style="background:#111112;border:1px solid rgba(37,245,164,0.1)"><span class="w-2 h-2 rounded-full flex-shrink-0" style="background:var(--color-accent)"></span><span class="text-white/80">Datos de productos</span></div>
+        <div class="flex items-center gap-3 text-sm p-3 rounded-xl" style="background:#111112;border:1px solid rgba(255,255,255,0.05)"><span class="w-2 h-2 rounded-full flex-shrink-0 bg-on-surface-variant"></span><span class="text-on-surface-variant">No hace falta un CRM ni ERP moderno</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PARA QUIÉN -->
+<section class="py-24 px-6 md:px-12 overflow-hidden" style="background:#0D0D0E;">
+  <div class="max-w-6xl mx-auto">
+    <div class="grid lg:grid-cols-[1fr_auto] gap-16 items-center lezac-reveal">
+      <div class="space-y-8">
+        <div>
+          <span class="text-xs font-semibold tracking-widest uppercase block mb-3" style="color:var(--color-accent)">¿Es para tu empresa?</span>
+          <h2 class="text-4xl md:text-5xl font-black tracking-tight leading-none text-white">Diseñada para<br/><span class="serif-italic font-normal text-3xl md:text-4xl" style="color:var(--color-accent)">quienes dirigen.</span></h2>
+        </div>
+        <div class="space-y-3">
+          <div class="flex items-start gap-4 px-5 py-4 rounded-xl" style="background:#0A0A0B;border:1px solid rgba(255,255,255,0.05)">
+            <div class="w-7 h-7 rounded-full flex items-center justify-center shrink-0 mt-0.5" style="background:rgba(37,245,164,0.12)"><span class="material-symbols-outlined" style="color:var(--color-accent);font-size:15px;font-variation-settings:'FILL' 1">business_center</span></div>
+            <div><p class="font-bold text-white text-sm">Dueños &amp; CEOs</p><p class="text-on-surface-variant text-xs mt-0.5">Que necesitan soltar el micro-management y dirigir desde indicadores reales.</p></div>
+          </div>
+          <div class="flex items-start gap-4 px-5 py-4 rounded-xl" style="background:#0A0A0B;border:1px solid rgba(255,255,255,0.05)">
+            <div class="w-7 h-7 rounded-full flex items-center justify-center shrink-0 mt-0.5" style="background:rgba(37,245,164,0.12)"><span class="material-symbols-outlined" style="color:var(--color-accent);font-size:15px;font-variation-settings:'FILL' 1">leaderboard</span></div>
+            <div><p class="font-bold text-white text-sm">Gerentes Comerciales</p><p class="text-on-surface-variant text-xs mt-0.5">Con mapa completo de cobertura y desempeño de su fuerza de ventas en un solo tablero.</p></div>
+          </div>
+          <div class="flex items-start gap-4 px-5 py-4 rounded-xl" style="background:rgba(37,245,164,0.05);border:1px solid rgba(37,245,164,0.2)">
+            <div class="w-7 h-7 rounded-full flex items-center justify-center shrink-0 mt-0.5" style="background:rgba(37,245,164,0.2)"><span class="material-symbols-outlined" style="color:var(--color-accent);font-size:15px;font-variation-settings:'FILL' 1">factory</span></div>
+            <div><p class="font-bold text-sm" style="color:var(--color-accent)">Fábricas, distribuidoras &amp; mayoristas B2B</p><p class="text-on-surface-variant text-xs mt-0.5">Con estructuras comerciales complejas y bases de clientes atomizadas.</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="flex justify-center lg:justify-end" style="transition-delay:.2s">
+        <div class="relative" style="transform:rotate(-2deg)">
+          <div class="absolute -inset-4 rounded-[3rem] opacity-20" style="background:radial-gradient(ellipse at center,var(--color-accent) 0%,transparent 70%);filter:blur(40px);"></div>
+          <div class="relative overflow-hidden" style="width:300px;border-radius:2rem;border:2px solid rgba(37,245,164,0.2);box-shadow:0 32px 64px rgba(0,0,0,0.6)">
+            <video autoplay muted loop playsinline class="w-full block"><source src="/videocortosbc.mp4" type="video/mp4"></video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- POR QUÉ CONTINUA -->
+<section class="py-24 px-6 md:px-12">
+  <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center lezac-reveal">
+    <div>
+      <span class="text-xs font-semibold tracking-widest uppercase block mb-3" style="color:var(--color-accent)">Por qué es una relación continua</span>
+      <h2 class="text-3xl md:text-4xl font-black text-white leading-tight mb-4">Los datos cambian<br/><span class="serif-italic font-normal" style="color:var(--color-accent)">todos los meses.</span></h2>
+      <p class="text-on-surface-variant text-sm leading-relaxed mb-6">Por eso Brújula Comercial no tiene fecha de cierre como +Clientes Activos — es un acompañamiento permanente, con la misma lógica de una reunión de equipo, pero con datos reales arriba de la mesa.</p>
+      <blockquote class="border-l-2 pl-5 py-1 italic text-base text-white/70 leading-relaxed" style="border-color:var(--color-accent)">"El tablero te muestra números. Brújula Comercial te dice qué hacer con ellos esta semana."</blockquote>
+    </div>
+    <div class="space-y-4">
+      <div class="liquid-glass rounded-xl p-5 flex items-center gap-4"><div class="w-10 h-10 rounded-xl flex-shrink-0 flex items-center justify-center" style="background:rgba(37,245,164,0.1)"><span class="material-symbols-outlined" style="color:var(--color-accent);font-size:20px">calendar_month</span></div><div><p class="text-sm font-bold text-white">Revisión mensual de tus datos</p><p class="text-xs text-on-surface-variant mt-0.5">Procesamos el historial actualizado cada mes</p></div></div>
+      <div class="liquid-glass rounded-xl p-5 flex items-center gap-4"><div class="w-10 h-10 rounded-xl flex-shrink-0 flex items-center justify-center" style="background:rgba(37,245,164,0.1)"><span class="material-symbols-outlined" style="color:var(--color-accent);font-size:20px">insights</span></div><div><p class="text-sm font-bold text-white">Decisiones concretas</p><p class="text-xs text-on-surface-variant mt-0.5">No un informe genérico — qué hacer esta semana con tu equipo</p></div></div>
+      <div class="liquid-glass rounded-xl p-5 flex items-center gap-4"><div class="w-10 h-10 rounded-xl flex-shrink-0 flex items-center justify-center" style="background:rgba(37,245,164,0.1)"><span class="material-symbols-outlined" style="color:var(--color-accent);font-size:20px">support_agent</span></div><div><p class="text-sm font-bold text-white">Acompañamiento real</p><p class="text-xs text-on-surface-variant mt-0.5">Podés consultar entre reuniones cuando algo cambia</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- RESULTADOS -->
+<section class="py-20 md:py-28 px-6 md:px-10 overflow-hidden" style="background:#050506;">
+  <div class="max-w-[1500px] mx-auto">
+    <div class="lezac-reveal mb-14 md:mb-20 text-center max-w-3xl mx-auto">
+      <span class="text-xs font-semibold tracking-widest uppercase block mb-3" style="color:var(--color-accent)">Así se ve Brújula Comercial</span>
+      <h2 class="text-3xl md:text-4xl font-black text-white">Resultados en un tablero que se actualiza todos los meses.</h2>
+    </div>
+
+    <div id="rs-carousel" class="rs-wrap lezac-reveal flex flex-col gap-6" aria-roledescription="carrusel">
+      <div class="rs-slide" data-i="0"><img src="/captura1.png" alt="Visión general — tablero de Brújula Comercial" loading="lazy" class="w-full h-auto float-shot" data-f="0" style="border:1px solid rgba(255,255,255,0.1);" /></div>
+      <div class="rs-slide" data-i="1"><img src="/captura2.png" alt="Vendedores — tablero de Brújula Comercial" loading="lazy" class="w-full h-auto float-shot" data-f="1" style="border:1px solid rgba(255,255,255,0.1);" /></div>
+      <div class="rs-slide" data-i="2"><img src="/captura3.png" alt="Objetivos por vendedor — tablero de Brújula Comercial" loading="lazy" class="w-full h-auto float-shot" data-f="2" style="border:1px solid rgba(255,255,255,0.1);" /></div>
+    </div>
+    <p class="lezac-reveal mt-10 text-center text-sm text-on-surface-variant">Visión general · Vendedores · Objetivos por vendedor</p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="py-24 px-6 md:px-12 bg-surface">
+  <div class="max-w-3xl mx-auto lezac-reveal">
+    <h2 class="text-3xl font-black text-center text-white uppercase tracking-tight mb-10">Preguntas frecuentes</h2>
+    <div class="space-y-3">
+
+      <div class="glass rounded-xl overflow-hidden"><button class="faq-btn w-full flex items-center justify-between p-6 text-left gap-4"><span class="font-bold text-white text-sm">¿Qué es la inteligencia comercial, en criollo?</span><span class="material-symbols-outlined faq-chevron text-on-surface-variant flex-shrink-0">keyboard_arrow_down</span></button><div class="faq-answer px-6 text-sm text-on-surface-variant leading-relaxed"><p class="pb-5">Saber qué clientes te compran, cuáles dejaron de comprarte y por qué, antes de que te des cuenta por la caja.</p></div></div>
+
+      <div class="glass rounded-xl overflow-hidden"><button class="faq-btn w-full flex items-center justify-between p-6 text-left gap-4"><span class="font-bold text-white text-sm">¿Qué datos necesitan?</span><span class="material-symbols-outlined faq-chevron text-on-surface-variant flex-shrink-0">keyboard_arrow_down</span></button><div class="faq-answer px-6 text-sm text-on-surface-variant leading-relaxed"><p class="pb-5">El historial de ventas de tu sistema de facturación o de gestión: clientes, productos, fechas, montos y vendedor.</p></div></div>
+
+      <div class="glass rounded-xl overflow-hidden"><button class="faq-btn w-full flex items-center justify-between p-6 text-left gap-4"><span class="font-bold text-white text-sm">¿Es un informe que me entregan y listo?</span><span class="material-symbols-outlined faq-chevron text-on-surface-variant flex-shrink-0">keyboard_arrow_down</span></button><div class="faq-answer px-6 text-sm text-on-surface-variant leading-relaxed"><p class="pb-5">No. Es una relación continua: los datos cambian todos los meses y las decisiones también.</p></div></div>
+
+      <div class="glass rounded-xl overflow-hidden"><button class="faq-btn w-full flex items-center justify-between p-6 text-left gap-4"><span class="font-bold text-white text-sm">¿Sirve si mis datos están desordenados?</span><span class="material-symbols-outlined faq-chevron text-on-surface-variant flex-shrink-0">keyboard_arrow_down</span></button><div class="faq-answer px-6 text-sm text-on-surface-variant leading-relaxed"><p class="pb-5">Sí. Ordenarlos es parte del trabajo.</p></div></div>
+
+      <div class="glass rounded-xl overflow-hidden"><button class="faq-btn w-full flex items-center justify-between p-6 text-left gap-4"><span class="font-bold text-white text-sm">¿En qué se diferencia de un tablero de Power BI?</span><span class="material-symbols-outlined faq-chevron text-on-surface-variant flex-shrink-0">keyboard_arrow_down</span></button><div class="faq-answer px-6 text-sm text-on-surface-variant leading-relaxed"><p class="pb-5">El tablero te muestra números. Brújula Comercial te dice qué hacer con ellos esta semana.</p></div></div>
+
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="py-24 px-6 md:px-12 relative overflow-hidden" style="background:#050506">
+  <div class="glow-blob w-[600px] h-[600px] opacity-[0.06] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" style="background:var(--color-accent)"></div>
+  <div class="max-w-3xl mx-auto text-center relative z-10 lezac-reveal">
+    <h2 class="text-4xl md:text-5xl font-black text-white mb-6">Contanos cómo trabaja<br/><span class="serif-italic font-normal" style="color:var(--color-accent)">hoy tu equipo comercial.</span></h2>
+    <p class="text-on-surface-variant mb-8 max-w-xl mx-auto leading-relaxed">Vemos juntos si Brújula Comercial encaja con tu empresa.</p>
+    <a href="https://calendly.com/lezacconsultoria/asesoria-comercial" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-10 py-4 rounded-full font-bold text-black text-sm transition-all hover:brightness-110 hover:scale-[1.02]" style="background:var(--color-accent);box-shadow:0 0 40px var(--color-accent-glow)">Agendar una charla <span class="material-symbols-outlined" style="font-size:18px">arrow_forward</span></a>
+  </div>
+</section>
+
+</main>
+<script src="./shared.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const revObs = new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting){e.target.classList.add('revealed');revObs.unobserve(e.target);} }), {threshold:.1,rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.lezac-reveal').forEach(el => revObs.observe(el));
+
+  // BI counters
+  document.querySelectorAll('.bi-counter[data-target]').forEach(el => {
+    const obs = new IntersectionObserver(es => { if(es[0].isIntersecting){ const t=parseInt(el.dataset.target),s=performance.now(); const tick=n=>{const p=Math.min((n-s)/1200,1);el.textContent=Math.round((1-Math.pow(1-p,3))*t);if(p<1)requestAnimationFrame(tick);}; requestAnimationFrame(tick); obs.unobserve(el); }}, {threshold:.5});
+    obs.observe(el);
+  });
+
+  // BI bars
+  const barsObs = new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.querySelectorAll('.bi-bar[data-w]').forEach(b=>{setTimeout(()=>{b.style.width=b.dataset.w;},100)});barsObs.unobserve(e.target);}}),{threshold:.3});
+  const biPanel = document.getElementById('bi-panel');
+  if(biPanel) barsObs.observe(biPanel);
+
+
+  // Carrusel de tableros: rota las posiciones izquierda / centro / derecha
+  (function(){
+    const wrap = document.getElementById('rs-carousel');
+    if (!wrap) return;
+    const slides = [...wrap.querySelectorAll('.rs-slide')];
+    let step = 0, timer;
+    const layout = () => slides.forEach((el, i) => { el.dataset.p = (i + step) % 3; });
+    const next = () => { step = (step + 1) % 3; layout(); };
+    layout();
+    const start = () => { timer = setInterval(next, 3800); };
+    const stop = () => clearInterval(timer);
+    wrap.addEventListener('mouseenter', stop);
+    wrap.addEventListener('mouseleave', () => { stop(); start(); });
+    slides.forEach((el, i) => el.addEventListener('click', () => { step = (1 - i + 3) % 3; layout(); }));
+    start();
+  })();
+
+  // FAQ
+  document.querySelectorAll('.faq-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const ans = btn.nextElementSibling, chev = btn.querySelector('.faq-chevron'), open = ans.classList.contains('open');
+      document.querySelectorAll('.faq-answer.open').forEach(a => { a.classList.remove('open'); a.previousElementSibling.querySelector('.faq-chevron').classList.remove('rotated'); });
+      if(!open) { ans.classList.add('open'); chev.classList.add('rotated'); }
+    });
+  });
+});
+</script>
+</body>
+</html>
