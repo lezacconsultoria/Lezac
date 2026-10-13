@@ -1,0 +1,926 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Dirección Comercial Inteligente 2026</title>
+<meta name="robots" content="noindex, follow">
+<link rel="canonical" href="https://lezacconsultoria.com/blog/direccion-comercial-inteligente-2026">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap">
+<style>
+/* Layout: playbook por diapositivas (no scroll continuo). Cabecera fija con marca, navegación por tema,
+   contador y cinta continua de empresas con las que trabajamos. El área central es un mazo de slides en
+   capas: solo la activa es visible y entra en cruzado con la siguiente/anterior. Barra inferior fija con
+   Anterior/Siguiente y, flotando sobre ella, el botón de WhatsApp. Indicadores (barras/anillos) muestran
+   las estadísticas citadas como magnitud, no solo como texto. Mundo visual: editorial oscuro sobrio,
+   resuelto con tipografía, color y geometría simple; la única fotografía es la firma del autor
+   (portada y cierre), en avatar circular. */
+:root{
+  --bg:#0A0A0B;
+  --surface:#141417;
+  --surface-2:#1B1B21;
+  --line:rgba(255,255,255,.09);
+  --fg:#FFFFFF;
+  --muted:#A6A2B8;
+  --muted-2:#716C85;
+  --accent:#8C52FF;
+  --accent-deep:#7B2FBE;
+  --accent-soft:rgba(140,82,255,.14);
+  --positive:#25F5A4;
+  --alert:#EC0543;
+  --wa:#25D366;
+  --wa-deep:#1DA851;
+  --f-display:"Inter",ui-sans-serif,system-ui,sans-serif;
+  --f-body:"Inter",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+  --headerH:92px;
+  --footerH:62px;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;display:flex;flex-direction:column;overflow:hidden}
+h1,h2,h3{font-family:var(--f-display);font-weight:900;letter-spacing:-.01em;text-wrap:balance;margin:0}
+p{margin:0}
+::selection{background:var(--accent);color:#fff}
+button{font:inherit}
+
+/* cabecera */
+header.bar{flex:none;background:rgba(10,10,11,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);z-index:40}
+.barrow{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:12px 18px}
+.wordmark{font-family:var(--f-display);font-weight:900;font-size:13.5px;letter-spacing:.03em;white-space:nowrap;flex:none}
+.wordmark span{color:var(--accent)}
+.toplinks{display:flex;gap:18px;overflow-x:auto;scrollbar-width:none;flex:1;justify-content:center}
+.toplinks::-webkit-scrollbar{display:none}
+.toplinks button{background:none;border:0;color:var(--muted);font-size:12.5px;font-weight:600;cursor:pointer;white-space:nowrap;padding-block:4px}
+.toplinks button:hover,.toplinks button.active{color:var(--fg)}
+.toplinks button:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:3px}
+@media (max-width:700px){.toplinks{display:none}}
+.counter{font-family:var(--f-display);font-weight:700;font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums;flex:none}
+.barprogress{height:3px;background:var(--surface)}
+.barprogress i{display:block;height:100%;width:6.25%;background:var(--accent);transition:width .35s ease}
+
+/* cinta de empresas */
+.marquee{display:flex;align-items:center;gap:13px;overflow:hidden;border-bottom:1px solid var(--line);background:var(--surface);padding:6px 18px}
+.marquee-label{flex:none;font-size:9.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--muted-2);white-space:nowrap;padding-right:13px;border-right:1px solid var(--line)}
+.marquee-scroll{flex:1;overflow:hidden;min-width:0}
+.marquee-track{display:flex;width:max-content;gap:26px;animation:scrollmq 36s linear infinite}
+.marquee:hover .marquee-track{animation-play-state:paused}
+.marquee span.cl{font-size:9.5px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--muted-2);opacity:.75;white-space:nowrap}
+@keyframes scrollmq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.marquee-track{animation:none;flex-wrap:wrap;width:auto}}
+@media (max-width:560px){.marquee-label{display:none}}
+
+/* textura de fondo sutil (grilla de puntos) */
+.deckwrap::before{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;background-image:radial-gradient(circle,rgba(255,255,255,.05) 1px,transparent 1.4px);background-size:24px 24px}
+
+/* mazo */
+.deckwrap{flex:1 1 auto;position:relative;overflow:hidden;background:var(--bg)}
+.deck{position:absolute;inset:0;z-index:1}
+.slide{position:absolute;inset:0;overflow-y:auto;-webkit-overflow-scrolling:touch;opacity:0;pointer-events:none;transition:opacity .42s ease,transform .42s cubic-bezier(.22,1,.36,1);padding:40px 24px 96px}
+.slide.active{opacity:1;pointer-events:auto;transform:translateX(0) scale(1) !important;z-index:2}
+@media (prefers-reduced-motion:reduce){.slide{transition:opacity .15s linear}}
+.inner{max-width:680px;margin:0 auto}
+.inner-wide{max-width:900px;margin:0 auto}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+.rule{width:44px;height:3px;background:var(--accent);border-radius:2px;margin-block:16px}
+
+/* firma del autor (portada y cierre) */
+.author{display:flex;align-items:center;gap:14px;margin-bottom:24px}
+.avatar{width:88px;height:88px;border-radius:50%;object-fit:cover;object-position:center 35%;flex:none;display:block;background:var(--surface);border:2px solid var(--accent);box-shadow:0 0 0 5px var(--accent-soft),0 10px 30px -10px rgba(140,82,255,.6)}
+.author .an{font-family:var(--f-display);font-weight:800;font-size:17px;line-height:1.2;letter-spacing:-.005em}
+.author .ar{font-size:12.5px;color:var(--muted);margin-top:3px;line-height:1.4}
+.author.sm{margin:30px 0 0;padding:16px 18px;background:var(--surface);border:1px solid var(--line);border-radius:12px}
+.author.sm .avatar{width:60px;height:60px;box-shadow:0 0 0 4px var(--accent-soft)}
+.author.sm .an{font-size:15px}
+.author.sm .ar b{color:var(--wa);font-weight:700}
+@media (max-width:560px){.avatar{width:72px;height:72px}.author .an{font-size:15.5px}}
+@keyframes authorin{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.slide.active .author{animation:authorin .6s cubic-bezier(.22,1,.36,1) .12s backwards}
+@media (prefers-reduced-motion:reduce){.slide.active .author{animation:none}}
+
+/* side arrows (desktop) */
+.sidebtn{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:var(--surface);color:var(--fg);font-size:20px;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:30}
+.sidebtn:hover{border-color:var(--accent);color:var(--accent)}
+.sidebtn:disabled{opacity:0;pointer-events:none}
+.sidebtn.prev{left:16px}
+.sidebtn.next{right:16px}
+@media (max-width:820px){.sidebtn{display:none}}
+
+/* pie fijo */
+footer.bottombar{flex:none;position:relative;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 18px;height:var(--footerH);background:rgba(10,10,11,.92);backdrop-filter:blur(10px);border-top:1px solid var(--line);z-index:40}
+.bbtn{display:inline-flex;align-items:center;gap:7px;background:var(--surface);border:1px solid var(--line);color:var(--fg);border-radius:8px;padding:9px 15px;font-size:13.5px;font-weight:600;cursor:pointer}
+.bbtn:hover{border-color:var(--accent);color:var(--accent)}
+.bbtn:disabled{opacity:.35;cursor:default;pointer-events:none}
+.bbtn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+.bbtn.primary:hover{background:var(--accent-deep);color:#fff}
+.bbtn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.midcounter{font-size:12px;color:var(--muted-2);font-variant-numeric:tabular-nums;white-space:nowrap}
+
+/* hero */
+.hero-slide{display:flex;flex-direction:column;justify-content:center;min-height:100%}
+.hero-slide h1{font-size:clamp(32px,7vw,52px);line-height:1.04}
+.hero-slide h1 em{font-style:normal;color:var(--accent)}
+.hero-slide .sub{margin-top:16px;font-size:17px;color:var(--muted);max-width:50ch;line-height:1.55}
+.statrow{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}
+.statchip{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:10px 14px;display:flex;flex-direction:column;gap:2px;min-width:126px}
+.statchip .n{font-family:var(--f-display);font-weight:900;font-size:21px;font-variant-numeric:tabular-nums}
+.statchip .l{font-size:11px;color:var(--muted)}
+.swipehint{margin-top:34px;font-size:12px;color:var(--muted-2);display:flex;align-items:center;gap:6px}
+
+/* intro + anillos */
+.hook{font-size:21px;font-weight:600;line-height:1.5;max-width:46ch}
+.stattiles{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:26px}
+@media (max-width:540px){.stattiles{grid-template-columns:1fr}}
+.stattile{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:18px;display:flex;align-items:center;gap:16px}
+.ring{position:relative;width:72px;height:72px;flex:none}
+.ring svg{width:100%;height:100%;transform:rotate(-90deg)}
+.ring circle{fill:none;stroke-width:7}
+.ring .track{stroke:var(--line)}
+.ring .fill{stroke:var(--positive);stroke-linecap:round;stroke-dasharray:188.5;stroke-dashoffset:188.5}
+.ring .ringval{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:var(--f-display);font-weight:900;font-size:15px;color:var(--positive);font-variant-numeric:tabular-nums}
+.stattile-text .d{font-size:13.5px;color:var(--muted);line-height:1.5}
+.stattile-text .src{display:block;margin-top:7px;font-size:11px;color:var(--muted-2)}
+.lede{margin-top:24px;color:var(--muted);font-size:15.5px;max-width:60ch;line-height:1.65}
+
+/* índice */
+.toc{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:24px}
+@media (max-width:560px){.toc{grid-template-columns:1fr}}
+.toc button{display:flex;align-items:baseline;gap:12px;background:var(--surface);border:1px solid var(--line);border-radius:9px;padding:13px 15px;text-align:left;color:var(--fg);font-size:14px;font-weight:500;cursor:pointer}
+.toc button:hover{border-color:var(--accent);background:var(--accent-soft)}
+.toc .tn{font-family:var(--f-display);font-weight:900;color:var(--muted-2);font-size:13px;flex:none}
+
+/* claves */
+.cn{font-family:var(--f-display);font-weight:900;font-size:13px;letter-spacing:.1em;color:var(--muted-2)}
+.clave h2{font-size:clamp(21px,4vw,27px);margin-top:10px;line-height:1.22}
+.block{margin-top:22px}
+.block h3{font-family:var(--f-body);font-weight:700;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-bottom:8px}
+.block p{color:var(--muted);font-size:15px;line-height:1.62;max-width:62ch}
+.stat-inline{color:var(--fg);font-weight:700}
+.stat-inline b{color:var(--positive)}
+.statbar{margin-top:12px;display:flex;align-items:center;gap:10px;max-width:62ch}
+.statbar .track{flex:1;height:6px;border-radius:999px;background:var(--line);overflow:hidden}
+.statbar .track i{display:block;height:100%;background:var(--positive);border-radius:999px;width:0%;transition:width .9s cubic-bezier(.16,1,.3,1)}
+.statbar .pct{font-family:var(--f-display);font-weight:900;font-size:13px;color:var(--positive);min-width:38px;text-align:right;font-variant-numeric:tabular-nums}
+ul.checklist{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:9px;max-width:62ch}
+ul.checklist li{display:flex;gap:10px;font-size:14.5px;color:var(--fg);line-height:1.5}
+ul.checklist li::before{content:"✓";color:var(--positive);font-weight:700;flex:none;width:18px}
+ul.checklist li .sub{display:block;color:var(--muted);font-size:13px;margin-top:2px}
+
+/* frentes de dolor (radar) */
+.painhead .lede{margin-top:12px}
+.radarwrap{position:relative;width:min(100%,336px);aspect-ratio:1/1;margin:20px auto 4px}
+.radarsvg{position:absolute;inset:0;width:100%;height:100%}
+.radarsvg polygon{fill:none;stroke:var(--line)}
+.radarsvg line{stroke:var(--line)}
+.radarhub{fill:var(--surface);stroke:var(--line)}
+.radarcenter{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);text-align:center;width:46%}
+.radarcenter .rc-n{font-family:var(--f-display);font-weight:900;font-size:clamp(14px,3.6vw,17px);line-height:1.15}
+.radarcenter .rc-s{display:block;margin-top:4px;font-size:10px;color:var(--muted-2)}
+.painnode{position:absolute;transform:translate(-50%,-50%);width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--f-display);font-weight:900;font-size:11px;color:#fff;box-shadow:0 0 0 4px var(--bg)}
+@keyframes nodepop{from{opacity:0;transform:translate(-50%,-50%) scale(0)}to{opacity:1;transform:translate(-50%,-50%) scale(1)}}
+@keyframes radarfade{from{opacity:0;transform:scale(.88)}to{opacity:1;transform:none}}
+.radarwrap.lit .radarsvg{animation:radarfade .6s ease backwards}
+.radarwrap.lit .radarcenter{animation:radarfade .5s ease .32s backwards}
+.radarwrap.lit .painnode{animation:nodepop .48s cubic-bezier(.34,1.56,.64,1) backwards;animation-delay:calc(.4s + var(--i,0) * .07s)}
+@media (prefers-reduced-motion:reduce){.radarwrap.lit .radarsvg,.radarwrap.lit .radarcenter,.radarwrap.lit .painnode{animation:none}}
+.painlegend{display:flex;gap:16px;flex-wrap:wrap;justify-content:center;margin-top:14px}
+.painlegend span{display:inline-flex;align-items:center;gap:6px;font-size:11px;color:var(--muted);white-space:nowrap}
+.painlegend i{width:9px;height:9px;border-radius:50%;flex:none}
+@media (max-width:460px){
+  .radarwrap{width:min(100%,250px);margin:14px auto 0}
+  .painhead .lede{margin-top:10px}
+  .painlegend{margin-top:10px;gap:10px 14px}
+}
+@media (max-height:720px){
+  .painhead .lede{margin-top:8px;font-size:14px}
+  .radarwrap{width:min(100%,210px);margin:10px auto 0}
+  .painnode{width:22px;height:22px;font-size:10px}
+  .radarcenter .rc-n{font-size:13px}
+  .painlegend{margin-top:8px}
+}
+.painlist{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:26px}
+@media (max-width:620px){.painlist{grid-template-columns:1fr}}
+.painrow{display:flex;gap:11px;background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:9px;padding:12px 14px}
+.painrow .pn{flex:none;width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--f-display);font-weight:900;font-size:10.5px;color:#fff;margin-top:1px}
+.painrow h4{font-size:13.5px;font-weight:700}
+.painrow p{margin-top:3px;font-size:12.5px;color:var(--muted);line-height:1.5}
+.painrow .tag{display:block;margin-top:5px;font-size:10px;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+.cat-ic .pn,.painnode.cat-ic{background:var(--accent)}
+.cat-ca .pn,.painnode.cat-ca{background:var(--positive)}
+.cat-ia .pn,.painnode.cat-ia{background:var(--fg);color:var(--bg)}
+.painrow.cat-ic{border-left-color:var(--accent)}
+.painrow.cat-ca{border-left-color:var(--positive)}
+.painrow.cat-ia{border-left-color:var(--fg)}
+.painrow.cat-ic .tag{color:var(--accent)}
+.painrow.cat-ca .tag{color:var(--positive)}
+.painrow.cat-ia .tag{color:var(--muted)}
+
+/* enfoque */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:26px}
+@media (max-width:720px){.steps{grid-template-columns:1fr 1fr}}
+@media (max-width:420px){.steps{grid-template-columns:1fr}}
+.step{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:16px}
+.step .sn{font-family:var(--f-display);font-weight:900;color:var(--accent);font-size:19px}
+.step h4{margin-top:9px;font-size:14px;font-weight:700}
+.step p{margin-top:6px;font-size:12.5px;color:var(--muted);line-height:1.5}
+.enfoque-body{margin-top:24px;color:var(--muted);font-size:15.5px;max-width:62ch;line-height:1.65}
+.enfoque-body strong{color:var(--fg)}
+
+/* autodiagnóstico */
+.quizcard{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:26px;margin-top:22px}
+@media (max-width:560px){.quizcard{padding:18px}}
+.qdots{display:flex;gap:6px;margin-bottom:18px}
+.qdots i{height:4px;flex:1;background:var(--line);border-radius:2px;overflow:hidden;display:block}
+.qdots i b{display:block;height:100%;width:0%;background:var(--accent);transition:width .25s ease}
+.qdots i.done b{width:100%}
+.qdots i.current b{width:50%}
+.qtext{font-size:17px;font-weight:600;line-height:1.4}
+.qopts{display:flex;flex-direction:column;gap:9px;margin-top:18px}
+.qopt{text-align:left;background:var(--bg);border:1px solid var(--line);color:var(--fg);border-radius:9px;padding:12px 15px;font:inherit;font-size:14px;cursor:pointer;transition:border-color .15s,background .15s}
+.qopt:hover{border-color:var(--accent);background:var(--accent-soft)}
+.qopt:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.qresult{display:none}
+.qresult.show{display:block}
+.qresult .tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;border-radius:999px;padding:4px 10px}
+.qresult .tag.band-alto{color:var(--positive);background:rgba(37,245,164,.12)}
+.qresult .tag.band-medio{color:var(--accent);background:var(--accent-soft)}
+.qresult .tag.band-bajo{color:var(--alert);background:rgba(236,5,67,.12)}
+.qresult h3{font-family:var(--f-display);font-weight:900;font-size:20px;margin-top:13px}
+.qresult p.qdesc{margin-top:11px;color:var(--muted);font-size:14.5px;line-height:1.6}
+.qmeter{margin-top:18px;display:flex;align-items:center;gap:10px}
+.qmeter .track{flex:1;height:8px;border-radius:999px;background:var(--line);overflow:hidden}
+.qmeter .track i{display:block;height:100%;border-radius:999px;width:0%;transition:width .8s cubic-bezier(.16,1,.3,1)}
+.qmeter .score{font-family:var(--f-display);font-weight:900;font-size:13px;color:var(--fg);white-space:nowrap}
+.qnext{margin-top:20px}
+.qnext h4{font-size:12.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--muted-2);margin-bottom:10px}
+.qrestart{margin-top:18px;background:none;border:0;color:var(--muted-2);font-size:12.5px;text-decoration:underline;cursor:pointer;padding:0;font:inherit}
+
+/* hablemos */
+.hablemos p.lead{color:var(--muted);font-size:16.5px;max-width:54ch;line-height:1.6;margin-top:14px}
+.focusrow{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:26px}
+@media (max-width:620px){.focusrow{grid-template-columns:1fr}}
+.focusitem{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:16px}
+.focusitem h4{font-size:14px;font-weight:700}
+.focusitem p{margin-top:6px;font-size:12.5px;color:var(--muted);line-height:1.5}
+.ctarow{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.btn{display:inline-flex;align-items:center;gap:9px;border-radius:9px;padding:13px 20px;font-size:14.5px;font-weight:700;text-decoration:none;cursor:pointer;border:1px solid transparent;font:inherit}
+.btn.primary{background:var(--accent);color:#fff}
+.btn.primary:hover{background:var(--accent-deep)}
+.btn.ghost{background:transparent;border-color:var(--line);color:var(--fg)}
+.btn.ghost:hover{border-color:var(--accent);color:var(--accent)}
+.btn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.footnote{margin-top:28px;font-size:12px;color:var(--muted-2)}
+
+/* botón de WhatsApp, flotante sobre la barra inferior */
+#wa-float{position:absolute;right:16px;bottom:calc(100% + 10px);transform:translateY(10px) scale(.6);z-index:45;opacity:0;pointer-events:none;transition:opacity .4s ease,transform .5s cubic-bezier(.34,1.56,.64,1)}
+#wa-float.show{opacity:1;transform:translateY(0) scale(1);pointer-events:auto}
+#wa-float a{position:relative;display:flex;align-items:center;gap:7px;background:var(--wa);color:#07301c;text-decoration:none;border-radius:999px;padding:8px 14px 8px 11px;box-shadow:0 6px 18px -6px rgba(37,211,102,.55);font-size:12px;font-weight:700}
+#wa-float a:hover{background:var(--wa-deep)}
+#wa-float .ring-pulse{position:absolute;inset:0;border-radius:999px;animation:pulse 2.6s ease-out infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(37,211,102,.45)}100%{box-shadow:0 0 0 13px rgba(37,211,102,0)}}
+@media (prefers-reduced-motion:reduce){#wa-float .ring-pulse{animation:none}#wa-float{transition:opacity .2s ease}}
+</style>
+
+<header class="bar">
+  <div class="barrow">
+    <span class="wordmark">LEZAC<span>·</span>CONSULTORÍA</span>
+    <nav class="toplinks" aria-label="Secciones">
+      <button type="button" data-go="hero">Inicio</button>
+      <button type="button" data-go="frentes">Puntos de dolor</button>
+      <button type="button" data-go="indice">Las 10 claves</button>
+      <button type="button" data-go="enfoque">Cómo trabajamos</button>
+      <button type="button" data-go="hablemos">Hablemos</button>
+    </nav>
+    <span class="counter" id="counter">01 / 16</span>
+  </div>
+  <div class="marquee" aria-hidden="true">
+    <span class="marquee-label">Empresas que confiaron en nosotros</span>
+    <div class="marquee-scroll"><div class="marquee-track" id="marqueeTrack"></div></div>
+  </div>
+  <div class="barprogress"><i id="barFill"></i></div>
+</header>
+
+<div class="deckwrap">
+  <div class="deck" id="deck">
+
+    <section class="slide active hero-slide" id="hero">
+      <div class="inner">
+        <div class="author">
+          <img class="avatar" src="data:image/jpeg;base64,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" alt="Lic. Leandro Zacaria" width="88" height="88">
+          <div>
+            <div class="an">Lic. Leandro Zacaria</div>
+            <div class="ar">Fundador · Lezac Consultoría</div>
+          </div>
+        </div>
+        <span class="eyebrow">Recurso 2026 · Lezac Consultoría</span>
+        <h1 style="margin-top:14px">Dirección comercial <em>inteligente</em></h1>
+        <p class="sub">Un enfoque integral para pasar de vender por inercia a gestionar con propósito. Diez prácticas concretas, con qué implementar en cada una.</p>
+        <div class="statrow">
+          <div class="statchip"><span class="n" data-count="100" data-prefix="+">0</span><span class="l">empresas asesoradas</span></div>
+          <div class="statchip"><span class="n" data-count="10" data-prefix="+">0</span><span class="l">años de trayectoria</span></div>
+          <div class="statchip"><span class="n">AR · PY · BO · UY</span><span class="l">presencia regional</span></div>
+        </div>
+        <div class="swipehint">→ Deslizá o usá las flechas para avanzar</div>
+      </div>
+    </section>
+
+    <section class="slide" id="intro">
+      <div class="inner">
+        <span class="eyebrow">Por qué este recurso</span>
+        <p class="hook" style="margin-top:14px">¿Cuántas veces tuviste que tomar una decisión comercial importante sin contar con los datos completos o actualizados?</p>
+        <div class="stattiles">
+          <div class="stattile">
+            <div class="ring" data-pct="72">
+              <svg viewBox="0 0 72 72"><circle class="track" cx="36" cy="36" r="30"/><circle class="fill" cx="36" cy="36" r="30"/></svg>
+              <span class="ringval" data-count="72" data-suffix="%">0%</span>
+            </div>
+            <div class="stattile-text"><p class="d">de los gerentes reconoce que enfrenta esa realidad cada semana.</p><span class="src">McKinsey, 2023</span></div>
+          </div>
+          <div class="stattile">
+            <div class="ring" data-pct="60">
+              <svg viewBox="0 0 72 72"><circle class="track" cx="36" cy="36" r="30"/><circle class="fill" cx="36" cy="36" r="30"/></svg>
+              <span class="ringval" data-count="60" data-prefix="+" data-suffix="%">0%</span>
+            </div>
+            <div class="stattile-text"><p class="d">busca activamente nuevas herramientas para mejorar su gestión.</p><span class="src">Forrester, 2024</span></div>
+          </div>
+        </div>
+        <p class="lede">Este recurso no busca enseñarte lo que ya sabés. En unos quince minutos vas a encontrar diez ideas prácticas e indicadores listos para aplicar mañana mismo, en cualquier empresa que venda con equipo comercial — no solo en distribución.</p>
+      </div>
+    </section>
+
+    <section class="slide" id="indice">
+      <div class="inner-wide">
+        <span class="eyebrow">Índice</span>
+        <h2 style="margin-top:10px;font-size:clamp(21px,4vw,27px)">Las 10 claves</h2>
+        <div class="toc">
+          <button type="button" data-go="c1"><span class="tn">01</span>Definir objetivos con lógica operativa</button>
+          <button type="button" data-go="c2"><span class="tn">02</span>Ver diariamente los indicadores clave</button>
+          <button type="button" data-go="c3"><span class="tn">03</span>Una metodología de reuniones real</button>
+          <button type="button" data-go="c4"><span class="tn">04</span>Un panel de control estructurado</button>
+          <button type="button" data-go="c5"><span class="tn">05</span>Conectar con clientes y prospectos</button>
+          <button type="button" data-go="c6"><span class="tn">06</span>Una política clara de captación</button>
+          <button type="button" data-go="c7"><span class="tn">07</span>La experiencia del cliente como marca</button>
+          <button type="button" data-go="c8"><span class="tn">08</span>Jefes convertidos en líderes</button>
+          <button type="button" data-go="c9"><span class="tn">09</span>Rutas comerciales optimizadas</button>
+          <button type="button" data-go="c10"><span class="tn">10</span>Incentivos alineados a resultados</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" id="frentes">
+      <div class="inner-wide painhead">
+        <span class="eyebrow">Antes de las 10 claves</span>
+        <h2 style="margin-top:10px;font-size:clamp(21px,4vw,27px)">¿Con cuántos de estos frentes te identificás hoy?</h2>
+        <p class="lede">No hace falta que falle todo a la vez. Alcanza con que te resulte familiar uno de estos ocho puntos para que valga la pena seguir leyendo — cada uno conecta con una de las diez claves que vienen a continuación.</p>
+
+        <div class="radarwrap">
+          <svg class="radarsvg" viewBox="0 0 400 400" aria-hidden="true">
+            <polygon points="200,40 313.1,86.9 360,200 313.1,313.1 200,360 86.9,313.1 40,200 86.9,86.9"></polygon>
+            <polygon points="200,80 259.8,120.7 280,200 259.8,279.3 200,320 140.2,279.3 120,200 140.2,120.7"></polygon>
+            <polygon points="200,120 206.5,154.3 230,200 206.5,245.7 200,280 193.5,245.7 170,200 193.5,154.3"></polygon>
+            <line x1="200" y1="200" x2="200" y2="40"></line>
+            <line x1="200" y1="200" x2="313.1" y2="86.9"></line>
+            <line x1="200" y1="200" x2="360" y2="200"></line>
+            <line x1="200" y1="200" x2="313.1" y2="313.1"></line>
+            <line x1="200" y1="200" x2="200" y2="360"></line>
+            <line x1="200" y1="200" x2="86.9" y2="313.1"></line>
+            <line x1="200" y1="200" x2="40" y2="200"></line>
+            <line x1="200" y1="200" x2="86.9" y2="86.9"></line>
+            <circle class="radarhub" cx="200" cy="200" r="54"></circle>
+          </svg>
+          <div class="radarcenter"><span class="rc-n">8 frentes,<br>3 enfoques</span><span class="rc-s">elegí los que te tocan</span></div>
+          <div class="painnode cat-ic" style="left:50%;top:10%;--i:0">01</div>
+          <div class="painnode cat-ic" style="left:78.3%;top:21.7%;--i:1">02</div>
+          <div class="painnode cat-ca" style="left:90%;top:50%;--i:2">03</div>
+          <div class="painnode cat-ca" style="left:78.3%;top:78.3%;--i:3">04</div>
+          <div class="painnode cat-ca" style="left:50%;top:90%;--i:4">05</div>
+          <div class="painnode cat-ia" style="left:21.7%;top:78.3%;--i:5">06</div>
+          <div class="painnode cat-ia" style="left:10%;top:50%;--i:6">07</div>
+          <div class="painnode cat-ia" style="left:21.7%;top:21.7%;--i:7">08</div>
+        </div>
+        <div class="painlegend">
+          <span><i style="background:var(--accent)"></i>Inteligencia comercial</span>
+          <span><i style="background:var(--positive)"></i>+Clientes Activos</span>
+          <span><i style="background:var(--fg)"></i>IA a Medida</span>
+        </div>
+
+        <div class="painlist">
+          <div class="painrow cat-ic"><span class="pn">01</span><div><h4>Decisiones a ciegas</h4><p>Objetivos y reuniones que se definen sin datos reales del día a día.</p><span class="tag">Inteligencia comercial</span></div></div>
+          <div class="painrow cat-ic"><span class="pn">02</span><div><h4>Indicadores dispersos</h4><p>Cada área mira un número distinto y nadie tiene la misma foto del negocio.</p><span class="tag">Inteligencia comercial</span></div></div>
+          <div class="painrow cat-ca"><span class="pn">03</span><div><h4>Clientes que dejaron de comprar</h4><p>Cuentas que se enfrían de a poco y nadie lo detecta a tiempo.</p><span class="tag">+Clientes Activos</span></div></div>
+          <div class="painrow cat-ca"><span class="pn">04</span><div><h4>Cobertura territorial despareja</h4><p>Zonas con potencial sin visitar y rutas que nunca se ajustan.</p><span class="tag">+Clientes Activos</span></div></div>
+          <div class="painrow cat-ca"><span class="pn">05</span><div><h4>Captación sin método</h4><p>La llegada de clientes nuevos depende del momento, no de un proceso.</p><span class="tag">+Clientes Activos</span></div></div>
+          <div class="painrow cat-ia"><span class="pn">06</span><div><h4>Vendedores que se van</h4><p>Y se llevan con ellos el conocimiento de los clientes.</p><span class="tag">IA a Medida</span></div></div>
+          <div class="painrow cat-ia"><span class="pn">07</span><div><h4>Alertas que llegan tarde</h4><p>Los desvíos se notan cuando ya impactaron en el cierre del mes.</p><span class="tag">IA a Medida</span></div></div>
+          <div class="painrow cat-ia"><span class="pn">08</span><div><h4>Procesos manuales repetidos</h4><p>Horas del equipo armando planillas que podrían automatizarse.</p><span class="tag">IA a Medida</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide clave" id="c1">
+      <div class="inner">
+        <span class="cn">CLAVE 01 DE 10</span>
+        <h2>Definir objetivos comerciales con lógica operativa y enfoque estratégico</h2>
+        <div class="block"><h3>Qué es</h3><p>El proceso de establecer metas comerciales concretas, conectadas no solo con la ambición de facturación sino con la estructura logística, el comportamiento real de los clientes y la capacidad operativa del equipo.</p></div>
+        <div class="block"><h3>Por qué importa</h3><p>Según el SalesBenchmark Index, <span class="stat-inline"><b>72%</b></span> de los objetivos comerciales fallidos se deben a errores en su formulación inicial. Con múltiples zonas, cientos de SKU y presión sobre stock y cobranzas, un mal objetivo desarticula todo el sistema comercial.</p>
+          <div class="statbar" data-pct="72"><div class="track"><i></i></div><span class="pct">72%</span></div>
+        </div>
+        <div class="block"><h3>Qué implementar</h3>
+          <ul class="checklist">
+            <li>Combiná un enfoque top-down y bottom-up para balancear ambición con realismo</li>
+            <li>Establecé metas de ventas netas, margen, activaciones y cobertura por zona o canal</li>
+            <li>Escaloná objetivos semanalmente por categoría de producto</li>
+            <li>Cruzá las metas con capacidad logística, tiempos de entrega y recursos reales</li>
+            <li>Validá el objetivo con líderes intermedios para evitar conflictos en la ejecución</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide clave" id="c2">
+      <div class="inner">
+        <span class="cn">CLAVE 02 DE 10</span>
+        <h2>Ver diariamente los indicadores clave: menos ruido, más control</h2>
+        <div class="block"><h3>Qué es</h3><p>Revisar cada mañana un grupo reducido de KPI estratégicos que reflejen el comportamiento real del negocio, para detectar desvíos, anticipar problemas y priorizar decisiones.</p></div>
+        <div class="block"><h3>Por qué importa</h3><p>Según Deloitte, las empresas que monitorean sus indicadores críticos a diario toman decisiones un <span class="stat-inline"><b>42%</b></span> más rápido y con mayor precisión. En entornos de alta rotación, tres días sin mirar los datos pueden derivar en errores operativos de alto costo.</p>
+          <div class="statbar" data-pct="42"><div class="track"><i></i></div><span class="pct">42%</span></div>
+        </div>
+        <div class="block"><h3>Qué implementar</h3>
+          <ul class="checklist">
+            <li>Armá un panel con 5 a 7 KPI base<span class="sub">ventas netas acumuladas, % de cumplimiento vs objetivo, clientes con compra activa, ticket promedio, cobertura por producto clave</span></li>
+            <li>Revisalos cada mañana antes de arrancar la jornada</li>
+            <li>Compartilos en formato visual con el equipo de ventas o supervisores</li>
+            <li>Usalos como base de conversación en reuniones breves de seguimiento</li>
+            <li>Generá alertas automáticas para desvíos críticos</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide clave" id="c3">
+      <div class="inner">
+        <span class="cn">CLAVE 03 DE 10</span>
+        <h2>Establecer una metodología de reuniones con foco operativo y visión estratégica</h2>
+        <div class="block"><h3>Qué es</h3><p>Un sistema de encuentros estructurados que combina el control de lo operativo con la toma de decisiones estratégicas, evitando la improvisación, la dispersión o la repetición ineficaz.</p></div>
+        <div class="block"><h3>Por qué importa</h3><p>Según Harvard Business Review, <span class="stat-inline"><b>71%</b></span> de las reuniones comerciales fracasan por falta de estructura, foco o datos — en la práctica, descoordinación entre áreas y baja efectividad en calle.</p>
+          <div class="statbar" data-pct="71"><div class="track"><i></i></div><span class="pct">71%</span></div>
+        </div>
+        <div class="block"><h3>Qué implementar</h3>
+          <ul class="checklist">
+            <li>Definí dos tipos de reunión<span class="sub">semanal operativa (30–45 min): visitas, objetivos, stock o cobranzas · mensual estratégica (60–75 min): resultados del mes y foco del siguiente</span></li>
+            <li>Usá dashboards o presentaciones breves con los KPI como eje</li>
+            <li>Cerrá cada reunión con acuerdos claros, responsables y fechas</li>
+            <li>Documentá los compromisos y retomalos en la siguiente reunión</li>
+            <li>Fomentá una participación activa pero disciplinada</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide clave" id="c4">
+      <div class="inner">
+        <span class="cn">CLAVE 04 DE 10</span>
+        <h2>Tener un panel de control estructurado y eficiente para tomar decisiones</h2>
+        <div class="block"><h3>Qué es</h3><p>Una herramienta visual e integrada que muestra en un solo lugar los principales indicadores comerciales, logísticos y financieros de la operación, con actualizaciones frecuentes.</p></div>
+        <div class="block"><h3>Por qué importa</h3><p>Según Gartner, las empresas con paneles de control bien diseñados aumentan su capacidad de reacción ante desvíos en un <span class="stat-inline"><b>33%</b></span>. Sin claridad visual, las decisiones llegan tarde, son subjetivas o están mal fundamentadas.</p>
+          <div class="statbar" data-pct="33"><div class="track"><i></i></div><span class="pct">33%</span></div>
+        </div>
+        <div class="block"><h3>Qué implementar</h3>
+          <ul class="checklist">
+            <li>Construí un dashboard con visualización diaria<span class="sub">ventas netas vs objetivo, cumplimiento por vendedor/zona/categoría, actividad de clientes, productos líderes y su cobertura</span></li>
+            <li>Incorporá filtros por fecha, canal y tipo de cliente</li>
+            <li>Automatizá el flujo de datos desde el sistema comercial para evitar errores manuales</li>
+            <li>Usá el panel como eje de tus reuniones y decisiones tácticas</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide clave" id="c5">
+      <div class="inner">
+        <span class="cn">CLAVE 05 DE 10</span>
+        <h2>Conectar frecuentemente con clientes y prospectos para detectar tendencias</h2>
+        <div class="block"><h3>Qué es</h3><p>Mantener contacto directo y periódico con cuentas activas y potenciales, para escuchar sus necesidades reales y adaptar la propuesta de valor de forma continua.</p></div>
+        <div class="block"><h3>Por qué importa</h3><p>El <span class="stat-inline"><b>73%</b></span> de los clientes B2B espera que la empresa entienda sus desafíos antes de venderle (Salesforce, 2023). Donde el canal cambia rápido, escuchar es lo que sostiene la relevancia comercial.</p>
+          <div class="statbar" data-pct="73"><div class="track"><i></i></div><span class="pct">73%</span></div>
+        </div>
+        <div class="block"><h3>Qué implementar</h3>
+          <ul class="checklist">
+            <li>Agendá llamadas mensuales con clientes estratégicos, sin intención de venta</li>
+            <li>Activá rondas de escucha con prospectos por zona o canal</li>
+            <li>Documentá lo que escuchás: precios, plazos, objeciones, rotación</li>
+            <li>Ajustá tu oferta o comunicación según los patrones detectados</li>
+            <li>Compartí esa información con tu equipo para decidir de forma coordinada</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide clave" id="c6">
+      <div class="inner">
+        <span class="cn">CLAVE 06 DE 10</span>
+        <h2>Tener una política clara de captación de nuevos clientes</h2>
+        <div class="block"><h3>Qué es</h3><p>Un sistema formalizado y sostenido en el tiempo para identificar, contactar y activar nuevos clientes cada mes, con métricas y responsables asignados. No una campaña aislada, sino una política continua.</p></div>
+        <div class="block"><h3>Por qué importa</h3><p>HubSpot indica que las empresas B2B con una tasa constante de adquisición mensual crecen hasta <span class="stat-inline"><b>2,6 veces</b></span> más rápido. Depender siempre de la misma base de clientes funciona hasta que dos clientes dejan de comprar — y ahí el impacto es inmediato.</p></div>
+        <div class="block"><h3>Qué implementar</h3>
+          <ul class="checklist">
+            <li>Definí un objetivo mensual de nuevos clientes por zona o canal</li>
+            <li>Segmentá y priorizá prospectos según potencial y base de clientes actual</li>
+            <li>Asigná responsables específicos por grupo de prospectos</li>
+            <li>Medí intentos de contacto, tasa de conversión y tiempo de activación</li>
+            <li>Reunite cada 15 días con tu equipo para ajustar y evaluar</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide clave" id="c7">
+      <div class="inner">
+        <span class="cn">CLAVE 07 DE 10</span>
+        <h2>Enfocarse en la experiencia del cliente para fidelizar y construir marca</h2>
+        <div class="block"><h3>Qué es</h3><p>Analizar y optimizar cada punto de contacto con el cliente, desde el primer contacto hasta el servicio posventa, para generar una experiencia consistente que se traduzca en fidelización.</p></div>
+        <div class="block"><h3>Por qué importa</h3><p>Un estudio de PwC revela que el <span class="stat-inline"><b>73%</b></span> de los clientes B2B considera la experiencia tan importante como el producto o el precio. Tiempos de entrega, atención y resolución de problemas impactan directo en la recompra.</p>
+          <div class="statbar" data-pct="73"><div class="track"><i></i></div><span class="pct">73%</span></div>
+        </div>
+        <div class="block"><h3>Qué implementar</h3>
+          <ul class="checklist">
+            <li>Mapeá el ciclo completo: pedido, entrega, facturación, servicio, seguimiento</li>
+            <li>Aplicá encuestas breves luego de cada operación (NPS o CSAT)</li>
+            <li>Registrá reclamos, tiempos de resolución y aprendizajes por zona</li>
+            <li>Reuní feedback mensual del equipo de calle sobre objeciones y mejoras</li>
+            <li>Hacé ajustes trimestrales concretos en procesos o comunicación</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide clave" id="c8">
+      <div class="inner">
+        <span class="cn">CLAVE 08 DE 10</span>
+        <h2>Convertir a los jefes y supervisores en verdaderos líderes comerciales</h2>
+        <div class="block"><h3>Qué es</h3><p>Desarrollar competencias, herramientas y visión en los mandos medios para que no sean solo transmisores de órdenes, sino multiplicadores del enfoque comercial de la empresa.</p></div>
+        <div class="block"><h3>Por qué importa</h3><p>Según Gallup, los equipos con líderes capacitados y empoderados son un <span class="stat-inline"><b>40%</b></span> más productivos y presentan hasta un 25% más de retención de vendedores.</p>
+          <div class="statbar" data-pct="40"><div class="track"><i></i></div><span class="pct">40%</span></div>
+        </div>
+        <div class="block"><h3>Qué implementar</h3>
+          <ul class="checklist">
+            <li>Formá a los jefes en análisis de indicadores, objetivos y liderazgo de equipo</li>
+            <li>Entregales tableros de seguimiento por zona o ruta</li>
+            <li>Delegá seguimiento operativo con criterio: no solo control, acompañamiento</li>
+            <li>Incluilos en la toma de decisiones mensuales de objetivos y recursos</li>
+            <li>Armá un plan de desarrollo semestral con foco en habilidades blandas y técnicas</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide clave" id="c9">
+      <div class="inner">
+        <span class="cn">CLAVE 09 DE 10</span>
+        <h2>Optimizar las rutas comerciales para maximizar productividad y cobertura</h2>
+        <div class="block"><h3>Qué es</h3><p>Rediseñar los recorridos diarios o semanales de cada vendedor, priorizando clientes de alto valor y zonas rentables, para lograr más ventas en menos tiempo.</p></div>
+        <div class="block"><h3>Por qué importa</h3><p>Una mala planificación de rutas puede representar hasta <span class="stat-inline"><b>25%</b></span> de pérdida en eficiencia comercial y logística (GS1). La mayoría de los vendedores visita a los mismos clientes por costumbre, no por estrategia.</p>
+          <div class="statbar" data-pct="25"><div class="track"><i></i></div><span class="pct">25%</span></div>
+        </div>
+        <div class="block"><h3>Qué implementar</h3>
+          <ul class="checklist">
+            <li>Geo-segmentá la base de clientes por rentabilidad, frecuencia y potencial de crecimiento</li>
+            <li>Priorizá clientes A y B en el recorrido base, dejá los C como cobertura</li>
+            <li>Planificá rutas semanales por proximidad, evitando solapamientos</li>
+            <li>Cruzá la planificación con indicadores de venta real por cliente</li>
+            <li>Revisá las rutas cada mes según performance y comportamiento de compra</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide clave" id="c10">
+      <div class="inner">
+        <span class="cn">CLAVE 10 DE 10</span>
+        <h2>Revisar y alinear los esquemas de incentivos a los resultados esperados</h2>
+        <div class="block"><h3>Qué es</h3><p>Analizar y rediseñar periódicamente los planes de comisiones, bonos y premios para que motiven los objetivos estratégicos reales — no solo el cierre de ventas sin criterio.</p></div>
+        <div class="block"><h3>Por qué importa</h3><p>Según Harvard Business Review, el <span class="stat-inline"><b>89%</b></span> de los vendedores prioriza su comportamiento según cómo se le paga. Un plan mal enfocado puede terminar premiando ventas no rentables o sobrestock.</p>
+          <div class="statbar" data-pct="89"><div class="track"><i></i></div><span class="pct">89%</span></div>
+        </div>
+        <div class="block"><h3>Qué implementar</h3>
+          <ul class="checklist">
+            <li>Definí incentivos mixtos: venta, rentabilidad, cobranzas y cobertura</li>
+            <li>Medí el costo de los incentivos contra el retorno por zona o vendedor</li>
+            <li>Incluí objetivos escalonados para potenciar a los vendedores intermedios</li>
+            <li>Reforzá con premios no monetarios: visibilidad interna, reconocimiento</li>
+            <li>Revisá y ajustá el plan cada 3 o 6 meses según desvíos o aprendizajes</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" id="enfoque">
+      <div class="inner">
+        <span class="eyebrow">Cómo trabajamos</span>
+        <h2 style="margin-top:10px;font-size:clamp(21px,4vw,27px)">Así pensamos la inteligencia comercial en Lezac</h2>
+        <p class="enfoque-body">No partimos de la teoría. Acompañamos a empresas como <strong>Bacardi</strong>, <strong>Vitalcan</strong> y <strong>Weilen</strong> entendiendo dónde está la operación, diseñando el camino junto al equipo y midiendo el avance real.</p>
+        <p class="lede" style="margin-top:14px">Por eso, antes de seguir, te invitamos a algo breve: un autodiagnóstico de treinta segundos para ubicar dónde está tu gestión comercial hoy.</p>
+        <div class="quizcard">
+          <div class="qdots" id="qdots" aria-hidden="true"></div>
+          <div id="quizBody">
+            <p class="qtext" id="qtext"></p>
+            <div class="qopts" id="qopts"></div>
+          </div>
+          <div class="qresult" id="qresult">
+            <span class="tag" id="qtag">Resultado</span>
+            <h3 id="qtitle"></h3>
+            <p class="qdesc" id="qdesc"></p>
+            <div class="qmeter">
+              <div class="track"><i id="qmeterFill"></i></div>
+              <span class="score" id="qscore">0/10</span>
+            </div>
+            <div class="qnext">
+              <h4>Tres acciones para esta semana</h4>
+              <ul class="checklist" id="qactions"></ul>
+            </div>
+            <button class="qrestart" id="qrestart" type="button">Volver a responder</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide hablemos" id="hablemos">
+      <div class="inner">
+        <span class="eyebrow">Para cerrar</span>
+        <h2 style="margin-top:10px;font-size:clamp(23px,4.4vw,31px)">Gracias por llegar hasta acá</h2>
+        <p class="lead">Si en algún momento necesitás ordenar, validar o repensar tu estrategia comercial, esto es en lo que nos enfocamos hoy:</p>
+        <div class="focusrow">
+          <div class="focusitem"><h4>Inteligencia comercial</h4><p>Ordenamos la gestión comercial con datos reales, mes a mes.</p></div>
+          <div class="focusitem"><h4>+Clientes Activos</h4><p>Más clientes, más ventas — expansión territorial con datos.</p></div>
+          <div class="focusitem"><h4>IA a Medida</h4><p>Resolvemos lo que tu empresa necesita, puntualmente.</p></div>
+        </div>
+        <div class="ctarow">
+          <a class="btn primary" href="https://lezacconsultoria.com" target="_blank" rel="noopener">Conocé más sobre nosotros</a>
+        </div>
+        <div class="author sm">
+          <img class="avatar" src="data:image/jpeg;base64,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" alt="Lic. Leandro Zacaria" width="60" height="60" loading="lazy">
+          <div>
+            <div class="an">Lic. Leandro Zacaria</div>
+            <div class="ar">Fundador · Lezac Consultoría<br>Si querés lo charlamos: escribime desde el botón de <b>WhatsApp</b>.</div>
+          </div>
+        </div>
+        <p class="footnote">Lezac Consultoría · Dirección Comercial Inteligente 2026 · lezacconsultoria.com</p>
+      </div>
+    </section>
+
+  </div>
+
+  <button class="sidebtn prev" id="btnPrevSide" type="button" aria-label="Anterior">‹</button>
+  <button class="sidebtn next" id="btnNextSide" type="button" aria-label="Siguiente">›</button>
+</div>
+
+<footer class="bottombar">
+  <button class="bbtn" id="btnPrev" type="button">← Anterior</button>
+  <span class="midcounter" id="midcounter">Diapositiva 1 de 16</span>
+  <button class="bbtn primary" id="btnNext" type="button">Siguiente →</button>
+  <div id="wa-float">
+    <a id="waFloat" href="#" target="_blank" rel="noopener" aria-label="Escribinos por WhatsApp">
+      <span class="ring-pulse" aria-hidden="true"></span>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.35 5.07L2 22l5.06-1.33A9.94 9.94 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2Zm5.2 14.2c-.22.62-1.28 1.18-1.76 1.22-.46.05-.92.2-3.1-.65-2.62-1.03-4.3-3.7-4.43-3.87-.13-.17-1.06-1.4-1.06-2.68 0-1.27.67-1.9.9-2.16.23-.26.5-.33.67-.33.17 0 .33 0 .48.01.16.01.37-.06.57.44.22.54.73 1.86.8 2 .06.13.1.29.02.46-.08.17-.12.28-.24.43-.12.15-.26.33-.37.44-.12.12-.25.25-.11.49.14.25.63 1.05 1.37 1.7.94.84 1.72 1.1 1.97 1.22.25.12.4.1.55-.06.15-.17.63-.73.8-.98.17-.25.33-.2.56-.12.23.08 1.47.7 1.72.82.25.12.42.19.48.29.06.1.06.62-.16 1.23Z" fill="#07301c"/></svg>
+      <span>¿Charlamos?</span>
+    </a>
+  </div>
+</footer>
+
+<script>
+(() => {
+  const $ = id => document.getElementById(id);
+  const reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  // --- cinta de empresas ---
+  const CLIENTS = ["Bacardi", "Vitalcan", "Weilen", "Proquim", "Madersa", "Vaca Fría", "Gloria", "Alco", "Indega", "Pluscar"];
+  const mq = $("marqueeTrack");
+  [0, 1].forEach(() => { CLIENTS.forEach(c => { const s = document.createElement("span"); s.className = "cl"; s.textContent = c; mq.appendChild(s); }); });
+
+  // --- orden del mazo ---
+  const slideEls = Array.from(document.querySelectorAll(".slide"));
+  const idIndex = {};
+  slideEls.forEach((el, i) => { idIndex[el.id] = i; });
+  let current = 0;
+  const total = slideEls.length;
+
+  const fill = $("barFill");
+  const counter = $("counter");
+  const midcounter = $("midcounter");
+  const btnPrev = $("btnPrev"), btnNext = $("btnNext");
+  const btnPrevSide = $("btnPrevSide"), btnNextSide = $("btnNextSide");
+  const topLinks = Array.from(document.querySelectorAll(".toplinks button"));
+  const waFloat = $("wa-float");
+  let waShown = false;
+
+  function updateUI() {
+    const n = current + 1;
+    counter.textContent = String(n).padStart(2, "0") + " / " + total;
+    midcounter.textContent = "Diapositiva " + n + " de " + total;
+    fill.style.width = (n / total * 100) + "%";
+    btnPrev.disabled = current === 0;
+    btnPrevSide.disabled = current === 0;
+    btnNext.textContent = (current === total - 1) ? "Volver al inicio ↺" : "Siguiente →";
+    const activeTopId = slideEls[current].id;
+    const topMatch = ["hero", "frentes", "indice", "enfoque", "hablemos"].includes(activeTopId) ? activeTopId : (current >= idIndex.c1 && current <= idIndex.c10 ? "indice" : null);
+    topLinks.forEach(b => b.classList.toggle("active", b.dataset.go === topMatch));
+    if (!waShown && (current / (total - 1)) >= 0.20) { waFloat.classList.add("show"); waShown = true; }
+  }
+
+  function animateCounters(slideEl) {
+    slideEl.querySelectorAll("[data-count]").forEach(el => {
+      const target = parseFloat(el.dataset.count);
+      const prefix = el.dataset.prefix || "";
+      const suffix = el.dataset.suffix || "";
+      if (reduceMotion) { el.textContent = prefix + target.toLocaleString("es-AR") + suffix; return; }
+      const dur = 800;
+      const t0 = performance.now();
+      function tick(now) {
+        const p = Math.min(1, (now - t0) / dur);
+        const eased = 1 - Math.pow(1 - p, 3);
+        el.textContent = prefix + Math.round(target * eased).toLocaleString("es-AR") + suffix;
+        if (p < 1) requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+    });
+    slideEl.querySelectorAll(".ring[data-pct]").forEach(ring => {
+      const pct = parseFloat(ring.dataset.pct);
+      const circumference = 188.5;
+      const fillEl = ring.querySelector(".fill");
+      if (reduceMotion) { fillEl.style.strokeDashoffset = circumference - (circumference * pct / 100); return; }
+      const dur = 800; const t0 = performance.now();
+      function tick(now) {
+        const p = Math.min(1, (now - t0) / dur);
+        const eased = 1 - Math.pow(1 - p, 3);
+        fillEl.style.strokeDashoffset = circumference - (circumference * pct / 100) * eased;
+        if (p < 1) requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+    });
+    slideEl.querySelectorAll(".statbar[data-pct]").forEach(bar => {
+      const pct = parseFloat(bar.dataset.pct);
+      requestAnimationFrame(() => { bar.querySelector("i").style.width = pct + "%"; });
+    });
+    const radarwrap = slideEl.querySelector(".radarwrap");
+    if (radarwrap) {
+      radarwrap.classList.remove("lit");
+      void radarwrap.offsetWidth;
+      radarwrap.classList.add("lit");
+    }
+  }
+
+  function goTo(i) {
+    i = Math.max(0, Math.min(total - 1, i));
+    if (i === current) return;
+    const dir = i > current ? 1 : -1;
+    const oldEl = slideEls[current];
+    const newEl = slideEls[i];
+    if (!reduceMotion) {
+      oldEl.style.transform = "translateX(" + (-dir * 36) + "px) scale(.97)";
+      newEl.style.transform = "translateX(" + (dir * 36) + "px) scale(.97)";
+    }
+    oldEl.classList.remove("active");
+    newEl.querySelectorAll(".statbar i").forEach(i2 => { i2.style.width = "0%"; });
+    requestAnimationFrame(() => {
+      newEl.classList.add("active");
+      newEl.scrollTop = 0;
+    });
+    current = i;
+    updateUI();
+    animateCounters(newEl);
+  }
+  function goToId(id) { if (id in idIndex) goTo(idIndex[id]); }
+
+  btnPrev.addEventListener("click", () => goTo(current - 1));
+  btnPrevSide.addEventListener("click", () => goTo(current - 1));
+  btnNext.addEventListener("click", () => { if (current === total - 1) goTo(0); else goTo(current + 1); });
+  btnNextSide.addEventListener("click", () => { if (current === total - 1) goTo(0); else goTo(current + 1); });
+  document.querySelectorAll("[data-go]").forEach(b => b.addEventListener("click", () => goToId(b.dataset.go)));
+
+  document.addEventListener("keydown", (e) => {
+    if (["ArrowRight", "ArrowDown", "PageDown"].includes(e.key)) { e.preventDefault(); goTo(current + 1); }
+    else if (["ArrowLeft", "ArrowUp", "PageUp"].includes(e.key)) { e.preventDefault(); goTo(current - 1); }
+    else if (e.key === "Home") { e.preventDefault(); goTo(0); }
+    else if (e.key === "End") { e.preventDefault(); goTo(total - 1); }
+  });
+
+  // --- swipe horizontal ---
+  let tsx = 0, tsy = 0;
+  document.querySelector(".deckwrap").addEventListener("touchstart", (e) => {
+    tsx = e.changedTouches[0].clientX; tsy = e.changedTouches[0].clientY;
+  }, { passive: true });
+  document.querySelector(".deckwrap").addEventListener("touchend", (e) => {
+    const dx = e.changedTouches[0].clientX - tsx;
+    const dy = e.changedTouches[0].clientY - tsy;
+    if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) {
+      if (dx < 0) goTo(current + 1); else goTo(current - 1);
+    }
+  }, { passive: true });
+
+  // --- WhatsApp ---
+  const WA_NUMBER = "5491154107921";
+  const WA_TEXT = "Hola! Vengo del ebook de Dirección Comercial Inteligente 2026 y quiero charlar sobre esto";
+  const waHref = "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(WA_TEXT);
+  $("waFloat").href = waHref;
+
+  // --- autodiagnóstico ---
+  const QUESTIONS = [
+    { q: "¿Revisás tus indicadores comerciales todos los días, o solo cuando algo anda mal?",
+      opts: [["Todos los días", 2], ["Una vez por semana", 1], ["Solo cuando hay un problema", 0]] },
+    { q: "¿Tenés un panel único donde ver ventas, cobertura y rentabilidad, o lo armás a mano cada vez?",
+      opts: [["Panel único y actualizado", 2], ["Lo armo a mano cuando lo necesito", 1], ["No tengo un panel armado", 0]] },
+    { q: "¿Sabés hoy cuántos clientes dejaron de comprarte en los últimos 60 días?",
+      opts: [["Sí, lo tengo identificado", 2], ["Tengo una idea aproximada", 1], ["No lo sé con precisión", 0]] },
+    { q: "¿Tus reuniones comerciales se apoyan en datos concretos o en percepciones del equipo?",
+      opts: [["En datos concretos", 2], ["Una mezcla de ambos", 1], ["Mayormente percepciones", 0]] },
+    { q: "¿Podés anticipar un problema de ventas antes de que impacte en el cierre del mes?",
+      opts: [["Sí, con bastante anticipación", 2], ["A veces", 1], ["Casi siempre lo noto tarde", 0]] },
+  ];
+  const RESULTS = [
+    { min: 8, band: "alto", tag: "Nivel alto", title: "Ya gestionás con datos reales",
+      text: "Tu operación ya se apoya en información concreta más que en intuición. Las diez claves de este recurso te van a servir para afinar lo que ya tenés en marcha, no para empezar de cero.",
+      actions: [
+        "Documentá tus 5-7 KPI base para que no dependan de vos (clave 02)",
+        "Delegá la lectura diaria del panel a un mando medio, con criterio claro (clave 08)",
+        "Revisá el esquema de incentivos cada 6 meses para que siga empujando en la misma dirección (clave 10)",
+      ] },
+    { min: 4, band: "medio", tag: "Nivel medio", title: "Hay partes ordenadas y otras a ciegas",
+      text: "Una parte de tu gestión ya usa datos y otra todavía depende de la memoria o el ojo del equipo. Ahí suele estar el margen más rápido de ganar: visibilidad donde hoy no la hay.",
+      actions: [
+        "Armá un panel único con 5-7 KPI y dejá de armarlo a mano cada vez (claves 02 y 04)",
+        "Fijá una reunión semanal operativa de 30-45 minutos con los datos como eje (clave 03)",
+        "Identificá hoy mismo qué clientes dejaron de comprarte en los últimos 60 días (clave 06)",
+      ] },
+    { min: 0, band: "bajo", tag: "Punto de partida", title: "Las decisiones llegan tarde o a ciegas",
+      text: "Hoy buena parte de tu gestión se apoya en información parcial o tardía. Es el punto de partida más común — y, con el enfoque correcto, el que más rápido se puede ordenar.",
+      actions: [
+        "Elegí 5 indicadores y empezá a mirarlos todas las mañanas, aunque sea en una planilla simple (clave 02)",
+        "Agendá una reunión semanal de 30 minutos con tu equipo basada en esos números (clave 03)",
+        "Mapeá qué datos ya tenés dispersos — ventas, cobranzas, visitas — antes de buscar una herramienta nueva (clave 04)",
+      ] },
+  ];
+  const BAND_COLOR = { alto: "var(--positive)", medio: "var(--accent)", bajo: "var(--alert)" };
+
+  let qi = 0, score = 0;
+  const qdots = $("qdots");
+  QUESTIONS.forEach(() => { const i = document.createElement("i"); i.innerHTML = "<b></b>"; qdots.appendChild(i); });
+  const dots = Array.from(qdots.children);
+
+  function renderQuestion() {
+    const item = QUESTIONS[qi];
+    $("qtext").textContent = item.q;
+    const opts = $("qopts");
+    opts.innerHTML = "";
+    item.opts.forEach(([label, pts]) => {
+      const b = document.createElement("button");
+      b.type = "button"; b.className = "qopt"; b.textContent = label;
+      b.addEventListener("click", () => {
+        score += pts; qi++; dots[qi - 1].classList.add("done");
+        if (qi < QUESTIONS.length) { dots[qi].classList.add("current"); renderQuestion(); }
+        else { showResult(); }
+      });
+      opts.appendChild(b);
+    });
+    dots.forEach((d, i) => d.classList.toggle("current", i === qi));
+  }
+
+  function showResult() {
+    $("quizBody").style.display = "none";
+    const r = RESULTS.find(r => score >= r.min);
+    const tagEl = $("qtag");
+    tagEl.textContent = r.tag;
+    tagEl.className = "tag band-" + r.band;
+    $("qtitle").textContent = r.title;
+    $("qdesc").textContent = r.text;
+    $("qscore").textContent = score + "/10";
+    const meterFill = $("qmeterFill");
+    meterFill.style.background = BAND_COLOR[r.band];
+    requestAnimationFrame(() => { meterFill.style.width = (score / 10 * 100) + "%"; });
+    const actionsEl = $("qactions");
+    actionsEl.innerHTML = "";
+    r.actions.forEach(a => { const li = document.createElement("li"); li.textContent = a; actionsEl.appendChild(li); });
+    $("qresult").classList.add("show");
+  }
+
+  $("qrestart").addEventListener("click", () => {
+    qi = 0; score = 0;
+    dots.forEach(d => d.classList.remove("done", "current"));
+    dots[0].classList.add("current");
+    $("qresult").classList.remove("show");
+    $("qmeterFill").style.width = "0%";
+    $("quizBody").style.display = "";
+    renderQuestion();
+  });
+
+  dots[0].classList.add("current");
+  renderQuestion();
+
+  // --- deep link opcional por hash ---
+  const hashId = (location.hash || "").replace("#", "");
+  if (hashId && hashId in idIndex) { current = idIndex[hashId]; slideEls.forEach((el, i) => el.classList.toggle("active", i === current)); }
+
+  updateUI();
+  animateCounters(slideEls[current]);
+})();
+</script>
+
+</body></html>
