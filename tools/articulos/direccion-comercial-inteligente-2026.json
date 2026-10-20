@@ -1,0 +1,470 @@
+{
+ "slug": "direccion-comercial-inteligente-2026",
+ "h1": "Dirección comercial inteligente 2026",
+ "subtitle": "Un enfoque integral para pasar de vender por inercia a gestionar con propósito. Diez prácticas concretas, con qué implementar en cada una.",
+ "title": "Dirección comercial inteligente 2026: 10 claves | Lezac",
+ "description": "Diez prácticas concretas, con qué implementar en cada una, para pasar de vender por inercia a gestionar con propósito. Un recurso de Lezac Consultoría.",
+ "category": "Dirección comercial",
+ "date": "2026-10-13",
+ "read_minutes": 15,
+ "deck": "/presentacion-direccion-comercial-inteligente-2026",
+ "wa_text": "Hola Leandro, leí el artículo Dirección comercial inteligente 2026 y quiero charlar.",
+ "blocks": [
+  {
+   "t": "h2",
+   "id": "por-que-este-recurso",
+   "text": "Por qué este recurso"
+  },
+  {
+   "t": "p",
+   "html": "¿Cuántas veces tuviste que tomar una decisión comercial importante sin contar con los datos completos o actualizados?"
+  },
+  {
+   "t": "stats",
+   "items": [
+    {
+     "v": "72%",
+     "d": "de los gerentes reconoce que enfrenta esa realidad cada semana.",
+     "src": "McKinsey, 2023"
+    },
+    {
+     "v": "+60%",
+     "d": "busca activamente nuevas herramientas para mejorar su gestión.",
+     "src": "Forrester, 2024"
+    }
+   ]
+  },
+  {
+   "t": "p",
+   "html": "Este recurso no busca enseñarte lo que ya sabés. En unos quince minutos vas a encontrar diez ideas prácticas e indicadores listos para aplicar mañana mismo, en cualquier empresa que venda con equipo comercial — no solo en distribución."
+  },
+  {
+   "t": "toc",
+   "title": "Índice",
+   "items": [
+    "Definir objetivos con lógica operativa",
+    "Ver diariamente los indicadores clave",
+    "Una metodología de reuniones real",
+    "Un panel de control estructurado",
+    "Conectar con clientes y prospectos",
+    "Una política clara de captación",
+    "La experiencia del cliente como marca",
+    "Jefes convertidos en líderes",
+    "Rutas comerciales optimizadas",
+    "Incentivos alineados a resultados"
+   ]
+  },
+  {
+   "t": "h2",
+   "id": "antes-de-las-10-claves",
+   "text": "¿Con cuántos de estos frentes te identificás hoy?"
+  },
+  {
+   "t": "p",
+   "html": "No hace falta que falle todo a la vez. Alcanza con que te resulte familiar uno de estos ocho puntos para que valga la pena seguir leyendo — cada uno conecta con una de las diez claves que vienen a continuación."
+  },
+  {
+   "t": "cards",
+   "items": [
+    [
+     "Decisiones a ciegas",
+     "Objetivos y reuniones que se definen sin datos reales del día a día.",
+     "Inteligencia comercial",
+     "/consultoria-inteligencia-comercial"
+    ],
+    [
+     "Indicadores dispersos",
+     "Cada área mira un número distinto y nadie tiene la misma foto del negocio.",
+     "Inteligencia comercial",
+     "/consultoria-inteligencia-comercial"
+    ],
+    [
+     "Clientes que dejaron de comprar",
+     "Cuentas que se enfrían de a poco y nadie lo detecta a tiempo.",
+     "+Clientes Activos",
+     "/mas-clientes-activos"
+    ],
+    [
+     "Cobertura territorial despareja",
+     "Zonas con potencial sin visitar y rutas que nunca se ajustan.",
+     "+Clientes Activos",
+     "/mas-clientes-activos"
+    ],
+    [
+     "Captación sin método",
+     "La llegada de clientes nuevos depende del momento, no de un proceso.",
+     "+Clientes Activos",
+     "/mas-clientes-activos"
+    ],
+    [
+     "Vendedores que se van",
+     "Y se llevan con ellos el conocimiento de los clientes.",
+     "IA a Medida",
+     "/ia-a-medida"
+    ],
+    [
+     "Alertas que llegan tarde",
+     "Los desvíos se notan cuando ya impactaron en el cierre del mes.",
+     "IA a Medida",
+     "/ia-a-medida"
+    ],
+    [
+     "Procesos manuales repetidos",
+     "Horas del equipo armando planillas que podrían automatizarse.",
+     "IA a Medida",
+     "/ia-a-medida"
+    ]
+   ]
+  },
+  {
+   "t": "h2",
+   "id": "las-10-claves",
+   "text": "Las 10 claves"
+  },
+  {
+   "t": "clave",
+   "n": 1,
+   "h2": "Definir objetivos comerciales con lógica operativa y enfoque estratégico",
+   "que": "El proceso de establecer metas comerciales concretas, conectadas no solo con la ambición de facturación sino con la estructura logística, el comportamiento real de los clientes y la capacidad operativa del equipo.",
+   "por": "Según el SalesBenchmark Index, <strong>72%</strong> de los objetivos comerciales fallidos se deben a errores en su formulación inicial. Con múltiples zonas, cientos de SKU y presión sobre stock y cobranzas, un mal objetivo desarticula todo el sistema comercial.",
+   "pct": "72",
+   "items": [
+    {
+     "t": "Combiná un enfoque top-down y bottom-up para balancear ambición con realismo",
+     "sub": null
+    },
+    {
+     "t": "Establecé metas de ventas netas, margen, activaciones y cobertura por zona o canal",
+     "sub": null
+    },
+    {
+     "t": "Escaloná objetivos semanalmente por categoría de producto",
+     "sub": null
+    },
+    {
+     "t": "Cruzá las metas con capacidad logística, tiempos de entrega y recursos reales",
+     "sub": null
+    },
+    {
+     "t": "Validá el objetivo con líderes intermedios para evitar conflictos en la ejecución",
+     "sub": null
+    }
+   ]
+  },
+  {
+   "t": "clave",
+   "n": 2,
+   "h2": "Ver diariamente los indicadores clave: menos ruido, más control",
+   "que": "Revisar cada mañana un grupo reducido de KPI estratégicos que reflejen el comportamiento real del negocio, para detectar desvíos, anticipar problemas y priorizar decisiones.",
+   "por": "Según Deloitte, las empresas que monitorean sus indicadores críticos a diario toman decisiones un <strong>42%</strong> más rápido y con mayor precisión. En entornos de alta rotación, tres días sin mirar los datos pueden derivar en errores operativos de alto costo.",
+   "pct": "42",
+   "items": [
+    {
+     "t": "Armá un panel con 5 a 7 KPI base",
+     "sub": "ventas netas acumuladas, % de cumplimiento vs objetivo, clientes con compra activa, ticket promedio, cobertura por producto clave"
+    },
+    {
+     "t": "Revisalos cada mañana antes de arrancar la jornada",
+     "sub": null
+    },
+    {
+     "t": "Compartilos en formato visual con el equipo de ventas o supervisores",
+     "sub": null
+    },
+    {
+     "t": "Usalos como base de conversación en reuniones breves de seguimiento",
+     "sub": null
+    },
+    {
+     "t": "Generá alertas automáticas para desvíos críticos",
+     "sub": null
+    }
+   ]
+  },
+  {
+   "t": "clave",
+   "n": 3,
+   "h2": "Establecer una metodología de reuniones con foco operativo y visión estratégica",
+   "que": "Un sistema de encuentros estructurados que combina el control de lo operativo con la toma de decisiones estratégicas, evitando la improvisación, la dispersión o la repetición ineficaz.",
+   "por": "Según Harvard Business Review, <strong>71%</strong> de las reuniones comerciales fracasan por falta de estructura, foco o datos — en la práctica, descoordinación entre áreas y baja efectividad en calle.",
+   "pct": "71",
+   "items": [
+    {
+     "t": "Definí dos tipos de reunión",
+     "sub": "semanal operativa (30–45 min): visitas, objetivos, stock o cobranzas · mensual estratégica (60–75 min): resultados del mes y foco del siguiente"
+    },
+    {
+     "t": "Usá dashboards o presentaciones breves con los KPI como eje",
+     "sub": null
+    },
+    {
+     "t": "Cerrá cada reunión con acuerdos claros, responsables y fechas",
+     "sub": null
+    },
+    {
+     "t": "Documentá los compromisos y retomalos en la siguiente reunión",
+     "sub": null
+    },
+    {
+     "t": "Fomentá una participación activa pero disciplinada",
+     "sub": null
+    }
+   ]
+  },
+  {
+   "t": "clave",
+   "n": 4,
+   "h2": "Tener un panel de control estructurado y eficiente para tomar decisiones",
+   "que": "Una herramienta visual e integrada que muestra en un solo lugar los principales indicadores comerciales, logísticos y financieros de la operación, con actualizaciones frecuentes.",
+   "por": "Según Gartner, las empresas con paneles de control bien diseñados aumentan su capacidad de reacción ante desvíos en un <strong>33%</strong>. Sin claridad visual, las decisiones llegan tarde, son subjetivas o están mal fundamentadas.",
+   "pct": "33",
+   "items": [
+    {
+     "t": "Construí un dashboard con visualización diaria",
+     "sub": "ventas netas vs objetivo, cumplimiento por vendedor/zona/categoría, actividad de clientes, productos líderes y su cobertura"
+    },
+    {
+     "t": "Incorporá filtros por fecha, canal y tipo de cliente",
+     "sub": null
+    },
+    {
+     "t": "Automatizá el flujo de datos desde el sistema comercial para evitar errores manuales",
+     "sub": null
+    },
+    {
+     "t": "Usá el panel como eje de tus reuniones y decisiones tácticas",
+     "sub": null
+    }
+   ]
+  },
+  {
+   "t": "clave",
+   "n": 5,
+   "h2": "Conectar frecuentemente con clientes y prospectos para detectar tendencias",
+   "que": "Mantener contacto directo y periódico con cuentas activas y potenciales, para escuchar sus necesidades reales y adaptar la propuesta de valor de forma continua.",
+   "por": "El <strong>73%</strong> de los clientes B2B espera que la empresa entienda sus desafíos antes de venderle (Salesforce, 2023). Donde el canal cambia rápido, escuchar es lo que sostiene la relevancia comercial.",
+   "pct": "73",
+   "items": [
+    {
+     "t": "Agendá llamadas mensuales con clientes estratégicos, sin intención de venta",
+     "sub": null
+    },
+    {
+     "t": "Activá rondas de escucha con prospectos por zona o canal",
+     "sub": null
+    },
+    {
+     "t": "Documentá lo que escuchás: precios, plazos, objeciones, rotación",
+     "sub": null
+    },
+    {
+     "t": "Ajustá tu oferta o comunicación según los patrones detectados",
+     "sub": null
+    },
+    {
+     "t": "Compartí esa información con tu equipo para decidir de forma coordinada",
+     "sub": null
+    }
+   ]
+  },
+  {
+   "t": "clave",
+   "n": 6,
+   "h2": "Tener una política clara de captación de nuevos clientes",
+   "que": "Un sistema formalizado y sostenido en el tiempo para identificar, contactar y activar nuevos clientes cada mes, con métricas y responsables asignados. No una campaña aislada, sino una política continua.",
+   "por": "HubSpot indica que las empresas B2B con una tasa constante de adquisición mensual crecen hasta <strong>2,6 veces</strong> más rápido. Depender siempre de la misma base de clientes funciona hasta que dos clientes dejan de comprar — y ahí el impacto es inmediato.",
+   "pct": null,
+   "items": [
+    {
+     "t": "Definí un objetivo mensual de nuevos clientes por zona o canal",
+     "sub": null
+    },
+    {
+     "t": "Segmentá y priorizá prospectos según potencial y base de clientes actual",
+     "sub": null
+    },
+    {
+     "t": "Asigná responsables específicos por grupo de prospectos",
+     "sub": null
+    },
+    {
+     "t": "Medí intentos de contacto, tasa de conversión y tiempo de activación",
+     "sub": null
+    },
+    {
+     "t": "Reunite cada 15 días con tu equipo para ajustar y evaluar",
+     "sub": null
+    }
+   ]
+  },
+  {
+   "t": "clave",
+   "n": 7,
+   "h2": "Enfocarse en la experiencia del cliente para fidelizar y construir marca",
+   "que": "Analizar y optimizar cada punto de contacto con el cliente, desde el primer contacto hasta el servicio posventa, para generar una experiencia consistente que se traduzca en fidelización.",
+   "por": "Un estudio de PwC revela que el <strong>73%</strong> de los clientes B2B considera la experiencia tan importante como el producto o el precio. Tiempos de entrega, atención y resolución de problemas impactan directo en la recompra.",
+   "pct": "73",
+   "items": [
+    {
+     "t": "Mapeá el ciclo completo: pedido, entrega, facturación, servicio, seguimiento",
+     "sub": null
+    },
+    {
+     "t": "Aplicá encuestas breves luego de cada operación (NPS o CSAT)",
+     "sub": null
+    },
+    {
+     "t": "Registrá reclamos, tiempos de resolución y aprendizajes por zona",
+     "sub": null
+    },
+    {
+     "t": "Reuní feedback mensual del equipo de calle sobre objeciones y mejoras",
+     "sub": null
+    },
+    {
+     "t": "Hacé ajustes trimestrales concretos en procesos o comunicación",
+     "sub": null
+    }
+   ]
+  },
+  {
+   "t": "clave",
+   "n": 8,
+   "h2": "Convertir a los jefes y supervisores en verdaderos líderes comerciales",
+   "que": "Desarrollar competencias, herramientas y visión en los mandos medios para que no sean solo transmisores de órdenes, sino multiplicadores del enfoque comercial de la empresa.",
+   "por": "Según Gallup, los equipos con líderes capacitados y empoderados son un <strong>40%</strong> más productivos y presentan hasta un 25% más de retención de vendedores.",
+   "pct": "40",
+   "items": [
+    {
+     "t": "Formá a los jefes en análisis de indicadores, objetivos y liderazgo de equipo",
+     "sub": null
+    },
+    {
+     "t": "Entregales tableros de seguimiento por zona o ruta",
+     "sub": null
+    },
+    {
+     "t": "Delegá seguimiento operativo con criterio: no solo control, acompañamiento",
+     "sub": null
+    },
+    {
+     "t": "Incluilos en la toma de decisiones mensuales de objetivos y recursos",
+     "sub": null
+    },
+    {
+     "t": "Armá un plan de desarrollo semestral con foco en habilidades blandas y técnicas",
+     "sub": null
+    }
+   ]
+  },
+  {
+   "t": "clave",
+   "n": 9,
+   "h2": "Optimizar las rutas comerciales para maximizar productividad y cobertura",
+   "que": "Rediseñar los recorridos diarios o semanales de cada vendedor, priorizando clientes de alto valor y zonas rentables, para lograr más ventas en menos tiempo.",
+   "por": "Una mala planificación de rutas puede representar hasta <strong>25%</strong> de pérdida en eficiencia comercial y logística (GS1). La mayoría de los vendedores visita a los mismos clientes por costumbre, no por estrategia.",
+   "pct": "25",
+   "items": [
+    {
+     "t": "Geo-segmentá la base de clientes por rentabilidad, frecuencia y potencial de crecimiento",
+     "sub": null
+    },
+    {
+     "t": "Priorizá clientes A y B en el recorrido base, dejá los C como cobertura",
+     "sub": null
+    },
+    {
+     "t": "Planificá rutas semanales por proximidad, evitando solapamientos",
+     "sub": null
+    },
+    {
+     "t": "Cruzá la planificación con indicadores de venta real por cliente",
+     "sub": null
+    },
+    {
+     "t": "Revisá las rutas cada mes según performance y comportamiento de compra",
+     "sub": null
+    }
+   ]
+  },
+  {
+   "t": "clave",
+   "n": 10,
+   "h2": "Revisar y alinear los esquemas de incentivos a los resultados esperados",
+   "que": "Analizar y rediseñar periódicamente los planes de comisiones, bonos y premios para que motiven los objetivos estratégicos reales — no solo el cierre de ventas sin criterio.",
+   "por": "Según Harvard Business Review, el <strong>89%</strong> de los vendedores prioriza su comportamiento según cómo se le paga. Un plan mal enfocado puede terminar premiando ventas no rentables o sobrestock.",
+   "pct": "89",
+   "items": [
+    {
+     "t": "Definí incentivos mixtos: venta, rentabilidad, cobranzas y cobertura",
+     "sub": null
+    },
+    {
+     "t": "Medí el costo de los incentivos contra el retorno por zona o vendedor",
+     "sub": null
+    },
+    {
+     "t": "Incluí objetivos escalonados para potenciar a los vendedores intermedios",
+     "sub": null
+    },
+    {
+     "t": "Reforzá con premios no monetarios: visibilidad interna, reconocimiento",
+     "sub": null
+    },
+    {
+     "t": "Revisá y ajustá el plan cada 3 o 6 meses según desvíos o aprendizajes",
+     "sub": null
+    }
+   ]
+  },
+  {
+   "t": "h2",
+   "id": "como-trabajamos",
+   "text": "Así pensamos la inteligencia comercial en Lezac"
+  },
+  {
+   "t": "p",
+   "html": "No partimos de la teoría. Acompañamos a empresas como Bacardi, Vitalcan y Weilen entendiendo dónde está la operación, diseñando el camino junto al equipo y midiendo el avance real."
+  },
+  {
+   "t": "p",
+   "html": "Por eso, antes de seguir, te invitamos a algo breve: un autodiagnóstico de treinta segundos para ubicar dónde está tu gestión comercial hoy.",
+   "link": [
+    "Hacer el autodiagnóstico",
+    "https://diagnostico.lezacconsultoria.com/"
+   ]
+  },
+  {
+   "t": "h2",
+   "id": "para-cerrar",
+   "text": "Gracias por llegar hasta acá"
+  },
+  {
+   "t": "p",
+   "html": "Si en algún momento necesitás ordenar, validar o repensar tu estrategia comercial, esto es en lo que nos enfocamos hoy:"
+  },
+  {
+   "t": "services",
+   "items": [
+    [
+     "Inteligencia comercial",
+     "Ordenamos la gestión comercial con datos reales, mes a mes.",
+     "/consultoria-inteligencia-comercial",
+     "#25F5A4"
+    ],
+    [
+     "+Clientes Activos",
+     "Más clientes, más ventas — expansión territorial con datos.",
+     "/mas-clientes-activos",
+     "#38BDF8"
+    ],
+    [
+     "IA a Medida",
+     "Resolvemos lo que tu empresa necesita, puntualmente.",
+     "/ia-a-medida",
+     "#8C52FF"
+    ]
+   ]
+  }
+ ]
+}

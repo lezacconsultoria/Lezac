@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lezac Consultoría — Inteligencia Comercial</title>
+<meta name="description" content="Inteligencia comercial aplicada a tu empresa: ventas, cobertura de clientes y rentabilidad para fábricas, distribuidoras y mayoristas. Lezac Consultoría.">
+<meta name="robots" content="noindex, follow">
+<link rel="canonical" href="https://lezacconsultoria.com/presentacion">
+<link rel="icon" type="image/png" href="/logo-lezac-mini.png">
+<script src="/analytics.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ── Reset & Base ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html, body {
+  height: 100dvh;
+  width: 100%;
+  overflow: hidden;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Animated Gradient Background ── */
+body {
+  background: linear-gradient(-45deg, #050508, #0d1629, #1a1a2e, #0a0c14, #050508);
+  background-size: 400% 400%;
+  animation: gradientShift 10s ease infinite;
+  position: relative;
+}
+
+@keyframes gradientShift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ── Ambient glow ── */
+body::before {
+  content: '';
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  width: 80vw;
+  height: 60vh;
+  background: radial-gradient(ellipse, rgba(30, 80, 180, 0.12) 0%, rgba(30, 80, 180, 0.04) 40%, transparent 70%);
+  transform: translate(-50%, -50%);
+  animation: glowPulse 6s ease-in-out infinite alternate;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes glowPulse {
+  0%   { opacity: 0.6; transform: translate(-50%, -50%) scale(1); }
+  100% { opacity: 1; transform: translate(-50%, -48%) scale(1.1); }
+}
+
+/* ── Main Layout ── */
+.landing {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px 14px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* ── 1. Brand ── */
+.brand {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #a78bfa;
+  opacity: 0.7;
+  flex-shrink: 0;
+}
+
+/* ── 2. Headline ── */
+.headline {
+  font-size: clamp(22px, 3.5vw, 42px);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  white-space: nowrap;
+  flex-shrink: 0;
+  margin-top: 10px;
+}
+
+/* ── 3. Subheadline ── */
+.subheadline {
+  font-size: clamp(13px, 1.4vw, 16px);
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.65);
+  margin-top: 6px;
+  flex-shrink: 0;
+}
+
+/* ── 4. Specialization ── */
+.specialization {
+  font-size: clamp(9px, 1vw, 12px);
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.4);
+  margin-top: 8px;
+  flex-shrink: 0;
+}
+
+/* ── 5. Pillars ── */
+.pillars {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  flex-shrink: 0;
+}
+
+.pillar {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: clamp(11px, 1.1vw, 14px);
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.pillar svg {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  color: rgba(167, 139, 250, 0.6);
+}
+
+.pillar-sep {
+  color: rgba(255, 255, 255, 0.2);
+  font-weight: 700;
+  font-size: 10px;
+  margin: 0 2px;
+}
+
+/* ── 6. Authority ── */
+.authority {
+  font-size: clamp(10px, 1vw, 13px);
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.45);
+  letter-spacing: 0.04em;
+  margin-top: 10px;
+  padding: 6px 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  flex-shrink: 0;
+}
+
+/* ── 7. Video Player ── */
+.video-wrap {
+  width: min(90vw, 680px);
+  aspect-ratio: 16 / 9;
+  max-height: 38vh;
+  margin-top: 14px;
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  background: rgba(12, 20, 40, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow:
+    0 0 60px -12px rgba(56, 189, 248, 0.2),
+    0 0 20px -4px rgba(56, 130, 246, 0.15),
+    0 4px 24px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  flex-shrink: 1;
+  min-height: 0;
+}
+
+.video-wrap:hover {
+  transform: scale(1.01);
+  box-shadow:
+    0 0 80px -12px rgba(56, 189, 248, 0.3),
+    0 0 30px -4px rgba(56, 130, 246, 0.2),
+    0 4px 30px rgba(0, 0, 0, 0.5);
+}
+
+.video-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.5) 0%, rgba(10, 20, 50, 0.3) 50%, rgba(30, 60, 120, 0.15) 100%);
+}
+
+.play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: clamp(56px, 8vw, 80px);
+  height: clamp(56px, 8vw, 80px);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 30px rgba(56, 189, 248, 0.3);
+  transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.video-wrap:hover .play-btn {
+  background: rgba(255, 255, 255, 0.18);
+  box-shadow: 0 0 40px rgba(56, 189, 248, 0.45);
+  transform: translate(-50%, -50%) scale(1.08);
+}
+
+.play-btn svg {
+  width: clamp(22px, 3vw, 32px);
+  height: clamp(22px, 3vw, 32px);
+  margin-left: 3px;
+  color: #ffffff;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+/* ── 8. WhatsApp Button ── */
+.wa-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 14px;
+  padding: 10px 22px;
+  background: #25D366;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 50px;
+  font-size: clamp(12px, 1.2vw, 14px);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  transition: transform 0.3s ease, background 0.3s ease;
+  animation: waPulse 3s ease-in-out infinite;
+  flex-shrink: 0;
+}
+
+.wa-btn:hover {
+  background: #1db954;
+  transform: translateY(-2px);
+}
+
+.wa-btn svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+@keyframes waPulse {
+  0%   { box-shadow: 0 0 8px rgba(37, 211, 102, 0.2); }
+  50%  { box-shadow: 0 0 22px rgba(37, 211, 102, 0.5); }
+  100% { box-shadow: 0 0 8px rgba(37, 211, 102, 0.2); }
+}
+
+/* ── 9. Trust / Logos ── */
+.trust {
+  margin-top: 16px;
+  width: 100%;
+  max-width: 700px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.trust-label {
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.35);
+  margin-bottom: 10px;
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 35s linear infinite;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+.logo-item {
+  flex-shrink: 0;
+  height: 26px;
+  padding: 0 14px;
+  margin: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.4;
+  transition: opacity 0.3s;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: rgba(255, 255, 255, 0.85);
+  white-space: nowrap;
+}
+
+.logo-item:hover { opacity: 0.65; }
+
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ── 10. Services footer ── */
+.services {
+  font-size: clamp(8px, 0.9vw, 10px);
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.3);
+  padding-top: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
+  flex-shrink: 0;
+  width: 100%;
+}
+
+.services a {
+  color: rgba(255, 255, 255, 0.3);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.services a:hover {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+/* ── Responsive: mobile ── */
+@media (max-width: 768px) {
+  .landing { padding: 16px 16px 10px; }
+  .headline { white-space: normal; }
+  .video-wrap { width: 94vw; max-height: 32vh; border-radius: 10px; }
+  .pillar-sep:nth-child(4) { display: none; }
+  .pillars { gap: 4px 6px; }
+  .logo-item { height: 22px; margin: 0 8px; font-size: 10px; padding: 0 10px; }
+}
+
+@media (max-width: 400px) {
+  .brand { font-size: 9px; }
+  .wa-btn { padding: 9px 16px; font-size: 12px; }
+}
+
+/* ── Reduced motion ── */
+@media (prefers-reduced-motion: reduce) {
+  body { animation: none; }
+  body::before { animation: none; }
+  .marquee-track { animation: none; }
+  .wa-btn { animation: none; }
+  .play-btn { transition: none; }
+  .video-wrap { transition: none; }
+}
+</style>
+</head>
+<body>
+
+<main class="landing">
+
+  <!-- 1. Brand -->
+  <span class="brand">Lezac Consultoría</span>
+
+  <!-- 2. Headline -->
+  <h1 class="headline">Inteligencia comercial aplicada a tu empresa</h1>
+
+  <!-- 3. Subheadline -->
+  <p class="subheadline">Te lo explicamos en 2 min</p>
+
+  <!-- 4. Specialization -->
+  <p class="specialization">Fábricas, distribuidoras y mayoristas</p>
+
+  <!-- 5. Pillars -->
+  <div class="pillars">
+    <span class="pillar">
+      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+      Ventas
+    </span>
+    <span class="pillar-sep">·</span>
+    <span class="pillar">
+      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+      Cobertura de clientes
+    </span>
+    <span class="pillar-sep">·</span>
+    <span class="pillar">
+      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+      Optimizar recursos
+    </span>
+    <span class="pillar-sep">·</span>
+    <span class="pillar">
+      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+      Rentabilidad
+    </span>
+  </div>
+
+  <!-- 6. Authority -->
+  <p class="authority">+10 años de experiencia &nbsp;·&nbsp; +100 empresas asesoradas</p>
+
+  <!-- 7. Video BCL -->
+  <div class="video-wrap" role="button" aria-label="Reproducir video de presentación">
+    <div class="video-overlay"></div>
+    <div class="play-btn">
+      <svg fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+    </div>
+  </div>
+
+  <!-- 8. WhatsApp CTA -->
+  <a class="wa-btn" href="https://wa.me/5491154107921?text=Hola%2C%20vi%20la%20presentaci%C3%B3n%20de%20Lezac%20y%20me%20interesa%20saber%20m%C3%A1s." target="_blank" rel="noopener">
+    <svg fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+    Quiero saber cómo aplicarlo en mi empresa
+  </a>
+
+  <!-- 9. Trust Logos -->
+  <div class="trust">
+    <p class="trust-label">Empresas que han confiado en nosotros</p>
+    <div style="overflow:hidden;">
+      <div class="marquee-track">
+        <!-- Set 1 -->
+        <div class="logo-item">Madersa</div>
+        <div class="logo-item">PlusCar</div>
+        <div class="logo-item">VitalCan</div>
+        <div class="logo-item">Distribuidora Norte</div>
+        <div class="logo-item">Broking</div>
+        <div class="logo-item">Raimondi</div>
+        <div class="logo-item">Indega</div>
+        <div class="logo-item">McCain</div>
+        <div class="logo-item">Baci</div>
+        <div class="logo-item">Vaca Fría</div>
+        <div class="logo-item">Weilen</div>
+        <div class="logo-item">Termoplástica</div>
+        <div class="logo-item">Bogdan</div>
+        <div class="logo-item">Alco</div>
+        <div class="logo-item">Iglú</div>
+        <!-- Set 2 (duplicado para loop continuo) -->
+        <div class="logo-item">Madersa</div>
+        <div class="logo-item">PlusCar</div>
+        <div class="logo-item">VitalCan</div>
+        <div class="logo-item">Distribuidora Norte</div>
+        <div class="logo-item">Broking</div>
+        <div class="logo-item">Raimondi</div>
+        <div class="logo-item">Indega</div>
+        <div class="logo-item">McCain</div>
+        <div class="logo-item">Baci</div>
+        <div class="logo-item">Vaca Fría</div>
+        <div class="logo-item">Weilen</div>
+        <div class="logo-item">Termoplástica</div>
+        <div class="logo-item">Bogdan</div>
+        <div class="logo-item">Alco</div>
+        <div class="logo-item">Iglú</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 10. Services -->
+  <p class="services"><a href="https://lezacconsultoria.com/consultoria-inteligencia-comercial" target="_blank" rel="noopener">Consultoría Comercial</a> &nbsp;·&nbsp; <a href="https://lezacconsultoria.com/mas-clientes-activos" target="_blank" rel="noopener">Más Clientes Activos</a> &nbsp;·&nbsp; <a href="https://lezacconsultoria.com/ia-a-medida" target="_blank" rel="noopener">IA a Medida</a> &nbsp;·&nbsp; <a href="https://lezacconsultoria.com/wa-ventas" target="_blank" rel="noopener">WhatsApp Ventas</a></p>
+
+</main>
+
+</body>
+</html>

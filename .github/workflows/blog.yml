@@ -1,0 +1,44 @@
+name: Generar blog
+
+# Se ejecuta cuando Control Maestro (o vos) cambia un artículo en tools/articulos/.
+# Genera las páginas del blog, el sitemap y llms.txt, y sube el resultado a master.
+# Hostinger toma ese commit y lo publica solo.
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'tools/articulos/**'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: blog
+  cancel-in-progress: false
+
+jobs:
+  generar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: pip install pillow
+      - run: python tools/gen.py blog
+      - name: Subir los cambios
+        run: |
+          git config user.name "Lezac Blog"
+          git config user.email "noreply@lezacconsultoria.com"
+          git add blog blog.html sitemap.xml llms.txt
+          if git diff --cached --quiet; then
+            echo "Sin cambios"
+          else
+            git commit -m "chore(blog): regenerar páginas del blog"
+            git pull --rebase origin master
+            git push origin master
+          fi

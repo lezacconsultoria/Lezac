@@ -6,3 +6,5 @@ _backup/
 serve.py
 SEO/
 *.docx
+
+__pycache__/

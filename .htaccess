@@ -1,6 +1,9 @@
 Options -MultiViews
 RewriteEngine On
 
+# Código y borradores del blog: no se sirven al público
+RewriteRule ^(tools|\.github)(/|$) - [R=404,L]
+
 # Force /bio to the main-site page: a bio/ directory exists here as the
 # docroot for the consultor.lezacconsultoria.com subdomain, so the generic
 # rule below (which skips real directories) would never reach bio.html.
