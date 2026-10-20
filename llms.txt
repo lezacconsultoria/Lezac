@@ -15,5 +15,4 @@
 
 ## Blog
 - [Blog de inteligencia comercial](https://lezacconsultoria.com/blog)
-- [Prueba del módulo Blog](https://lezacconsultoria.com/blog/zz-prueba-modulo): Artículo de prueba creado desde la API para comprobar que el blog se publica solo y después se borra.
 - [Dirección comercial inteligente 2026](https://lezacconsultoria.com/blog/direccion-comercial-inteligente-2026): Diez prácticas concretas, con qué implementar en cada una, para pasar de vender por inercia a gestionar con propósito. Un recurso de Lezac Consultoría.
