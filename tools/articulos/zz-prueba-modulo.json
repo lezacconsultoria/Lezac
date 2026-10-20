@@ -1,0 +1,10 @@
+{
+ "slug": "zz-prueba-modulo",
+ "h1": "Prueba del módulo Blog",
+ "description": "Artículo de prueba creado desde la API para comprobar que el blog se publica solo y después se borra.",
+ "date": "2026-10-20",
+ "status": "publicado",
+ "category": "Prueba",
+ "toc": false,
+ "body": "## Primera sección\n\nEste artículo es una **prueba** y se borra enseguida.\n\n- Punto uno\n- Punto dos"
+}
