@@ -25,7 +25,7 @@ def normalize(a):
     a.setdefault('subtitle', '')
     a.setdefault('title', f"{a['h1']} | Lezac")
     a.setdefault('date', datetime.date.today().isoformat())
-    if 'blocks' not in a:
+    if 'blocks' not in a and 'html_file' not in a:
         a['blocks'] = [{'t': 'md', 'text': a.get('body', ''), 'toc': bool(a.get('toc', False))}]
     if 'read_minutes' not in a:
         n = len(re.findall(r'\w+', re.sub(r'<[^>]+>', ' ', json.dumps(a['blocks'], ensure_ascii=False))))
@@ -362,7 +362,13 @@ def generate():
     (ROOT / 'blog').mkdir(exist_ok=True)
     write('blog.html', index_page(arts))
     for a in arts:
-        write(f'blog/{a["slug"]}.html', article_page(a))
+        if a.get('html_file'):
+            # Página propia y funcional (calculadora, guía interactiva): se publica tal cual
+            fuente = (ROOT / a['html_file']).read_text(encoding='utf-8')
+            (ROOT / 'blog' / f'{a["slug"]}.html').write_text(fuente, encoding='utf-8', newline='\n')
+            print('copiado', a['slug'])
+        else:
+            write(f'blog/{a["slug"]}.html', article_page(a))
     vivos = {a['slug'] for a in arts}
     for f in (ROOT / 'blog').glob('*.html'):
         if f.stem not in vivos:

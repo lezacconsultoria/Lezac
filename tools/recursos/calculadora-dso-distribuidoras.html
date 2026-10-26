@@ -1,0 +1,1791 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Lezac Consultoría">
+    <meta name="theme-color" content="#0A0A0B">
+    <title>Calculadora de DSO para Distribuidoras (Simulador) | Lezac</title>
+    <meta name="description" content="Calculá el DSO de tu distribuidora en segundos: fórmula, simulador en vivo y semáforo para saber cuántos días y cuánta plata te cuesta cobrar tarde.">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <link rel="canonical" href="https://lezacconsultoria.com/blog/calculadora-dso-distribuidoras">
+    
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Calculadora de DSO para Distribuidoras (Simulador) | Lezac">
+    <meta property="og:description" content="Calculá el DSO de tu distribuidora en segundos: fórmula, simulador en vivo y semáforo para saber cuántos días y cuánta plata te cuesta cobrar tarde.">
+    <meta property="og:url" content="https://lezacconsultoria.com/blog/calculadora-dso-distribuidoras">
+    <meta property="og:site_name" content="Lezac Consultoría">
+    <meta property="og:locale" content="es_AR">
+    <meta property="og:image" content="https://lezacconsultoria.com/opengrap.jpeg">
+    <meta property="article:published_time" content="2026-10-26T15:00:00-03:00">
+    <meta property="article:modified_time" content="2026-10-26T15:00:00-03:00">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://lezacconsultoria.com/opengrap.jpeg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+
+    <!-- LOGO_URL = https://lezacconsultoria.com/Logo%20Lezac%20%28500%20x%20500%20px%29%20%283%29.png -->
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://lezacconsultoria.com/#organization",
+          "name": "Lezac Consultoría",
+          "url": "https://lezacconsultoria.com/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://lezacconsultoria.com/Logo%20Lezac%20%28500%20x%20500%20px%29%20%283%29.png"
+          },
+          "areaServed": ["AR", "PY", "BO", "UY"],
+          "sameAs": [
+            "https://www.linkedin.com/company/lezac-consultoria",
+            "https://www.instagram.com/lezacconsultoria"
+          ],
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "customer service",
+            "telephone": "+5491154107921",
+            "availableLanguage": "es"
+          }
+        },
+        {
+          "@type": "BlogPosting",
+          "@id": "https://lezacconsultoria.com/blog/calculadora-dso-distribuidoras#article",
+          "headline": "Calculadora de DSO para distribuidoras: cuántos días tardás en cobrar",
+          "description": "Calculá el DSO de tu distribuidora en segundos: fórmula, simulador en vivo y semáforo para saber cuántos días y cuánta plata te cuesta cobrar tarde.",
+          "inLanguage": "es-AR",
+          "datePublished": "2026-10-26T15:00:00-03:00",
+          "dateModified": "2026-10-26T15:00:00-03:00",
+          "author": {
+            "@id": "https://lezacconsultoria.com/#organization"
+          },
+          "publisher": {
+            "@id": "https://lezacconsultoria.com/#organization"
+          },
+          "mainEntityOfPage": "https://lezacconsultoria.com/blog/calculadora-dso-distribuidoras",
+          "image": "https://lezacconsultoria.com/opengrap.jpeg",
+          "about": {
+            "@id": "https://lezacconsultoria.com/consultoria-inteligencia-comercial#service"
+          },
+          "keywords": "calculadora de DSO, cómo calcular el DSO, días de cobranza, gestión de cobros, cuenta corriente vencida, distribuidoras",
+          "mentions": [
+            {
+              "@type": "DefinedTerm",
+              "name": "DSO",
+              "alternateName": ["Days Sales Outstanding", "días de cobranza", "plazo medio de cobro"],
+              "description": "Días promedio que tarda una empresa en cobrar lo que vende a crédito."
+            }
+          ]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Inicio",
+              "item": "https://lezacconsultoria.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Blog",
+              "item": "https://lezacconsultoria.com/blog"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Calculadora de DSO"
+            }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "¿Qué es el DSO en una distribuidora?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "El DSO (Days Sales Outstanding) son los días promedio que tarda tu distribuidora en cobrar lo que vende a crédito. Un DSO de 42 días significa que, en promedio, el dinero de una venta entra a caja 42 días después de facturarla. Es el número que separa la venta que figura en el sistema de la plata que realmente tenés."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿El DSO y los días de cobranza son lo mismo?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sí, en la práctica miden lo mismo: cuántos días tarda una empresa en cobrar lo que vende a crédito. DSO es la sigla en inglés de Days Sales Outstanding; en español se dice días de cobranza o plazo medio de cobro. Se calcula igual: saldo de cuentas por cobrar dividido por las ventas a crédito, multiplicado por los días del período."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Cuál es un buen DSO para una distribuidora?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Un buen DSO es el que se mantiene dentro del 15% del plazo que pactaste con tus clientes. Si cobrás a 30 días, hasta 34 días es un desfase normal. No existe un DSO ideal universal: depende del plazo de tu rubro y de tus condiciones de venta, por eso la calculadora compara contra tu propio plazo."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Cuál es la diferencia entre DSO y plazo de pago pactado?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "El plazo pactado es lo que acordaste con el cliente: por ejemplo, 30 días. El DSO es lo que pasa en la realidad: cuánto tardás en cobrar en promedio. La diferencia entre los dos es la brecha, y esa brecha, multiplicada por tu venta diaria a crédito, es la plata que financiás con capital propio."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Cada cuánto conviene calcular el DSO?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Calculalo todos los meses con el mismo criterio y compará con el promedio de los últimos 90 días. Un mes aislado engaña en negocios con temporada. Si la brecha está en amarillo o rojo, pasá a seguimiento semanal de la cuenta corriente: el DSO mensual avisa tarde y la revisión semanal permite actuar mientras el atraso es chico."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Se puede medir el DSO si el sistema de gestión está desordenado?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sí. Alcanza con dos números: el total vendido a crédito en el período y el saldo de cuentas por cobrar al cierre. Los dos salen de la facturación y de la cuenta corriente, aunque estén en una planilla. Con ese cálculo ya tenés el semáforo; el orden fino por cliente viene después."
+              }
+            }
+          ]
+        },
+        {
+          "@type": "Service",
+          "@id": "https://lezacconsultoria.com/consultoria-inteligencia-comercial#service",
+          "name": "Consultoría de inteligencia comercial (método Brújula Comercial)",
+          "serviceType": "Consultoría de Inteligencia Comercial B2B",
+          "provider": {
+            "@id": "https://lezacconsultoria.com/#organization"
+          },
+          "areaServed": ["AR", "PY", "BO", "UY"],
+          "url": "https://lezacconsultoria.com/consultoria-inteligencia-comercial"
+        },
+        {
+          "@type": "WebApplication",
+          "name": "Calculadora de DSO para distribuidoras",
+          "url": "https://lezacconsultoria.com/blog/calculadora-dso-distribuidoras",
+          "applicationCategory": "BusinessApplication",
+          "operatingSystem": "All",
+          "browserRequirements": "Requires JavaScript",
+          "inLanguage": "es-AR",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "ARS"
+          },
+          "featureList": [
+            "Cálculo del DSO en días",
+            "Brecha contra el plazo de pago pactado",
+            "Plata inmovilizada por la brecha",
+            "Costo mensual y anual de esa plata parada",
+            "Simulador de caja liberada al recuperar días de cobranza",
+            "Semáforo verde, amarillo y rojo"
+          ],
+          "publisher": {
+            "@id": "https://lezacconsultoria.com/#organization"
+          }
+        }
+      ]
+    }
+    </script>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background-color: #FFFFFF;
+            color: #111827;
+            line-height: 1.65;
+            overflow-x: clip; /* Fix for sticky header */
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            .animate-on-scroll { opacity: 1 !important; transform: none !important; transition: none !important; }
+        }
+
+        a { text-decoration: none; color: inherit; }
+        button { font-family: inherit; border: none; cursor: pointer; }
+        img { max-width: 100%; display: block; }
+        ul, ol { list-style: none; }
+        
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: #8C52FF;
+            color: white;
+            padding: 8px;
+            z-index: 2000;
+        }
+        .skip-link:focus { top: 0; }
+
+        .container {
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        @media (min-width: 900px) {
+            .container { padding: 0 24px; }
+        }
+
+        /* Specific responsive text utilities (Mandatory) */
+        .t-xs { display: inline; }
+        .t-sm, .t-md { display: none; }
+        @media (min-width: 600px) {
+            .t-xs { display: none; }
+            .t-sm { display: inline; }
+        }
+        @media (min-width: 900px) {
+            .t-sm { display: none; }
+            .t-md { display: inline; }
+        }
+
+        .t-sm-up { display: none; }
+        @media (min-width: 600px) {
+            .t-sm-up { display: inline; }
+        }
+
+        /* Focus styles */
+        *:focus-visible {
+            outline: 3px solid #8C52FF;
+            outline-offset: 2px;
+        }
+
+        /* --- Header --- */
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background-color: #0A0A0B;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            height: 56px;
+        }
+        @media (min-width: 600px) { .site-header { height: 60px; } }
+        @media (min-width: 900px) { .site-header { height: 64px; } }
+        
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+            gap: 8px;
+        }
+        .header-logo {
+            min-width: 0;
+            flex-shrink: 1;
+        }
+        .header-logo img {
+            height: 22px;
+            width: auto;
+            display: block;
+        }
+        .header-logo-fallback {
+            font-weight: 900;
+            color: #FFFFFF;
+            font-size: 16px;
+        }
+        @media (min-width: 600px) { .header-logo img { height: 28px; } }
+        @media (min-width: 900px) { .header-logo img { height: 34px; } }
+        
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .btn-header {
+            display: flex;
+            align-items: center;
+            height: 40px;
+            font-size: 14px;
+            font-weight: 600;
+            border-radius: 10px;
+            white-space: nowrap;
+        }
+        .btn-wa {
+            background-color: #25F5A4;
+            color: #0A0A0B;
+            padding: 0;
+            width: 40px;
+            justify-content: center;
+        }
+        .btn-agenda {
+            border: 1.5px solid #8C52FF;
+            background-color: transparent;
+            color: #FFFFFF;
+            padding: 0 14px;
+        }
+        @media (min-width: 600px) {
+            .btn-wa {
+                padding: 0 14px;
+                width: auto;
+                gap: 8px;
+            }
+        }
+
+        /* --- Dark Theme Sections --- */
+        .bg-dark {
+            background: linear-gradient(160deg, #0A0A0B 0%, #18181C 100%);
+            color: #FFFFFF;
+            padding: 40px 0;
+        }
+        @media (min-width: 900px) { .bg-dark { padding: 64px 0; } }
+
+        /* --- Hero --- */
+        .breadcrumb {
+            margin-bottom: 24px;
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.8);
+        }
+        .breadcrumb ol { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+        .breadcrumb a:hover { text-decoration: underline; color: #FFFFFF; }
+        .breadcrumb-separator { color: rgba(255, 255, 255, 0.4); }
+        
+        .hero-tag {
+            display: inline-block;
+            background: rgba(140, 82, 255, 0.15);
+            border: 1px solid #8C52FF;
+            color: #FFFFFF;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-radius: 20px;
+            padding: 4px 12px;
+            margin-bottom: 24px;
+        }
+        
+        .hero-title {
+            font-weight: 900;
+            font-size: 1.75rem;
+            line-height: 1.2;
+            margin-bottom: 16px;
+        }
+        @media (min-width: 600px) { .hero-title { font-size: 2.25rem; } }
+        @media (min-width: 1100px) { .hero-title { font-size: 2.6rem; } }
+        
+        .hero-signature {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.6);
+            margin-bottom: 32px;
+        }
+        
+        .hero-excerpt {
+            border-left: 3px solid #8C52FF;
+            padding-left: 16px;
+            font-size: 17px;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 24px;
+        }
+        
+        .hero-text {
+            font-size: 17px;
+            color: rgba(255, 255, 255, 0.8);
+        }
+        .hero-text a {
+            color: #8C52FF;
+            font-weight: 500;
+            text-decoration: underline;
+        }
+
+        /* --- Marquee --- */
+        .brands-section {
+            background-color: #0A0A0B;
+            padding: 28px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+            text-align: center;
+        }
+        .brands-title {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 18px;
+        }
+        @media (min-width: 600px) { .brands-title { font-size: 1.35rem; } }
+        
+        .marquee {
+            overflow: hidden;
+            mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
+            -webkit-mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
+        }
+        .marquee-inner {
+            display: flex;
+            width: max-content;
+            animation: marquee 80s linear infinite;
+        }
+        .marquee:hover .marquee-inner,
+        .marquee:focus-within .marquee-inner {
+            animation-play-state: paused;
+        }
+        @keyframes marquee {
+            from { transform: translateX(0); }
+            to { transform: translateX(-50%); }
+        }
+        .marquee ul { display: flex; align-items: center; }
+        .marquee li {
+            font-weight: 500;
+            font-size: 15px;
+            color: rgba(255, 255, 255, 0.6);
+            letter-spacing: 0.01em;
+            white-space: nowrap;
+            display: flex;
+            align-items: center;
+        }
+        @media (min-width: 600px) { .marquee li { font-size: 16px; } }
+        .marquee li::after {
+            content: '';
+            display: block;
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background-color: rgba(140, 82, 255, 0.7);
+            margin: 0 28px;
+        }
+        .marquee li:last-child::after { display: none; }
+        .marquee ul:first-child li:last-child::after { display: block; }
+
+        @media (prefers-reduced-motion: reduce) {
+            .marquee { mask-image: none; -webkit-mask-image: none; }
+            .marquee-inner { animation: none; width: 100%; justify-content: center; flex-wrap: wrap; }
+            .marquee ul:last-child { display: none; }
+            .marquee ul:first-child { flex-wrap: wrap; justify-content: center; gap: 10px 24px; }
+            .marquee li::after { display: none !important; }
+        }
+
+        /* --- Calculator Section --- */
+        .calc-h2 {
+            font-weight: 900;
+            font-size: 1.4rem;
+            margin-bottom: 8px;
+        }
+        @media (min-width: 600px) { .calc-h2 { font-size: 1.6rem; } }
+        @media (min-width: 1100px) { .calc-h2 { font-size: 1.8rem; } }
+        
+        .calc-aux {
+            font-size: 15px;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 32px;
+        }
+
+        .calc-layout {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr);
+            gap: 32px;
+        }
+        @media (min-width: 900px) {
+            .calc-layout {
+                grid-template-columns: minmax(0, 9fr) minmax(0, 11fr);
+                align-items: start;
+            }
+        }
+
+        .calc-form {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 24px;
+        }
+        
+        .form-group { margin-bottom: 20px; }
+        .form-label {
+            display: block;
+            font-weight: 600;
+            font-size: 15px;
+            margin-bottom: 4px;
+        }
+        .form-help {
+            display: block;
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.5);
+            margin-bottom: 8px;
+        }
+        .input-wrapper { position: relative; }
+        .input-symbol {
+            position: absolute;
+            left: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: rgba(255, 255, 255, 0.5);
+            font-weight: 500;
+            pointer-events: none;
+        }
+        .form-control {
+            width: 100%;
+            height: 48px;
+            background: rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            color: #FFFFFF;
+            font-size: 16px;
+            font-family: inherit;
+            padding: 0 14px;
+            transition: border-color 0.2s;
+        }
+        .form-control:focus {
+            border-color: #8C52FF;
+            outline: none;
+        }
+        .form-control.has-symbol { padding-left: 36px; }
+        .form-control[aria-invalid="true"] { border-color: #EC0543; }
+        .form-error {
+            display: none;
+            color: #EC0543;
+            font-size: 13px;
+            margin-top: 6px;
+            font-weight: 500;
+        }
+        .form-control[aria-invalid="true"] ~ .form-error { display: block; }
+        
+        select.form-control { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='white'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; background-size: 16px; }
+        
+        .btn-calc {
+            width: 100%;
+            height: 48px;
+            background-color: #25F5A4;
+            color: #0A0A0B;
+            font-weight: 600;
+            font-size: 16px;
+            border-radius: 8px;
+            margin-top: 8px;
+        }
+
+        /* --- Results Panel --- */
+        .calc-results {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .res-header {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+        .res-dso-number {
+            font-weight: 900;
+            font-size: 2.25rem;
+            line-height: 1;
+        }
+        @media (min-width: 600px) { .res-dso-number { font-size: 2.75rem; } }
+        @media (min-width: 1100px) { .res-dso-number { font-size: 3rem; } }
+        
+        .res-chip {
+            padding: 4px 12px;
+            border-radius: 16px;
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border: 1px solid currentColor;
+        }
+        .chip-yellow { background-color: rgba(255, 194, 51, 0.1); color: #FFC233; border-color: #FFC233; }
+        .chip-green { background-color: rgba(37, 245, 164, 0.1); color: #25F5A4; border-color: #25F5A4; }
+        .chip-red { background-color: rgba(236, 5, 67, 0.1); color: #EC0543; border-color: #EC0543; }
+
+        .res-bars { display: flex; flex-direction: column; gap: 12px; }
+        .res-bar-row { display: flex; flex-direction: column; gap: 4px; }
+        .res-bar-label { font-size: 13px; font-weight: 600; }
+        .res-bar-track {
+            height: 12px;
+            background-color: #333;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+        .res-bar-fill {
+            height: 100%;
+            border-radius: 6px;
+            transition: width 0.3s ease, background-color 0.3s;
+        }
+        .fill-violet { background-color: #8C52FF; }
+        .fill-yellow { background-color: #FFC233; }
+        .fill-green { background-color: #25F5A4; }
+        .fill-red { background-color: #EC0543; }
+
+        .res-cards {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr);
+            gap: 16px;
+        }
+        @media (min-width: 600px) {
+            .res-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+            .card-full { grid-column: span 2; }
+        }
+        
+        .res-card {
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            padding: 16px;
+            transition: border-color 0.2s;
+            overflow-wrap: anywhere;
+        }
+        .res-card:hover { border-color: #8C52FF; }
+        .res-card-title { font-size: 13px; color: rgba(255, 255, 255, 0.6); margin-bottom: 4px; font-weight: 500; }
+        .res-card-value { font-size: 16px; font-weight: 600; color: #FFFFFF; }
+
+        .res-message {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 12px;
+            padding: 20px;
+            font-size: 15px;
+            color: rgba(255, 255, 255, 0.85);
+            border-left: 4px solid currentColor;
+        }
+        .msg-yellow { border-color: #FFC233; }
+        .msg-green { border-color: #25F5A4; }
+        .msg-red { border-color: #EC0543; }
+        .res-message p.msg-title { font-weight: 700; color: #FFFFFF; margin-bottom: 8px; font-size: 16px; }
+        .res-message a { color: #8C52FF; text-decoration: underline; }
+
+        .res-simulator {
+            background: rgba(140, 82, 255, 0.1);
+            border: 1px dashed #8C52FF;
+            border-radius: 12px;
+            padding: 20px;
+        }
+        .sim-title { font-weight: 600; font-size: 15px; margin-bottom: 16px; }
+        .sim-slider {
+            width: 100%;
+            margin-bottom: 16px;
+            accent-color: #8C52FF;
+        }
+        .sim-result { font-size: 14.5px; color: rgba(255, 255, 255, 0.9); }
+
+        .btn-panel-wa {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background-color: #25F5A4;
+            color: #0A0A0B;
+            height: 48px;
+            padding: 0 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 15px;
+            width: 100%;
+        }
+        @media (min-width: 600px) { .btn-panel-wa { width: max-content; } }
+        
+        .res-note { font-size: 13px; color: rgba(255, 255, 255, 0.5); }
+        .res-share {
+            display: inline-block;
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: underline;
+        }
+        .res-share:hover { color: #FFFFFF; }
+
+        /* --- White Content --- */
+        .content-section {
+            padding: 40px 0;
+            background-color: #FFFFFF;
+        }
+        @media (min-width: 900px) { .content-section { padding: 64px 0; } }
+
+        .content-layout {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr);
+            gap: 24px;
+        }
+        
+        .toc-wrapper { grid-column: 1; grid-row: 1; }
+        .article-body { grid-column: 1; grid-row: 2; }
+
+        @media (min-width: 1100px) {
+            .content-layout {
+                grid-template-columns: minmax(0, 1fr) 300px;
+                gap: 56px;
+                align-items: start;
+            }
+            .article-body { grid-column: 1; grid-row: 1; }
+            .toc-wrapper { grid-column: 2; grid-row: 1; position: sticky; top: 84px; }
+        }
+
+        .toc {
+            background: #F9FAFB;
+            border: 1px solid #E5E7EB;
+            border-radius: 12px;
+            padding: 20px;
+        }
+        .toc summary {
+            font-weight: 600;
+            font-size: 16px;
+            cursor: pointer;
+            outline: none;
+            color: #111827;
+        }
+        .toc summary::marker { color: #8C52FF; }
+        .toc ol {
+            margin-top: 16px;
+            list-style: none !important;
+            padding: 0 !important;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .toc a {
+            display: block;
+            font-size: 15px;
+            color: #374151;
+            padding-left: 12px;
+            border-left: 2px solid transparent;
+            transition: color 0.2s, border-color 0.2s;
+        }
+        .toc a:hover { color: #7B2FBE; }
+        .toc a[aria-current="true"] {
+            color: #7B2FBE;
+            font-weight: 600;
+            border-left-color: #7B2FBE;
+        }
+
+        .article-body p, .article-body ul, .article-body ol {
+            color: #374151;
+            font-size: 17px;
+            line-height: 1.7;
+            margin-bottom: 1.25rem;
+        }
+        
+        /* Restoration of list styles */
+        .article-body ol { list-style: decimal; padding-left: 1.5em; }
+        .article-body ul { list-style: disc; padding-left: 1.5em; }
+        .article-body li { margin-bottom: 0.5rem; padding-left: 0.25rem; }
+        .article-body ol li::marker { color: #7B2FBE; font-weight: 600; }
+        .article-body ul li::marker { color: #7B2FBE; }
+
+        .article-body h2 {
+            font-family: 'Inter', sans-serif;
+            font-weight: 900;
+            color: #111827;
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            font-size: 1.4rem;
+            position: relative;
+        }
+        .article-body h2:first-child { margin-top: 0; }
+        @media (min-width: 600px) { .article-body h2 { font-size: 1.6rem; } }
+        @media (min-width: 1100px) { .article-body h2 { font-size: 1.8rem; } }
+        .article-body h2::after {
+            content: '';
+            display: block;
+            width: 40px;
+            height: 3px;
+            background-color: #8C52FF;
+            margin-top: 12px;
+        }
+        
+        .article-body a { color: #7B2FBE; text-decoration: underline; font-weight: 500; }
+        
+        .table-container {
+            overflow-x: auto;
+            margin: 2rem 0;
+            border-radius: 12px;
+            border: 1px solid #E5E7EB;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            min-width: 600px;
+        }
+        caption {
+            caption-side: top;
+            padding: 12px;
+            font-weight: 600;
+            color: #374151;
+            background: #F9FAFB;
+            border-bottom: 1px solid #E5E7EB;
+        }
+        th, td {
+            padding: 16px;
+            border-bottom: 1px solid #E5E7EB;
+            font-size: 15px;
+            vertical-align: top;
+        }
+        th { background: #F9FAFB; font-weight: 600; color: #111827; }
+        
+        .aside-case {
+            background-color: #F6F3FF;
+            border-left: 4px solid #8C52FF;
+            padding: 24px;
+            border-radius: 0 12px 12px 0;
+            margin: 2rem 0;
+            color: #111827;
+        }
+        .aside-tag {
+            font-size: 13px;
+            font-weight: 700;
+            color: #7B2FBE;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 12px;
+            display: block;
+        }
+        .aside-case p { margin-bottom: 0; color: #111827; }
+
+        .cards-steps {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr);
+            gap: 24px;
+            margin-top: 2rem;
+        }
+        @media (min-width: 900px) { .cards-steps { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+        .step-card {
+            background: #FFFFFF;
+            border: 1px solid #E5E7EB;
+            border-radius: 12px;
+            padding: 24px;
+            transition: border-color 0.2s;
+        }
+        .step-card:hover { border-color: #8C52FF; }
+        .step-num {
+            width: 32px; height: 32px;
+            background: #8C52FF;
+            color: #FFFFFF;
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-weight: 700; font-size: 14px;
+            margin-bottom: 16px;
+        }
+        .step-card h3 { font-weight: 700; font-size: 17px; margin-bottom: 8px; color: #111827; }
+        .step-card p { font-size: 15px; margin-bottom: 0; }
+
+        .testimonials {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr);
+            gap: 24px;
+            margin-top: 2rem;
+        }
+        @media (min-width: 600px) { .testimonials { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+        .testimonial-card {
+            background: #F9FAFB;
+            border: 1px solid #E5E7EB;
+            border-radius: 12px;
+            padding: 24px;
+        }
+        .testimonial-card blockquote { margin: 0; padding: 0; }
+        .quote-icon {
+            font-size: 48px;
+            line-height: 28px;
+            height: 28px;
+            color: #8C52FF;
+            font-family: serif;
+            margin-bottom: 8px;
+            display: block;
+        }
+        .testimonial-card p { font-size: 16px; font-style: italic; color: #374151; margin-bottom: 16px; }
+        .testimonial-card figcaption { font-weight: 600; font-size: 15px; color: #111827; }
+
+        .faq-item h3 {
+            font-weight: 700;
+            font-size: 18px;
+            color: #111827;
+            margin-top: 2rem;
+            margin-bottom: 0.75rem;
+        }
+
+        /* --- Closure --- */
+        .closure-section {
+            text-align: center;
+            padding: 64px 20px;
+        }
+        .closure-inner {
+            max-width: 720px;
+            margin: 0 auto;
+        }
+        .closure-h2 {
+            font-weight: 900;
+            font-size: 1.8rem;
+            margin-bottom: 16px;
+        }
+        .closure-text {
+            font-size: 17px;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 32px;
+        }
+        .closure-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+        @media (min-width: 700px) {
+            .closure-buttons {
+                flex-direction: row;
+                justify-content: center;
+            }
+        }
+        .btn-closure {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            height: 48px;
+            padding: 0 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 16px;
+            white-space: nowrap;
+        }
+        .btn-closure.wa { background-color: #25F5A4; color: #0A0A0B; gap: 8px; }
+        .btn-closure.agenda { border: 1.5px solid #8C52FF; background: transparent; color: #FFFFFF; }
+        .closure-meta { font-size: 13px; color: rgba(255, 255, 255, 0.5); }
+
+        /* --- Footer --- */
+        .site-footer {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 56px 0 0;
+            background-color: #0A0A0B;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr);
+            gap: 32px;
+            align-items: start;
+        }
+        @media (min-width: 900px) {
+            .footer-grid {
+                grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr) minmax(0, 1fr);
+                gap: 48px;
+            }
+        }
+        .footer-logo img { height: 30px; margin-bottom: 16px; }
+        .footer-desc {
+            font-size: 15px;
+            color: rgba(255, 255, 255, 0.7);
+            max-width: 360px;
+        }
+        .footer-title {
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: rgba(255, 255, 255, 0.5);
+            margin-bottom: 16px;
+        }
+        .footer-links { display: flex; flex-direction: column; gap: 10px; }
+        .footer-links a, .footer-contact-text { font-size: 15px; color: rgba(255, 255, 255, 0.75); }
+        .footer-contact-text { margin-bottom: 10px; display: block; }
+        .footer-links a:hover { color: #FFFFFF; }
+        .footer-wa-link { display: inline-flex; align-items: center; gap: 8px; }
+        
+        .footer-bottom {
+            margin-top: 40px;
+            padding: 20px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+        }
+        @media (min-width: 600px) {
+            .footer-bottom {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+        }
+        .footer-copy, .footer-social a { font-size: 13px; color: rgba(255, 255, 255, 0.5); }
+        .footer-social { display: flex; gap: 16px; }
+        .footer-social a:hover { color: #FFFFFF; }
+    </style>
+    <link rel="icon" type="image/png" href="/logo-lezac-mini.png">
+    <script src="/analytics.js"></script>
+</head>
+<body>
+
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="https://lezacconsultoria.com/" class="header-logo" aria-label="Ir a Inicio de Lezac Consultoría">
+                <img src="https://lezacconsultoria.com/Logo%20Lezac%20%28500%20x%20500%20px%29%20%283%29.png" alt="Lezac Consultoría" height="34" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <span class="header-logo-fallback" style="display:none;">Lezac Consultoría</span>
+            </a>
+            <div class="header-actions">
+                <a href="https://wa.me/5491154107921?text=Hola%2C%20vi%20la%20calculadora%20de%20DSO%20en%20el%20blog%20de%20Lezac%20y%20quiero%20agendar%20la%20asesor%C3%ADa%20comercial%20gratuita." target="_blank" rel="noopener" class="btn-header btn-wa" aria-label="Escribir por WhatsApp">
+                    <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.82 9.82 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+                    <span class="t-sm-up">Escribinos</span>
+                </a>
+                <a href="https://calendly.com/lezacconsultoria/consultoria-comercial?utm_source=blog&utm_medium=header&utm_campaign=blog-dso" target="_blank" rel="noopener" class="btn-header btn-agenda" aria-label="Agendar asesoría gratuita">
+                    <span class="t-xs">Agendar</span>
+                    <span class="t-sm">Agendar asesoría</span>
+                    <span class="t-md">Agendar asesoría gratuita</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <article>
+            
+            <section class="bg-dark">
+                <div class="container">
+                    <nav aria-label="Breadcrumb" class="breadcrumb">
+                        <ol>
+                            <li><a href="https://lezacconsultoria.com/">Inicio</a></li>
+                            <li class="breadcrumb-separator" aria-hidden="true">›</li>
+                            <li><a href="https://lezacconsultoria.com/blog">Blog</a></li>
+                            <li class="breadcrumb-separator" aria-hidden="true">›</li>
+                            <li aria-current="page">Calculadora de DSO</li>
+                        </ol>
+                    </nav>
+
+                    <span class="hero-tag">Herramienta gratuita · Sin registro</span>
+                    <h1 class="hero-title">Calculadora de DSO para distribuidoras: cuántos días tardás en cobrar</h1>
+                    <p class="hero-signature">Equipo de Lezac Consultoría · Actualizado el 26 de octubre de 2026 · 10+ años y 100+ empresas asesoradas</p>
+                    
+                    <div class="hero-excerpt">
+                        <p>El DSO (días de cobranza) es la cantidad de días que tarda una distribuidora en cobrar lo que vende a crédito. Se calcula dividiendo el saldo de cuentas por cobrar por las ventas a crédito del período y multiplicando por los días del período. El número que decide es la brecha contra el plazo pactado con tus clientes.</p>
+                    </div>
+                    
+                    <p class="hero-text">El DSO es uno de los indicadores que se trabajan en una <a href="https://lezacconsultoria.com/consultoria-inteligencia-comercial">consultoría de inteligencia comercial</a> para distribuidoras: se calcula sobre los datos de tu propia empresa, no sobre promedios del mercado. Probá primero con tus números.</p>
+                </div>
+            </section>
+
+            <section class="brands-section" aria-label="Empresas que confían en Lezac">
+                <p class="brands-title">Empresas que confían en Lezac</p>
+                <div class="marquee">
+                    <!-- Reemplazar cada nombre por <img src="URL del logo" alt="Logo de [empresa]" height="28"> cuando estén las URLs -->
+                    <div class="marquee-inner">
+                        <ul>
+                            <li>Bacardi</li>
+                            <li>Vitalcan</li>
+                            <li>Weilen</li>
+                            <li>Proquim</li>
+                            <li>Madersa</li>
+                            <li>Vaca Fría</li>
+                            <li>Distribuidora Gloria</li>
+                            <li>Alco</li>
+                            <li>Indega</li>
+                            <li>Pluscar</li>
+                            <li>McCain</li>
+                        </ul>
+                        <ul aria-hidden="true">
+                            <li>Bacardi</li>
+                            <li>Vitalcan</li>
+                            <li>Weilen</li>
+                            <li>Proquim</li>
+                            <li>Madersa</li>
+                            <li>Vaca Fría</li>
+                            <li>Distribuidora Gloria</li>
+                            <li>Alco</li>
+                            <li>Indega</li>
+                            <li>Pluscar</li>
+                            <li>McCain</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="bg-dark" id="calcular-dso">
+                <div class="container">
+                    <h2 class="calc-h2">Calculá el DSO de tu distribuidora</h2>
+                    <p class="calc-aux">Los valores cargados son un ejemplo ilustrativo de una distribuidora con cuatro vendedores. Reemplazalos por los tuyos.</p>
+                    
+                    <div class="calc-layout">
+                        
+                        <div class="calc-form">
+                            <div class="form-group">
+                                <label for="moneda" class="form-label">Moneda</label>
+                                <select id="moneda" class="form-control">
+                                    <option value="$">$ Pesos argentinos</option>
+                                    <option value="US$">US$ Dólares</option>
+                                    <option value="Gs.">Gs. Guaraníes</option>
+                                    <option value="Bs">Bs Bolivianos</option>
+                                    <option value="$U">$U Pesos uruguayos</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="ventas" class="form-label">Ventas a crédito del período</label>
+                                <span id="help-ventas" class="form-help">Solo lo facturado a cuenta corriente. No incluyas lo cobrado al contado.</span>
+                                <div class="input-wrapper">
+                                    <span class="input-symbol">$</span>
+                                    <input type="text" id="ventas" class="form-control has-symbol" inputmode="numeric" value="45.000.000" aria-describedby="help-ventas">
+                                </div>
+                                <div class="form-error" role="alert" id="error-ventas">Ingresá un valor mayor a cero.</div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="saldo" class="form-label">Saldo de cuentas por cobrar al cierre</label>
+                                <span id="help-saldo" class="form-help">Todo lo que tus clientes te deben a la fecha de cierre, vencido y no vencido.</span>
+                                <div class="input-wrapper">
+                                    <span class="input-symbol">$</span>
+                                    <input type="text" id="saldo" class="form-control has-symbol" inputmode="numeric" value="63.000.000" aria-describedby="help-saldo">
+                                </div>
+                                <div class="form-error" role="alert" id="error-saldo">Ingresá un valor válido (0 o mayor).</div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="dias-select" class="form-label">Días del período</label>
+                                <select id="dias-select" class="form-control">
+                                    <option value="30">30</option>
+                                    <option value="60">60</option>
+                                    <option value="90">90</option>
+                                    <option value="otro">Otro</option>
+                                </select>
+                                <input type="number" id="dias-custom" class="form-control" min="1" max="365" style="display:none; margin-top:12px;" placeholder="Ingresá los días (ej. 45)">
+                                <div class="form-error" role="alert" id="error-dias">Ingresá un valor entre 1 y 365.</div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="plazo" class="form-label">Plazo de pago pactado promedio, en días</label>
+                                <span id="help-plazo" class="form-help">Los días que en promedio les das a tus clientes para pagar. Mínimo 1.</span>
+                                <input type="number" id="plazo" class="form-control" min="1" step="1" value="30" aria-describedby="help-plazo">
+                                <div class="form-error" role="alert" id="error-plazo">El plazo pactado debe ser de 1 día o más.</div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="costo" class="form-label">Lo que te cuesta tener esa plata parada, por mes, en %</label>
+                                <span id="help-costo" class="form-help">La tasa a la que te financiás o el rendimiento al que renunciás. Poné 0 si no querés ver este dato.</span>
+                                <input type="number" id="costo" class="form-control" min="0" step="0.1" value="4" aria-describedby="help-costo">
+                                <div class="form-error" role="alert" id="error-costo">El costo no puede ser negativo.</div>
+                            </div>
+
+                            <button type="button" id="btn-calcular" class="btn-calc">Calcular</button>
+                        </div>
+
+                        
+                        <div class="calc-results" id="panel-resultados">
+                            <p class="sr-only" aria-live="polite" id="res-resumen">DSO de 42 días, semáforo Amarillo</p>
+                            
+                            <div class="res-header">
+                                <span class="res-dso-number" id="out-dso">DSO: 42 días</span>
+                                <span class="res-chip chip-yellow" id="out-chip">Amarillo</span>
+                            </div>
+
+                            <div class="res-bars" aria-hidden="true">
+                                <div class="res-bar-row">
+                                    <span class="res-bar-label" id="bar-lbl-plazo" style="color:#8C52FF;">Plazo pactado: 30 días</span>
+                                    <div class="res-bar-track"><div class="res-bar-fill fill-violet" id="bar-fill-plazo" style="width: 71.4%;"></div></div>
+                                </div>
+                                <div class="res-bar-row">
+                                    <span class="res-bar-label" id="bar-lbl-dso" style="color:#FFC233;">Tu DSO: 42 días</span>
+                                    <div class="res-bar-track"><div class="res-bar-fill fill-yellow" id="bar-fill-dso" style="width: 100%;"></div></div>
+                                </div>
+                            </div>
+
+                            <div class="res-cards">
+                                <div class="res-card">
+                                    <p class="res-card-title">Brecha contra lo pactado</p>
+                                    <p class="res-card-value" id="out-brecha">+12 días · 40% del plazo</p>
+                                </div>
+                                <div class="res-card">
+                                    <p class="res-card-title">Venta diaria a crédito</p>
+                                    <p class="res-card-value" id="out-diaria">$1.500.000</p>
+                                </div>
+                                <div class="res-card card-full">
+                                    <p class="res-card-title">Plata inmovilizada por la brecha</p>
+                                    <p class="res-card-value" id="out-inmovilizada">$18.000.000 · equivale a 12 días de venta a crédito</p>
+                                </div>
+                                <div class="res-card card-full cost-card">
+                                    <p class="res-card-title">Costo mensual de esa plata parada</p>
+                                    <p class="res-card-value" id="out-costo-mensual">$720.000</p>
+                                </div>
+                                <div class="res-card card-full cost-card">
+                                    <p class="res-card-title">Costo en un año si la brecha se mantiene</p>
+                                    <p class="res-card-value" id="out-costo-anual">$8.640.000</p>
+                                </div>
+                            </div>
+
+                            <div class="res-message msg-yellow" id="out-message">
+                                <p class="msg-title" id="msg-t">Estás cobrando más tarde de lo pactado.</p>
+                                <p id="msg-p">Tu DSO está 12 días por encima del plazo pactado (40% del plazo). Son $18.000.000 vendidos que todavía no entraron a caja, con un costo de $720.000 por mes. Es el momento de ver qué clientes concentran el atraso, antes de que se vuelva costumbre. Es el tipo de análisis que se trabaja con el <a href="https://lezacconsultoria.com/consultoria-inteligencia-comercial">método Brújula Comercial</a>.</p>
+                            </div>
+
+                            <div class="res-simulator" id="simulador-box">
+                                <p class="sim-title">Simulá: ¿cuántos días de cobranza podrías recuperar?</p>
+                                <label for="sim-dias" class="sr-only">Días a recuperar</label>
+                                <input type="range" id="sim-dias" class="sim-slider" min="0" max="12" step="1" value="5">
+                                <p class="sim-result" aria-live="polite" id="sim-result-text">Si recuperaras 5 días, liberarías $7.500.000 de caja y tu DSO bajaría a 37 días. Además, el costo de esa plata parada bajaría $300.000 por mes.</p>
+                            </div>
+
+                            <a href="https://wa.me/5491154107921?text=Hola%2C%20us%C3%A9%20la%20calculadora%20de%20DSO%20de%20Lezac.%20Me%20dio%20un%20DSO%20de%2042%20d%C3%ADas%20contra%2030%20pactados%20(Amarillo).%20Quiero%20revisar%20mi%20caso." target="_blank" rel="noopener" class="btn-panel-wa" id="btn-panel-wa">
+                                <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.82 9.82 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+                                Revisar mi caso por WhatsApp
+                            </a>
+                            <p class="res-note">Cálculo orientativo con los datos que cargás. No reemplaza el análisis de tu cuenta corriente por cliente.</p>
+                            <div>
+                                <a href="https://wa.me/?text=Calculadora%20de%20DSO%20para%20distribuidoras%3A%20https%3A%2F%2Flezacconsultoria.com%2Fblog%2Fcalculadora-dso-distribuidoras" target="_blank" rel="noopener" class="res-share">Compartir esta calculadora por WhatsApp</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <div class="container content-layout">
+                    
+                    <div class="toc-wrapper">
+                        <details class="toc" id="toc-details">
+                            <summary>En esta página</summary>
+                            <ol>
+                                <li><a href="#calcular-dso">Calculadora</a></li>
+                                <li><a href="#como-calcular-dso">Cómo se calcula el DSO</a></li>
+                                <li><a href="#leer-resultado">Cómo leer el resultado</a></li>
+                                <li><a href="#errores-dso">Errores frecuentes</a></li>
+                                <li><a href="#reducir-dias-cobranza">Reducir los días de cobranza</a></li>
+                                <li><a href="#asesoria-gratuita">La asesoría gratuita</a></li>
+                                <li><a href="#clientes">Lo que dicen los clientes</a></li>
+                                <li><a href="#preguntas-frecuentes">Preguntas frecuentes</a></li>
+                            </ol>
+                        </details>
+                    </div>
+
+                    <div class="article-body">
+                        
+                        <h2 id="como-calcular-dso" class="animate-on-scroll" style="opacity:0; transform:translateY(12px); transition: opacity 0.6s, transform 0.6s;">¿Cómo se calcula el DSO en una distribuidora?</h2>
+                        <p class="animate-on-scroll" style="opacity:0; transform:translateY(12px); transition: opacity 0.6s, transform 0.6s; transition-delay: 0.1s;">DSO = (saldo de cuentas por cobrar ÷ ventas a crédito del período) × días del período. Con $63.000.000 de saldo y $45.000.000 de ventas a crédito en 30 días, el DSO es de 42 días. Si pactaste cobrar a 30, la brecha es de 12 días: son $18.000.000 de ventas hechas que todavía no entraron a caja.</p>
+                        
+                        <ol class="animate-on-scroll" style="opacity:0; transform:translateY(12px); transition: opacity 0.6s, transform 0.6s; transition-delay: 0.2s;">
+                            <li>Sumá las ventas a crédito del período, sin contar lo cobrado al contado. Ejemplo: $45.000.000 en 30 días.</li>
+                            <li>Tomá el saldo total de cuentas por cobrar a la fecha de cierre, vencido y no vencido. Ejemplo: $63.000.000.</li>
+                            <li>Dividí el saldo por las ventas: 63.000.000 ÷ 45.000.000 = 1,4.</li>
+                            <li>Multiplicá por los días del período: 1,4 × 30 = 42 días de DSO.</li>
+                            <li>Restá el plazo pactado: 42 − 30 = 12 días de brecha.</li>
+                            <li>Multiplicá la brecha por la venta diaria a crédito ($1.500.000): 12 × $1.500.000 = $18.000.000 inmovilizados.</li>
+                        </ol>
+                        
+                        <p class="animate-on-scroll" style="opacity:0; transform:translateY(12px); transition: opacity 0.6s, transform 0.6s; transition-delay: 0.1s;">Las ventas y el saldo tienen que tener el mismo tratamiento de IVA. Si uno lo incluye y el otro no, el resultado sale distorsionado.</p>
+
+                        <h2 id="leer-resultado" class="animate-on-scroll" style="opacity:0; transform:translateY(12px); transition: opacity 0.6s, transform 0.6s;">¿Qué te dice el resultado? Tabla de lectura del semáforo</h2>
+                        <p class="animate-on-scroll" style="opacity:0; transform:translateY(12px); transition: opacity 0.6s, transform 0.6s; transition-delay: 0.1s;">El resultado se lee contra tu propio plazo pactado, no contra un promedio del mercado. Hasta un 15% de brecha es desfase normal por fechas de facturación y feriados. Entre 15% y 50% hay atraso que se corrige con gestión semanal. Arriba de 50%, estás financiando a tus clientes con capital propio.</p>
+                        
+                        <div class="table-container animate-on-scroll" style="opacity:0; transform:translateY(12px); transition: opacity 0.6s, transform 0.6s; transition-delay: 0.2s;" tabindex="0" aria-label="Tabla de lectura del semáforo de DSO">
+                            <table>
+                                <caption>Lectura del DSO según la brecha contra el plazo pactado</caption>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Semáforo</th>
+                                        <th scope="col">Brecha contra el plazo pactado</th>
+                                        <th scope="col">Ejemplo con plazo de 30 días</th>
+                                        <th scope="col">Qué significa</th>
+                                        <th scope="col">Qué decisión tomar</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row"><span class="res-chip chip-green">Verde</span></th>
+                                        <td>Hasta 15%</td>
+                                        <td>Hasta 4,5 días (DSO hasta 34,5)</td>
+                                        <td>Desfase normal por fechas de facturación y días no hábiles.</td>
+                                        <td>Mantener y medir todos los meses con el mismo criterio.</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"><span class="res-chip chip-yellow">Amarillo</span></th>
+                                        <td>Más de 15% y hasta 50%</td>
+                                        <td>De 4,5 a 15 días (DSO de 34,5 a 45)</td>
+                                        <td>Se perdió medio plazo de cobranza.</td>
+                                        <td>Ver qué clientes concentran el atraso y definir quién los llama cada semana.</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"><span class="res-chip chip-red">Rojo</span></th>
+                                        <td>Más de 50%</td>
+                                        <td>Más de 15 días (DSO arriba de 45)</td>
+                                        <td>Financiás a tus clientes con capital propio.</td>
+                                        <td>Poner límite de crédito a las cuentas más atrasadas y pasar a seguimiento semanal.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <p class="animate-on-scroll" style="opacity:0; transform:translateY(12px); transition: opacity 0.6s, transform 0.6s; transition-delay: 0.1s;">Esta cuenta se hace en diez minutos para un mes. Lo que no se sostiene en una planilla es seguir cada semana la cuenta corriente de toda la base de clientes, por vendedor, zona y antigüedad de la deuda. Ese análisis se resuelve mejor <a href="https://lezacconsultoria.com/consultoria-inteligencia-comercial">trabajando tus datos de venta uno a uno</a> con un consultor: Lezac no gestiona cobranzas, te da el criterio para decidir a tiempo.</p>
+
+                        <h2 id="errores-dso" class="animate-on-scroll" style="opacity:0; transform:translateY(12px); transition: opacity 0.6s, transform 0.6s;">¿Qué errores distorsionan el cálculo del DSO?</h2>
+                        <p class="animate-on-scroll" style="opacity:0; transform:translateY(12px); transition: opacity 0.6s, transform 0.6s; transition-delay: 0.1s;">Tres errores falsean el DSO: comparar ventas sin IVA contra un saldo con IVA, medir un solo mes en un negocio con temporada fuerte, y mirar el saldo total sin separar lo vencido. Cualquiera de los tres distorsiona el resultado y altera el semáforo sin que cambie tu cobranza real.</p>
+                        
+                        <ul class="animate-on-scroll" style="opacity:0; transform:translateY(12px); transition: opacity 0.6s, transform 0.6s; transition-delay: 0.2s;">
+                            <li><strong>Mezclar criterios de IVA.</strong> Si las ventas están sin IVA y el saldo con IVA, el DSO sale inflado. Usá el mismo criterio en los dos números.</li>
+                            <li><strong>Medir un solo mes.</strong> En una distribuidora con picos de venta, un mes alto achica el DSO y uno flojo lo agranda. Compará con el promedio de los últimos 90 días.</li>
+                            <li><strong>No separar lo vencido.</strong> El saldo incluye lo que todavía no venció. El DSO te dice cuánto tardás en cobrar en promedio; para saber cuánto está realmente atrasado y de quién, hay que abrir la cuenta corriente por cliente y por antigüedad.</li>
+                        </ul>
+
+                        <h2 id="reducir-dias-cobranza" class="animate-on-scroll" style="opacity:0; transform:translateY(12px); transition: opacity 0.6s, transform 0.6s;">¿Cómo reducir los días de cobranza en una distribuidora sin pelearte con los clientes?</h2>
+                        <p class="animate-on-scroll" style="opacity:0; transform:translateY(12px); transition: opacity 0.6s, transform 0.6s; transition-delay: 0.1s;">Los días de cobranza bajan cuando la gestión de cobros de la cuenta corriente es semanal y tiene un responsable por cliente, no cuando se aprieta a todos por igual. Primero se identifican las pocas cuentas que concentran el atraso; después se define quién las llama, con qué argumento y qué límite de crédito se les aplica.</p>
+                        
+                        <ol class="animate-on-scroll" style="opacity:0; transform:translateY(12px); transition: opacity 0.6s, transform 0.6s; transition-delay: 0.2s;">
+                            <li>Abrí la cuenta corriente vencida por cliente y por antigüedad: de 0 a 30 días, de 31 a 60 y de más de 60.</li>
+                            <li>Identificá las cuentas que concentran el atraso. En las distribuidoras que asesoramos, el atraso suele estar en pocos clientes y no en toda la base.</li>
+                            <li>Asigná un responsable por cuenta. Por lo general hay vendedores que priorizan cerrar el pedido antes que hablar de la deuda; separar la gestión de cobranza de la venta evita ese conflicto.</li>
+                            <li>Definí una regla de crédito: la cuenta con más de 30 días vencidos no carga un pedido nuevo sin un pago parcial.</li>
+                            <li>Volvé a medir cada semana, no cada mes. Ese ritmo es el que mueve el DSO.</li>
+                        </ol>
+
+                        <p class="animate-on-scroll" style="opacity:0; transform:translateY(12px); transition: opacity 0.6s, transform 0.6s; transition-delay: 0.1s;">Si querés profundizar en cómo ordenar toda el área comercial, mirá las <a href="https://lezacconsultoria.com/blog/direccion-comercial-inteligente-2026">diez prácticas de dirección comercial</a> que publicamos en el blog.</p>
+                        <p class="animate-on-scroll" style="opacity:0; transform:translateY(12px); transition: opacity 0.6s, transform 0.6s; transition-delay: 0.1s;">Lo que depende de tu equipo es la llamada y la decisión de frenar crédito. Lo que se ordena con un consultor es el análisis: qué cuentas atender primero y cada cuánto revisarlas.</p>
+
+                        <aside class="aside-case animate-on-scroll" style="opacity:0; transform:translateY(12px); transition: opacity 0.6s, transform 0.6s; transition-delay: 0.1s;">
+                            <span class="aside-tag">Caso anónimo · Provincia de Córdoba</span>
+                            <p>Distribuidora de consumo masivo con 5 vendedores y plazo pactado de 30 días. El dueño veía crecer las ventas y la caja ajustada. Al cargar la cuenta corriente por cliente y por antigüedad, el DSO daba 58 días: 28 de brecha. El atraso no estaba repartido: se concentraba en un grupo chico de cuentas que, además, seguían cargando pedidos nuevos cada semana. Se definió un responsable por cuenta, un límite de crédito para las que superaban 30 días vencidos y un informe semanal de cuenta corriente los lunes. A los 60 días el DSO bajó a 41 y la brecha a 11 días.</p>
+                        </aside>
+
+                        <h2 id="asesoria-gratuita" class="animate-on-scroll" style="opacity:0; transform:translateY(12px); transition: opacity 0.6s, transform 0.6s;">¿Qué pasa en la asesoría comercial gratuita?</h2>
+                        <p class="animate-on-scroll" style="opacity:0; transform:translateY(12px); transition: opacity 0.6s, transform 0.6s; transition-delay: 0.1s;">La asesoría comercial gratuita dura 45 minutos y es online. Escuchamos cómo trabaja hoy tu equipo comercial y vemos si encaja con tu empresa. No hay contrato inicial: si seguimos, el trabajo empieza con una <a href="https://lezacconsultoria.com/consultoria-inteligencia-comercial">auditoría de los últimos 12 meses</a> de tus ventas y continúa con acompañamiento mes a mes, sin permanencia obligatoria.</p>
+
+                        <div class="cards-steps animate-on-scroll" style="opacity:0; transform:translateY(12px); transition: opacity 0.6s, transform 0.6s; transition-delay: 0.2s;">
+                            <div class="step-card">
+                                <div class="step-num" aria-hidden="true">1</div>
+                                <h3>La asesoría</h3>
+                                <p>Escuchamos tu caso y vemos si encaja con tu empresa. Solo necesitás tu historial de ventas, tu base de clientes y tu listado de productos.</p>
+                            </div>
+                            <div class="step-card">
+                                <div class="step-num" aria-hidden="true">2</div>
+                                <h3>La auditoría</h3>
+                                <p>Analizamos tus últimos 12 meses de ventas sobre tus datos reales para encontrar dónde se pierde plata.</p>
+                            </div>
+                            <div class="step-card">
+                                <div class="step-num" aria-hidden="true">3</div>
+                                <h3>El acompañamiento</h3>
+                                <p>Un consultor trabaja con vos mes a mes, con una reunión cada 15 días y un reporte cada lunes.</p>
+                            </div>
+                        </div>
+
+                        <h2 id="clientes" class="animate-on-scroll" style="opacity:0; transform:translateY(12px); transition: opacity 0.6s, transform 0.6s;">Lo que dicen los clientes de Lezac</h2>
+                        
+                        <div class="testimonials animate-on-scroll" style="opacity:0; transform:translateY(12px); transition: opacity 0.6s, transform 0.6s; transition-delay: 0.1s;">
+                            <figure class="testimonial-card">
+                                <span class="quote-icon" aria-hidden="true">“</span>
+                                <blockquote>
+                                    <p>"Lezac transformó nuestra visión comercial. En una sola sesión identificamos oportunidades de rentabilidad que no habíamos visto en años."</p>
+                                </blockquote>
+                                <figcaption>— Mariano, Madersa</figcaption>
+                            </figure>
+                            <figure class="testimonial-card">
+                                <span class="quote-icon" aria-hidden="true">“</span>
+                                <blockquote>
+                                    <p>"Teníamos vendedores pisando las mismas zonas sin saberlo. Con el censo y el ruteo de Lezac reorganizamos todo el territorio y empezamos a crecer de verdad."</p>
+                                </blockquote>
+                                <figcaption>— Gabriel, Weilen</figcaption>
+                            </figure>
+                        </div>
+
+                        <h2 id="preguntas-frecuentes" class="animate-on-scroll" style="opacity:0; transform:translateY(12px); transition: opacity 0.6s, transform 0.6s;">Preguntas frecuentes sobre el DSO</h2>
+                        
+                        <div class="faq-item animate-on-scroll" style="opacity:0; transform:translateY(12px); transition: opacity 0.6s, transform 0.6s; transition-delay: 0.1s;">
+                            <h3>¿Qué es el DSO en una distribuidora?</h3>
+                            <p>El DSO (Days Sales Outstanding) son los días promedio que tarda tu distribuidora en cobrar lo que vende a crédito. Un DSO de 42 días significa que, en promedio, el dinero de una venta entra a caja 42 días después de facturarla. Es el número que separa la venta que figura en el sistema de la plata que realmente tenés.</p>
+                        </div>
+                        
+                        <div class="faq-item animate-on-scroll" style="opacity:0; transform:translateY(12px); transition: opacity 0.6s, transform 0.6s; transition-delay: 0.1s;">
+                            <h3>¿El DSO y los días de cobranza son lo mismo?</h3>
+                            <p>Sí, en la práctica miden lo mismo: cuántos días tarda una empresa en cobrar lo que vende a crédito. DSO es la sigla en inglés de Days Sales Outstanding; en español se dice días de cobranza o plazo medio de cobro. Se calcula igual: saldo de cuentas por cobrar dividido por las ventas a crédito, multiplicado por los días del período.</p>
+                        </div>
+
+                        <div class="faq-item animate-on-scroll" style="opacity:0; transform:translateY(12px); transition: opacity 0.6s, transform 0.6s; transition-delay: 0.1s;">
+                            <h3>¿Cuál es un buen DSO para una distribuidora?</h3>
+                            <p>Un buen DSO es el que se mantiene dentro del 15% del plazo que pactaste con tus clientes. Si cobrás a 30 días, hasta 34 días es un desfase normal. No existe un DSO ideal universal: depende del plazo de tu rubro y de tus condiciones de venta, por eso la calculadora compara contra tu propio plazo.</p>
+                        </div>
+
+                        <div class="faq-item animate-on-scroll" style="opacity:0; transform:translateY(12px); transition: opacity 0.6s, transform 0.6s; transition-delay: 0.1s;">
+                            <h3>¿Cuál es la diferencia entre DSO y plazo de pago pactado?</h3>
+                            <p>El plazo pactado es lo que acordaste con el cliente: por ejemplo, 30 días. El DSO es lo que pasa en la realidad: cuánto tardás en cobrar en promedio. La diferencia entre los dos es la brecha, y esa brecha, multiplicada por tu venta diaria a crédito, es la plata que financiás con capital propio.</p>
+                        </div>
+
+                        <div class="faq-item animate-on-scroll" style="opacity:0; transform:translateY(12px); transition: opacity 0.6s, transform 0.6s; transition-delay: 0.1s;">
+                            <h3>¿Cada cuánto conviene calcular el DSO?</h3>
+                            <p>Calculalo todos los meses con el mismo criterio y compará con el promedio de los últimos 90 días. Un mes aislado engaña en negocios con temporada. Si la brecha está en amarillo o rojo, pasá a seguimiento semanal de la cuenta corriente: el DSO mensual avisa tarde y la revisión semanal permite actuar mientras el atraso es chico.</p>
+                        </div>
+
+                        <div class="faq-item animate-on-scroll" style="opacity:0; transform:translateY(12px); transition: opacity 0.6s, transform 0.6s; transition-delay: 0.1s;">
+                            <h3>¿Se puede medir el DSO si el sistema de gestión está desordenado?</h3>
+                            <p>Sí. Alcanza con dos números: el total vendido a crédito en el período y el saldo de cuentas por cobrar al cierre. Los dos salen de la facturación y de la cuenta corriente, aunque estén en una planilla. Con ese cálculo ya tenés el semáforo; el orden fino por cliente viene después.</p>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <section class="bg-dark closure-section" id="cierre">
+                <div class="closure-inner">
+                    <h2 class="closure-h2">Agendá tu asesoría comercial gratuita de 45 minutos</h2>
+                    <p class="closure-text">En una charla online escuchamos cómo trabaja hoy tu equipo comercial, vemos si podemos ayudarte y qué alcance tendría. Sin contrato inicial.</p>
+                    
+                    <div class="closure-buttons">
+                        <a href="https://wa.me/5491154107921?text=Hola%2C%20vi%20la%20calculadora%20de%20DSO%20en%20el%20blog%20de%20Lezac%20y%20quiero%20agendar%20la%20asesor%C3%ADa%20comercial%20gratuita." target="_blank" rel="noopener" class="btn-closure wa">
+                            <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.82 9.82 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+                            Escribir por WhatsApp
+                        </a>
+                        <a href="https://calendly.com/lezacconsultoria/consultoria-comercial?utm_source=blog&utm_medium=cierre&utm_campaign=blog-dso" target="_blank" rel="noopener" class="btn-closure agenda">
+                            Agendar asesoría gratuita · 45 min
+                        </a>
+                    </div>
+                    
+                    <p class="closure-meta">10+ años · 100+ empresas asesoradas · Argentina, Paraguay, Bolivia y Uruguay</p>
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            
+            <div class="footer-col">
+                <a href="https://lezacconsultoria.com/" class="footer-logo" aria-label="Ir a Inicio de Lezac Consultoría">
+                    <img src="https://lezacconsultoria.com/Logo%20Lezac%20%28500%20x%20500%20px%29%20%283%29.png" alt="Lezac Consultoría" height="30" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <span class="header-logo-fallback" style="display:none; font-size:18px; margin-bottom:16px;">Lezac Consultoría</span>
+                </a>
+                <p class="footer-desc">Consultoría de inteligencia comercial para distribuidoras, mayoristas y fábricas pyme en Argentina, Paraguay, Bolivia y Uruguay.</p>
+            </div>
+
+            <div class="footer-col">
+                <p class="footer-title">Servicios</p>
+                <div class="footer-links">
+                    <a href="https://lezacconsultoria.com/consultoria-inteligencia-comercial">Consultoría Inteligencia Comercial</a>
+                    <a href="https://lezacconsultoria.com/mas-clientes-activos">+Clientes Activos</a>
+                    <a href="https://lezacconsultoria.com/ia-a-medida">IA a Medida</a>
+                    <a href="https://lezacconsultoria.com/wa-ventas">WA Ventas</a>
+                    <a href="https://lezacconsultoria.com/blog">Blog</a>
+                    <a href="https://lezacconsultoria.com/partner">Partner</a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <p class="footer-title">Contacto</p>
+                <span class="footer-contact-text">¿Listo para ordenar tu gestión comercial?</span>
+                <a href="https://wa.me/5491154107921" target="_blank" rel="noopener" class="footer-wa-link">
+                    <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.82 9.82 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+                    WhatsApp +54 9 11 5410-7921
+                </a>
+            </div>
+
+        </div>
+        <div class="container">
+            <div class="footer-bottom">
+                <div class="footer-copy">© 2026 Lezac Consultoría · lezacconsultoria.com</div>
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/company/lezac-consultoria" target="_blank" rel="noopener">LinkedIn</a>
+                    <a href="https://www.instagram.com/lezacconsultoria" target="_blank" rel="noopener">Instagram</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // TOC Logic
+            const tocDetails = document.getElementById('toc-details');
+            
+            function handleResize() {
+                if (window.innerWidth >= 1100) {
+                    tocDetails.setAttribute('open', '');
+                } else {
+                    tocDetails.removeAttribute('open');
+                }
+            }
+            window.addEventListener('resize', handleResize);
+            handleResize();
+
+            // Intersection Observer for TOC active state
+            const tocLinks = document.querySelectorAll('.toc a');
+            const sections = Array.from(tocLinks).map(link => document.querySelector(link.getAttribute('href'))).filter(Boolean);
+            
+            const observerOptions = {
+                rootMargin: '-85px 0px -60% 0px',
+                threshold: 0
+            };
+            
+            const tocObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const id = entry.target.getAttribute('id');
+                        tocLinks.forEach(link => {
+                            if (link.getAttribute('href') === `#${id}`) {
+                                link.setAttribute('aria-current', 'true');
+                            } else {
+                                link.removeAttribute('aria-current');
+                            }
+                        });
+                    }
+                });
+            }, observerOptions);
+            
+            sections.forEach(sec => tocObserver.observe(sec));
+
+            // Animations for white content block
+            const isReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            if (!isReducedMotion) {
+                const animObserver = new IntersectionObserver((entries, obs) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.style.opacity = '1';
+                            entry.target.style.transform = 'translateY(0)';
+                            obs.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+                
+                document.querySelectorAll('.animate-on-scroll').forEach(el => animObserver.observe(el));
+            }
+
+            // Calculator Logic
+            const monedaSelect = document.getElementById('moneda');
+            const inputVentas = document.getElementById('ventas');
+            const inputSaldo = document.getElementById('saldo');
+            const diasSelect = document.getElementById('dias-select');
+            const diasCustom = document.getElementById('dias-custom');
+            const inputPlazo = document.getElementById('plazo');
+            const inputCosto = document.getElementById('costo');
+            const btnCalcular = document.getElementById('btn-calcular');
+            const simSlider = document.getElementById('sim-dias');
+
+            const symbols = document.querySelectorAll('.input-symbol');
+            
+            // Format functions
+            const parseNumber = (str) => {
+                if(typeof str === 'number') return str;
+                return parseFloat(str.replace(/\./g, '').replace(/,/g, '.'));
+            };
+            const formatter = new Intl.NumberFormat('es-AR', { maximumFractionDigits: 0 });
+            const formatMoney = (val) => formatter.format(Math.round(val));
+
+            // State
+            let currentData = {
+                ventas: 45000000,
+                saldo: 63000000,
+                dias: 30,
+                plazo: 30,
+                costo: 4,
+                dso: 42,
+                brecha: 12,
+                ventaDiaria: 1500000
+            };
+
+            // Updates currency symbol
+            monedaSelect.addEventListener('change', (e) => {
+                const sym = e.target.value;
+                symbols.forEach(el => el.textContent = sym);
+                calcular();
+            });
+
+            // Days toggle
+            diasSelect.addEventListener('change', (e) => {
+                if (e.target.value === 'otro') {
+                    diasCustom.style.display = 'block';
+                    diasCustom.value = '';
+                } else {
+                    diasCustom.style.display = 'none';
+                    document.getElementById('error-dias').style.display = 'none';
+                    diasCustom.removeAttribute('aria-invalid');
+                }
+                calcular();
+            });
+
+            // Formatting inputs on blur
+            [inputVentas, inputSaldo].forEach(input => {
+                input.addEventListener('focus', () => input.select());
+                input.addEventListener('blur', (e) => {
+                    const val = parseNumber(e.target.value);
+                    if (!isNaN(val)) e.target.value = formatMoney(val);
+                });
+            });
+
+            const validateInputs = () => {
+                let isValid = true;
+                const vVentas = parseNumber(inputVentas.value);
+                const vSaldo = parseNumber(inputSaldo.value);
+                let vDias = diasSelect.value === 'otro' ? parseInt(diasCustom.value) : parseInt(diasSelect.value);
+                const vPlazo = parseInt(inputPlazo.value);
+                const vCosto = parseFloat(inputCosto.value);
+
+                if (isNaN(vVentas) || vVentas <= 0) { inputVentas.setAttribute('aria-invalid', 'true'); isValid = false; }
+                else { inputVentas.removeAttribute('aria-invalid'); }
+
+                if (isNaN(vSaldo) || vSaldo < 0) { inputSaldo.setAttribute('aria-invalid', 'true'); isValid = false; }
+                else { inputSaldo.removeAttribute('aria-invalid'); }
+
+                if (diasSelect.value === 'otro') {
+                    if (isNaN(vDias) || vDias < 1 || vDias > 365) { 
+                        if(diasCustom.value !== '') { // Only show if they typed something
+                            diasCustom.setAttribute('aria-invalid', 'true'); 
+                        }
+                        isValid = false; 
+                    }
+                    else { diasCustom.removeAttribute('aria-invalid'); }
+                }
+
+                if (isNaN(vPlazo) || vPlazo < 1) { inputPlazo.setAttribute('aria-invalid', 'true'); isValid = false; }
+                else { inputPlazo.removeAttribute('aria-invalid'); }
+
+                if (isNaN(vCosto) || vCosto < 0) { inputCosto.setAttribute('aria-invalid', 'true'); isValid = false; }
+                else { inputCosto.removeAttribute('aria-invalid'); }
+
+                return isValid ? { ventas: vVentas, saldo: vSaldo, dias: vDias, plazo: vPlazo, costo: vCosto } : null;
+            };
+
+            let readOutTimeout;
+
+            const calcular = () => {
+                const data = validateInputs();
+                if (!data) return;
+
+                const dsoRaw = (data.saldo / data.ventas) * data.dias;
+                const dso = Math.round(dsoRaw * 10) / 10;
+                const brechaRaw = dso - data.plazo;
+                const brecha = Math.round(brechaRaw * 10) / 10;
+                const ventaDiaria = data.ventas / data.dias;
+                const inmovilizada = Math.max(brecha, 0) * ventaDiaria;
+                const costoMensual = inmovilizada * (data.costo / 100);
+                const costoAnual = costoMensual * 12;
+                const pctBrecha = Math.round((brecha / data.plazo) * 100 * 10) / 10;
+
+                // Color Logic
+                let color = 'green';
+                let chipText = 'Verde';
+                if (pctBrecha > 50) { color = 'red'; chipText = 'Rojo'; }
+                else if (pctBrecha > 15) { color = 'yellow'; chipText = 'Amarillo'; }
+
+                const sym = monedaSelect.value;
+                const strDso = Number.isInteger(dso) ? dso.toString() : dso.toString().replace('.', ',');
+                const strBrecha = Number.isInteger(brecha) ? brecha.toString() : brecha.toString().replace('.', ',');
+                
+                // Update DOM
+                document.getElementById('out-dso').textContent = `DSO: ${strDso} días`;
+                
+                const chip = document.getElementById('out-chip');
+                chip.className = `res-chip chip-${color}`;
+                chip.textContent = chipText;
+
+                document.getElementById('bar-lbl-plazo').textContent = `Plazo pactado: ${data.plazo} días`;
+                document.getElementById('bar-lbl-dso').textContent = `Tu DSO: ${strDso} días`;
+                
+                const maxVal = Math.max(dso, data.plazo);
+                document.getElementById('bar-fill-plazo').style.width = `${(data.plazo / maxVal) * 100}%`;
+                const barDso = document.getElementById('bar-fill-dso');
+                barDso.style.width = `${(dso / maxVal) * 100}%`;
+                barDso.className = `res-bar-fill fill-${color}`;
+
+                document.getElementById('out-brecha').textContent = brecha > 0 ? `+${strBrecha} días · ${pctBrecha.toString().replace('.', ',')}% del plazo` : 'Sin brecha';
+                document.getElementById('out-diaria').textContent = `${sym}${formatMoney(ventaDiaria)}`;
+                document.getElementById('out-inmovilizada').textContent = brecha > 0 ? `${sym}${formatMoney(inmovilizada)} · equivale a ${strBrecha} días de venta a crédito` : `${sym}0`;
+                
+                const costCards = document.querySelectorAll('.cost-card');
+                if (data.costo > 0 && brecha > 0) {
+                    costCards.forEach(c => c.style.display = 'block');
+                    document.getElementById('out-costo-mensual').textContent = `${sym}${formatMoney(costoMensual)}`;
+                    document.getElementById('out-costo-anual').textContent = `${sym}${formatMoney(costoAnual)}`;
+                } else {
+                    costCards.forEach(c => c.style.display = 'none');
+                }
+
+                // Update Message
+                const msgBox = document.getElementById('out-message');
+                msgBox.className = `res-message msg-${color}`;
+                const msgT = document.getElementById('msg-t');
+                const msgP = document.getElementById('msg-p');
+
+                const inmovStr = `${sym}${formatMoney(inmovilizada)}`;
+                const costoStr = data.costo > 0 ? `, con un costo de ${sym}${formatMoney(costoMensual)} por mes` : '';
+
+                if (color === 'green') {
+                    msgT.textContent = "Cobrás dentro de lo pactado.";
+                    msgP.innerHTML = `Tu DSO está dentro del 15% de desfase normal respecto del plazo pactado. La cuenta corriente está bajo control. Lo que sigue es sostenerlo cuando crece la base de clientes o se suma un vendedor. Si querés confirmarlo con el resto de tu gestión comercial, agendá una asesoría comercial gratuita de 45 minutos.`;
+                } else if (color === 'yellow') {
+                    msgT.textContent = "Estás cobrando más tarde de lo pactado.";
+                    msgP.innerHTML = `Tu DSO está ${strBrecha} días por encima del plazo pactado (${pctBrecha.toString().replace('.', ',')}% del plazo). Son ${inmovStr} vendidos que todavía no entraron a caja${costoStr}. Es el momento de ver qué clientes concentran el atraso, antes de que se vuelva costumbre. Es el tipo de análisis que se trabaja con el <a href="https://lezacconsultoria.com/consultoria-inteligencia-comercial">método Brújula Comercial</a>.`;
+                } else {
+                    msgT.textContent = "Estás financiando a tus clientes con capital propio.";
+                    msgP.innerHTML = `Tu DSO supera el plazo pactado en ${strBrecha} días (${pctBrecha.toString().replace('.', ',')}% del plazo). Tenés ${inmovStr} inmovilizados${costoStr}. Con esta brecha, cada venta a crédito nueva agranda el problema. Hace falta abrir la cuenta corriente por cliente y definir un responsable por cuenta. Lezac no cobra por vos: ordena el análisis para que decidas a tiempo, con el <a href="https://lezacconsultoria.com/consultoria-inteligencia-comercial">método Brújula Comercial</a>.`;
+                }
+
+                // Simulator update
+                const simBox = document.getElementById('simulador-box');
+                if (brecha >= 1) {
+                    simBox.style.display = 'block';
+                    const maxSim = Math.floor(brecha);
+                    simSlider.max = maxSim;
+                    if (parseInt(simSlider.value) > maxSim) simSlider.value = maxSim;
+                    // Retain slider state logic
+                    currentData = { ...data, dso, brecha, ventaDiaria };
+                    updateSimulator();
+                } else {
+                    simBox.style.display = 'none';
+                }
+
+                // Screen Reader Timeout
+                clearTimeout(readOutTimeout);
+                readOutTimeout = setTimeout(() => {
+                    document.getElementById('res-resumen').textContent = `DSO de ${strDso} días, semáforo ${chipText}`;
+                }, 600);
+
+                // Update WhatsApp URL
+                const waUrl = `https://wa.me/5491154107921?text=${encodeURIComponent(`Hola, usé la calculadora de DSO de Lezac. Me dio un DSO de ${strDso} días contra ${data.plazo} pactados (${chipText}). Quiero revisar mi caso.`)}`;
+                document.getElementById('btn-panel-wa').href = waUrl;
+            };
+
+            const updateSimulator = () => {
+                const n = parseInt(simSlider.value);
+                const sym = monedaSelect.value;
+                const resultText = document.getElementById('sim-result-text');
+                
+                if (n === 0) {
+                    resultText.textContent = "Mové el deslizador para simular cuánta plata liberarías si recuperaras días de cobranza.";
+                    return;
+                }
+
+                const lib = n * currentData.ventaDiaria;
+                const newDsoRaw = currentData.dso - n;
+                const newDso = Math.round(newDsoRaw * 10) / 10;
+                const strNewDso = Number.isInteger(newDso) ? newDso.toString() : newDso.toString().replace('.', ',');
+                
+                let text = `Si recuperaras ${n} días, liberarías ${sym}${formatMoney(lib)} de caja y tu DSO bajaría a ${strNewDso} días.`;
+                if (currentData.costo > 0) {
+                    const ahorroMensual = lib * (currentData.costo / 100);
+                    text += ` Además, el costo de esa plata parada bajaría ${sym}${formatMoney(ahorroMensual)} por mes.`;
+                }
+                resultText.textContent = text;
+            };
+
+            simSlider.addEventListener('input', updateSimulator);
+
+            // Debounce for inputs
+            let debounceTimer;
+            const debouncedCalc = () => {
+                clearTimeout(debounceTimer);
+                debounceTimer = setTimeout(calcular, 150);
+            };
+
+            [inputVentas, inputSaldo, inputPlazo, inputCosto, diasCustom].forEach(el => {
+                el.addEventListener('input', debouncedCalc);
+            });
+
+            btnCalcular.addEventListener('click', calcular);
+
+        });
+    </script>
+</body>
+</html>
