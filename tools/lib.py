@@ -27,22 +27,21 @@ ACCENTS = {
 
 
 PIXEL_ID = '2671253406469508'
-# Nombre con el que cada página se identifica en Meta (ViewContent: content_name / content_category)
+# Evento propio de cada página en Meta (trackCustom): aparece con su nombre en el Administrador de eventos
 PIXEL_PAGINAS = {
-    'home': ('Inicio', 'Inicio'),
-    'brujula': ('Consultoría de Inteligencia Comercial', 'Servicio'),
-    'clientes': ('+Clientes Activos', 'Servicio'),
-    'ia': ('IA a Medida', 'Servicio'),
-    'wa': ('WA Ventas', 'Servicio'),
-    'partner': ('Programa de Partners', 'Partners'),
+    'home': ('VerInicio', 'Inicio'),
+    'brujula': ('VerConsultoria', 'Consultoría de Inteligencia Comercial'),
+    'clientes': ('VerClientesActivos', '+Clientes Activos'),
+    'ia': ('VerIAaMedida', 'IA a Medida'),
+    'wa': ('VerWAVentas', 'WA Ventas'),
+    'partner': ('VerPartner', 'Programa de Partners'),
 }
 
-
 def pixel(page):
-    """Meta Pixel: PageView + ViewContent con el nombre de la página. El blog todavía no lo lleva."""
+    """Meta Pixel: PageView + un evento con el nombre de la página. El blog todavía no lo lleva."""
     if page not in PIXEL_PAGINAS:
         return ''
-    nombre, categoria = PIXEL_PAGINAS[page]
+    evento, nombre = PIXEL_PAGINAS[page]
     return (f"""<script>
 !function(f,b,e,v,n,t,s){{if(f.fbq)return;n=f.fbq=function(){{n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)}};if(!f._fbq)f._fbq=n;
@@ -51,7 +50,7 @@ t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}}(window,
 document,'script','https://connect.facebook.net/en_US/fbevents.js');
 fbq('init', '{PIXEL_ID}');
 fbq('track', 'PageView');
-fbq('track', 'ViewContent', {{content_name: {json.dumps(nombre, ensure_ascii=False)}, content_category: {json.dumps(categoria, ensure_ascii=False)}}});
+fbq('trackCustom', '{evento}', {{content_name: {json.dumps(nombre, ensure_ascii=False)}}});
 </script>
 """)
 
