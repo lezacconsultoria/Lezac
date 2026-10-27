@@ -27,8 +27,23 @@ ACCENTS = {
 
 
 PIXEL_ID = '2671253406469508'
-# Meta Pixel: solo PageView por ahora. El blog todavía no lo lleva.
-PIXEL = (f"""<script>
+# Nombre con el que cada página se identifica en Meta (ViewContent: content_name / content_category)
+PIXEL_PAGINAS = {
+    'home': ('Inicio', 'Inicio'),
+    'brujula': ('Consultoría de Inteligencia Comercial', 'Servicio'),
+    'clientes': ('+Clientes Activos', 'Servicio'),
+    'ia': ('IA a Medida', 'Servicio'),
+    'wa': ('WA Ventas', 'Servicio'),
+    'partner': ('Programa de Partners', 'Partners'),
+}
+
+
+def pixel(page):
+    """Meta Pixel: PageView + ViewContent con el nombre de la página. El blog todavía no lo lleva."""
+    if page not in PIXEL_PAGINAS:
+        return ''
+    nombre, categoria = PIXEL_PAGINAS[page]
+    return (f"""<script>
 !function(f,b,e,v,n,t,s){{if(f.fbq)return;n=f.fbq=function(){{n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)}};if(!f._fbq)f._fbq=n;
 n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
@@ -36,6 +51,7 @@ t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}}(window,
 document,'script','https://connect.facebook.net/en_US/fbevents.js');
 fbq('init', '{PIXEL_ID}');
 fbq('track', 'PageView');
+fbq('track', 'ViewContent', {{content_name: {json.dumps(nombre, ensure_ascii=False)}, content_category: {json.dumps(categoria, ensure_ascii=False)}}});
 </script>
 """)
 
@@ -211,7 +227,7 @@ def head(page, title, desc, path, ld, extra_css=''):
 <meta name="twitter:image" content="{OG_IMAGE}"/>
 {ld}
 <script src="/analytics.js"></script>
-{PIXEL if page != "blog" else ""}<link rel="preconnect" href="https://fonts.googleapis.com"/>
+{pixel(page)}<link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Playfair+Display:ital,wght@1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
