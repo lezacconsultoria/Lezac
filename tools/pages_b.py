@@ -186,7 +186,8 @@ def wa_ventas():
              paragraph='WA Ventas es el sistema de Lezac Consultoría para distribuidoras, mayoristas y fábricas que reciben pedidos por WhatsApp. Centraliza pedidos, consultas, reclamos y prospectos en un solo número, con catálogo digital y un panel de control para validar y hacer seguimiento. Trabajamos con la API oficial de WhatsApp y lo ponemos en marcha en 10 a 15 días hábiles aproximadamente.',
              eslogan='Que ningún mensaje se quede sin respuesta.',
              bl=['Reunión inicial sin costo', 'API oficial de WhatsApp', 'Puesta en marcha en 10 a 15 días hábiles', '100% online'],
-             buttons=[btn(meet, CAL, 'primary', 'calendar_today'), btn('Ver cómo funciona', '#como-funciona', 'secondary')])
+             buttons=[btn(meet, CAL, 'primary', 'calendar_today'), btn('Ver cómo funciona', '#como-funciona', 'secondary')],
+             vid=youtube('36Lhzc72YTE', 'WA Ventas: presentación del servicio'))
     c += prueba('Más de 100 empresas asesoradas en 4 países', '10+ años · 100+ empresas asesoradas · Argentina, Paraguay, Bolivia y Uruguay')
 
     c += section(h2('¿Te pasa que los pedidos se pierden entre chats?') + item_cards([

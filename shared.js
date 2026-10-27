@@ -410,6 +410,17 @@ function injectSharedStyles() {
 
 // ─── VSL AUTOPLAY MUTED ───────────────────────────────────────────────────────
 
+function botonSonido() {
+  const btn = document.createElement('button');
+  btn.type = 'button';
+  btn.setAttribute('aria-label', 'Activar sonido');
+  btn.style.cssText = 'position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:10;display:flex;align-items:center;gap:16px;background:rgba(0,0,0,0.7);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:2px solid var(--color-accent);border-radius:9999px;padding:26px 52px;cursor:pointer;box-shadow:0 0 40px var(--color-accent-glow);animation:lezac-unmute-pulse 1.4s ease-in-out infinite;';
+  btn.innerHTML = `
+    <svg width="40" height="40" viewBox="0 0 24 24" fill="white" style="flex-shrink:0"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+    <span style="font-size:22px;font-weight:700;color:white;letter-spacing:0.06em;text-transform:uppercase;font-family:Inter,sans-serif;">Activar sonido</span>`;
+  return btn;
+}
+
 function initVSL() {
   if (!document.getElementById('lezac-unmute-style')) {
     const st = document.createElement('style');
@@ -422,13 +433,7 @@ function initVSL() {
     const container = video.parentElement;
     if (!container) return;
 
-    const btn = document.createElement('button');
-    btn.type = 'button';
-    btn.setAttribute('aria-label', 'Activar sonido');
-    btn.style.cssText = 'position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:10;display:flex;align-items:center;gap:16px;background:rgba(0,0,0,0.7);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:2px solid var(--color-accent);border-radius:9999px;padding:26px 52px;cursor:pointer;box-shadow:0 0 40px var(--color-accent-glow);animation:lezac-unmute-pulse 1.4s ease-in-out infinite;';
-    btn.innerHTML = `
-      <svg width="40" height="40" viewBox="0 0 24 24" fill="white" style="flex-shrink:0"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
-      <span style="font-size:22px;font-weight:700;color:white;letter-spacing:0.06em;text-transform:uppercase;font-family:Inter,sans-serif;">Activar sonido</span>`;
+    const btn = botonSonido();
 
     const unmute = () => {
       video.muted = false;
@@ -442,31 +447,23 @@ function initVSL() {
     container.appendChild(btn);
   });
 
-  document.querySelectorAll('iframe[src*="youtube.com/embed"]').forEach(iframe => {
-    const url = new URL(iframe.src);
-    url.searchParams.set('autoplay', '1');
-    url.searchParams.set('mute', '1');
-    url.searchParams.set('enablejsapi', '1');
-    iframe.src = url.toString();
-
+  document.querySelectorAll('iframe[src*="youtube.com/embed"], iframe[src*="youtube-nocookie.com/embed"]').forEach(iframe => {
     const container = iframe.parentElement;
     if (!container) return;
 
-    const overlay = document.createElement('div');
-    overlay.style.cssText = 'position:absolute;inset:0;z-index:10;cursor:pointer;display:flex;align-items:flex-end;justify-content:flex-start;padding:16px;';
-    overlay.innerHTML = `
-      <div style="display:flex;align-items:center;gap:8px;background:rgba(0,0,0,0.65);backdrop-filter:blur(10px);border-radius:9999px;padding:8px 14px;border:1px solid rgba(255,255,255,0.12);transition:opacity 0.2s;">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="white" style="flex-shrink:0"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
-        <span style="font-size:11px;font-weight:600;color:white;letter-spacing:0.06em;text-transform:uppercase;font-family:Inter,sans-serif;">Activar sonido</span>
-      </div>`;
+    const url = new URL(iframe.src);
+    [['autoplay', '1'], ['mute', '1'], ['enablejsapi', '1'], ['playsinline', '1']].forEach(([k, v]) => url.searchParams.set(k, v));
+    if (iframe.src !== url.toString()) iframe.src = url.toString();
 
-    overlay.addEventListener('click', () => {
-      overlay.remove();
-      iframe.contentWindow.postMessage(JSON.stringify({ event: 'command', func: 'unMute', args: [] }), '*');
-      iframe.contentWindow.postMessage(JSON.stringify({ event: 'command', func: 'setVolume', args: [100] }), '*');
+    const btn = botonSonido();
+    btn.addEventListener('click', () => {
+      btn.remove();
+      const cmd = (func, args) => iframe.contentWindow.postMessage(JSON.stringify({ event: 'command', func, args }), '*');
+      cmd('unMute', []);
+      cmd('setVolume', [100]);
+      cmd('playVideo', []);
     });
-
-    container.appendChild(overlay);
+    container.appendChild(btn);
   });
 }
 

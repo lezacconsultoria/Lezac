@@ -5,7 +5,7 @@ import pathlib
 import urllib.parse
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
-VER = '20261014'
+VER = '20261027'
 SITE = 'https://lezacconsultoria.com'
 CAL = 'https://calendly.com/lezacconsultoria/consultoria-comercial'
 WA = 'https://wa.me/5491154107921'
@@ -24,6 +24,20 @@ ACCENTS = {
     'blog': ('#8C52FF', '#7131E3', 'rgba(140,82,255,0.3)', '#FFFFFF'),
     'partner': ('#F5C842', '#D4A800', 'rgba(245,200,66,0.25)', '#0A0A0B'),
 }
+
+
+PIXEL_ID = '2671253406469508'
+# Meta Pixel: solo PageView por ahora. El blog todavía no lo lleva.
+PIXEL = (f"""<script>
+!function(f,b,e,v,n,t,s){{if(f.fbq)return;n=f.fbq=function(){{n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)}};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '{PIXEL_ID}');
+fbq('track', 'PageView');
+</script>
+""")
 
 
 class Raw(str):
@@ -197,7 +211,7 @@ def head(page, title, desc, path, ld, extra_css=''):
 <meta name="twitter:image" content="{OG_IMAGE}"/>
 {ld}
 <script src="/analytics.js"></script>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
+{PIXEL if page != "blog" else ""}<link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Playfair+Display:ital,wght@1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
@@ -355,6 +369,16 @@ def video(src, label):
             '<div class="relative aspect-video rounded-2xl overflow-hidden" style="box-shadow:0 0 0 1px color-mix(in srgb,var(--color-accent) 20%,transparent),0 32px 64px rgba(0,0,0,0.5)">'
             f'<video data-vsl controls autoplay muted playsinline preload="auto" aria-label="{html.escape(label)}" class="absolute inset-0 w-full h-full" style="background:#000;">'
             f'<source src="/{s}" type="video/mp4"></video></div></div>')
+
+
+def youtube(video_id, label):
+    """Video de YouTube con el mismo marco que video() (sin cookies de seguimiento hasta que se reproduce)."""
+    return ('<div class="relative mt-8 max-w-4xl mx-auto"><div class="absolute -inset-2 rounded-2xl opacity-40" '
+            'style="background:radial-gradient(ellipse at center,var(--color-accent-glow) 0%,transparent 70%);filter:blur(24px);"></div>'
+            '<div class="relative aspect-video rounded-2xl overflow-hidden" style="box-shadow:0 0 0 1px color-mix(in srgb,var(--color-accent) 20%,transparent),0 32px 64px rgba(0,0,0,0.5)">'
+            f'<iframe src="https://www.youtube-nocookie.com/embed/{video_id}?rel=0&amp;modestbranding=1&amp;color=white&amp;autoplay=1&amp;mute=1&amp;enablejsapi=1&amp;playsinline=1" title="{html.escape(label)}" loading="lazy" '
+            'allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen '
+            'class="absolute inset-0 w-full h-full" style="border:none;"></iframe></div></div>')
 
 
 def hero(page_name, label, h1a, h1b, subtitle=None, paragraph=None, eslogan=None, focus=None, bl=None,
