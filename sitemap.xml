@@ -50,9 +50,27 @@
   </url>
   <url>
     <loc>https://lezacconsultoria.com/blog</loc>
-    <lastmod>2026-10-26</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lezacconsultoria.com/blog/alianzas-contadores-consultores-agencias</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lezacconsultoria.com/blog/calculadora-clientes-inactivos</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lezacconsultoria.com/blog/consultoria-comercial-pymes</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://lezacconsultoria.com/blog/calculadora-dso-distribuidoras</loc>

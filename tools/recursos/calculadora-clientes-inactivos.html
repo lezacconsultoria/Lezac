@@ -1,0 +1,1203 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Equipo de Lezac Consultoría">
+<meta name="theme-color" content="#0A0A0B">
+<title>Calculadora de Clientes Inactivos para Distribuidoras | Lezac</title>
+<meta name="description" content="Calculá cuántos clientes inactivos tiene tu distribuidora, cuánta venta representan y cuánto podrías recuperar. Con ejemplo, regla de color y respuestas.">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<link rel="canonical" href="https://lezacconsultoria.com/blog/calculadora-clientes-inactivos">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="Calculadora de Clientes Inactivos para Distribuidoras | Lezac">
+<meta property="og:description" content="Calculá cuántos clientes inactivos tiene tu distribuidora, cuánta venta representan y cuánto podrías recuperar. Con ejemplo, regla de color y respuestas.">
+<meta property="og:url" content="https://lezacconsultoria.com/blog/calculadora-clientes-inactivos">
+<meta property="og:site_name" content="Lezac Consultoría">
+<meta property="og:locale" content="es_AR">
+<meta property="og:image" content="https://lezacconsultoria.com/opengrap.jpeg">
+<meta property="article:published_time" content="2026-10-27T21:00:00-03:00">
+<meta property="article:modified_time" content="2026-10-27T21:00:00-03:00">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://lezacconsultoria.com/opengrap.jpeg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+
+<!-- LOGO_URL = https://lezacconsultoria.com/Logo%20Lezac%20%28500%20x%20500%20px%29%20%283%29.png -->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://lezacconsultoria.com/#organization",
+      "name": "Lezac Consultoría",
+      "url": "https://lezacconsultoria.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://lezacconsultoria.com/Logo%20Lezac%20%28500%20x%20500%20px%29%20%283%29.png"
+      },
+      "areaServed": ["AR", "PY", "BO", "UY"],
+      "sameAs": [
+        "https://www.linkedin.com/company/lezac-consultoria",
+        "https://www.instagram.com/lezacconsultoria"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "telephone": "+5491154107921",
+        "availableLanguage": "es"
+      }
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "https://lezacconsultoria.com/blog/calculadora-clientes-inactivos#article",
+      "headline": "Calculadora de clientes inactivos: cuánto te cuestan los que dejaron de comprar",
+      "description": "Calculá cuántos clientes inactivos tiene tu distribuidora, cuánta venta representan y cuánto podrías recuperar. Con ejemplo, regla de color y respuestas.",
+      "inLanguage": "es-AR",
+      "datePublished": "2026-10-27T21:00:00-03:00",
+      "dateModified": "2026-10-27T21:00:00-03:00",
+      "timeRequired": "PT8M",
+      "author": { "@id": "https://lezacconsultoria.com/#organization" },
+      "publisher": { "@id": "https://lezacconsultoria.com/#organization" },
+      "mainEntityOfPage": "https://lezacconsultoria.com/blog/calculadora-clientes-inactivos",
+      "image": "https://lezacconsultoria.com/opengrap.jpeg",
+      "about": { "@id": "https://lezacconsultoria.com/consultoria-inteligencia-comercial#service" },
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "Dueños y gerentes de distribuidoras, mayoristas, fábricas y pymes"
+      },
+      "keywords": "calculadora de clientes inactivos, clientes dormidos, recuperar clientes inactivos, porcentaje de clientes activos, cuántos días sin comprar es un cliente inactivo, reactivación de clientes distribuidora, tasa de abandono de clientes"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "https://lezacconsultoria.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://lezacconsultoria.com/blog"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Calculadora de clientes inactivos",
+          "item": "https://lezacconsultoria.com/blog/calculadora-clientes-inactivos"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Qué es un cliente inactivo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Es un cliente que compró alguna vez y no volvió a comprar dentro del corte de días sin comprar que define tu empresa. También se lo llama cliente dormido. Lo importante no es el nombre sino medirlo siempre con el mismo corte, para poder comparar un período con otro y ver si la cantidad sube o baja."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuántos días sin comprar hacen inactivo a un cliente?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No hay un número único: depende del ciclo de compra de tu rubro. Un cliente que compra todas las semanas se vuelve inactivo mucho antes que uno que compra una vez por trimestre. Elegí un corte mayor al ciclo típico de tus clientes y mantenelo en el tiempo."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo se calcula el porcentaje de clientes activos?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Se divide la cantidad de clientes que compraron dentro de tu corte por el total de tu base de clientes y se multiplica por 100. Por ejemplo, si de 400 clientes compraron 250, el porcentaje de activos es 62,5% y los 150 restantes son inactivos. Comparalo con el período anterior para saber si mejora o empeora."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuánta venta se pierde por los clientes inactivos?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Depende de cuántos son y de cuánto compraban. Una estimación simple es multiplicar la cantidad de clientes inactivos por la compra promedio mensual de un cliente activo. Es un máximo teórico: no todos van a volver. Por eso la calculadora te deja simular qué pasa si recuperás una parte, por ejemplo 10%, 20% o 30%."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo recuperar clientes inactivos en una distribuidora?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Armá la lista de los clientes que no compraron dentro del corte, ordenada por cuánto compraban, asigná una persona responsable de cada grupo y contactalos con un motivo concreto, como su última compra o una novedad. Medí cada semana cuántos volvieron a comprar. Empezar por los que más compraban rinde más rápido."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué diferencia hay entre un cliente inactivo y un cliente perdido?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Un cliente inactivo no compró dentro de tu corte, pero todavía puede volver. Un cliente perdido es el que ya decidió comprar a otro proveedor o cerró su negocio. Al principio no sabés cuál es cuál: por eso conviene contactar a los inactivos antes de que pasen los meses y la relación se enfríe."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Es lo mismo clientes inactivos que tasa de abandono?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Son parecidos. La tasa de abandono mide el porcentaje de clientes que dejaron de comprar en un período, y los clientes inactivos son esos mismos clientes vistos en cantidad y en venta en pausa. En una distribuidora la compra no es por suscripción y no hay una baja formal, por eso se mide con un corte de días sin comprar."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué datos necesito para calcular mis clientes inactivos?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Alcanza con tres números: el total de tu base de clientes, cuántos compraron dentro de tu corte y cuántos compraron en el período anterior. Para estimar la venta en pausa sumá la compra promedio mensual de un cliente activo. Los sacás de tu sistema de gestión o de un Excel de ventas."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "WebApplication",
+      "name": "Calculadora de clientes inactivos",
+      "url": "https://lezacconsultoria.com/blog/calculadora-clientes-inactivos",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "inLanguage": "es-AR",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "ARS"
+      },
+      "provider": { "@id": "https://lezacconsultoria.com/#organization" }
+    },
+    {
+      "@type": "DefinedTermSet",
+      "name": "Glosario de clientes activos e inactivos",
+      "hasDefinedTerm": [
+        {
+          "@type": "DefinedTerm",
+          "name": "Cliente activo",
+          "description": "Cliente que compró dentro del corte de días sin comprar que define la empresa."
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Cliente inactivo (dormido)",
+          "description": "Cliente que compró alguna vez y no volvió a comprar dentro del corte de días sin comprar."
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Corte de días sin comprar",
+          "description": "Cantidad de días sin compras a partir de la cual un cliente se considera inactivo. Depende del ciclo de compra del rubro."
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Base de clientes",
+          "description": "Total de clientes que alguna vez compraron, activos e inactivos."
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Tasa de clientes activos",
+          "description": "Porcentaje de la base de clientes que compró dentro del corte."
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Reactivación de clientes",
+          "description": "Conjunto de acciones para que un cliente inactivo vuelva a comprar."
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://lezacconsultoria.com/consultoria-inteligencia-comercial#service",
+      "name": "Consultoría de inteligencia comercial (método Brújula Comercial)",
+      "serviceType": "Consultoría de Inteligencia Comercial B2B",
+      "provider": { "@id": "https://lezacconsultoria.com/#organization" },
+      "areaServed": ["AR", "PY", "BO", "UY"],
+      "url": "https://lezacconsultoria.com/consultoria-inteligencia-comercial"
+    }
+  ]
+}
+</script>
+
+<style>
+/* CSS RESET */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: #FFFFFF; color: #0A0A0B; -webkit-font-smoothing: antialiased; overflow-x: clip; }
+img, svg { display: block; max-width: 100%; }
+input, select, button, textarea { font: inherit; }
+
+:root {
+  --header-h: 56px;
+  --bg-dark: #0A0A0B;
+  --c-violet: #8C52FF;
+  --c-violet-dk: #7B2FBE;
+  --c-green: #25F5A4;
+  --c-red: #EC0543;
+  --c-amber: #FFC233;
+}
+@media (min-width: 600px) { :root { --header-h: 60px; } }
+@media (min-width: 900px) { :root { --header-h: 64px; } }
+
+html { scroll-behavior: smooth; scroll-padding-top: calc(var(--header-h) + 16px); }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+/* GLOBAL UTILS */
+.container { width: 100%; max-width: 1240px; margin: 0 auto; padding: 0 20px; }
+@media (min-width: 900px) { .container { padding: 0 24px; } }
+.visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+
+/* HEADER */
+.site-header { position: sticky; top: 0; z-index: 1000; background: #0A0A0B; border-bottom: 1px solid rgba(255,255,255,0.08); height: var(--header-h); display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 0 20px; }
+@media (min-width: 900px) { .site-header { padding: 0 24px; } }
+.header-logo { min-width: 0; flex-shrink: 1; display: flex; align-items: center; text-decoration: none; }
+.header-logo img { height: 22px; display: block; object-fit: contain; }
+@media (min-width: 600px) { .header-logo img { height: 28px; } }
+@media (min-width: 900px) { .header-logo img { height: 34px; } }
+.header-logo span { color: #FFFFFF; font-weight: 900; font-size: 16px; }
+.header-actions { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+.btn-wa-hdr { display: flex; align-items: center; justify-content: center; height: 40px; padding: 0 10px; background: #25F5A4; color: #0A0A0B; font-size: 14px; font-weight: 600; text-decoration: none; border-radius: 10px; white-space: nowrap; gap: 6px; }
+@media (min-width: 600px) { .btn-wa-hdr { padding: 0 14px; } }
+.btn-wa-hdr svg { width: 18px; height: 18px; flex: none; }
+.wa-text { display: none; }
+@media (min-width: 600px) { .wa-text { display: inline; } }
+.btn-agenda { display: flex; align-items: center; justify-content: center; height: 40px; padding: 0 14px; background: transparent; border: 1.5px solid #8C52FF; color: #FFFFFF; font-size: 14px; font-weight: 600; text-decoration: none; border-radius: 10px; white-space: nowrap; }
+.t-xs { display: inline; }
+.t-sm, .t-md { display: none; }
+@media (min-width: 600px) { .t-xs { display: none; } .t-sm { display: inline; } }
+@media (min-width: 900px) { .t-sm { display: none; } .t-md { display: inline; } }
+
+/* PROGRESS BAR */
+.read-progress { position: sticky; top: var(--header-h); height: 3px; z-index: 900; background: transparent; }
+.read-progress-bar { width: var(--progress, 0%); height: 100%; background: #8C52FF; transition: width 0.1s; }
+
+/* 1. Base del texto: especificidad CERO. Los componentes la pisan sin !important. */
+:where(.article) :where(p){margin:0 0 1.15rem;font-size:17px;line-height:1.7;color:#374151;max-width:820px}
+:where(.article) :where(ul){list-style:disc;padding-left:1.5em}
+:where(.article) :where(ol){list-style:decimal;padding-left:1.5em}
+:where(.article) :where(li){margin-bottom:.5rem;padding-left:.25rem}
+:where(.article) :where(a){color:#7B2FBE;font-weight:500;text-decoration:underline}
+:where(.article) :where(li)::marker{color:#7B2FBE;font-weight:600}
+
+/* SECTION PADDINGS & HEADINGS */
+.section-py { padding: 40px 0; }
+@media (min-width: 900px) { .section-py { padding: 64px 0; } }
+.article h2 { margin: 3rem 0 1rem; max-width: 820px; font-size: 1.4rem; font-weight: 900; line-height: 1.3; color: #0A0A0B; }
+@media (min-width: 600px) { .article h2 { font-size: 1.6rem; } }
+@media (min-width: 1100px) { .article h2 { font-size: 1.8rem; } }
+.article h3 { margin: 2rem 0 1rem; max-width: 820px; font-size: 18px; font-weight: 700; line-height: 1.4; color: #0A0A0B; }
+
+/* 2. Portada clara y tarjeta de ejemplo */
+.hero{background:radial-gradient(800px 380px at 90% 0%,rgba(140,82,255,0.14),rgba(140,82,255,0) 70%),linear-gradient(180deg,#F6F3FF 0%,#FFFFFF 100%)}
+.hero-content { display: grid; gap: 32px; align-items: start; }
+@media (min-width: 900px) { .hero-content { grid-template-columns: minmax(0,1fr) 340px; gap: 48px; } }
+.breadcrumb { margin: 0 0 24px; padding: 0; list-style: none; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; font-size: 14px; }
+.breadcrumb li { display: flex; align-items: center; gap: 8px; color: #4B5563; }
+.breadcrumb a { color: #4B5563; text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+.hero-tag { display: inline-block; margin: 0 0 20px; padding: 4px 12px; background: rgba(140,82,255,0.12); border: 1px solid #8C52FF; border-radius: 20px; font-size: 12px; font-weight: 600; text-transform: uppercase; color: #7B2FBE; letter-spacing: 0.05em; }
+.hero-title{margin:0 0 24px;max-width:none;font-weight:900;line-height:1.2;color:#0A0A0B; font-size: 1.75rem;}
+@media (min-width: 600px) { .hero-title { font-size: 2.25rem; } }
+@media (min-width: 1100px) { .hero-title { font-size: 2.6rem; } }
+.hero-meta{margin:0 0 24px;max-width:none;font-size:14px;line-height:1.5;color:#4B5563; display: flex; align-items: center; flex-wrap: wrap; gap: 12px;}
+.author-logo { width: 48px; height: 48px; background: #0A0A0B; border-radius: 12px; display: flex; align-items: center; justify-content: center; padding: 6px; }
+.author-logo img { width: 100%; height: 100%; object-fit: contain; }
+.hero-meta a { color: #7B2FBE; text-decoration: underline; font-weight: 500; }
+.hero-extract{margin:0 0 20px;max-width:640px;padding:20px 24px;border-left:4px solid #8C52FF;border-radius:0 12px 12px 0;background:#FFFFFF;font-size:17px;line-height:1.7;color:#374151}
+.hero-jump{display:inline-flex;align-items:center;min-height:44px;padding:0 24px;border-radius:8px;background:#0A0A0B;color:#FFFFFF;font-size:15px;font-weight:600;text-decoration:none}
+.example{padding:20px;border:1px solid #E5E7EB;border-radius:16px;background:#FFFFFF}
+.example-label{margin:0 0 12px;max-width:none;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#7B2FBE}
+.example-big{margin:0;max-width:none;font-size:2.4rem;font-weight:900;line-height:1.1;color:#0A0A0B}
+.example-sub{margin:4px 0 16px;max-width:none;font-size:14px;line-height:1.5;color:#4B5563}
+.stack{display:flex;height:16px;border-radius:8px;overflow:hidden;background:#EC0543}
+.stack-a{width:62.5%;background:#8C52FF;transform-origin:left;animation:stack-in .9s .3s both}
+@keyframes stack-in{from{transform:scaleX(0)}}
+@media (prefers-reduced-motion:reduce){.stack-a{animation:none}}
+.example-legend { display: flex; gap: 16px; margin: 12px 0 0; list-style: none; padding: 0; font-size: 13px; color: #4B5563; }
+.example-legend li { display: flex; align-items: center; gap: 6px; }
+.example-legend i { width: 8px; height: 8px; border-radius: 50%; }
+
+/* 3. Mesa de trabajo: datos (claro) y resumen de celular (oscuro, pegajoso) */
+.work{padding:16px;border-radius:16px;background:#F6F3FF}
+.work-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:16px}
+@media (min-width:900px){.work{padding:24px}.work-grid{grid-template-columns:minmax(0,360px) minmax(0,1fr);gap:24px;align-items:start}}
+.card-in{padding:20px;border:1px solid #E5E7EB;border-radius:16px;background:#FFFFFF; position: relative;}
+.field{margin:0 0 16px}
+.field-label{display:block;margin:0 0 4px;font-size:15px;font-weight:600;line-height:1.4;color:#0A0A0B}
+.field-help{display:block;margin:4px 0 0;font-size:13px;line-height:1.4;color:#4B5563}
+.field-error{display:none;margin:4px 0 0;font-size:13px;font-weight:600;line-height:1.4;color:#9F1239}
+.field.is-invalid .field-error { display: block; }
+.field.is-invalid input { border-color: #9F1239; outline-color: #9F1239; }
+.field input,.field select{width:100%;height:48px;padding:0 12px;border:1px solid #9CA3AF;border-radius:8px;background:#FFFFFF;font-family:inherit;font-size:16px;color:#0A0A0B;-webkit-appearance:none;appearance:none}
+.field input[type="number"]{-moz-appearance:textfield}
+.field input::-webkit-outer-spin-button,.field input::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
+.field input:focus-visible,.field select:focus-visible{outline:3px solid #8C52FF;outline-offset:2px}
+.btn-reset{min-height:44px;padding:0 8px;background:none;border:0;font-family:inherit;font-size:14px;color:#4B5563;text-decoration:underline;cursor:pointer}
+.mini{position:sticky;bottom:12px;display:flex;gap:16px;align-items:center;margin-top:8px;padding:12px 16px;border:1px solid rgba(255,255,255,0.08);border-radius:12px;background:#111114;z-index:10}
+@media (min-width:900px){.mini{display:none}}
+.mini-item{flex:1;min-width:0}
+.mini-num{margin:0;max-width:none;font-size:18px;font-weight:900;line-height:1.2;color:#FFFFFF;overflow-wrap:anywhere}
+.mini-lbl{margin:0;max-width:none;font-size:12px;line-height:1.3;color:rgba(255,255,255,0.7)}
+
+/* 4. Panel de resultados (oscuro): color propio en cada texto */
+.results{padding:20px;border:1px solid rgba(255,255,255,0.08);border-radius:16px;background:#111114;color:#FFFFFF}
+@media (min-width:900px){.results{padding:24px}}
+.res-top{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin:0 0 12px}
+.res-verdict{margin:0 0 20px;max-width:none;font-size:15px;line-height:1.6;color:rgba(255,255,255,0.92)}
+.waffle{display:grid;grid-template-columns:repeat(10,minmax(0,1fr));gap:3px;width:100%;max-width:240px;margin:0 auto}
+.cell{aspect-ratio:1/1;border-radius:3px;background:#3A3A40;transition:background .3s}
+.cell.is-a{background:#8C52FF}
+.cell.is-r{background:#25F5A4}
+.cell.is-d{background:#EC0543}
+.legend{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 16px;margin:12px 0 0;padding:0;list-style:none}
+.legend li{display:flex;align-items:center;gap:6px;margin:0;padding:0;font-size:13px;line-height:1.3;color:rgba(255,255,255,0.85)}
+.legend i{flex:none;width:12px;height:12px;border-radius:3px}
+.legend-desc { text-align: center; font-size: 13px; color: rgba(255,255,255,0.7); margin: 8px 0 0; }
+.kpis{display:grid;grid-template-columns:minmax(0,1fr);gap:12px;margin:20px 0 0;padding:0}
+@media (min-width:480px){.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.kpi{margin:0;padding:12px 16px;border:1px solid rgba(255,255,255,0.08);border-radius:12px;background:#18181C}
+.kpi dt{margin:0 0 4px;padding:0;font-size:12px;line-height:1.3;color:rgba(255,255,255,0.7)}
+.kpi dd{margin:0;padding:0;font-size:18px;font-weight:900;line-height:1.25;color:#FFFFFF;overflow-wrap:anywhere}
+.res-note{margin:12px 0 0;max-width:none;font-size:13px;line-height:1.5;color:rgba(255,255,255,0.7)}
+.sim{margin:20px 0 0;padding:16px;border:1px solid rgba(255,255,255,0.08);border-radius:12px;background:#18181C}
+.sim-title{margin:0 0 4px;max-width:none;font-size:15px;font-weight:700;line-height:1.4;color:#FFFFFF}
+.sim input[type="range"]{display:block;width:100%;height:44px;margin:4px 0;accent-color:#8C52FF}
+.sim-out{margin:4px 0 0;max-width:none;font-size:14px;line-height:1.6;color:rgba(255,255,255,0.92)}
+.btn-wa{display:flex;align-items:center;justify-content:center;gap:8px;min-height:48px;margin:20px 0 0;padding:0 16px;border-radius:8px;background:#25F5A4;color:#0A0A0B;font-size:15px;font-weight:600;text-decoration:none;text-align:center}
+.btn-wa svg { width: 20px; height: 20px; flex: none; }
+.btn-wa-note{margin:8px 0 0;max-width:none;font-size:13px;line-height:1.4;color:rgba(255,255,255,0.7);text-align:center}
+
+/* Chips */
+.chip { display: inline-flex; font-size: 12px; font-weight: 700; text-transform: uppercase; padding: 4px 10px; border-radius: 12px; white-space: nowrap; }
+.chip.c-green { background: rgba(37,245,164,0.18); color: #065F46; border: 1px solid #059669; }
+.chip.c-amber { background: rgba(255,194,51,0.25); color: #92400E; border: 1px solid #D97706; }
+.chip.c-red { background: rgba(236,5,67,0.10); color: #9F1239; border: 1px solid #EC0543; }
+.chip.dk-green { background: rgba(37,245,164,0.12); color: #25F5A4; border: 1px solid #25F5A4; }
+.chip.dk-amber { background: rgba(255,194,51,0.12); color: #FFC233; border: 1px solid #FFC233; }
+.chip.dk-red { background: rgba(236,5,67,0.12); color: #EC0543; border: 1px solid #EC0543; }
+.chip.dk-gray { background: transparent; color: rgba(255,255,255,0.7); border: 1px solid rgba(255,255,255,0.3); }
+
+/* 5. Tríada de servicios: barra lateral fija en escritorio */
+.layout{display:block}
+.rail-wrap{margin-top:48px}
+@media (min-width:1100px){.layout{display:grid;grid-template-columns:minmax(0,1fr) 300px;column-gap:56px}.layout-main{grid-column:1;grid-row:1}.rail-wrap{grid-column:2;grid-row:1;margin-top:0}.rail{position:sticky;top:calc(var(--header-h) + 24px)}}
+@media (min-width:1100px) and (max-height:700px){.rail{position:static}}
+.rail-title{margin:0 0 12px;max-width:none;font-size:18px;font-weight:900;line-height:1.3;color:#0A0A0B}
+.rail-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:minmax(0,1fr);gap:12px}
+@media (min-width:900px) and (max-width:1099px){.rail-list{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.rail-card{display:flex;flex-direction:column;margin:0;padding:16px;border:1px solid #E5E7EB;border-radius:16px;background:#FFFFFF}
+.rail-card.is-main{padding:15px;border:2px solid #8C52FF}
+.rail-badge{align-self:flex-start;margin:0 0 8px;max-width:none;padding:3px 10px;border:1px solid #8C52FF;border-radius:12px;background:rgba(140,82,255,0.12);font-size:12px;font-weight:700;line-height:1.3;color:#7B2FBE}
+.rail-name{margin:0 0 4px;max-width:none;font-size:16px;font-weight:900;line-height:1.3;color:#0A0A0B}
+.rail-text{margin:0 0 12px;max-width:none;font-size:14px;line-height:1.5;color:#374151}
+.rail-btn{display:flex;align-items:center;justify-content:center;min-height:44px;margin-top:auto;padding:0 12px;border-radius:8px;background:#25F5A4;color:#0A0A0B;font-size:14px;font-weight:600;text-align:center;text-decoration:none}
+.rail-link{display:inline-flex;align-items:center;min-height:44px;margin-top:auto;font-size:14px;font-weight:600;color:#7B2FBE;text-decoration:underline}
+
+/* Componentes Editoriales */
+.formula { background: #FFFFFF; border: 1px solid #E5E7EB; border-radius: 12px; padding: 16px; margin: 0 0 24px; }
+.formula p:first-child { font-weight: 600; margin: 0 0 12px; color: #0A0A0B; }
+.formula p { margin: 0 0 8px; font-size: 15px; color: #374151; }
+.rules-table { width: 100%; border-collapse: collapse; margin: 0 0 24px; font-size: 15px; text-align: left; }
+.rules-table caption { caption-side: bottom; font-size: 13px; color: #4B5563; margin-top: 8px; text-align: left; }
+.rules-table th, .rules-table td { padding: 12px 16px; border-bottom: 1px solid #E5E7EB; }
+.rules-table th { font-weight: 600; color: #0A0A0B; }
+.rules-table td { color: #374151; }
+
+/* 6. Tarjetas de pasos (padding propio, a salvo del reset de listas) */
+.steps4{list-style:none;margin:24px 0;padding:0;display:grid;grid-template-columns:minmax(0,1fr);gap:16px}
+@media (min-width:700px){.steps4{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.step4{margin:0;padding:20px;border:1px solid #E5E7EB;border-radius:16px;background:#FFFFFF}
+.step4-num{margin:0 0 8px;max-width:none;font-size:2rem;font-weight:900;line-height:1;color:#8C52FF}
+.step4-title{margin:0 0 4px;max-width:none;font-size:16px;font-weight:700;line-height:1.4;color:#0A0A0B}
+.step4-text{margin:0;max-width:none;font-size:15px;line-height:1.5;color:#374151}
+
+.published-case { border: 1px solid #E5E7EB; border-radius: 12px; padding: 16px; background: #F9FAFB; margin: 0 0 24px; }
+.published-case-label { font-size: 13px; font-weight: 600; text-transform: uppercase; color: #4B5563; margin: 0 0 8px; }
+.published-case p.pc-title { font-size: 14px; font-weight: 600; color: #0A0A0B; margin: 0 0 8px; }
+.published-case p.pc-text { font-size: 14px; color: #374151; margin: 0; }
+
+.gloss { display: grid; grid-template-columns: minmax(0,1fr); gap: 16px; margin: 0 0 24px; }
+@media (min-width: 700px) { .gloss { grid-template-columns: repeat(2, minmax(0,1fr)); } }
+.gloss-item { border: 1px solid #E5E7EB; border-radius: 12px; padding: 16px; }
+.gloss-item dt { font-weight: 700; font-size: 16px; color: #0A0A0B; margin: 0 0 4px; }
+.gloss-item dd { font-size: 15px; color: #374151; margin: 0; }
+
+.author-box { display: flex; flex-direction: column; gap: 16px; background: #F9FAFB; border: 1px solid #E5E7EB; border-radius: 12px; padding: 24px; margin: 48px 0 0; }
+@media (min-width: 600px) { .author-box { flex-direction: row; align-items: start; } }
+.author-box-logo { width: 64px; height: 64px; flex: none; background: #0A0A0B; border-radius: 12px; display: flex; align-items: center; justify-content: center; padding: 6px; }
+.author-box-logo img { width: 100%; height: 100%; object-fit: contain; }
+.author-box p { margin: 0 0 8px; font-size: 15px; color: #374151; }
+.author-box p:last-child { margin: 0; }
+.author-box p.ab-title { font-weight: 700; color: #0A0A0B; }
+.author-box a { color: #7B2FBE; font-weight: 500; text-decoration: underline; }
+
+/* 7. Carrusel de marcas */
+.brands{background:#0A0A0B;padding:32px 0;overflow:hidden}
+.brands-title{margin:0 0 16px;max-width:none;text-align:center;font-size:18px;font-weight:700;line-height:1.3;color:rgba(255,255,255,0.92)}
+.marquee{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent);mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent)}
+.marquee-inner{display:flex;width:max-content;animation:marquee 90s linear infinite}
+.marquee:hover .marquee-inner,.marquee:focus-within .marquee-inner{animation-play-state:paused}
+.brands-list{display:flex;flex:none;align-items:center;list-style:none;margin:0;padding:0;max-width:none}
+.brands-list li{display:flex;align-items:center;margin:0;padding:0;white-space:nowrap;font-size:15px;font-weight:500;line-height:1.4;color:rgba(255,255,255,0.6)}
+.brands-list li::after{content:"";width:4px;height:4px;margin:0 24px;border-radius:50%;background:rgba(140,82,255,0.7)}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.marquee{-webkit-mask-image:none;mask-image:none}.marquee-inner{animation:none;width:auto;justify-content:center}.brands-list:not(:first-child){display:none}.brands-list{flex-wrap:wrap;justify-content:center;gap:10px 24px;padding:0 20px}.brands-list li::after{display:none}}
+
+/* CIERRE */
+.cierre { background: radial-gradient(900px 420px at 88% 0%, rgba(140,82,255,0.30), rgba(140,82,255,0) 65%), linear-gradient(160deg,#0A0A0B 0%,#18181C 100%); padding: 64px 20px; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.cierre-inner { max-width: 720px; width: 100%; }
+.cierre h2 { margin: 0 0 16px; font-size: 1.8rem; font-weight: 900; line-height: 1.3; color: #FFFFFF; }
+@media (min-width: 600px) { .cierre h2 { font-size: 2.2rem; } }
+.cierre p { margin: 0 0 32px; font-size: 17px; line-height: 1.6; color: rgba(255,255,255,0.92); }
+.cierre-actions { display: flex; flex-direction: column; gap: 12px; margin: 0 0 24px; }
+@media (min-width: 700px) { .cierre-actions { flex-direction: row; justify-content: center; } }
+.cierre-btn-wa { display: flex; align-items: center; justify-content: center; min-height: 48px; padding: 0 24px; background: #25F5A4; color: #0A0A0B; font-size: 15px; font-weight: 600; text-decoration: none; border-radius: 8px; white-space: nowrap; gap: 8px; }
+.cierre-btn-wa svg { width: 20px; height: 20px; flex: none; }
+.cierre-btn-ag { display: flex; align-items: center; justify-content: center; min-height: 48px; padding: 0 24px; background: transparent; border: 1.5px solid #8C52FF; color: #FFFFFF; font-size: 15px; font-weight: 600; text-decoration: none; border-radius: 8px; white-space: nowrap; }
+.cierre-meta { margin: 0; font-size: 13px; color: rgba(255,255,255,0.6); }
+
+/* FOOTER */
+.site-footer { background: #0A0A0B; border-top: 1px solid rgba(255,255,255,0.1); padding: 56px 20px 0; }
+@media (min-width: 900px) { .site-footer { padding: 56px 24px 0; } }
+.footer-grid { max-width: 1240px; margin: 0 auto; display: grid; gap: 32px; }
+@media (min-width: 900px) { .footer-grid { grid-template-columns: minmax(0,1.4fr) minmax(0,1fr) minmax(0,1fr); gap: 48px; align-items: start; } }
+.footer-logo { display: inline-flex; align-items: center; text-decoration: none; margin: 0 0 16px; }
+.footer-logo img { height: 30px; object-fit: contain; }
+.footer-logo span { color: #FFFFFF; font-weight: 900; font-size: 20px; }
+.footer-col-1 p { font-size: 15px; color: rgba(255,255,255,0.7); max-width: 360px; line-height: 1.6; }
+.footer-title { margin: 0 0 16px; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: rgba(255,255,255,0.5); }
+.footer-links { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; }
+.footer-links a { color: rgba(255,255,255,0.75); text-decoration: none; font-size: 15px; display: inline-flex; align-items: center; gap: 8px; }
+.footer-links a:hover { color: #FFFFFF; }
+.footer-bottom { max-width: 1240px; margin: 40px auto 0; padding: 20px 0; border-top: 1px solid rgba(255,255,255,0.08); display: flex; flex-direction: column; align-items: center; gap: 16px; }
+@media (min-width: 600px) { .footer-bottom { flex-direction: row; justify-content: space-between; } }
+.footer-copy { font-size: 13px; color: rgba(255,255,255,0.5); }
+.footer-social { display: flex; gap: 16px; }
+.footer-social a { font-size: 13px; color: rgba(255,255,255,0.5); text-decoration: none; }
+.footer-social a:hover { color: #FFFFFF; }
+
+/* ANIMATION UTILS */
+html.js [data-reveal]:not(.is-visible) { opacity: 0; transform: translateY(12px); }
+[data-reveal] { transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
+@media (prefers-reduced-motion: reduce) { html.js [data-reveal]:not(.is-visible) { opacity: 1; transform: none; transition: none; } }
+</style>
+    <link rel="icon" type="image/png" href="/logo-lezac-mini.png">
+    <script src="/analytics.js"></script>
+</head>
+<body>
+
+<header class="site-header">
+  <a href="https://lezacconsultoria.com/" class="header-logo" aria-label="Ir a inicio de Lezac Consultoría">
+    <img src="https://lezacconsultoria.com/Logo%20Lezac%20%28500%20x%20500%20px%29%20%283%29.png" alt="" aria-hidden="true" onerror="this.style.display='none';this.nextElementSibling.style.display='inline';">
+    <span style="display:none;">Lezac Consultoría</span>
+  </a>
+  <div class="header-actions">
+    <a href="https://wa.me/5491154107921?text=Hola%2C%20us%C3%A9%20la%20calculadora%20de%20clientes%20inactivos%20de%20Lezac%20y%20quiero%20agendar%20la%20asesor%C3%ADa%20comercial%20gratuita." target="_blank" rel="noopener" class="btn-wa-hdr" aria-label="Escribir por WhatsApp">
+      <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.888-.788-1.489-1.761-1.663-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.82 9.82 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+      <span class="wa-text">Escribinos</span>
+    </a>
+    <a href="https://calendly.com/lezacconsultoria/consultoria-comercial?utm_source=blog&utm_medium=header&utm_campaign=blog-clientes-inactivos" target="_blank" rel="noopener" class="btn-agenda" aria-label="Agendar asesoría gratuita">
+      <span class="t-xs">Agendar</span>
+      <span class="t-sm">Agendar asesoría</span>
+      <span class="t-md">Agendar asesoría gratuita</span>
+    </a>
+  </div>
+</header>
+
+<main id="main-content">
+  <div class="read-progress" aria-hidden="true"><div class="read-progress-bar"></div></div>
+
+  <article class="article">
+    
+    <section class="hero section-py" data-reveal>
+      <div class="container hero-content">
+        <div class="hero-main">
+          <nav aria-label="Breadcrumb">
+            <ol class="breadcrumb">
+              <li><a href="https://lezacconsultoria.com/">Inicio</a></li>
+              <li>›</li>
+              <li><a href="https://lezacconsultoria.com/blog">Blog</a></li>
+              <li>›</li>
+              <li aria-current="page">Calculadora de clientes inactivos</li>
+            </ol>
+          </nav>
+          <span class="hero-tag">Herramienta gratuita · Sin registro</span>
+          <h1 class="hero-title">Calculadora de clientes inactivos: cuánto te cuestan los que dejaron de comprar</h1>
+          <div class="hero-meta">
+            <div class="author-logo">
+              <img src="https://lezacconsultoria.com/Logo%20Lezac%20%28500%20x%20500%20px%29%20%283%29.png" alt="" aria-hidden="true" onerror="this.style.display='none';this.nextElementSibling.style.display='inline';">
+              <span style="display:none;color:#FFF;font-size:10px;font-weight:900;">Lezac</span>
+            </div>
+            <span>Equipo de Lezac Consultoría · Actualizado el 27 de octubre de 2026 · 8 min de lectura · <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Flezacconsultoria.com%2Fblog%2Fcalculadora-clientes-inactivos" target="_blank" rel="noopener">Compartir en LinkedIn</a></span>
+          </div>
+          <p class="hero-extract">Un cliente inactivo es el que compró alguna vez y no volvió a comprar dentro de tu corte de días sin comprar. Esta calculadora te dice cuántos clientes inactivos tiene tu distribuidora, cuánta venta mensual representan y cuánto podrías recuperar si volvieran algunos. Trabaja con tus propios datos: no usa promedios de mercado.</p>
+          <a href="#calculadora" class="hero-jump">Ir a la calculadora ↓</a>
+        </div>
+        <div class="example">
+          <p class="example-label">Ejemplo ilustrativo</p>
+          <p class="example-big">150 clientes inactivos</p>
+          <p class="example-sub">de 400 en la base · 250 activos hoy · −10,7% contra el período anterior</p>
+          <div class="stack" aria-hidden="true">
+            <div class="stack-a"></div>
+          </div>
+          <ul class="example-legend">
+            <li><i style="background:#8C52FF"></i> Activos</li>
+            <li><i style="background:#EC0543"></i> Inactivos</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <div class="container layout">
+      <div class="layout-main">
+        
+        <section id="calculadora" class="section-py" data-reveal>
+          <h2>¿Cuántos clientes inactivos tiene tu empresa y cuánto te cuestan?</h2>
+          <p>Para saberlo, dividí los clientes que compraron dentro de tu corte por el total de tu base: ese es tu porcentaje de activos. Los que faltan son tus clientes inactivos. Multiplicalos por lo que compra un cliente activo promedio y tenés la venta que hoy está en pausa. Cargá tus datos abajo y mirá el resultado.</p>
+          <p style="font-size:13px; color:#4B5563; margin:0 0 12px; font-weight:600;">Ejemplo ilustrativo: valores precargados de una distribuidora de 400 clientes. Reemplazalos por los tuyos.</p>
+          
+          <div class="work">
+            <div class="work-grid">
+              
+              <form class="card-in" novalidate>
+                <div class="field">
+                  <label class="field-label" for="moneda">Moneda</label>
+                  <select id="moneda">
+                    <option value="ARS" selected>ARS ($)</option>
+                    <option value="USD">USD (US$)</option>
+                    <option value="PYG">PYG (Gs.)</option>
+                    <option value="BOB">BOB (Bs)</option>
+                    <option value="UYU">UYU ($U)</option>
+                  </select>
+                  <span class="field-help">Solo cambia el símbolo; no convierte montos.</span>
+                </div>
+                <div class="field">
+                  <label class="field-label" for="f-base">Clientes en tu base</label>
+                  <input type="number" id="f-base" value="400" min="1" step="1" inputmode="numeric">
+                  <span class="field-help">Total de clientes que alguna vez te compraron.</span>
+                  <span class="field-error">Ingresá un número válido mayor a 0.</span>
+                </div>
+                <div class="field">
+                  <label class="field-label" for="f-activos">Clientes que compraron dentro de tu corte</label>
+                  <input type="number" id="f-activos" value="250" min="0" step="1" inputmode="numeric">
+                  <span class="field-help">Por ejemplo, en los últimos 60 días. Usá siempre el mismo corte.</span>
+                  <span class="field-error">Los clientes activos no pueden superar la base.</span>
+                </div>
+                <div class="field">
+                  <label class="field-label" for="f-anterior">Clientes activos del período anterior</label>
+                  <input type="number" id="f-anterior" value="280" min="0" step="1" inputmode="numeric">
+                  <span class="field-help">Con el mismo corte, en el período anterior.</span>
+                  <span class="field-error">Ingresá un número válido igual o mayor a 0.</span>
+                </div>
+                <div class="field">
+                  <label class="field-label" for="f-compra">Compra promedio mensual de un cliente activo</label>
+                  <input type="number" id="f-compra" value="450000" min="0" step="1" inputmode="numeric">
+                  <span class="field-help">Lo que compra por mes, en tu moneda.</span>
+                  <span class="field-error">Ingresá un número válido igual o mayor a 0.</span>
+                </div>
+                <div class="field" style="margin-bottom:8px">
+                  <label class="field-label" for="f-margen">Margen sobre ventas (%)</label>
+                  <input type="number" id="f-margen" value="25" min="0" max="100" step="0.1" inputmode="decimal">
+                  <span class="field-help">Opcional. Sirve para estimar la ganancia.</span>
+                  <span class="field-error">Ingresá un porcentaje entre 0 y 100.</span>
+                </div>
+                <button type="button" class="btn-reset">Restablecer ejemplo</button>
+
+                <div class="mini" aria-hidden="true">
+                  <div class="mini-item">
+                    <p class="mini-num" id="m-inactivos">150 inactivos</p>
+                    <p class="mini-lbl" id="m-pct">37,5% de tu base</p>
+                  </div>
+                  <div class="mini-item">
+                    <p class="mini-num" id="m-venta">$ 67.500.000</p>
+                    <p class="mini-lbl">venta mensual en pausa</p>
+                  </div>
+                </div>
+              </form>
+
+              <div class="results">
+                <div class="res-top">
+                  <span class="chip dk-red" id="r-chip">ROJO</span>
+                  <span style="font-size:13px; color:rgba(255,255,255,0.7);">Regla de color: variación de clientes activos</span>
+                </div>
+                <p class="res-verdict" aria-live="polite" id="r-verdict">Caída de más de 5%: armá la lista de clientes que dejaron de comprar y asigná quién llama a cada uno esta semana.</p>
+                
+                <div class="waffle" aria-hidden="true" id="r-waffle">
+                  <!-- JS generará 100 celdas, pero como piden que esté en HTML estático: -->
+                  <span class="cell is-a"></span><span class="cell is-a"></span><span class="cell is-a"></span><span class="cell is-a"></span><span class="cell is-a"></span><span class="cell is-a"></span><span class="cell is-a"></span><span class="cell is-a"></span><span class="cell is-a"></span><span class="cell is-a"></span>
+                  <span class="cell is-a"></span><span class="cell is-a"></span><span class="cell is-a"></span><span class="cell is-a"></span><span class="cell is-a"></span><span class="cell is-a"></span><span class="cell is-a"></span><span class="cell is-a"></span><span class="cell is-a"></span><span class="cell is-a"></span>
+                  <span class="cell is-a"></span><span class="cell is-a"></span><span class="cell is-a"></span><span class="cell is-a"></span><span class="cell is-a"></span><span class="cell is-a"></span><span class="cell is-a"></span><span class="cell is-a"></span><span class="cell is-a"></span><span class="cell is-a"></span>
+                  <span class="cell is-a"></span><span class="cell is-a"></span><span class="cell is-a"></span><span class="cell is-a"></span><span class="cell is-a"></span><span class="cell is-a"></span><span class="cell is-a"></span><span class="cell is-a"></span><span class="cell is-a"></span><span class="cell is-a"></span>
+                  <span class="cell is-a"></span><span class="cell is-a"></span><span class="cell is-a"></span><span class="cell is-a"></span><span class="cell is-a"></span><span class="cell is-a"></span><span class="cell is-a"></span><span class="cell is-a"></span><span class="cell is-a"></span><span class="cell is-a"></span>
+                  <span class="cell is-a"></span><span class="cell is-a"></span><span class="cell is-a"></span><span class="cell is-a"></span><span class="cell is-a"></span><span class="cell is-a"></span><span class="cell is-a"></span><span class="cell is-a"></span><span class="cell is-a"></span><span class="cell is-a"></span>
+                  <span class="cell is-a"></span><span class="cell is-a"></span><span class="cell is-a"></span><span class="cell is-r"></span><span class="cell is-r"></span><span class="cell is-r"></span><span class="cell is-r"></span><span class="cell is-r"></span><span class="cell is-r"></span><span class="cell is-r"></span>
+                  <span class="cell is-d"></span><span class="cell is-d"></span><span class="cell is-d"></span><span class="cell is-d"></span><span class="cell is-d"></span><span class="cell is-d"></span><span class="cell is-d"></span><span class="cell is-d"></span><span class="cell is-d"></span><span class="cell is-d"></span>
+                  <span class="cell is-d"></span><span class="cell is-d"></span><span class="cell is-d"></span><span class="cell is-d"></span><span class="cell is-d"></span><span class="cell is-d"></span><span class="cell is-d"></span><span class="cell is-d"></span><span class="cell is-d"></span><span class="cell is-d"></span>
+                  <span class="cell is-d"></span><span class="cell is-d"></span><span class="cell is-d"></span><span class="cell is-d"></span><span class="cell is-d"></span><span class="cell is-d"></span><span class="cell is-d"></span><span class="cell is-d"></span><span class="cell is-d"></span><span class="cell is-d"></span>
+                </div>
+                <ul class="legend">
+                  <li><i style="background:#8C52FF"></i> Activos</li>
+                  <li><i style="background:#25F5A4"></i> Inactivos que recuperarías (escenario)</li>
+                  <li><i style="background:#EC0543"></i> Inactivos</li>
+                </ul>
+                <p class="legend-desc">Cada cuadrado es el 1% de tu base de clientes.</p>
+
+                <dl class="kpis">
+                  <div class="kpi"><dt>Clientes activos</dt><dd id="k-act">250 de 400 (62,5%)</dd></div>
+                  <div class="kpi"><dt>Clientes inactivos</dt><dd id="k-ina">150 (37,5%)</dd></div>
+                  <div class="kpi"><dt>Variación de clientes activos</dt><dd id="k-var">−10,7%</dd></div>
+                  <div class="kpi"><dt>Venta mensual en pausa</dt><dd id="k-vmp">$ 67.500.000</dd></div>
+                  <div class="kpi"><dt>Venta anual en pausa</dt><dd id="k-vap">$ 810.000.000</dd></div>
+                </dl>
+                <p class="res-note">La venta en pausa es la de los clientes inactivos si compraran como un cliente activo promedio. Es un máximo teórico: no todos van a volver.</p>
+
+                <div class="sim">
+                  <p class="sim-title" id="s-lbl">Si recuperás una parte de los inactivos</p>
+                  <label for="f-rec" class="visually-hidden">Porcentaje de recuperación</label>
+                  <input type="range" id="f-rec" min="5" max="50" step="5" value="20">
+                  <p style="font-size:14px; font-weight:600; color:#25F5A4; margin:4px 0 8px;" id="s-tag">Recuperás el 20% de los inactivos</p>
+                  <p class="sim-out" id="s-out">30 clientes · $ 13.500.000 por mes · $ 162.000.000 por año · ganancia anual estimada $ 40.500.000.</p>
+                </div>
+                <p class="res-note">Estimación sobre los datos que cargaste. No es una promesa de resultado.</p>
+
+                <a href="https://wa.me/5491154107921?text=Hola%2C%20us%C3%A9%20la%20calculadora%20de%20clientes%20inactivos%20de%20Lezac%20y%20quiero%20ver%20cu%C3%A1ntos%20clientes%20dormidos%20tiene%20mi%20empresa%20con%20mis%20datos%20reales." target="_blank" rel="noopener" class="btn-wa">
+                  <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.888-.788-1.489-1.761-1.663-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.82 9.82 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+                  Quiero ver mis clientes inactivos con mis datos reales
+                </a>
+                <p class="btn-wa-note">Lo vemos en una asesoría comercial gratuita de 45 minutos.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="como-se-calcula" class="section-py" data-reveal>
+          <h2>¿Cómo se calcula el porcentaje de clientes activos y la variación?</h2>
+          <p>El porcentaje de clientes activos es los clientes que compraron dentro de tu corte dividido por el total de tu base, por 100. La variación compara los activos de hoy con los del período anterior: (activos hoy − activos anteriores) ÷ activos anteriores × 100. Si cae más de 5%, la regla de color pasa a rojo.</p>
+          
+          <div class="formula">
+            <p>Las fórmulas de la calculadora</p>
+            <p>Clientes activos % = activos ÷ base × 100.</p>
+            <p>Clientes inactivos = base − activos.</p>
+            <p>Variación % = (activos hoy − activos del período anterior) ÷ activos del período anterior × 100.</p>
+            <p>Venta mensual en pausa = inactivos × compra promedio mensual de un cliente activo.</p>
+            <p>Recuperación estimada = inactivos × % que recuperás × compra promedio mensual.</p>
+          </div>
+
+          <div style="overflow-x:auto; margin:0 0 24px;">
+            <table class="rules-table">
+              <caption>Regla de color según la variación de clientes activos</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Resultado</th>
+                  <th scope="col">Qué hacer</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><span class="chip c-green">Verde</span><br>Sin caída de clientes activos contra el período anterior</td>
+                  <td>La base se mantiene o crece. Revisá cada semana qué clientes están por pasar el corte.</td>
+                </tr>
+                <tr>
+                  <td><span class="chip c-amber">Amarillo</span><br>Caída de hasta 5%</td>
+                  <td>Algunos clientes se están yendo. Mirá quiénes dejaron de comprar y llamá primero a los que más compraban.</td>
+                </tr>
+                <tr>
+                  <td><span class="chip c-red">Rojo</span><br>Caída de más de 5%</td>
+                  <td>Armá la lista de clientes que dejaron de comprar y asigná quién llama a cada uno esta semana.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          
+          <p>Ejemplo ilustrativo: con 400 clientes en la base, 250 activos hoy y 280 en el período anterior, el 62,5% de la base está activa, hay 150 clientes inactivos y los activos cayeron 10,7%: la regla marca rojo.</p>
+          <p>Para ver otros indicadores de la semana, mirá la guía de <a href="https://lezacconsultoria.com/blog/indicadores-ventas-semanales-pymes">indicadores de ventas semanales para pymes</a>; y para medir cuánto tardás en cobrar, usá la <a href="https://lezacconsultoria.com/blog/calculadora-dso-distribuidoras">calculadora de días de cobranza</a>.</p>
+        </section>
+
+        <section id="cuantos-dias-sin-comprar" class="section-py" data-reveal>
+          <h2>¿Cuántos días sin comprar hacen inactivo a un cliente?</h2>
+          <p>No hay un número fijo: depende de cada cuánto compra normalmente tu cliente. Alguien que compra por semana está inactivo mucho antes que alguien que compra una vez por trimestre. Definí un corte según tu rubro, por ejemplo 60 días si tus clientes compran una vez por mes, y no lo cambies para poder comparar períodos.</p>
+          <ol>
+            <li>Fijate cada cuánto compra normalmente tu cliente típico.</li>
+            <li>Elegí un corte mayor a ese ciclo de compra.</li>
+            <li>Mantenelo en el tiempo y compará siempre contra el período anterior.</li>
+          </ol>
+          <p>Si tu rubro tiene temporadas, compará el mismo período del año anterior para no confundir una pausa normal con un cliente que se fue.</p>
+        </section>
+
+        <section id="por-que-y-como-recuperar" class="section-py" data-reveal>
+          <h2>¿Por qué dejan de comprar los clientes y cómo se recuperan?</h2>
+          <p>Los clientes suelen dejar de comprar porque nadie los visitó ni los llamó a tiempo, porque cambió el contacto de compras o porque encontraron otro proveedor. Se recuperan empezando por los que más compraban, con un llamado personal y una razón concreta para volver, y asignando a una persona responsable de cada lista.</p>
+          
+          <ol class="steps4">
+            <li class="step4">
+              <p class="step4-num">1</p>
+              <p class="step4-title">Armá la lista</p>
+              <p class="step4-text">Los clientes que no compraron dentro del corte, ordenados por cuánto compraban.</p>
+            </li>
+            <li class="step4">
+              <p class="step4-num">2</p>
+              <p class="step4-title">Asigná responsables</p>
+              <p class="step4-text">Cada lista tiene una persona a cargo, sea un vendedor o un coordinador.</p>
+            </li>
+            <li class="step4">
+              <p class="step4-num">3</p>
+              <p class="step4-title">Contactá con un motivo</p>
+              <p class="step4-text">Llamá con una razón concreta: su última compra o una novedad que le sirva.</p>
+            </li>
+            <li class="step4">
+              <p class="step4-num">4</p>
+              <p class="step4-title">Medí cada semana</p>
+              <p class="step4-text">Cuántos volvieron a comprar y cuántos siguen sin responder.</p>
+            </li>
+          </ol>
+
+          <p class="published-case-label">Caso publicado en nuestra página de +Clientes Activos</p>
+          <div class="published-case">
+            <p class="pc-title">Distribuidora de la provincia de Buenos Aires</p>
+            <p class="pc-text">Solo el 35% de sus clientes había comprado en el último año. Enfocamos el trabajo en reactivar a los clientes inactivos y logró más de 15% de clientes activos. Después, el equipo continuó con la metodología por su cuenta.</p>
+          </div>
+          <p>Cuando además hay zonas y puntos de venta sin atender, el trabajo incluye el método <a href="https://lezacconsultoria.com/mas-clientes-activos">+Clientes Activos</a>, con geolocalización, censo y ruteo comercial.</p>
+        </section>
+
+        <section id="que-hacemos-en-lezac" class="section-py" data-reveal>
+          <h2>¿Qué hacemos en Lezac con los clientes inactivos de una distribuidora?</h2>
+          <p>En Lezac trabajamos uno a uno sobre tus datos de venta: detectamos quiénes dejaron de comprar, cuánto compraban y qué zonas quedaron sin atender, y ordenamos el plan para recuperarlos. Con el <a href="https://lezacconsultoria.com/consultoria-inteligencia-comercial">método Brújula Comercial</a> recibís un reporte cada lunes y una reunión cada 15 días; con <a href="https://lezacconsultoria.com/mas-clientes-activos">+Clientes Activos</a> sumamos geolocalización, censo y ruteo.</p>
+          <p>Si estás evaluando cómo elegir, leé la guía de <a href="https://lezacconsultoria.com/blog/consultoria-comercial-pymes">consultoría comercial para pymes</a>.</p>
+        </section>
+
+        <section id="glosario" class="section-py" data-reveal>
+          <h2>Glosario: seis términos para medir tus clientes</h2>
+          <dl class="gloss">
+            <div class="gloss-item">
+              <dt>Cliente activo</dt>
+              <dd>Cliente que compró dentro del corte de días sin comprar que define la empresa.</dd>
+            </div>
+            <div class="gloss-item">
+              <dt>Cliente inactivo (dormido)</dt>
+              <dd>Cliente que compró alguna vez y no volvió a comprar dentro del corte de días sin comprar.</dd>
+            </div>
+            <div class="gloss-item">
+              <dt>Corte de días sin comprar</dt>
+              <dd>Cantidad de días sin compras a partir de la cual un cliente se considera inactivo. Depende del ciclo de compra del rubro.</dd>
+            </div>
+            <div class="gloss-item">
+              <dt>Base de clientes</dt>
+              <dd>Total de clientes que alguna vez compraron, activos e inactivos.</dd>
+            </div>
+            <div class="gloss-item">
+              <dt>Tasa de clientes activos</dt>
+              <dd>Porcentaje de la base de clientes que compró dentro del corte.</dd>
+            </div>
+            <div class="gloss-item">
+              <dt>Reactivación de clientes</dt>
+              <dd>Conjunto de acciones para que un cliente inactivo vuelva a comprar.</dd>
+            </div>
+          </dl>
+        </section>
+
+        <section id="preguntas-frecuentes" class="section-py" data-reveal>
+          <h2>Preguntas frecuentes sobre clientes inactivos</h2>
+          
+          <h3>¿Qué es un cliente inactivo?</h3>
+          <p>Es un cliente que compró alguna vez y no volvió a comprar dentro del corte de días sin comprar que define tu empresa. También se lo llama cliente dormido. Lo importante no es el nombre sino medirlo siempre con el mismo corte, para poder comparar un período con otro y ver si la cantidad sube o baja.</p>
+          
+          <h3>¿Cuántos días sin comprar hacen inactivo a un cliente?</h3>
+          <p>No hay un número único: depende del ciclo de compra de tu rubro. Un cliente que compra todas las semanas se vuelve inactivo mucho antes que uno que compra una vez por trimestre. Elegí un corte mayor al ciclo típico de tus clientes y mantenelo en el tiempo.</p>
+          
+          <h3>¿Cómo se calcula el porcentaje de clientes activos?</h3>
+          <p>Se divide la cantidad de clientes que compraron dentro de tu corte por el total de tu base de clientes y se multiplica por 100. Por ejemplo, si de 400 clientes compraron 250, el porcentaje de activos es 62,5% y los 150 restantes son inactivos. Comparalo con el período anterior para saber si mejora o empeora.</p>
+          
+          <h3>¿Cuánta venta se pierde por los clientes inactivos?</h3>
+          <p>Depende de cuántos son y de cuánto compraban. Una estimación simple es multiplicar la cantidad de clientes inactivos por la compra promedio mensual de un cliente activo. Es un máximo teórico: no todos van a volver. Por eso la calculadora te deja simular qué pasa si recuperás una parte, por ejemplo 10%, 20% o 30%.</p>
+          
+          <h3>¿Cómo recuperar clientes inactivos en una distribuidora?</h3>
+          <p>Armá la lista de los clientes que no compraron dentro del corte, ordenada por cuánto compraban, asigná una persona responsable de cada grupo y contactalos con un motivo concreto, como su última compra o una novedad. Medí cada semana cuántos volvieron a comprar. Empezar por los que más compraban rinde más rápido.</p>
+          
+          <h3>¿Qué diferencia hay entre un cliente inactivo y un cliente perdido?</h3>
+          <p>Un cliente inactivo no compró dentro de tu corte, pero todavía puede volver. Un cliente perdido es el que ya decidió comprar a otro proveedor o cerró su negocio. Al principio no sabés cuál es cuál: por eso conviene contactar a los inactivos antes de que pasen los meses y la relación se enfríe.</p>
+          
+          <h3>¿Es lo mismo clientes inactivos que tasa de abandono?</h3>
+          <p>Son parecidos. La tasa de abandono mide el porcentaje de clientes que dejaron de comprar en un período, y los clientes inactivos son esos mismos clientes vistos en cantidad y en venta en pausa. En una distribuidora la compra no es por suscripción y no hay una baja formal, por eso se mide con un corte de días sin comprar.</p>
+          
+          <h3>¿Qué datos necesito para calcular mis clientes inactivos?</h3>
+          <p>Alcanza con tres números: el total de tu base de clientes, cuántos compraron dentro de tu corte y cuántos compraron en el período anterior. Para estimar la venta en pausa sumá la compra promedio mensual de un cliente activo. Los sacás de tu sistema de gestión o de un Excel de ventas.</p>
+
+          <div class="author-box">
+            <div class="author-box-logo">
+              <img src="https://lezacconsultoria.com/Logo%20Lezac%20%28500%20x%20500%20px%29%20%283%29.png" alt="" aria-hidden="true" onerror="this.style.display='none';this.nextElementSibling.style.display='inline';">
+              <span style="display:none;color:#FFF;font-size:12px;font-weight:900;">Lezac</span>
+            </div>
+            <div>
+              <p class="ab-title">Equipo de Lezac Consultoría</p>
+              <p>Lezac Consultoría es una consultora de inteligencia comercial con más de 10 años de trayectoria y más de 100 empresas asesoradas en Argentina, Paraguay, Bolivia y Uruguay. Esta herramienta fue elaborada por nuestro equipo de consultores.</p>
+              <p><a href="https://www.linkedin.com/company/lezac-consultoria" target="_blank" rel="noopener">Seguinos en LinkedIn</a></p>
+            </div>
+          </div>
+        </section>
+
+      </div>
+      
+      <aside class="rail-wrap" aria-label="Servicios de Lezac Consultoría">
+        <div class="rail">
+          <p class="rail-title">Lo que hacemos en Lezac</p>
+          <ul class="rail-list">
+            <li class="rail-card is-main">
+              <p class="rail-badge">Servicio principal</p>
+              <p class="rail-name">Consultoría comercial · Brújula Comercial</p>
+              <p class="rail-text">Un consultor trabaja uno a uno sobre tus datos de venta, con acompañamiento mes a mes.</p>
+              <a href="https://lezacconsultoria.com/consultoria-inteligencia-comercial" class="rail-btn">Conocer la consultoría comercial</a>
+            </li>
+            <li class="rail-card">
+              <p class="rail-name">+Clientes Activos</p>
+              <p class="rail-text">Recuperamos clientes dormidos y sumamos puntos de venta sin atender.</p>
+              <a href="https://lezacconsultoria.com/mas-clientes-activos" class="rail-link">Ver +Clientes Activos →</a>
+            </li>
+            <li class="rail-card">
+              <p class="rail-name">IA a Medida</p>
+              <p class="rail-text">Bots de WhatsApp, herramientas internas y automatizaciones a medida.</p>
+              <a href="https://lezacconsultoria.com/ia-a-medida" class="rail-link">Ver IA a Medida →</a>
+            </li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </article>
+
+  <section class="brands" aria-label="Empresas que confían en Lezac" data-reveal>
+    <p class="brands-title">Empresas que confían en Lezac</p>
+    <div class="marquee">
+      <div class="marquee-inner">
+        <!-- Reemplazar cada nombre por <img src="URL del logo" alt="Logo de [empresa]" height="28"> cuando estén las URLs -->
+        <ul class="brands-list">
+          <li>Bacardi</li><li>Vitalcan</li><li>Weilen</li><li>Proquim</li><li>Madersa</li><li>Vaca Fría</li><li>Distribuidora Gloria</li><li>Alco</li><li>Indega</li><li>Pluscar</li><li>McCain</li>
+        </ul>
+        <ul class="brands-list" aria-hidden="true">
+          <li>Bacardi</li><li>Vitalcan</li><li>Weilen</li><li>Proquim</li><li>Madersa</li><li>Vaca Fría</li><li>Distribuidora Gloria</li><li>Alco</li><li>Indega</li><li>Pluscar</li><li>McCain</li>
+        </ul>
+        <ul class="brands-list" aria-hidden="true">
+          <li>Bacardi</li><li>Vitalcan</li><li>Weilen</li><li>Proquim</li><li>Madersa</li><li>Vaca Fría</li><li>Distribuidora Gloria</li><li>Alco</li><li>Indega</li><li>Pluscar</li><li>McCain</li>
+        </ul>
+        <ul class="brands-list" aria-hidden="true">
+          <li>Bacardi</li><li>Vitalcan</li><li>Weilen</li><li>Proquim</li><li>Madersa</li><li>Vaca Fría</li><li>Distribuidora Gloria</li><li>Alco</li><li>Indega</li><li>Pluscar</li><li>McCain</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="cierre" class="cierre" data-reveal>
+    <div class="cierre-inner">
+      <h2>Agendá tu asesoría comercial gratuita de 45 minutos</h2>
+      <p>En una charla online vemos cuántos clientes inactivos tiene tu empresa con tus datos reales, qué se puede recuperar y por dónde empezar. Sin contrato inicial.</p>
+      <div class="cierre-actions">
+        <a href="https://wa.me/5491154107921?text=Hola%2C%20us%C3%A9%20la%20calculadora%20de%20clientes%20inactivos%20de%20Lezac%20y%20quiero%20agendar%20la%20asesor%C3%ADa%20comercial%20gratuita." target="_blank" rel="noopener" class="cierre-btn-wa">
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.888-.788-1.489-1.761-1.663-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.82 9.82 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+          Escribir por WhatsApp
+        </a>
+        <a href="https://calendly.com/lezacconsultoria/consultoria-comercial?utm_source=blog&utm_medium=cierre&utm_campaign=blog-clientes-inactivos" target="_blank" rel="noopener" class="cierre-btn-ag">
+          Agendar asesoría gratuita · 45 min
+        </a>
+      </div>
+      <p class="cierre-meta">10+ años · 100+ empresas asesoradas · Argentina, Paraguay, Bolivia y Uruguay</p>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-col-1">
+      <a href="https://lezacconsultoria.com/" class="footer-logo" aria-label="Ir a inicio de Lezac Consultoría">
+        <img src="https://lezacconsultoria.com/Logo%20Lezac%20%28500%20x%20500%20px%29%20%283%29.png" alt="" aria-hidden="true" onerror="this.style.display='none';this.nextElementSibling.style.display='inline';">
+        <span style="display:none;">Lezac</span>
+      </a>
+      <p>Consultoría de inteligencia comercial para pymes, distribuidoras, mayoristas y fábricas en Argentina, Paraguay, Bolivia y Uruguay.</p>
+    </div>
+    <div class="footer-col-2">
+      <p class="footer-title">Servicios</p>
+      <ul class="footer-links">
+        <li><a href="https://lezacconsultoria.com/consultoria-inteligencia-comercial">Consultoría Inteligencia Comercial</a></li>
+        <li><a href="https://lezacconsultoria.com/mas-clientes-activos">+Clientes Activos</a></li>
+        <li><a href="https://lezacconsultoria.com/ia-a-medida">IA a Medida</a></li>
+        <li><a href="https://lezacconsultoria.com/wa-ventas">WA Ventas</a></li>
+        <li><a href="https://lezacconsultoria.com/blog">Blog</a></li>
+        <li><a href="https://lezacconsultoria.com/partner">Partner</a></li>
+      </ul>
+    </div>
+    <div class="footer-col-3">
+      <p class="footer-title">Contacto</p>
+      <ul class="footer-links">
+        <li><span style="color:rgba(255,255,255,0.75); font-size:15px; display:block; margin:0 0 10px;">¿Listo para ordenar tu gestión comercial?</span></li>
+        <li>
+          <a href="https://wa.me/5491154107921" target="_blank" rel="noopener">
+            <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor" style="width:16px;height:16px;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.888-.788-1.489-1.761-1.663-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.82 9.82 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+            WhatsApp +54 9 11 5410-7921
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copy">© 2026 Lezac Consultoría · lezacconsultoria.com</span>
+    <div class="footer-social">
+      <a href="https://www.linkedin.com/company/lezac-consultoria" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.instagram.com/lezacconsultoria" target="_blank" rel="noopener">Instagram</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.documentElement.classList.add('js');
+
+// Scroll Progress
+const progressEl = document.querySelector('.read-progress-bar');
+const layoutEl = document.querySelector('.layout');
+let ticking = false;
+let startY = 0, endY = 0;
+
+function calcMetrics() {
+  if (!layoutEl) return;
+  const rect = layoutEl.getBoundingClientRect();
+  startY = rect.top + window.scrollY;
+  endY = rect.bottom + window.scrollY;
+}
+
+function updateProgress() {
+  const y = window.scrollY;
+  const h = window.innerHeight;
+  const divisor = endY - startY - (h * 0.5);
+  let p = 0;
+  if (divisor > 0) {
+    p = Math.max(0, Math.min(1, (y - startY) / divisor));
+  }
+  if (progressEl) progressEl.style.setProperty('--progress', (p * 100) + '%');
+}
+
+window.addEventListener('resize', () => {
+  calcMetrics();
+  if (!ticking) {
+    window.requestAnimationFrame(() => {
+      updateProgress();
+      ticking = false;
+    });
+    ticking = true;
+  }
+}, {passive:true});
+
+window.addEventListener('scroll', () => {
+  if (!ticking) {
+    window.requestAnimationFrame(() => {
+      updateProgress();
+      ticking = false;
+    });
+    ticking = true;
+  }
+}, {passive:true});
+
+calcMetrics();
+updateProgress();
+
+// Scroll Reveal Observer
+const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)');
+if (!prefersReduced.matches) {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
+  document.querySelectorAll('[data-reveal]').forEach(el => observer.observe(el));
+}
+
+// Calculator Logic
+const fBase = document.getElementById('f-base');
+const fActivos = document.getElementById('f-activos');
+const fAnterior = document.getElementById('f-anterior');
+const fCompra = document.getElementById('f-compra');
+const fMargen = document.getElementById('f-margen');
+const fRec = document.getElementById('f-rec');
+const monedaSelect = document.getElementById('moneda');
+const btnReset = document.querySelector('.btn-reset');
+const form = document.querySelector('form');
+const inputs = [fBase, fActivos, fAnterior, fCompra, fMargen];
+
+const resChip = document.getElementById('r-chip');
+const resVerdict = document.getElementById('r-verdict');
+const cells = document.querySelectorAll('.cell');
+const kAct = document.getElementById('k-act');
+const kIna = document.getElementById('k-ina');
+const kVar = document.getElementById('k-var');
+const kVmp = document.getElementById('k-vmp');
+const kVap = document.getElementById('k-vap');
+const sTag = document.getElementById('s-tag');
+const sOut = document.getElementById('s-out');
+const mIna = document.getElementById('m-inactivos');
+const mPct = document.getElementById('m-pct');
+const mVenta = document.getElementById('m-venta');
+
+const fmtNum = new Intl.NumberFormat('es-AR');
+
+function getSymbol(moneda) {
+  switch (moneda) {
+    case 'ARS': return '$';
+    case 'USD': return 'US$';
+    case 'PYG': return 'Gs.';
+    case 'BOB': return 'Bs';
+    case 'UYU': return '$U';
+    default: return '$';
+  }
+}
+
+function calcular(e) {
+  if (e && e.target && e.target.tagName === 'INPUT') {
+    e.target.dataset.touched = 'true';
+  }
+  
+  let isValid = true;
+  inputs.forEach(i => {
+    const field = i.closest('.field');
+    const val = parseFloat(i.value);
+    let err = false;
+    if (i.dataset.touched === 'true') {
+      if (i.id === 'f-base' && (isNaN(val) || val < 1 || !Number.isInteger(val))) err = true;
+      if (i.id === 'f-activos') {
+        const baseVal = parseFloat(fBase.value) || 0;
+        if (isNaN(val) || val < 0 || !Number.isInteger(val) || val > baseVal) err = true;
+      }
+      if (i.id === 'f-anterior' && (isNaN(val) || val < 0 || !Number.isInteger(val))) err = true;
+      if (i.id === 'f-compra' && (isNaN(val) || val < 0)) err = true;
+      if (i.id === 'f-margen') {
+        if (i.value === '') { err = false; } else if (isNaN(val) || val < 0 || val > 100) err = true;
+      }
+    }
+    if (err) {
+      field.classList.add('is-invalid');
+      isValid = false;
+    } else {
+      field.classList.remove('is-invalid');
+    }
+  });
+
+  const base = parseFloat(fBase.value);
+  const activos = parseFloat(fActivos.value);
+  const anterior = parseFloat(fAnterior.value);
+  const compra = parseFloat(fCompra.value);
+  const margenRaw = parseFloat(fMargen.value);
+  const margen = isNaN(margenRaw) ? 0 : margenRaw;
+  const rec = parseFloat(fRec.value);
+  const sym = getSymbol(monedaSelect.value);
+
+  sTag.textContent = `Recuperás el ${rec}% de los inactivos`;
+
+  if (!isValid || isNaN(base) || isNaN(activos) || isNaN(anterior) || isNaN(compra) || activos > base || base < 1) {
+    resChip.className = 'chip dk-gray';
+    resChip.textContent = '—';
+    resVerdict.textContent = 'Revisá los datos ingresados para ver el resultado.';
+    cells.forEach(c => c.className = 'cell');
+    kAct.textContent = '—';
+    kIna.textContent = '—';
+    kVar.textContent = '—';
+    kVmp.textContent = '—';
+    kVap.textContent = '—';
+    sOut.textContent = '—';
+    mIna.textContent = '— inactivos';
+    mPct.textContent = '— de tu base';
+    mVenta.textContent = '—';
+    return;
+  }
+
+  const pctActivos = (activos / base) * 100;
+  const inactivos = base - activos;
+  const pctInactivos = (inactivos / base) * 100;
+  let variacion = 0;
+  let hasVar = false;
+  if (anterior > 0) {
+    variacion = ((activos - anterior) / anterior) * 100;
+    hasVar = true;
+  }
+
+  const vmp = inactivos * compra;
+  const vap = vmp * 12;
+  const recuperados = Math.round((inactivos * rec) / 100);
+  const vmr = recuperados * compra;
+  const varAnual = vmr * 12;
+  const ganancia = (varAnual * margen) / 100;
+
+  // Semáforo
+  if (!hasVar) {
+    resChip.className = 'chip dk-gray';
+    resChip.style.display = 'none';
+    resVerdict.textContent = 'Sin un período anterior no se puede calcular la variación. Igual podés ver cuántos clientes inactivos tenés.';
+  } else {
+    resChip.style.display = 'inline-flex';
+    if (variacion >= 0) {
+      resChip.className = 'chip dk-green';
+      resChip.textContent = 'VERDE';
+      resVerdict.textContent = 'Tu base de clientes activos se mantiene o crece. Revisá cada semana qué clientes están por pasar el corte.';
+    } else if (variacion >= -5) {
+      resChip.className = 'chip dk-amber';
+      resChip.textContent = 'AMARILLO';
+      resVerdict.textContent = 'Algunos clientes se están yendo. Mirá quiénes dejaron de comprar y llamá primero a los que más compraban.';
+    } else {
+      resChip.className = 'chip dk-red';
+      resChip.textContent = 'ROJO';
+      resVerdict.textContent = 'Caída de más de 5%: armá la lista de clientes que dejaron de comprar y asigná quién llama a cada uno esta semana.';
+    }
+  }
+
+  // Waffle
+  let A = Math.round(pctActivos);
+  let R = Math.round((100 - A) * rec / 100);
+  let D = 100 - A - R;
+  if (A + R + D !== 100) D = 100 - A - R; // Safety
+  cells.forEach((c, idx) => {
+    if (idx < A) c.className = 'cell is-a';
+    else if (idx < A + R) c.className = 'cell is-r';
+    else c.className = 'cell is-d';
+  });
+
+  // Texto format
+  const fmtPct = (val) => fmtNum.format(val).replace('.', ',') + '%';
+  const fmtMonto = (val) => `${sym} ${fmtNum.format(val)}`;
+  const sign = variacion < 0 ? '−' : '';
+  const varStr = hasVar ? `${sign}${fmtPct(Math.abs(variacion))}` : '—';
+
+  kAct.textContent = `${activos} de ${base} (${fmtPct(pctActivos)})`;
+  kIna.textContent = `${inactivos} (${fmtPct(pctInactivos)})`;
+  kVar.textContent = varStr;
+  kVmp.textContent = fmtMonto(vmp);
+  kVap.textContent = fmtMonto(vap);
+
+  sOut.textContent = `${recuperados} clientes · ${fmtMonto(vmr)} por mes · ${fmtMonto(varAnual)} por año${margen > 0 ? ` · ganancia anual estimada ${fmtMonto(ganancia)}` : ''}.`;
+
+  mIna.textContent = `${inactivos} inactivos`;
+  mPct.textContent = `${fmtPct(pctInactivos)} de tu base`;
+  mVenta.textContent = fmtMonto(vmp);
+}
+
+inputs.forEach(i => i.addEventListener('blur', () => { i.dataset.touched = 'true'; calcular(); }));
+inputs.forEach(i => i.addEventListener('input', calcular));
+fRec.addEventListener('input', calcular);
+monedaSelect.addEventListener('change', calcular);
+form.addEventListener('submit', e => e.preventDefault());
+
+btnReset.addEventListener('click', () => {
+  form.reset();
+  inputs.forEach(i => { delete i.dataset.touched; i.closest('.field').classList.remove('is-invalid'); });
+  fRec.value = '20';
+  calcular();
+});
+</script>
+
+</body>
+</html>
