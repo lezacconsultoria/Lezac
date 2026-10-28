@@ -179,7 +179,6 @@ body::before {
     0 0 60px -12px rgba(56, 189, 248, 0.2),
     0 0 20px -4px rgba(56, 130, 246, 0.15),
     0 4px 24px rgba(0, 0, 0, 0.4);
-  cursor: pointer;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
   flex-shrink: 1;
   min-height: 0;
@@ -193,43 +192,50 @@ body::before {
     0 4px 30px rgba(0, 0, 0, 0.5);
 }
 
-.video-overlay {
+.video-wrap video {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(0, 0, 0, 0.5) 0%, rgba(10, 20, 50, 0.3) 50%, rgba(30, 60, 120, 0.15) 100%);
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #050a18;
 }
 
-.play-btn {
+.sound-btn {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: clamp(56px, 8vw, 80px);
-  height: clamp(56px, 8vw, 80px);
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  z-index: 2;
   display: flex;
   align-items: center;
-  justify-content: center;
-  box-shadow: 0 0 30px rgba(56, 189, 248, 0.3);
-  transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
-}
-
-.video-wrap:hover .play-btn {
-  background: rgba(255, 255, 255, 0.18);
-  box-shadow: 0 0 40px rgba(56, 189, 248, 0.45);
-  transform: translate(-50%, -50%) scale(1.08);
-}
-
-.play-btn svg {
-  width: clamp(22px, 3vw, 32px);
-  height: clamp(22px, 3vw, 32px);
-  margin-left: 3px;
+  gap: clamp(8px, 1.6vw, 14px);
+  padding: clamp(10px, 2vw, 18px) clamp(18px, 3.6vw, 36px);
+  border-radius: 9999px;
+  background: rgba(10, 20, 50, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(56, 189, 248, 0.55);
   color: #ffffff;
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+  font-family: inherit;
+  font-weight: 700;
+  font-size: clamp(12px, 2vw, 18px);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 0 0 40px rgba(56, 189, 248, 0.35);
+  animation: sound-pulse 1.4s ease-in-out infinite;
+}
+
+.sound-btn svg {
+  width: clamp(20px, 3vw, 30px);
+  height: clamp(20px, 3vw, 30px);
+  flex-shrink: 0;
+}
+
+@keyframes sound-pulse {
+  0%, 100% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+  50% { opacity: 0.55; transform: translate(-50%, -50%) scale(1.07); }
 }
 
 /* ── 8. WhatsApp Button ── */
@@ -364,7 +370,7 @@ body::before {
   body::before { animation: none; }
   .marquee-track { animation: none; }
   .wa-btn { animation: none; }
-  .play-btn { transition: none; }
+  .sound-btn { animation: none; }
   .video-wrap { transition: none; }
 }
 </style>
@@ -412,11 +418,12 @@ body::before {
   <p class="authority">+10 años de experiencia &nbsp;·&nbsp; +100 empresas asesoradas</p>
 
   <!-- 7. Video BCL -->
-  <div class="video-wrap" id="vsl" role="button" aria-label="Reproducir video de presentación">
-    <div class="video-overlay"></div>
-    <div class="play-btn">
-      <svg fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-    </div>
+  <div class="video-wrap" id="vsl">
+    <video src="/VSL%20I%20Servicio%20Landing.mp4" autoplay muted playsinline preload="auto" aria-label="Video de presentación"></video>
+    <button class="sound-btn" id="vsl-sound" type="button" aria-label="Activar sonido">
+      <svg fill="currentColor" viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+      <span>Activar sonido</span>
+    </button>
   </div>
 
   <!-- 8. WhatsApp CTA -->
@@ -473,21 +480,17 @@ body::before {
 
 <script>
 (function () {
-  var w = document.getElementById('vsl');
-  if (!w) return;
-  w.addEventListener('click', function () {
-    if (w.querySelector('video')) return;
-    var v = document.createElement('video');
-    v.src = '/VSL%20I%20Servicio%20Landing.mp4';
+  var v = document.querySelector('#vsl video');
+  var b = document.getElementById('vsl-sound');
+  if (!v || !b) return;
+  v.play().catch(function () {});
+  b.addEventListener('click', function () {
+    v.muted = false;
+    v.volume = 1;
+    v.currentTime = 0;
     v.controls = true;
-    v.autoplay = true;
-    v.playsInline = true;
-    v.setAttribute('playsinline', '');
-    v.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#000';
-    w.innerHTML = '';
-    w.style.cursor = 'default';
-    w.appendChild(v);
     v.play();
+    b.remove();
   });
 })();
 </script>
