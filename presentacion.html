@@ -166,9 +166,8 @@ body::before {
 
 /* ── 7. Video Player ── */
 .video-wrap {
-  width: min(90vw, 680px);
+  width: min(92vw, 900px, calc((100dvh - 370px) * 16 / 9));
   aspect-ratio: 16 / 9;
-  max-height: 38vh;
   margin-top: 14px;
   position: relative;
   border-radius: 14px;
@@ -180,8 +179,7 @@ body::before {
     0 0 20px -4px rgba(56, 130, 246, 0.15),
     0 4px 24px rgba(0, 0, 0, 0.4);
   transition: transform 0.4s ease, box-shadow 0.4s ease;
-  flex-shrink: 1;
-  min-height: 0;
+  flex-shrink: 0;
 }
 
 .video-wrap:hover {
@@ -210,7 +208,7 @@ body::before {
   display: flex;
   align-items: center;
   gap: clamp(8px, 1.6vw, 14px);
-  padding: clamp(10px, 2vw, 18px) clamp(18px, 3.6vw, 36px);
+  padding: clamp(8px, 1.3vw, 12px) clamp(14px, 2.4vw, 24px);
   border-radius: 9999px;
   background: rgba(10, 20, 50, 0.65);
   backdrop-filter: blur(12px);
@@ -219,7 +217,7 @@ body::before {
   color: #ffffff;
   font-family: inherit;
   font-weight: 700;
-  font-size: clamp(12px, 2vw, 18px);
+  font-size: clamp(11px, 1.4vw, 14px);
   letter-spacing: 0.06em;
   text-transform: uppercase;
   cursor: pointer;
@@ -228,8 +226,8 @@ body::before {
 }
 
 .sound-btn svg {
-  width: clamp(20px, 3vw, 30px);
-  height: clamp(20px, 3vw, 30px);
+  width: clamp(16px, 2vw, 22px);
+  height: clamp(16px, 2vw, 22px);
   flex-shrink: 0;
 }
 
@@ -244,12 +242,12 @@ body::before {
   align-items: center;
   gap: 8px;
   margin-top: 14px;
-  padding: 10px 22px;
+  padding: 13px 28px;
   background: #25D366;
   color: #ffffff;
   text-decoration: none;
   border-radius: 50px;
-  font-size: clamp(12px, 1.2vw, 14px);
+  font-size: clamp(13px, 1.4vw, 16px);
   font-weight: 500;
   letter-spacing: 0.02em;
   transition: transform 0.3s ease, background 0.3s ease;
@@ -259,19 +257,18 @@ body::before {
 
 .wa-btn:hover {
   background: #1db954;
-  transform: translateY(-2px);
 }
 
 .wa-btn svg {
-  width: 18px;
-  height: 18px;
+  width: 22px;
+  height: 22px;
   flex-shrink: 0;
 }
 
 @keyframes waPulse {
-  0%   { box-shadow: 0 0 8px rgba(37, 211, 102, 0.2); }
-  50%  { box-shadow: 0 0 22px rgba(37, 211, 102, 0.5); }
-  100% { box-shadow: 0 0 8px rgba(37, 211, 102, 0.2); }
+  0%   { transform: scale(1); box-shadow: 0 0 8px rgba(37, 211, 102, 0.2); }
+  50%  { transform: scale(1.025); box-shadow: 0 0 22px rgba(37, 211, 102, 0.5); }
+  100% { transform: scale(1); box-shadow: 0 0 8px rgba(37, 211, 102, 0.2); }
 }
 
 /* ── 9. Trust / Logos ── */
@@ -353,7 +350,7 @@ body::before {
 @media (max-width: 768px) {
   .landing { padding: 16px 16px 10px; }
   .headline { white-space: normal; }
-  .video-wrap { width: 94vw; max-height: 32vh; border-radius: 10px; }
+  .video-wrap { width: min(94vw, calc(40vh * 16 / 9)); border-radius: 10px; }
   .pillar-sep:nth-child(4) { display: none; }
   .pillars { gap: 4px 6px; }
   .logo-item { height: 22px; margin: 0 8px; font-size: 10px; padding: 0 10px; }
@@ -361,7 +358,7 @@ body::before {
 
 @media (max-width: 400px) {
   .brand { font-size: 9px; }
-  .wa-btn { padding: 9px 16px; font-size: 12px; }
+  .wa-btn { padding: 11px 18px; font-size: 13px; }
 }
 
 /* ── Reduced motion ── */
