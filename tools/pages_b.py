@@ -133,6 +133,7 @@ def ia():
     c += section(dual_cards('groups', 'Para quién es', 'Pymes, distribuidoras, mayoristas y fábricas que quieren resolver un proceso concreto, sin armar un equipo técnico. Se trabaja 100% online, en Argentina, Paraguay, Bolivia y Uruguay.', 'tune', 'A tu medida, también en presupuesto', 'La reunión inicial y la evaluación no tienen costo. Cotizamos cada proyecto según su alcance, desde algo simple hasta un sistema completo. Sin contrato inicial.') +
                  '<p class="mt-8 text-center text-sm text-on-surface-variant">¿Querés entender primero cómo vendés? Conocé nuestra <a href="/consultoria-inteligencia-comercial" class="underline accent hover:text-white">consultoría de inteligencia comercial</a>. ¿Pedidos por WhatsApp? Mirá <a href="/wa-ventas" class="underline accent hover:text-white">WA Ventas</a>.</p>', bg='dim')
 
+    c += resenas(['alejandro', 'leandro'])
     c += faq_section(faqs)
     c += cta_final('¿Qué proceso de tu empresa te gustaría dejar de hacer a mano?',
                    'Resolvemos lo que tu empresa necesita. Contanos cuál es el problema y te presentamos tres mejoras concretas.',
@@ -246,6 +247,7 @@ def wa_ventas():
     c += section(dual_cards('groups', 'Para quién es', 'Distribuidoras, mayoristas y fábricas que reciben pedidos y consultas de sus clientes por WhatsApp. Se trabaja 100% online, en Argentina, Paraguay, Bolivia y Uruguay.', 'handshake', 'Cómo se contrata', 'Modalidad de pago mensual, con todas las prestaciones incluidas. La reunión inicial no tiene costo. Escribinos y te contamos las condiciones.') +
                  '<p class="mt-8 text-center text-sm text-on-surface-variant">¿Necesitás algo distinto a WhatsApp? Conocé <a href="/ia-a-medida" class="underline accent hover:text-white">IA a Medida</a>. ¿Querés ordenar primero tus datos de venta? Conocé nuestra <a href="/consultoria-inteligencia-comercial" class="underline accent hover:text-white">consultoría de inteligencia comercial</a>.</p>', bg='dim')
 
+    c += resenas(['alejandro', 'andrea'])
     c += faq_section(faqs)
     c += cta_final('¿Cuántos pedidos se te pierden entre chats?',
                    'Que ningún mensaje se quede sin respuesta. Contanos cómo recibís hoy los pedidos y te mostramos cómo ordenarlos.',
@@ -343,6 +345,7 @@ def partner():
             'Las condiciones de cada acuerdo se ponen por escrito.']) + '</ul>', bg='dim')
 
     c += prueba('Más de 100 empresas asesoradas en 4 países', '10+ años · 100+ empresas asesoradas · Argentina, Paraguay, Bolivia y Uruguay')
+    c += resenas(['leandro', 'alejandro'])
     c += faq_section(faqs)
     c += cta_final('¿Tenés clientes que necesitan crecer?',
                    'Sumate al programa y crezcamos juntos. Contanos a quién asesorás y te mostramos cómo trabajar juntos.',

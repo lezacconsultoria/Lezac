@@ -115,6 +115,7 @@ def brujula():
                  '<div class="liquid-glass rounded-2xl p-7"><h3 class="text-lg font-black text-white mb-3">Distribuidora del sur del país, más de 1.500 productos.</h3><p class="text-sm text-on-surface-variant leading-relaxed">Descubrió qué productos sostenían su rentabilidad por zona y por vendedor, y qué clientes había dejado de atender.</p></div>'
                  '<div class="liquid-glass rounded-2xl p-7"><h3 class="text-lg font-black text-white mb-3">Empresa de materiales de construcción, Entre Ríos.</h3><p class="text-sm text-on-surface-variant leading-relaxed">Anticipó faltantes en los productos clave y detectó sobrestock antes de que afectara su caja.</p></div></div>')
 
+    c += resenas(['andrea', 'juan'])
     c += faq_section(faqs)
     c += cta_final('Mirá cómo se vería Brújula Comercial con los datos de tu empresa',
                    'En una charla online escuchamos cómo trabaja hoy tu equipo comercial y te contamos si encaja y qué alcance tendría. Sin contrato inicial.',
@@ -225,6 +226,7 @@ def clientes():
                  '<div class="liquid-glass rounded-2xl p-7 md:p-8 relative overflow-hidden" style="box-shadow:0 8px 32px rgba(0,0,0,0.35),0 0 60px -30px var(--color-accent-glow)"><div class="absolute -top-16 -right-16 w-48 h-48 rounded-full pointer-events-none" style="background:radial-gradient(circle,var(--color-accent-glow) 0%,transparent 70%);opacity:.5"></div><div class="relative"><span class="w-12 h-12 rounded-xl flex items-center justify-center mb-5" style="background:color-mix(in srgb,var(--color-accent) 15%,transparent)"><span class="material-symbols-outlined accent" style="font-size:26px">tune</span></span>' + h2('A tu medida, también en presupuesto') + p('Cobramos por punto de venta censado, con un pago único que se adapta al rubro de tu empresa, a su actividad y a la amplitud de zona que quieras desarrollar. Sin contrato inicial. Escribinos y lo vemos en una conversación.') + '</div></div>' +
                  '</div><p class="mt-8 text-center text-sm text-on-surface-variant">¿Primero querés entender tus datos de venta? Conocé nuestra <a href="/consultoria-inteligencia-comercial" class="underline accent hover:text-white">consultoría de inteligencia comercial</a>.</p>', bg='dim')
 
+    c += resenas(['juan', 'andrea'])
     c += faq_section(faqs)
     c += cta_final('¿Cuántos clientes más podría tener tu empresa?',
                    'Más clientes, más ventas. Contanos cuántos puntos de venta tiene tu empresa y te mostramos por dónde empezar.',

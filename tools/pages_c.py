@@ -129,6 +129,7 @@ def home():
                  testi('Lezac transformó nuestra visión comercial. En una sola sesión identificamos oportunidades de rentabilidad que no habíamos visto en años.', 'Mariano', 'Madersa', 'MA') +
                  testi('Teníamos vendedores pisando las mismas zonas sin saberlo. Con el censo y el ruteo de Lezac reorganizamos todo el territorio y empezamos a crecer de verdad.', 'Gabriel', 'Weilen', 'GA') +
                  '</div>', bg='dim')
+    c += resenas(['andrea', 'juan', 'leandro', 'alejandro'])
 
     # ───── para quién ─────
     c += section(h2('Para quién trabajamos') +

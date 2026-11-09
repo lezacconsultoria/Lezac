@@ -353,6 +353,34 @@ def faq(items):
     return out + '</div>'
 
 
+RESENAS = {
+    'andrea': ('Andrea Rodriguez', 'Muy efectivo y práctico. A mí me ayudó a organizarme con la gestión de la empresa.'),
+    'juan': ('Juan Ignacio Cabezón de Biasi', 'Recomiendo para soluciones PyME, en mi caso me fue muy útil para Censos e Indicadores del Negocio'),
+    'leandro': ('Leandro Nicolás Velázquez', 'Grandes profesionales con un espíritu joven, inteligente y emprendedor.'),
+    'alejandro': ('Alejandro Costa', 'Excelente nivel técnico de su gente, con herramientas de avanzada'),
+}
+GOOGLE_RESENAS = 'https://www.google.com/maps/search/?api=1&query=Lezac+Consultor%C3%ADa'
+
+
+def resenas(keys, bg='surface'):
+    star = ('<span class="material-symbols-outlined text-yellow-400" style="font-size:16px;font-variation-settings:\'FILL\' 1,\'wght\' 400,\'GRAD\' 0,\'opsz\' 20" aria-hidden="true">star</span>')
+    cols = 'md:grid-cols-2 lg:grid-cols-4' if len(keys) == 4 else 'md:grid-cols-2 max-w-3xl mx-auto'
+    out = f'<div class="grid grid-cols-1 {cols} gap-5">'
+    for k in keys:
+        n, q = RESENAS[k]
+        ini = ''.join(w[0] for w in n.split()[:2]).upper()
+        out += ('<figure class="liquid-glass rounded-2xl p-6 flex flex-col justify-between">'
+                f'<div class="flex gap-1 mb-4" role="img" aria-label="5 de 5 estrellas">{star * 5}</div>'
+                f'<blockquote class="text-white/85 text-sm leading-relaxed italic mb-6">"{E(q)}"</blockquote>'
+                '<figcaption class="flex items-center gap-3 pt-4 border-t border-white/5">'
+                f'<div class="w-9 h-9 rounded-full flex items-center justify-center font-bold text-xs flex-shrink-0 accent" style="background:color-mix(in srgb,var(--color-accent) 15%,transparent)" aria-hidden="true">{ini}</div>'
+                f'<div><p class="text-white text-sm font-bold">{E(n)}</p><p class="text-on-surface-variant text-xs">Reseña de Google</p></div></figcaption></figure>')
+    out += '</div>'
+    link = (f'<p class="text-center mt-8"><a href="{GOOGLE_RESENAS}" target="_blank" rel="noopener" '
+            'class="text-sm underline accent hover:text-white">Ver todas las reseñas en Google</a></p>')
+    return section(h2('Lo que dicen de nosotros en Google', center=True) + out + link, bg=bg, width='max-w-6xl')
+
+
 def faq_section(items):
     return section(h2('Preguntas frecuentes', center=True) + faq(items), width='max-w-3xl')
 
