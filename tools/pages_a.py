@@ -6,14 +6,18 @@ STRIP = '10+ años de experiencia · 100+ empresas asesoradas · 4 países de LA
 
 def brujula():
     name, path = 'Consultoría de inteligencia comercial', '/consultoria-inteligencia-comercial'
-    title = 'Consultoría de inteligencia comercial online | Brújula Comercial'
+    title = 'Consultoría de inteligencia comercial | Brújula Comercial'
     desc = ('Consultoría de inteligencia comercial online para pymes, distribuidoras y mayoristas de Argentina, '
-            'Paraguay, Bolivia y Uruguay. Más ventas y mejor rentabilidad.')
+            'Paraguay, Bolivia y Uruguay.')
     faqs = [
         ('¿Qué es la consultoría de inteligencia comercial?',
          'Es un servicio donde un consultor analiza los datos de venta de tu empresa (clientes, productos, vendedores) y te acompaña a decidir mejor: a quién visitar, qué ofrecer y dónde ganás o perdés plata.'),
-        ('¿Qué es Brújula Comercial? ¿Es un software?',
-         'Brújula Comercial es el método de trabajo de Lezac Consultoría. Combina consultoría uno a uno con una plataforma propia de inteligencia comercial. Es una consultoría: un tablero solo te muestra números, nosotros te explicamos qué significan y qué hacer.'),
+        ('¿Para qué tipo de empresas está pensado este servicio?',
+         'Trabajamos con distribuidoras, mayoristas y fábricas pyme que tienen un equipo de vendedores en calle y necesitan visibilidad real sobre lo que pasa con sus clientes y su facturación. Si hoy la información de ventas vive solo en la cabeza del vendedor o en WhatsApp sin trazabilidad, es el perfil que más le saca provecho.'),
+        ('¿Esto es un CRM o un software?',
+         'No. Es un servicio de consultoría de inteligencia comercial: un equipo que audita tu operación comercial, arma un tablero propio con tus datos reales y te acompaña con reuniones quincenales. No vendemos licencias ni accesos a una plataforma — vendemos método y criterio para que decidas con información confiable, no un programa más para que alguien tenga que actualizar.'),
+        ('¿Cómo es la primera etapa con Lezac Consultoría?',
+         'Arrancamos con una auditoría de 15 a 20 días hábiles sobre tu operación comercial actual: relevamos cómo trabajan hoy tus vendedores, qué datos existen y cuáles faltan. Esa auditoría entrega hallazgos concretos garantizados y es la base sobre la que se arma tu tablero de seguimiento comercial.'),
         ('¿Qué datos necesito y qué pasa si están desordenados o ya tengo un sistema?',
          'Tu historial de ventas, tu base de clientes y tu listado de productos, en Excel o desde tu sistema (Odoo, SAP Business One u otro). Si están desordenados, ordenarlos es parte del trabajo.'),
         ('¿Qué reportes y reuniones incluye?',
@@ -123,7 +127,7 @@ def clientes():
     name, path = '+Clientes Activos', '/mas-clientes-activos'
     title = 'Geolocalización, censo y ruteo comercial | +Clientes Activos'
     desc = ('Recuperamos clientes dormidos y sumamos puntos de venta sin atender. Geolocalización, censo y ruteo '
-            'comercial para distribuidoras y mayoristas. 100% online.')
+            'comercial para distribuidoras. 100% online.')
     faqs = [
         ('¿Qué es +Clientes Activos?',
          '+Clientes Activos es el método de Lezac Consultoría para que distribuidoras, mayoristas y fábricas vendan más ampliando la cantidad de clientes que realmente compran. Geolocalizamos tu base, censamos los puntos de venta de tu zona de influencia y rediseñamos las rutas de tu equipo. Se trabaja uno a uno y 100% online.'),

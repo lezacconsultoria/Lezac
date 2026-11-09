@@ -257,8 +257,8 @@ def wa_ventas():
 def partner():
     name, path = 'Programa de Partners', '/partner'
     title = 'Programa de Partners para consultores y contadores | Lezac'
-    desc = ('Recomendá a Lezac a distribuidoras, mayoristas y fábricas y recibí una comisión por cada cliente que se '
-            'activa. Sin costo ni permanencia. Argentina y Latinoamérica.')
+    desc = ('Recomendá a Lezac a distribuidoras, mayoristas y fábricas y recibí una comisión por cada cliente '
+            'activado. Sin costo ni permanencia.')
     faqs = [
         ('¿Qué es el Programa de Partners de Lezac?',
          'Es una alianza para que profesionales que asesoran a distribuidoras, mayoristas y fábricas recomienden a Lezac y reciban una comisión por cada cliente que se activa.'),

@@ -5,14 +5,14 @@ import pathlib
 import urllib.parse
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
-VER = '20261027'
+VER = '20261109'
 SITE = 'https://lezacconsultoria.com'
 CAL = 'https://calendly.com/lezacconsultoria/consultoria-comercial'
 WA = 'https://wa.me/5491154107921'
 PHONE = '+54 9 11 5410-7921'
 OG_IMAGE = SITE + '/opengrap.jpeg'
 LOGO = SITE + '/logo-lezac-completo.png'
-LINKEDIN = 'https://www.linkedin.com/company/lezac-consultoria'
+LINKEDIN = 'https://www.linkedin.com/company/lezac-consultoria/'
 INSTAGRAM = 'https://www.instagram.com/lezacconsultoria/'
 
 ACCENTS = {
@@ -211,7 +211,7 @@ def head(page, title, desc, path, ld, extra_css=''):
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>{t}</title>
 <meta name="description" content="{d}"/>
-<meta name="robots" content="index, follow"/>
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"/>
 <link rel="canonical" href="{url}"/>
 <meta property="og:type" content="website"/>
 <meta property="og:locale" content="es_AR"/>

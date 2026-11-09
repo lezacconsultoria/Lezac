@@ -8,8 +8,8 @@ from lib import *
 
 ART_DIR = pathlib.Path(__file__).parent / 'articulos'
 MESES = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre']
-AUTHOR = 'Lic. Leandro Zacaria'
-ROLE = 'Fundador · Lezac Consultoría'
+AUTHOR = 'Leandro Zacaria'
+ROLE = 'Consultor de inteligencia comercial, Lezac Consultoría'
 SVC_COLOR = {'Inteligencia comercial': '#25F5A4', '+Clientes Activos': '#38BDF8', 'IA a Medida': '#8C52FF'}
 # La última tarjeta suelta de una grilla de 2 columnas queda centrada
 ODD = ('md:[&>*:last-child:nth-child(odd)]:col-span-2 md:[&>*:last-child:nth-child(odd)]:w-[calc(50%-0.5rem)] '
@@ -260,7 +260,7 @@ def render(b):
 def article_page(a):
     path = f'/blog/{a["slug"]}'
     url = SITE + path
-    author = {"@type": "Person", "name": "Leandro Zacaria", "jobTitle": "Fundador de Lezac Consultoría",
+    author = {"@type": "Person", "name": "Leandro Zacaria", "jobTitle": "Consultor de inteligencia comercial",
               "worksFor": {"@id": SITE + "/#organization"}, "url": SITE + "/"}
     post = {"@type": "BlogPosting", "@id": url + "#article", "mainEntityOfPage": {"@type": "WebPage", "@id": url},
             "headline": a['h1'], "description": a['description'], "datePublished": a['date'],
