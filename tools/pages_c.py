@@ -34,7 +34,8 @@ def home():
            "telephone": "+5491154107921", "areaServed": ["AR", "PY", "BO", "UY"],
            "knowsAbout": ["Consultoría de inteligencia comercial", "Inteligencia comercial", "Análisis de ventas", "Ruteo comercial",
                           "Censo comercial", "Inteligencia artificial aplicada a ventas", "Automatización de ventas por WhatsApp"],
-           "sameAs": [LINKEDIN, INSTAGRAM]}
+           "sameAs": [LINKEDIN, INSTAGRAM, GOOGLE_RESENAS],
+           "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "7", "bestRating": "5"}}
     ld = jsonld(org, website_min(), faq_ld(faqs))
     wa_home = wa('Hola, quiero consultar por los servicios de Lezac.')
 
