@@ -117,18 +117,7 @@ def home():
                  p('No hay un paquete único. Trabajamos con pymes, distribuidoras y mayoristas de distintos tamaños, y por eso adaptamos el alcance, los tiempos y la inversión a la etapa de cada empresa. Podés empezar con algo chico, como un diagnóstico o una primera mejora en 15 días, y crecer a medida que ves resultados.') +
                  '<div class="mt-8">' + btn('Contanos tu caso', CAL, 'primary') + '</div>')
 
-    # ───── testimonios ─────
-    stars = '<div class="flex gap-1 mb-5">' + '<span class="material-symbols-outlined text-yellow-400" style="font-size:16px;font-variation-settings:\'FILL\' 1,\'wght\' 400,\'GRAD\' 0,\'opsz\' 20" aria-hidden="true">star</span>' * 5 + '</div>'
-
-    def testi(q, n, co, ini):
-        return (f'<figure class="liquid-glass rounded-2xl p-7 flex flex-col justify-between">{stars}<blockquote class="text-white/85 text-sm leading-relaxed italic mb-6">"{E(q)}"</blockquote>'
-                f'<figcaption class="flex items-center gap-3 pt-5 border-t border-white/5"><div class="w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0 accent" style="background:rgba(140,82,255,.2)" aria-hidden="true">{ini}</div>'
-                f'<div><p class="text-white text-sm font-bold">{E(n)}</p><p class="text-on-surface-variant text-xs">{E(co)}</p></div></figcaption></figure>')
-    c += section(h2('Lo que dicen las empresas con las que trabajamos', center=True) +
-                 '<div class="grid grid-cols-1 md:grid-cols-2 gap-5 max-w-3xl mx-auto">' +
-                 testi('Lezac transformó nuestra visión comercial. En una sola sesión identificamos oportunidades de rentabilidad que no habíamos visto en años.', 'Mariano', 'Madersa', 'MA') +
-                 testi('Teníamos vendedores pisando las mismas zonas sin saberlo. Con el censo y el ruteo de Lezac reorganizamos todo el territorio y empezamos a crecer de verdad.', 'Gabriel', 'Weilen', 'GA') +
-                 '</div>', bg='dim')
+    # ───── reseñas de Google ─────
     c += resenas(['andrea', 'juan', 'leandro', 'alejandro'])
 
     # ───── para quién ─────

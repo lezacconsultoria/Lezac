@@ -359,7 +359,7 @@ RESENAS = {
     'leandro': ('Leandro Nicolás Velázquez', 'Grandes profesionales con un espíritu joven, inteligente y emprendedor.'),
     'alejandro': ('Alejandro Costa', 'Excelente nivel técnico de su gente, con herramientas de avanzada'),
 }
-GOOGLE_RESENAS = 'https://www.google.com/maps/search/?api=1&query=Lezac+Consultor%C3%ADa'
+GOOGLE_RESENAS = 'https://maps.app.goo.gl/i13cTqLd9BBf1Vrg7'
 
 
 def resenas(keys, bg='surface'):
