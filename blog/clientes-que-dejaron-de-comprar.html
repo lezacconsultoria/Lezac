@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="es-AR" style="scroll-behavior: smooth; scroll-padding-top: var(--header-h);">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clientes que Dejaron de Comprar: Detectalos a Tiempo | Lezac</title>
+    <meta name="description" content="Cómo saber qué clientes dejaron de comprarte usando tu propia facturación, antes de que se conviertan en inactivos. Consultoría de ventas para pymes y fábricas.">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <link rel="canonical" href="https://lezacconsultoria.com/blog/clientes-que-dejaron-de-comprar">
+    
+    <!-- Open Graph -->
+    <meta property="og:locale" content="es_AR">
+    <meta property="article:published_time" content="2026-11-11T08:00:00-03:00">
+    <meta name="author" content="Leandro Zacaria">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Clientes que Dejaron de Comprar: Detectalos a Tiempo | Lezac">
+    <meta property="og:description" content="Cómo saber qué clientes dejaron de comprarte usando tu propia facturación, antes de que se conviertan en inactivos. Consultoría de ventas para pymes y fábricas.">
+    <meta property="og:url" content="https://lezacconsultoria.com/blog/clientes-que-dejaron-de-comprar">
+    <meta property="og:image" content="https://lezacconsultoria.com/opengrap.jpeg">
+    <meta property="og:site_name" content="Lezac Consultoría">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Clientes que Dejaron de Comprar: Detectalos a Tiempo | Lezac">
+    <meta name="twitter:description" content="Cómo saber qué clientes dejaron de comprarte usando tu propia facturación, antes de que se conviertan en inactivos. Consultoría de ventas para pymes y fábricas.">
+    <meta name="twitter:image" content="https://lezacconsultoria.com/opengrap.jpeg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+
+    <!-- JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://lezacconsultoria.com/#organization",
+          "name": "Lezac Consultoría",
+          "url": "https://lezacconsultoria.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://lezacconsultoria.com/Logo%20Lezac%20%28500%20x%20500%20px%29%20%283%29.png"
+          }
+        },
+        {
+          "@type": "Person",
+          "@id": "https://lezacconsultoria.com/#leandro",
+          "name": "Leandro Zacaria",
+          "jobTitle": "Consultor de inteligencia comercial",
+          "worksFor": {"@id": "https://lezacconsultoria.com/#organization"},
+          "image": "https://lezacconsultoria.com/perfil-leandro.jpg",
+          "sameAs": ["https://www.linkedin.com/in/leandro-zacaria"]
+        },
+        {
+          "@type": "BlogPosting",
+          "@id": "https://lezacconsultoria.com/blog/clientes-que-dejaron-de-comprar#article",
+          "headline": "Clientes que dejaron de comprar: cómo detectarlos a tiempo con tus propios datos, sin esperar a que sea tarde",
+          "author": {"@id": "https://lezacconsultoria.com/#leandro"},
+          "publisher": {"@id": "https://lezacconsultoria.com/#organization"},
+          "image": "https://lezacconsultoria.com/opengrap.jpeg",
+          "datePublished": "2026-11-11T08:00:00-03:00",
+          "dateModified": "2026-11-11T08:00:00-03:00",
+          "mainEntityOfPage": "https://lezacconsultoria.com/blog/clientes-que-dejaron-de-comprar",
+          "keywords": ["clientes que dejaron de comprar", "cómo saber qué clientes dejaron de comprar"],
+          "timeRequired": "PT6M",
+          "mentions": [
+            {
+              "@type": "Service",
+              "@id": "https://lezacconsultoria.com/consultoria-inteligencia-comercial#service"
+            }
+          ]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://lezacconsultoria.com/blog/clientes-que-dejaron-de-comprar#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Inicio",
+              "item": "https://lezacconsultoria.com"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Blog",
+              "item": "https://lezacconsultoria.com/blog"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Clientes que dejaron de comprar",
+              "item": "https://lezacconsultoria.com/blog/clientes-que-dejaron-de-comprar"
+            }
+          ]
+        },
+        {
+          "@type": "ItemList",
+          "name": "Umbrales de alerta temprana",
+          "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "15 días sin comprar: Observar, alerta temprana"},
+            {"@type": "ListItem", "position": 2, "name": "30 días sin comprar: Revisar motivo probable, ajustar oferta"},
+            {"@type": "ListItem", "position": 3, "name": "50 días sin comprar: Acción directa, llamada puntual"}
+          ]
+        },
+        {
+          "@type": "DefinedTermSet",
+          "name": "Glosario Comercial",
+          "hasDefinedTerm": [
+            {"@type": "DefinedTerm", "name": "seguimiento posventa"},
+            {"@type": "DefinedTerm", "name": "frecuencia de compra"},
+            {"@type": "DefinedTerm", "name": "cliente en fuga temprana"}
+          ]
+        },
+        {
+          "@type": "Service",
+          "@id": "https://lezacconsultoria.com/consultoria-inteligencia-comercial#service",
+          "name": "Consultoría de Inteligencia Comercial",
+          "description": "Un consultor trabaja uno a uno sobre tus propios datos de venta, con una plataforma propia y acompañamiento mes a mes, sin permanencia obligatoria.",
+          "provider": {"@id": "https://lezacconsultoria.com/#organization"}
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "¿Cómo sé si un cliente dejó de comprarme sin esperar a que pase mucho tiempo?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Se detecta midiendo la frecuencia de compra histórica de cada cliente y estableciendo umbrales de alerta (por ejemplo, 15 o 30 días sin pedido) sobre la facturación, para intervenir antes de que el vínculo se enfríe y pase a ser inactivo."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Qué diferencia hay entre un cliente inactivo y un cliente que recién empezó a dejar de comprar?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Un cliente en fuga temprana solo espació su pedido y aún tiene a tu empresa en su radar, requiriendo acciones sutiles; un cliente inactivo ya rompió el hábito de compra, suele requerir un esfuerzo comercial y de descuentos mucho mayor para ser recuperado."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Necesito un CRM o un software nuevo para hacer este seguimiento?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No obligatoriamente. Con tus propios datos de facturación actuales y un análisis ordenado de la frecuencia, podés armar estos umbrales. El problema rara vez es la falta de software, sino la falta de un método que lea los datos que ya tenés."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Esto sirve para cualquier rubro o solo para consumo masivo?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sirve para cualquier pyme o fábrica con venta recurrente. La única diferencia es que en consumo masivo los umbrales son de semanas (15, 30 días), mientras que en rubros de maquinaria o insumos pesados los umbrales se ajustan al ciclo natural de reposición."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Por qué conviene recuperar un cliente antes que buscar uno nuevo, sobre todo ahora?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Porque el costo de adquisición de un cliente nuevo siempre es más alto que retener a uno que ya superó la barrera de confianza. En un mercado retraído, reactivar clientes que empiezan a espaciar compras sostiene el volumen de forma más rápida y segura."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Cada cuánto hay que revisar esto — a diario, semanal, mensual?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Depende del rubro, pero en empresas con alta frecuencia de pedido la revisión de alertas tempranas suele ser semanal. Así, el equipo de ventas sabe exactamente sobre qué clientes poner foco en los próximos días sin saturar al resto de la cartera."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <style>
+        :root {
+            --c-brand: #8C52FF;
+            --c-brand-dark: #7B2FBE;
+            --c-success: #25F5A4;
+            --c-danger: #EC0543;
+            --c-warning: #FFC233;
+            --c-dark-1: #0A0A0B;
+            --c-dark-2: #111114;
+            --c-dark-3: #18181C;
+            --c-light-bg: #F9FAFB;
+            --c-light-alt: #F6F3FF;
+            --c-text: #374151;
+            --c-white: #FFFFFF;
+            --header-h: 60px;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--c-white);
+            color: var(--c-dark-2);
+            overflow-x: clip;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3, h4 { color: var(--c-dark-2); font-weight: 700; line-height: 1.2; }
+        
+        /* HEADER STICKY */
+        .header {
+            position: sticky;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: var(--header-h);
+            background: linear-gradient(160deg, rgba(10,10,11,0.95), rgba(24,24,28,0.95));
+            backdrop-filter: blur(8px);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
+        
+        .header-logo img { height: 32px; width: auto; display: block; }
+        .header-actions { display: flex; gap: 12px; align-items: center; }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 44px;
+            padding: 0 20px;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            cursor: pointer;
+            border: none;
+        }
+        .header .btn { min-height: 40px; font-size: 14px; }
+        
+        .btn-green { background: var(--c-success); color: var(--c-dark-1); }
+        .btn-green:hover { background: #1ed18c; }
+        .btn-outline { border: 1px solid rgba(255,255,255,0.2); color: var(--c-white); background: transparent; }
+        .btn-outline:hover { background: rgba(255,255,255,0.05); }
+        .btn-purple { background: var(--c-brand); color: var(--c-white); }
+        .btn-purple:hover { background: var(--c-brand-dark); }
+
+        /* PORTADA / HERO */
+        .hero {
+            padding: 60px 20px 40px;
+            max-width: 860px;
+            margin: 0 auto;
+        }
+        
+        .breadcrumb {
+            display: flex;
+            gap: 8px;
+            font-size: 14px;
+            color: #6B7280;
+            margin-bottom: 24px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .breadcrumb a { color: var(--c-brand-dark); text-decoration: none; font-weight: 500; }
+        .breadcrumb a:hover { text-decoration: underline; }
+        
+        .tag {
+            display: inline-block;
+            background: var(--c-light-alt);
+            color: var(--c-brand-dark);
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 24px;
+        }
+
+        h1 {
+            font-size: clamp(1.75rem, 4vw, 2.6rem);
+            margin-bottom: 24px;
+            letter-spacing: -0.02em;
+        }
+
+        .author-meta {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 40px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid #E5E7EB;
+        }
+        .author-meta img {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .author-meta-text strong { display: block; font-size: 15px; color: var(--c-dark-2); }
+        .author-meta-text span { font-size: 14px; color: #6B7280; }
+
+        /* GRID PRINCIPAL Y BASE DE TEXTO (Especificidad Cero) */
+        .container { max-width: 1240px; margin: 0 auto; padding: 0 20px 80px; }
+        .article { width: 100%; }
+
+        :where(.article) :where(p){font-size:17px;line-height:1.7;margin:0 0 1.15rem;color:#374151;max-width:820px}
+        :where(.article) :where(ul,ol){margin:0 0 1.15rem;padding-left:1.4rem}
+        :where(.article) :where(li){margin-bottom:0.5rem}
+        :where(.article) :where(a){color:#7B2FBE;text-decoration:underline}
+        
+        /* RESTITUCIÓN DE LISTAS */
+        :where(ol){list-style:decimal}
+        :where(ul){list-style:disc}
+        :where(li)::marker{color:#7B2FBE}
+
+        .article h2 { font-size: 1.5rem; margin: 2.5rem 0 1.25rem; scroll-margin-top: calc(var(--header-h) + 64px); }
+        .article h3 { font-size: 1.25rem; margin: 2rem 0 1rem; }
+        
+        .highlight-box {
+            background: var(--c-light-alt);
+            border-left: 4px solid var(--c-brand);
+            padding: 20px;
+            border-radius: 0 8px 8px 0;
+            margin-bottom: 24px;
+            max-width: 820px;
+        }
+
+        /* BARRA DE RUTA STICKY */
+        .route-bar{position:sticky;top:var(--header-h);z-index:5;background:#0A0A0B;height:44px;display:flex;align-items:center;gap:24px;padding:0 16px;overflow-x:auto;margin:40px 0;}
+        .route-bar a{color:rgba(255,255,255,.55);font-size:13px;text-decoration:none;white-space:nowrap;transition:color 0.2s;}
+        .route-bar a.active{color:#25F5A4;font-weight:600}
+        .route-bar a.done{color:#8C52FF}
+        .route-progress{position:absolute;bottom:0;left:0;height:3px;background:#25F5A4;width:0%}
+
+        /* ESTACIONES (ZIG-ZAG) */
+        .station{display:grid;gap:16px;margin-bottom:48px}
+        .station > *{min-width:0}
+        .station .st-card{background:#111114;border-radius:16px;padding:24px;color:#fff;box-shadow:0 8px 30px rgba(0,0,0,0.1);}
+        .station .st-card h4 { color: var(--c-white); margin-bottom: 16px; font-size: 18px; }
+        .station .st-card p{color:rgba(255,255,255,.85);font-size:15px;line-height:1.6;margin:0 0 12px}
+        
+        @media(min-width:1100px){
+          .station{grid-template-columns:1fr 440px;align-items:start}
+          .station.right .st-intro{grid-column:1}.station.right .st-card{grid-column:2}
+          .station.left .st-card{grid-column:1}.station.left .st-intro{grid-column:2}
+        }
+        @media(max-width:1099px) {
+            .station .st-intro { order: 1; }
+            .station .st-card { order: 2; margin-top: 16px; }
+        }
+
+        /* CHIPS DE UMBRAL */
+        .chip-verde{color:#25F5A4;background:rgba(37,245,164,.12);border:1px solid rgba(37,245,164,.3);border-radius:8px;padding:4px 10px;font-size:13px;display:inline-block;font-weight:600;}
+        .chip-ambar{color:#FFC233;background:rgba(255,194,51,.12);border:1px solid rgba(255,194,51,.3);border-radius:8px;padding:4px 10px;font-size:13px;display:inline-block;font-weight:600;}
+        .chip-rojo{color:#EC0543;background:rgba(236,5,67,.1);border:1px solid rgba(236,5,67,.3);border-radius:8px;padding:4px 10px;font-size:13px;display:inline-block;font-weight:600;}
+
+        /* CARRUSEL DE MARCAS */
+        .marquee{overflow:hidden;background:#0A0A0B;border-radius:16px;padding:24px 0;margin:60px 0;}
+        .marquee-inner{display:flex;width:max-content;animation:scroll 85s linear infinite}
+        .marquee-inner:hover{animation-play-state:paused}
+        .marquee-inner ul{display:flex;flex:none;max-width:none;list-style:none;margin:0;padding:0;gap:32px}
+        .marquee-inner ul li{color:rgba(255,255,255,.6);font-size:15px;white-space:nowrap}
+        .marquee-title{color:#fff;font-size:18px;text-align:center;margin-bottom:16px}
+        @keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+        @media(prefers-reduced-motion:reduce){.marquee-inner{animation:none}}
+
+        /* TABLA SENCILLA */
+        .table-wrapper { width: 100%; overflow-x: auto; margin-bottom: 2rem; border-radius: 8px; border: 1px solid #E5E7EB; }
+        table { width: 100%; min-width: 600px; border-collapse: collapse; text-align: left; }
+        th, td { padding: 16px; border-bottom: 1px solid #E5E7EB; font-size: 15px; color: var(--c-text); }
+        th { background: var(--c-light-bg); font-weight: 600; color: var(--c-dark-2); }
+
+        /* CAJA DE AUTOR Y SERVICIO */
+        .author-box{background:#F6F3FF;border-radius:16px;padding:24px;display:flex;gap:16px;align-items:center;margin:40px 0;max-width:820px;}
+        .author-box p{color:#374151;font-size:15px;margin:0}
+        .author-box img{width:64px;height:64px;border-radius:50%;object-fit:cover;flex-shrink:0;}
+
+        .service-card {
+            background: var(--c-light-alt);
+            border: 1px solid #D8B4FE;
+            border-radius: 12px;
+            padding: 32px;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            margin: 40px 0;
+            max-width: 820px;
+        }
+        @media(min-width: 760px) {
+            .service-card { flex-direction: row; align-items: center; justify-content: space-between; }
+        }
+        .service-card h4 { font-size: 20px; margin-bottom: 12px; }
+        .service-card p { font-size: 15px; color: var(--c-text); margin: 0; line-height: 1.6; }
+
+        /* FAQ */
+        .faq-container { margin: 40px 0; max-width: 820px; }
+        .faq-item { border-bottom: 1px solid #E5E7EB; padding: 20px 0; }
+        .faq-q { font-weight: 700; font-size: 17px; color: var(--c-dark-2); margin-bottom: 8px; }
+        .faq-a { font-size: 16px; color: var(--c-text); line-height: 1.6; margin: 0; }
+
+        /* CIERRE Y FOOTER */
+        .bottom-cta {
+            background: linear-gradient(160deg, var(--c-dark-1), var(--c-dark-3));
+            color: var(--c-white);
+            text-align: center;
+            padding: 80px 20px;
+        }
+        .bottom-cta h2 { color: var(--c-white); font-size: 2rem; margin-bottom: 16px; }
+        .bottom-cta p { color: rgba(255,255,255,0.8); font-size: 17px; max-width: 600px; margin: 0 auto 32px; line-height: 1.6; }
+        .cta-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-bottom: 24px; }
+        .cta-stats { font-size: 13px; color: rgba(255,255,255,0.5); }
+        
+        .footer {
+            background: var(--c-dark-1);
+            color: rgba(255,255,255,0.7);
+            padding: 60px 20px 24px;
+            font-size: 14px;
+        }
+        .footer-grid {
+            max-width: 1240px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding-bottom: 40px;
+            margin-bottom: 24px;
+        }
+        @media(min-width: 900px) { .footer-grid { grid-template-columns: 2fr 1fr 1fr; } }
+        .footer-logo { height: 40px; margin-bottom: 16px; }
+        .footer-col h5 { color: var(--c-white); font-size: 15px; margin-bottom: 16px; font-weight: 600; }
+        .footer-col ul { list-style: none; padding: 0; margin: 0; }
+        .footer-col ul li { margin-bottom: 12px; }
+        .footer-col a { color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.2s; }
+        .footer-col a:hover { color: var(--c-white); }
+        .footer-bottom {
+            max-width: 1240px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+        .social-links { display: flex; gap: 16px; }
+        .social-links a { color: rgba(255,255,255,0.7); text-decoration: none; }
+        .social-links a:hover { color: var(--c-white); }
+        
+        @media(max-width: 600px) {
+            .header-actions .btn-outline { display: none; }
+            .cta-actions { flex-direction: column; width: 100%; max-width: 320px; margin: 0 auto 24px; }
+            .cta-actions .btn { width: 100%; }
+        }
+    </style>
+    <link rel="icon" type="image/png" href="/logo-lezac-mini.png">
+    <script src="/analytics.js"></script>
+</head>
+<body>
+
+    <!-- HEADER FIJO -->
+    <header class="header">
+        <a href="https://lezacconsultoria.com" class="header-logo" aria-label="Inicio Lezac Consultoría">
+            <img src="https://lezacconsultoria.com/Logo%20Lezac%20%28500%20x%20500%20px%29%20%283%29.png" alt="Lezac Consultoría">
+        </a>
+        <div class="header-actions">
+            <a href="https://wa.me/5491154107921?text=Hola%2C%20vi%20la%20gu%C3%ADa%20de%20clientes%20que%20dejaron%20de%20comprar%20en%20el%20blog%20de%20Lezac%20y%20quiero%20agendar%20la%20asesor%C3%ADa%20comercial%20gratuita" class="btn btn-outline" target="_blank" rel="noopener">WhatsApp</a>
+            <a href="https://calendly.com/lezacconsultoria/consultoria-comercial?utm_source=blog&utm_medium=articulo&utm_campaign=clientes-que-dejaron-de-comprar" class="btn btn-green" target="_blank" rel="noopener">Agendar asesoría gratuita</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- PORTADA -->
+        <section class="hero">
+            <div class="breadcrumb">
+                <a href="https://lezacconsultoria.com">Inicio</a> &rsaquo; 
+                <a href="https://lezacconsultoria.com/blog">Blog</a> &rsaquo; 
+                <span>Clientes que dejaron de comprar</span>
+            </div>
+            
+            <span class="tag">Consultoría de inteligencia comercial</span>
+            
+            <h1>Clientes que dejaron de comprar: cómo detectarlos a tiempo con tus propios datos, sin esperar a que sea tarde</h1>
+            
+            <div class="author-meta">
+                <img src="https://lezacconsultoria.com/perfil-leandro.jpg" alt="Leandro Zacaria">
+                <div class="author-meta-text">
+                    <strong>Leandro Zacaria</strong>
+                    <span>Consultor de inteligencia comercial, Lezac Consultoría</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTENIDO PRINCIPAL -->
+        <div class="container layout">
+            <article class="article">
+                
+                <div class="highlight-box">
+                    <p style="margin:0;font-size:18px;font-weight:500;color:var(--c-dark-2);">Un cliente casi nunca avisa que te va a dejar de comprar — primero espacía los pedidos, después achica el ticket, y cuando dejó de comprar del todo ya pasó a ser un cliente inactivo, mucho más caro de recuperar.</p>
+                </div>
+
+                <p>Detectarlo a tiempo con tu propia facturación, sin esperar ese último paso, es lo que marca la diferencia. La clave está en establecer una hoja de ruta con umbrales de alerta temprana y políticas de acción concretas para cada fase. Este enfoque metódico es la base de nuestra <a href="https://lezacconsultoria.com/consultoria-inteligencia-comercial">consultoría de inteligencia comercial</a>, orientada a proteger tu volumen de ventas activas.</p>
+
+                <!-- BARRA DE RUTA STICKY -->
+                <nav class="route-bar" aria-label="Progreso de lectura">
+                    <div class="route-progress"></div>
+                    <a href="#estacion-15" class="active">15 días</a>
+                    <a href="#estacion-30">30 días</a>
+                    <a href="#estacion-50">50 días</a>
+                </nav>
+
+                <!-- ESTACIÓN 1 -->
+                <section id="estacion-15" class="station right">
+                    <div class="st-intro">
+                        <span style="display:inline-block; font-size:13px; font-weight:700; color:#6B7280; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:8px;">Alerta temprana</span>
+                        <h2>¿Qué hacer cuando un cliente de compra semanal no te compró en 15 días?</h2>
+                        <p>Si un cliente que históricamente compraba una vez por semana (por ejemplo, en el rubro de consumo masivo) lleva 15 días sin pedido, <strong>todavía no hay que presionar</strong>. Por lo general, hay vendedores que insisten de más en esta etapa temprana y el cliente lo toma como desconfianza o presión innecesaria.</p>
+                        <p>La acción correcta en este umbral es solo quedar registrado en el sistema como una señal a seguir, sin que haya una intervención directa del vendedor todavía. Tratar los 15 días como si ya fuera una alarma grave es un error común que genera desgaste, y el cliente lo nota rápidamente.</p>
+                    </div>
+                    <div class="st-card">
+                        <h4>Regla de decisión a los 15 días</h4>
+                        <p><span class="chip-verde">Verde</span> <strong>Sigue su ritmo normal:</strong> Puede que solo tenga sobrestock de la semana anterior. Solo observar.</p>
+                        <p><span class="chip-ambar">Ámbar</span> <strong>Próximo al segundo umbral:</strong> Se registra la pausa internamente para que el supervisor esté al tanto de la tendencia.</p>
+                        <p><span class="chip-rojo" style="text-decoration: line-through; opacity: 0.5;">Rojo</span> (No aplica en esta estación temprana).</p>
+                    </div>
+                </section>
+
+                <!-- ESTACIÓN 2 -->
+                <section id="estacion-30" class="station left">
+                    <div class="st-intro">
+                        <h2>¿Qué cambia a los 30 días sin que un cliente de compra frecuente te vuelva a pedir?</h2>
+                        <p>A los 30 días, la pausa ya no es casualidad. Sin embargo, según la política que se defina por industria, en muchos casos todavía conviene que el vendedor no insista directamente con una actitud de cierre agresivo.</p>
+                        <p>A veces la intervención correcta en esta etapa de fuga temprana es ajustar sutilmente la oferta o afinar el seguimiento, no la presión comercial bruta. Esta política se adapta a cada empresa según su rubro y la dinámica habitual de sus compradores.</p>
+                        
+                        <div class="table-wrapper" style="margin-top: 24px;">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Umbral de pausa</th>
+                                        <th>Acción sugerida</th>
+                                        <th>Quién interviene</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>15 días</strong></td>
+                                        <td>Observar, registrar señal.</td>
+                                        <td>Nadie interviene aún.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>30 días</strong></td>
+                                        <td>Revisar motivo probable sin presionar.</td>
+                                        <td>Vendedor registra pero no insiste agresivamente.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>50 días</strong></td>
+                                        <td>Acción directa de recuperación.</td>
+                                        <td>Equipo de atención telefónica o supervisor.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="st-card">
+                        <h4>El riesgo de los 30 días</h4>
+                        <p>En este punto el cliente todavía está activo en su mente respecto a tu marca, pero ya le dio entrada a la competencia o redujo su propio volumen de ventas. Actuar con inteligencia implica analizar el mix de productos que dejó de llevar antes de llamarlo.</p>
+                    </div>
+                </section>
+
+                <!-- CARRUSEL DE MARCAS -->
+                <div class="marquee" aria-hidden="true">
+                    <div class="marquee-title">Empresas que optimizan su seguimiento comercial</div>
+                    <div class="marquee-inner">
+                        <ul>
+                            <li>Bacardi</li><li>Vitalcan</li><li>Weilen</li><li>Proquim</li><li>Madersa</li><li>Vaca Fría</li><li>Distribuidora Gloria</li><li>Alco</li><li>Indega</li><li>Pluscar</li><li>McCain</li>
+                        </ul>
+                        <ul>
+                            <li>Bacardi</li><li>Vitalcan</li><li>Weilen</li><li>Proquim</li><li>Madersa</li><li>Vaca Fría</li><li>Distribuidora Gloria</li><li>Alco</li><li>Indega</li><li>Pluscar</li><li>McCain</li>
+                        </ul>
+                        <ul>
+                            <li>Bacardi</li><li>Vitalcan</li><li>Weilen</li><li>Proquim</li><li>Madersa</li><li>Vaca Fría</li><li>Distribuidora Gloria</li><li>Alco</li><li>Indega</li><li>Pluscar</li><li>McCain</li>
+                        </ul>
+                        <ul>
+                            <li>Bacardi</li><li>Vitalcan</li><li>Weilen</li><li>Proquim</li><li>Madersa</li><li>Vaca Fría</li><li>Distribuidora Gloria</li><li>Alco</li><li>Indega</li><li>Pluscar</li><li>McCain</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- ESTACIÓN 3 -->
+                <section id="estacion-50" class="station right">
+                    <div class="st-intro">
+                        <h2>¿Por qué a los 50 días conviene una llamada puntual y no esperar más?</h2>
+                        <p>A los 50 días sin pedido, en rubros de consumo masivo o reposición frecuente, ya hablamos de un cliente en riesgo real de pasar a inactivo. Acá sí conviene una acción directa y puntual — por ejemplo, una llamada de un equipo de atención al cliente (no necesariamente el vendedor de la zona) para entender el motivo concreto: problema de precio, de stock, de atención, o simplemente que empezó a comprarle a otro proveedor.</p>
+                        
+                        <div style="background-color: var(--c-light-bg); padding: 24px; border-radius: 12px; margin-top: 24px; border-left: 4px solid var(--c-danger);">
+                            <span style="display:inline-block; font-size:12px; font-weight:700; color:var(--c-danger); text-transform:uppercase; margin-bottom:8px;">Caso Real</span>
+                            <p style="font-size: 15px; margin-bottom: 0;">En una empresa de consumo masivo se definieron tres umbrales de seguimiento sobre la frecuencia de compra habitual (semanal): a los 15 días sin pedido, el vendedor no insistía; a los 30 días, tampoco se presionaba directamente; recién a los 50 días se activaba una llamada puntual de atención al cliente para entender el motivo de la pausa y, en base a eso, definir la acción de recuperación. La política se ajusta según el rubro y la impronta de cada empresa — no es un esquema rígido, sino un criterio que se calibra con los datos propios.</p>
+                        </div>
+                    </div>
+                    <div class="st-card" style="border-top: 4px solid var(--c-danger);">
+                        <h4>El límite de los 50 días</h4>
+                        <p>Dejar pasar este umbral convierte la "alerta temprana" en una pérdida consolidada. Si el cliente supera los 60 a 90 días, ya requiere estrategias mucho más agresivas y entra en el territorio donde es necesario utilizar herramientas como una <a href="https://lezacconsultoria.com/blog/calculadora-clientes-inactivos" style="color:#D8B4FE;">calculadora de clientes inactivos</a> para medir el daño y la viabilidad de rescate.</p>
+                    </div>
+                </section>
+
+                <!-- SECCIONES FINALES DE CONTEXTO -->
+                <h2>Por qué conviene actuar ahora</h2>
+                <p>Recuperar a un cliente que ya te compró antes es más simple que conseguir uno nuevo desde cero. En un contexto de retracción del consumo, activar a tiempo a los clientes que empiezan a espaciar sus compras es una de las formas más rápidas de sostener la venta sin salir a buscar mercado nuevo.</p>
+
+                <h3>Para quién no es esta metodología</h3>
+                <p>Este sistema no aplica igual para empresas con compra muy esporádica o estacional, donde 15, 30 o 50 días no son umbrales representativos. En esos casos —venta de maquinaria pesada, licitaciones anuales— los umbrales se redefinen y se extienden según el ciclo real de compra del rubro.</p>
+
+                <h3>Qué pasa en la asesoría con nosotros</h3>
+                <p>Durante la charla gratuita, revisamos la frecuencia real de compra de tu base de clientes y definimos los umbrales y las políticas de acción específicas para tu rubro. Es el primer paso para aplicar un <a href="https://lezacconsultoria.com/consultoria-inteligencia-comercial">seguimiento mes a mes de tus propios datos de venta</a>, completamente sin comprometerte a nada.</p>
+
+                <!-- TARJETA DE SERVICIO ÚNICA -->
+                <div class="service-card">
+                    <div style="flex: 1;">
+                        <h4>Consultoría de inteligencia comercial</h4>
+                        <p>Un consultor trabaja uno a uno sobre tus propios datos de venta, con una plataforma propia y acompañamiento mes a mes, sin permanencia obligatoria.</p>
+                    </div>
+                    <div>
+                        <a href="https://lezacconsultoria.com/consultoria-inteligencia-comercial" class="btn btn-purple" style="white-space: nowrap;">Conocer cómo trabajamos</a>
+                    </div>
+                </div>
+
+                <!-- FAQ -->
+                <div class="faq-container">
+                    <h3>Preguntas Frecuentes</h3>
+                    
+                    <div class="faq-item">
+                        <div class="faq-q">¿Cómo sé si un cliente dejó de comprarme sin esperar a que pase mucho tiempo?</div>
+                        <div class="faq-a">Se detecta midiendo la frecuencia de compra histórica de cada cliente y estableciendo umbrales de alerta (por ejemplo, 15 o 30 días sin pedido) sobre la facturación, para intervenir antes de que el vínculo se enfríe y pase a ser inactivo.</div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-q">¿Qué diferencia hay entre un cliente inactivo y un cliente que recién empezó a dejar de comprar?</div>
+                        <div class="faq-a">Un cliente en fuga temprana solo espació su pedido y aún tiene a tu empresa en su radar, requiriendo acciones sutiles; un cliente inactivo ya rompió el hábito de compra, suele requerir un esfuerzo comercial y de descuentos mucho mayor para ser recuperado.</div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-q">¿Necesito un CRM o un software nuevo para hacer este seguimiento?</div>
+                        <div class="faq-a">No obligatoriamente. Con tus propios datos de facturación actuales y un análisis ordenado de la frecuencia, podés armar estos umbrales. El problema rara vez es la falta de software, sino la falta de un método que lea los datos que ya tenés.</div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-q">¿Esto sirve para cualquier rubro o solo para consumo masivo?</div>
+                        <div class="faq-a">Sirve para cualquier pyme o fábrica con venta recurrente. La única diferencia es que en consumo masivo los umbrales son de semanas (15, 30 días), mientras que en rubros de maquinaria o insumos pesados los umbrales se ajustan al ciclo natural de reposición.</div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-q">¿Por qué conviene recuperar un cliente antes que buscar uno nuevo, sobre todo ahora?</div>
+                        <div class="faq-a">Porque el costo de adquisición de un cliente nuevo siempre es más alto que retener a uno que ya superó la barrera de confianza. En un mercado retraído, reactivar clientes que empiezan a espaciar compras sostiene el volumen de forma más rápida y segura.</div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-q">¿Cada cuánto hay que revisar esto — a diario, semanal, mensual?</div>
+                        <div class="faq-a">Depende del rubro, pero en empresas con alta frecuencia de pedido la revisión de alertas tempranas suele ser semanal. Así, el equipo de ventas sabe exactamente sobre qué clientes poner foco en los próximos días sin saturar al resto de la cartera.</div>
+                    </div>
+                </div>
+
+                <!-- CAJA DE AUTOR -->
+                <div class="author-box">
+                    <img src="https://lezacconsultoria.com/perfil-leandro.jpg" alt="Leandro Zacaria">
+                    <div>
+                        <p style="font-weight: 700; margin-bottom: 4px; font-size: 16px;">Leandro Zacaria</p>
+                        <p style="font-size: 14px; margin-bottom: 8px;">Consultor de inteligencia comercial, Lezac Consultoría</p>
+                        <p style="font-size: 13px; color: #6B7280; margin-bottom: 8px;">10+ años asesorando distribuidoras, mayoristas y fábricas pyme en Argentina, Paraguay, Bolivia y Uruguay.</p>
+                        <a href="https://www.linkedin.com/in/leandro-zacaria" target="_blank" rel="noopener" style="font-size: 13px; font-weight: 600; color: #7B2FBE;">Ver perfil en LinkedIn &rarr;</a>
+                    </div>
+                </div>
+
+            </article>
+        </div>
+    </main>
+
+    <!-- CIERRE DE EMBUDO -->
+    <section class="bottom-cta">
+        <h2>Agendá tu asesoría comercial gratuita de 45 minutos</h2>
+        <p>En una charla online revisamos la frecuencia de compra real de tu base de clientes y dónde conviene poner tus umbrales de alerta. Sin contrato inicial.</p>
+        <div class="cta-actions">
+            <a href="https://wa.me/5491154107921?text=Hola%2C%20vi%20la%20gu%C3%ADa%20de%20clientes%20que%20dejaron%20de%20comprar%20en%20el%20blog%20de%20Lezac%20y%20quiero%20agendar%20la%20asesor%C3%ADa%20comercial%20gratuita" class="btn btn-outline" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+            <a href="https://calendly.com/lezacconsultoria/consultoria-comercial?utm_source=blog&utm_medium=articulo&utm_campaign=clientes-que-dejaron-de-comprar" class="btn btn-green" target="_blank" rel="noopener">Agendar asesoría gratuita · 45 min</a>
+        </div>
+        <div class="cta-stats">
+            10+ años de experiencia | 100+ empresas asesoradas | Argentina · Paraguay · Bolivia · Uruguay
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <img src="https://lezacconsultoria.com/Logo%20Lezac%20%28500%20x%20500%20px%29%20%283%29.png" alt="Lezac Consultoría" class="footer-logo">
+                <p style="max-width: 320px; line-height: 1.6; margin-bottom: 0;">Consultora de inteligencia comercial para PyMEs. Transformamos datos dispersos en decisiones rentables para la calle.</p>
+            </div>
+            <div class="footer-col">
+                <h5>Servicios</h5>
+                <ul>
+                    <li><a href="https://lezacconsultoria.com/consultoria-inteligencia-comercial">Consultoría de inteligencia comercial</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>Contacto Directo</h5>
+                <ul>
+                    <li><a href="https://wa.me/5491154107921?text=Hola%2C%20vengo%20del%20blog%20de%20Lezac" target="_blank" rel="noopener">WhatsApp: +54 9 11 5410-7921</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div>&copy; 2026 Lezac Consultoría. Todos los derechos reservados.</div>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/company/lezac-consultoria" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a>
+                <a href="https://www.instagram.com/lezacconsultoria" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPT BARRA DE PROGRESO -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const routeBar = document.querySelector('.route-bar');
+            const progressBar = document.querySelector('.route-progress');
+            const stations = document.querySelectorAll('.station');
+            const links = document.querySelectorAll('.route-bar a');
+
+            if (!routeBar || !progressBar || stations.length === 0) return;
+
+            function throttle(callee, timeout) {
+                let timer = null;
+                return function perform(...args) {
+                    if (timer) return;
+                    timer = setTimeout(() => {
+                        callee(...args);
+                        clearTimeout(timer);
+                        timer = null;
+                    }, timeout);
+                }
+            }
+
+            function updateProgress() {
+                const firstStation = stations[0];
+                const lastStation = stations[stations.length - 1];
+                
+                const startY = firstStation.getBoundingClientRect().top + window.scrollY - window.innerHeight / 2;
+                const endY = lastStation.getBoundingClientRect().bottom + window.scrollY - window.innerHeight / 2;
+                const currentY = window.scrollY;
+                
+                let progress = 0;
+                if (currentY >= startY) {
+                    progress = ((currentY - startY) / (endY - startY)) * 100;
+                }
+                
+                progress = Math.max(0, Math.min(100, progress));
+                progressBar.style.width = progress + '%';
+
+                stations.forEach((station, index) => {
+                    const rect = station.getBoundingClientRect();
+                    const link = links[index];
+                    
+                    if (rect.top <= window.innerHeight / 2 && rect.bottom >= 0) {
+                        links.forEach(l => l.classList.remove('active'));
+                        link.classList.add('active');
+                    }
+                    
+                    if (rect.bottom < window.innerHeight / 2) {
+                        link.classList.add('done');
+                    } else {
+                        link.classList.remove('done');
+                    }
+                });
+            }
+
+            window.addEventListener('scroll', throttle(updateProgress, 50));
+            updateProgress(); // init
+        });
+    </script>
+</body>
+</html>

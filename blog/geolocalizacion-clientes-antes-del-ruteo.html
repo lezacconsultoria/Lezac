@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="es-AR" style="scroll-behavior: smooth; scroll-padding-top: var(--header-h);">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geolocalización de Clientes: lo que Va Antes del Ruteo | Lezac</title>
+    <meta name="description" content="Geolocalización de clientes y censo de puntos de venta para pymes, distribuidoras y fábricas con vendedores propios: el paso antes de rutear a ciegas.">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <link rel="canonical" href="https://lezacconsultoria.com/blog/geolocalizacion-clientes-antes-del-ruteo">
+    
+    <!-- Open Graph -->
+    <meta property="og:locale" content="es_AR">
+    <meta property="article:published_time" content="2026-11-11T08:00:00-03:00">
+    <meta name="author" content="Leandro Zacaria">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Geolocalización de Clientes: lo que Va Antes del Ruteo | Lezac">
+    <meta property="og:description" content="Geolocalización de clientes y censo de puntos de venta para pymes, distribuidoras y fábricas con vendedores propios: el paso antes de rutear a ciegas.">
+    <meta property="og:url" content="https://lezacconsultoria.com/blog/geolocalizacion-clientes-antes-del-ruteo">
+    <meta property="og:image" content="https://lezacconsultoria.com/opengrap.jpeg">
+    <meta property="og:site_name" content="Lezac Consultoría">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Geolocalización de Clientes: lo que Va Antes del Ruteo | Lezac">
+    <meta name="twitter:description" content="Geolocalización de clientes y censo de puntos de venta para pymes, distribuidoras y fábricas con vendedores propios: el paso antes de rutear a ciegas.">
+    <meta name="twitter:image" content="https://lezacconsultoria.com/opengrap.jpeg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+
+    <!-- JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://lezacconsultoria.com/#organization",
+          "name": "Lezac Consultoría",
+          "url": "https://lezacconsultoria.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://lezacconsultoria.com/Logo%20Lezac%20%28500%20x%20500%20px%29%20%283%29.png"
+          }
+        },
+        {
+          "@type": "Person",
+          "@id": "https://lezacconsultoria.com/#leandro",
+          "name": "Leandro Zacaria",
+          "jobTitle": "Consultor de inteligencia comercial",
+          "worksFor": {"@id": "https://lezacconsultoria.com/#organization"},
+          "image": "https://lezacconsultoria.com/perfil-leandro.jpg",
+          "sameAs": ["https://www.linkedin.com/in/leandro-zacaria"]
+        },
+        {
+          "@type": "BlogPosting",
+          "@id": "https://lezacconsultoria.com/blog/geolocalizacion-clientes-antes-del-ruteo#article",
+          "headline": "Geolocalización de clientes: lo que toda pyme con vendedores en la calle necesita antes de rutear",
+          "author": {"@id": "https://lezacconsultoria.com/#leandro"},
+          "publisher": {"@id": "https://lezacconsultoria.com/#organization"},
+          "image": "https://lezacconsultoria.com/opengrap.jpeg",
+          "datePublished": "2026-11-11T08:00:00-03:00",
+          "dateModified": "2026-11-11T08:00:00-03:00",
+          "mainEntityOfPage": "https://lezacconsultoria.com/blog/geolocalizacion-clientes-antes-del-ruteo",
+          "keywords": ["geolocalización de clientes", "censo de puntos de venta", "ruteo comercial pymes"],
+          "timeRequired": "PT8M",
+          "mentions": [
+            {
+              "@type": "Service",
+              "@id": "https://lezacconsultoria.com/mas-clientes-activos#service"
+            }
+          ]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://lezacconsultoria.com/blog/geolocalizacion-clientes-antes-del-ruteo#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Inicio",
+              "item": "https://lezacconsultoria.com"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Blog",
+              "item": "https://lezacconsultoria.com/blog"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Geolocalización de clientes",
+              "item": "https://lezacconsultoria.com/blog/geolocalizacion-clientes-antes-del-ruteo"
+            }
+          ]
+        },
+        {
+          "@type": "ItemList",
+          "name": "Señales de alerta en el padrón de clientes",
+          "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Vendedores con zonas que se superponen"},
+            {"@type": "ListItem", "position": 2, "name": "Clientes activos hace un año que hoy no compran"},
+            {"@type": "ListItem", "position": 3, "name": "Camionetas de reparto pasando por zonas de bajo volumen"},
+            {"@type": "ListItem", "position": 4, "name": "Nadie puede decir cuántos puntos de venta hay realmente en la zona"}
+          ]
+        },
+        {
+          "@type": "DefinedTermSet",
+          "name": "Glosario Comercial",
+          "hasDefinedTerm": [
+            {"@type": "DefinedTerm", "name": "censo de puntos de venta"},
+            {"@type": "DefinedTerm", "name": "geolocalización de clientes"},
+            {"@type": "DefinedTerm", "name": "zona de influencia"},
+            {"@type": "DefinedTerm", "name": "cobertura de clientes activos"}
+          ]
+        },
+        {
+          "@type": "Service",
+          "@id": "https://lezacconsultoria.com/mas-clientes-activos#service",
+          "name": "+Clientes Activos",
+          "description": "Recuperamos clientes dormidos y sumamos puntos de venta sin atender, con geolocalización, censo y ruteo comercial. Más clientes, más ventas.",
+          "provider": {"@id": "https://lezacconsultoria.com/#organization"}
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "¿Qué es un censo de puntos de venta?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "El censo de puntos de venta y geolocalización de clientes es el proceso de ubicar en un mapa cada comercio de la zona con su dirección exacta, tipo de negocio, volumen y frecuencia de compra, para tener una base real sobre la cual decidir y no una lista vieja."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Geolocalizar clientes sirve también para una fábrica con vendedores propios, no solo para una distribuidora?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sirve para cualquier pyme con equipo de venta en la calle —distribuidora, mayorista o fábrica que vende directo a comercios con vendedores propios— porque el problema principal no depende del rubro, sino de no saber con exactitud dónde están realmente los puntos de venta activos en tu zona."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Cuánto tarda en verse resultado después de geolocalizar la base de clientes?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Los primeros resultados se ven en 30 a 60 días. Al mapear la zona y reasignar recorridos, los vendedores empiezan casi de inmediato a tocar puntos de venta que antes ignoraban, reactivando clientes dormidos y optimizando el tiempo real en la calle."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Hace falta comprar un software de ruteo para hacer esto?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No en la etapa inicial. Antes de invertir en tecnología de ruteo compleja, es obligatorio depurar, geolocalizar y censar la base. Muchas pymes logran mejoras del 20% en cobertura solo ordenando sus datos actuales y usando herramientas cartográficas estándar."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Qué pasa con los clientes que aparecen en el sistema pero ya no compran?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Se los marca en el mapa como inactivos y se diseña una ruta de barrido específica para entender por qué dejaron de comprar. Muchas veces el problema es de frecuencia de visita, no de precio, por lo que reasignarles un vendedor los recupera rápidamente."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Cómo se define una zona nueva de prospección, como el caso de los 200 puntos de venta agregados?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Se cruzan las rutas actuales de entrega que tienen capacidad ociosa con áreas geográficas de alta densidad comercial que hoy no están siendo visitadas por los vendedores. Ahí se envía un equipo a relevar cuadra por cuadra para sumar comercios viables al padrón."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <style>
+        :root {
+            --c-brand: #8C52FF;
+            --c-brand-dark: #7B2FBE;
+            --c-success: #25F5A4;
+            --c-danger: #EC0543;
+            --c-dark-1: #0A0A0B;
+            --c-dark-2: #111114;
+            --c-dark-3: #18181C;
+            --c-light-bg: #F9FAFB;
+            --c-light-alt: #F6F3FF;
+            --c-text: #374151;
+            --c-white: #FFFFFF;
+            --header-h: 60px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--c-white);
+            color: var(--c-dark-2);
+            overflow-x: clip;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* TIPOGRAFÍA GLOBAL */
+        h1, h2, h3, h4 { color: var(--c-dark-2); font-weight: 700; line-height: 1.2; }
+        
+        /* HEADER STICKY */
+        .header {
+            position: sticky;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: var(--header-h);
+            background: linear-gradient(160deg, rgba(10,10,11,0.95), rgba(24,24,28,0.95));
+            backdrop-filter: blur(8px);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
+        
+        .header-logo img {
+            height: 32px;
+            width: auto;
+            display: block;
+        }
+        
+        .header-actions {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 44px;
+            padding: 0 20px;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            cursor: pointer;
+            border: none;
+        }
+        .header .btn { min-height: 40px; font-size: 14px; }
+        
+        .btn-green { background: var(--c-success); color: var(--c-dark-1); }
+        .btn-green:hover { background: #1ed18c; }
+        
+        .btn-outline { border: 1px solid rgba(255,255,255,0.2); color: var(--c-white); background: transparent; }
+        .btn-outline:hover { background: rgba(255,255,255,0.05); }
+
+        .btn-purple { background: var(--c-brand); color: var(--c-white); }
+        .btn-purple:hover { background: var(--c-brand-dark); }
+
+        /* PORTADA / HERO */
+        .hero {
+            padding: 60px 20px 40px;
+            max-width: 860px;
+            margin: 0 auto;
+        }
+        
+        .breadcrumb {
+            display: flex;
+            gap: 8px;
+            font-size: 14px;
+            color: #6B7280;
+            margin-bottom: 24px;
+            align-items: center;
+        }
+        .breadcrumb a { color: var(--c-brand-dark); text-decoration: none; font-weight: 500; }
+        .breadcrumb a:hover { text-decoration: underline; }
+        
+        .tag {
+            display: inline-block;
+            background: var(--c-light-alt);
+            color: var(--c-brand-dark);
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 24px;
+        }
+
+        h1 {
+            font-size: clamp(1.75rem, 4vw, 2.6rem);
+            margin-bottom: 24px;
+            letter-spacing: -0.02em;
+        }
+
+        .author-meta {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 40px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid #E5E7EB;
+        }
+        .author-meta img {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .author-meta-text strong { display: block; font-size: 15px; color: var(--c-dark-2); }
+        .author-meta-text span { font-size: 14px; color: #6B7280; }
+
+        /* GRID PRINCIPAL */
+        .container {
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 0 20px 80px;
+        }
+
+        .layout { display: block; }
+        .article { width: 100%; }
+        .toc { display: none; }
+        
+        /* INDICE LATERAL STICKY */
+        @media(min-width: 1100px) {
+            .layout { display: grid; grid-template-columns: minmax(0, 1fr) 280px; gap: 56px; }
+            .article { grid-column: 1; grid-row: 1; }
+            .toc { 
+                display: block;
+                grid-column: 2; 
+                grid-row: 1; 
+                position: sticky; 
+                top: calc(var(--header-h) + 24px); 
+                align-self: start;
+                background: var(--c-light-bg);
+                padding: 24px;
+                border-radius: 12px;
+            }
+            .toc-title { font-size: 14px; text-transform: uppercase; font-weight: 700; color: #6B7280; margin-bottom: 16px; letter-spacing: 0.05em; }
+            .toc ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 12px; }
+            .toc a { 
+                color: var(--c-text); 
+                text-decoration: none; 
+                font-size: 14px; 
+                line-height: 1.4;
+                display: block;
+                transition: color 0.2s;
+            }
+            .toc a:hover { color: var(--c-brand-dark); }
+        }
+
+        /* BASE DE TEXTO ARTICLE (Especificidad cero obligatoria) */
+        :where(.article) :where(p){font-size:17px;line-height:1.7;margin:0 0 1.15rem;color:#374151;max-width:820px}
+        :where(.article) :where(ul,ol){margin:0 0 1.15rem;padding-left:1.4rem}
+        :where(.article) :where(li){margin-bottom:0.5rem}
+        :where(.article) :where(a){color:#7B2FBE;text-decoration:underline}
+        
+        /* RESTITUCIÓN DE LISTAS */
+        :where(ol){list-style:decimal}
+        :where(ul){list-style:disc}
+        :where(li)::marker{color:#7B2FBE}
+
+        .article h2 {
+            font-size: 1.5rem;
+            margin: 2.5rem 0 1.25rem;
+            scroll-margin-top: calc(var(--header-h) + 24px);
+        }
+
+        .article h3 { font-size: 1.25rem; margin: 2rem 0 1rem; }
+        
+        .highlight-box {
+            background: var(--c-light-alt);
+            border-left: 4px solid var(--c-brand);
+            padding: 20px;
+            border-radius: 0 8px 8px 0;
+            margin-bottom: 24px;
+        }
+        
+        /* TABLA RESUMEN */
+        .table-wrapper {
+            width: 100%;
+            overflow-x: auto;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            border: 1px solid #E5E7EB;
+            tabindex: 0;
+        }
+        .table-hint {
+            display: none;
+            font-size: 13px;
+            color: #6B7280;
+            margin-bottom: 8px;
+            font-style: italic;
+        }
+        table {
+            width: 100%;
+            min-width: 600px;
+            border-collapse: collapse;
+            text-align: left;
+        }
+        th, td {
+            padding: 16px;
+            border-bottom: 1px solid #E5E7EB;
+            font-size: 15px;
+            color: var(--c-text);
+        }
+        th { background: var(--c-light-bg); font-weight: 600; color: var(--c-dark-2); }
+        
+        @media(max-width: 760px) {
+            .table-hint { display: block; }
+            th:first-child, td:first-child {
+                position: sticky;
+                left: 0;
+                background: var(--c-white);
+                z-index: 2;
+                border-right: 1px solid #E5E7EB;
+                box-shadow: 2px 0 5px rgba(0,0,0,0.05);
+            }
+            th:first-child { background: var(--c-light-bg); }
+        }
+
+        /* CARRUSEL DE MARCAS (Protegido) */
+        .marquee{overflow:hidden;background:#0A0A0B;border-radius:16px;padding:24px 0;margin:40px 0;}
+        .marquee-inner{display:flex;width:max-content;animation:scroll 85s linear infinite}
+        .marquee-inner:hover{animation-play-state:paused}
+        .marquee-inner ul{display:flex;flex:none;max-width:none;list-style:none;margin:0;padding:0;gap:32px}
+        .marquee-inner ul li{color:rgba(255,255,255,.6);font-size:15px;white-space:nowrap}
+        .marquee-title{color:#fff;font-size:18px;text-align:center;margin-bottom:16px}
+        @keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+        @media(prefers-reduced-motion:reduce){.marquee-inner{animation:none}}
+
+        /* CAJA DE AUTOR (Protegida) */
+        .author-box{background:#F6F3FF;border-radius:16px;padding:24px;display:flex;gap:16px;align-items:center;margin:40px 0;}
+        .author-box p{color:#374151;font-size:15px;margin:0}
+        .author-box img{width:64px;height:64px;border-radius:50%;object-fit:cover;flex-shrink:0;}
+
+        /* FAQ */
+        .faq-container { margin: 40px 0; }
+        .faq-item {
+            border-bottom: 1px solid #E5E7EB;
+            padding: 20px 0;
+        }
+        .faq-q { font-weight: 700; font-size: 17px; color: var(--c-dark-2); margin-bottom: 8px; }
+        .faq-a { font-size: 16px; color: var(--c-text); line-height: 1.6; margin: 0; }
+
+        /* GRILLA DE SERVICIOS */
+        .services-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 24px;
+            margin: 40px 0;
+        }
+        @media(min-width: 900px) { .services-grid { grid-template-columns: 1fr 1fr; } }
+        
+        .service-card {
+            background: var(--c-light-bg);
+            border: 1px solid #E5E7EB;
+            border-radius: 12px;
+            padding: 32px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .service-card.highlight {
+            background: var(--c-light-alt);
+            border-color: #D8B4FE;
+            grid-column: 1 / -1;
+            flex-direction: row;
+            gap: 32px;
+            align-items: center;
+        }
+        @media(max-width: 760px) {
+            .service-card.highlight { flex-direction: column; align-items: flex-start; gap: 16px; }
+        }
+        .service-card h4 { font-size: 20px; margin-bottom: 12px; }
+        .service-card p { font-size: 15px; color: var(--c-text); margin-bottom: 24px; line-height: 1.6; }
+        .service-card a:not(.btn) { font-size: 15px; font-weight: 600; color: var(--c-brand-dark); text-decoration: none; }
+        .service-card a:not(.btn):hover { text-decoration: underline; }
+
+        /* CIERRE Y FOOTER */
+        .bottom-cta {
+            background: linear-gradient(160deg, var(--c-dark-1), var(--c-dark-3));
+            color: var(--c-white);
+            text-align: center;
+            padding: 80px 20px;
+        }
+        .bottom-cta h2 { color: var(--c-white); font-size: 2rem; margin-bottom: 16px; }
+        .bottom-cta p { color: rgba(255,255,255,0.8); font-size: 17px; max-width: 600px; margin: 0 auto 32px; line-height: 1.6; }
+        .cta-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-bottom: 24px; }
+        .cta-stats { font-size: 13px; color: rgba(255,255,255,0.5); }
+        
+        .footer {
+            background: var(--c-dark-1);
+            color: rgba(255,255,255,0.7);
+            padding: 60px 20px 24px;
+            font-size: 14px;
+        }
+        .footer-grid {
+            max-width: 1240px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding-bottom: 40px;
+            margin-bottom: 24px;
+        }
+        @media(min-width: 900px) { .footer-grid { grid-template-columns: 2fr 1fr 1fr; } }
+        .footer-logo { height: 40px; margin-bottom: 16px; }
+        .footer-col h5 { color: var(--c-white); font-size: 15px; margin-bottom: 16px; font-weight: 600; }
+        .footer-col ul { list-style: none; padding: 0; margin: 0; }
+        .footer-col ul li { margin-bottom: 12px; }
+        .footer-col a { color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.2s; }
+        .footer-col a:hover { color: var(--c-white); }
+        .footer-bottom {
+            max-width: 1240px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+        .social-links { display: flex; gap: 16px; }
+        .social-links a { color: rgba(255,255,255,0.7); text-decoration: none; }
+        .social-links a:hover { color: var(--c-white); }
+        
+        @media(max-width: 600px) {
+            .header-actions .btn-outline { display: none; }
+            .cta-actions { flex-direction: column; width: 100%; max-width: 320px; margin: 0 auto 24px; }
+            .cta-actions .btn { width: 100%; }
+        }
+    </style>
+    <link rel="icon" type="image/png" href="/logo-lezac-mini.png">
+    <script src="/analytics.js"></script>
+</head>
+<body>
+
+    <!-- HEADER FIJO -->
+    <header class="header">
+        <a href="https://lezacconsultoria.com" class="header-logo" aria-label="Inicio Lezac Consultoría">
+            <img src="https://lezacconsultoria.com/Logo%20Lezac%20%28500%20x%20500%20px%29%20%283%29.png" alt="Lezac Consultoría">
+        </a>
+        <div class="header-actions">
+            <a href="https://wa.me/5491154107921?text=Hola%2C%20vi%20la%20gu%C3%ADa%20de%20geolocalizaci%C3%B3n%20de%20clientes%20en%20el%20blog%20de%20Lezac%20y%20quiero%20agendar%20la%20asesor%C3%ADa%20comercial%20gratuita" class="btn btn-outline" target="_blank" rel="noopener">WhatsApp</a>
+            <a href="https://calendly.com/lezacconsultoria/consultoria-comercial?utm_source=blog&utm_medium=articulo&utm_campaign=geolocalizacion-clientes-antes-del-ruteo" class="btn btn-green" target="_blank" rel="noopener">Agendar asesoría gratuita</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- PORTADA -->
+        <section class="hero">
+            <div class="breadcrumb">
+                <a href="https://lezacconsultoria.com">Inicio</a> &rsaquo; 
+                <a href="https://lezacconsultoria.com/blog">Blog</a> &rsaquo; 
+                <span>Geolocalización de clientes</span>
+            </div>
+            
+            <span class="tag">Servicio +Clientes Activos</span>
+            
+            <h1>Geolocalización de clientes: lo que toda pyme con vendedores en la calle necesita antes de rutear</h1>
+            
+            <div class="author-meta">
+                <img src="https://lezacconsultoria.com/perfil-leandro.jpg" alt="Leandro Zacaria">
+                <div class="author-meta-text">
+                    <strong>Leandro Zacaria</strong>
+                    <span>Consultor de inteligencia comercial, Lezac Consultoría</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTENIDO Y GRID -->
+        <div class="container layout">
+            <article class="article">
+                
+                <div class="highlight-box">
+                    <p style="margin:0;font-size:18px;font-weight:500;color:var(--c-dark-2);">Aplicar <a href="https://lezacconsultoria.com/mas-clientes-activos">+Clientes Activos</a> implica entender que el terreno es dinámico. Mapear tu base actual es el paso innegociable antes de cualquier mejora en ventas.</p>
+                </div>
+
+                <p>Implementar un ruteo eficiente parece ser el Santo Grial de la logística de ventas, pero hay un paso crítico que la mayoría de las empresas saltea. Si estás enviando vendedores a la calle guiados por intuición, hojas de cálculo desactualizadas o un sistema donde las direcciones no son precisas, cualquier esfuerzo de optimización de rutas va a fracasar desde el inicio. El secreto de un ruteo exitoso no es el algoritmo: es la calidad del dato de origen.</p>
+
+                <h2 id="software-ruteo-falla">¿Por qué un software de ruteo falla si tu padrón de clientes está desordenado?</h2>
+                <p>Un software de ruteo optimiza recorridos sobre datos que ya existen. Si tu padrón tiene direcciones viejas, zonas superpuestas entre distintos vendedores o clientes "fantasma" que nadie visita hace meses, la herramienta va a optimizar una ruta sobre información incorrecta, haciéndote perder tiempo y plata en la calle.</p>
+                <p>En el día a día operativo, es habitual que los propios vendedores terminen armando su propia lógica de visitas, guiados por la experiencia acumulada en la calle. El problema es que esa lógica valiosa queda en la cabeza del vendedor, no queda documentada en la empresa ni es visible para el resto del equipo comercial cuando esa persona falta, cambia de zona o se va.</p>
+
+                <div class="table-hint">Deslizá la tabla para ver más &rarr;</div>
+                <div class="table-wrapper" aria-label="Tabla de señales de alerta en el padrón de clientes">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Señal en tu operación</th>
+                                <th>Qué significa realmente</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Vendedores con zonas que se superponen</td>
+                                <td>Nadie sabe con certeza quién visita qué cuadra.</td>
+                            </tr>
+                            <tr>
+                                <td>Clientes activos hace un año que hoy no compran</td>
+                                <td>Tu cobertura está cayendo silenciosamente sin que se note a nivel gerencial.</td>
+                            </tr>
+                            <tr>
+                                <td>Camionetas de reparto pasando por zonas de bajo volumen</td>
+                                <td>Estás asumiendo un costo de entrega sin un retorno que lo justifique.</td>
+                            </tr>
+                            <tr>
+                                <td>Nadie puede decir cuántos puntos de venta hay realmente en la zona</td>
+                                <td>El crecimiento depende puramente de la memoria del equipo, no de los datos reales.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2 id="censo-puntos-venta">¿Qué es un censo de puntos de venta y qué datos hay que relevar?</h2>
+                <p>El censo de puntos de venta y geolocalización de clientes es el proceso de ubicar en un mapa cada comercio de la zona con su dirección exacta, tipo de negocio, volumen y frecuencia de compra, para tener una base real sobre la cual decidir y no una lista vieja.</p>
+                <p>Para entenderlo, podemos pensar en una analogía clara: es como pasar de manejar un vehículo en una ciudad desconocida con un mapa dibujado a mano, a hacerlo con una aplicación GPS que muestra el tráfico en vivo. La ruta o la calle de fondo puede ser exactamente la misma, pero ahora tenés visibilidad absoluta de lo que antes dependía de la intuición o de preguntar por la ventana.</p>
+
+                <h2 id="caso-real">Caso real: de la intuición a la cobertura de clientes activos</h2>
+                <p><em>Este caso detalla cómo el proceso impacta directamente en los números del negocio.</em></p>
+                <div style="background-color: var(--c-light-bg); padding: 24px; border-radius: 12px; margin-bottom: 24px;">
+                    <p>Una distribuidora de la provincia de Buenos Aires tenía una base histórica de 1.500 puntos de venta, pero en el último mes le estaba vendiendo activamente a solo 700 — la cobertura había caído sin que nadie lo notara a tiempo. Se geolocalizó el 100% de la base para ver dónde estaba cada punto de venta y dónde se concentraba el volumen real, y se cruzó esa información con la actividad de los últimos 30 días para identificar, en un mapa digital, qué clientes seguían activos y cuáles no.</p>
+                    <p>Sobre los inactivos se armó un plan de 60 días con rutas específicas para los vendedores. En paralelo, se detectó que en zonas donde las camionetas ya entregaban con poco volumen — en este caso, los barrios de Belgrano y Saavedra, en Capital Federal — había oportunidad de sumar comercios como cafeterías y restaurantes: se censaron 200 puntos de venta nuevos en esa zona, que se agregaron a la base, llevándola a 1.700.</p>
+                    <p>El resultado: 20% más de cobertura de clientes con compra, con vendedores más productivos (más puntos de venta visitados en un recorrido más corto) y menor costo por entrega. Lo importante: esto no se hace una sola vez — funciona como un flujo continuo, no como un proyecto de una vez.</p>
+                </div>
+                <p>El éxito radica en entender que la depuración de tu base de clientes es un hábito vivo, esencial para ejercer un <a href="https://lezacconsultoria.com/blog/indicadores-ventas-semanales-pymes">control de vendedores sin instalar un CRM nuevo</a> de forma engorrosa, ya que la visualización manda.</p>
+
+                <!-- CARRUSEL DE MARCAS -->
+                <div class="marquee" aria-hidden="true">
+                    <div class="marquee-title">Marcas que ya confían en la metodología</div>
+                    <div class="marquee-inner">
+                        <ul>
+                            <li>Bacardi</li><li>Vitalcan</li><li>Weilen</li><li>Proquim</li><li>Madersa</li><li>Vaca Fría</li><li>Distribuidora Gloria</li><li>Alco</li><li>Indega</li><li>Pluscar</li><li>McCain</li>
+                        </ul>
+                        <ul>
+                            <li>Bacardi</li><li>Vitalcan</li><li>Weilen</li><li>Proquim</li><li>Madersa</li><li>Vaca Fría</li><li>Distribuidora Gloria</li><li>Alco</li><li>Indega</li><li>Pluscar</li><li>McCain</li>
+                        </ul>
+                        <ul>
+                            <li>Bacardi</li><li>Vitalcan</li><li>Weilen</li><li>Proquim</li><li>Madersa</li><li>Vaca Fría</li><li>Distribuidora Gloria</li><li>Alco</li><li>Indega</li><li>Pluscar</li><li>McCain</li>
+                        </ul>
+                        <ul>
+                            <li>Bacardi</li><li>Vitalcan</li><li>Weilen</li><li>Proquim</li><li>Madersa</li><li>Vaca Fría</li><li>Distribuidora Gloria</li><li>Alco</li><li>Indega</li><li>Pluscar</li><li>McCain</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h2 id="fabricas-distribuidoras">¿Este proceso sirve solo para distribuidoras, o también para una fábrica con vendedores propios?</h2>
+                <p>Sirve para cualquier pyme con equipo de venta en la calle —distribuidora, mayorista o fábrica que vende directo a comercios con vendedores propios— porque el problema principal no depende del rubro, sino de no saber con exactitud dónde están realmente los puntos de venta activos en tu zona.</p>
+                <p>Especialmente para las fábricas que buscan saltar al intermediario y realizar una venta directa a los comercios de cercanía, tener el territorio mapeado reduce drásticamente los costos de exploración. Entender la zona de influencia de manera visual te asegura un despliegue inteligente.</p>
+
+                <h2 id="diseno-zonas">¿Cómo se diseñan las zonas de cada vendedor antes de pensar en rutas?</h2>
+                <p>Se reparte la zona según el volumen y la cantidad real de puntos de venta por vendedor, no por intuición ni por costumbre histórica. La meta de este ordenamiento es equilibrar verdaderamente la carga de trabajo en la calle, no solo acortar kilómetros de forma automática.</p>
+                
+                <h3>Para quién no es esta metodología</h3>
+                <p>Para no perder tu tiempo, somos muy directos con el perfil de operación donde esto genera impacto y donde no. Esto <strong>no es</strong> para una empresa que recién empieza y todavía no tiene una base de clientes para censar. Tampoco es para una empresa que vende servicios profesionales B2B sin venta territorial de productos físicos.</p>
+
+                <h3>Qué pasa en la asesoría con Lezac</h3>
+                <p>En nuestra charla inicial, hacemos una revisión sincera de cómo está hoy tu padrón y tu cobertura, y hacemos una primera lectura de dónde está la oportunidad en tu territorio. Todo esto es completamente sin compromiso.</p>
+
+                <div class="services-grid">
+                    <div class="service-card highlight">
+                        <div style="flex: 1;">
+                            <h4>+Clientes Activos</h4>
+                            <p>Recuperamos clientes dormidos y sumamos puntos de venta sin atender, con <a href="https://lezacconsultoria.com/mas-clientes-activos">geolocalización, censo y ruteo comercial</a>. Más clientes, más ventas.</p>
+                        </div>
+                        <div>
+                            <a href="https://lezacconsultoria.com/mas-clientes-activos" class="btn btn-purple">Conocer cómo trabajamos</a>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <h4>Brújula Comercial</h4>
+                        <p>Ordenamos y profesionalizamos la gestión comercial de tu distribuidora o fábrica pyme con indicadores precisos.</p>
+                        <a href="https://lezacconsultoria.com/consultoria-inteligencia-comercial">Ver servicio de Brújula Comercial &rarr;</a>
+                    </div>
+                    <div class="service-card">
+                        <h4>IA a Medida</h4>
+                        <p>Automatizamos procesos tediosos y análisis de datos repetitivos integrando Inteligencia Artificial adaptada a tu operación.</p>
+                        <a href="https://lezacconsultoria.com/ia-a-medida">Ver servicio de IA a Medida &rarr;</a>
+                    </div>
+                </div>
+
+                <div class="faq-container">
+                    <h3>Preguntas Frecuentes</h3>
+                    
+                    <div class="faq-item">
+                        <div class="faq-q">¿Qué es un censo de puntos de venta?</div>
+                        <div class="faq-a">El censo de puntos de venta y geolocalización de clientes es el proceso de ubicar en un mapa cada comercio de la zona con su dirección exacta, tipo de negocio, volumen y frecuencia de compra, para tener una base real sobre la cual decidir y no una lista vieja.</div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-q">¿Geolocalizar clientes sirve también para una fábrica con vendedores propios, no solo para una distribuidora?</div>
+                        <div class="faq-a">Sirve para cualquier pyme con equipo de venta en la calle —distribuidora, mayorista o fábrica que vende directo a comercios con vendedores propios— porque el problema principal no depende del rubro, sino de no saber con exactitud dónde están realmente los puntos de venta activos en tu zona.</div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-q">¿Cuánto tarda en verse resultado después de geolocalizar la base de clientes?</div>
+                        <div class="faq-a">Los primeros resultados se ven en 30 a 60 días. Al mapear la zona y reasignar recorridos, los vendedores empiezan casi de inmediato a tocar puntos de venta que antes ignoraban, reactivando clientes dormidos y optimizando el tiempo real en la calle.</div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-q">¿Hace falta comprar un software de ruteo para hacer esto?</div>
+                        <div class="faq-a">No en la etapa inicial. Antes de invertir en tecnología de ruteo compleja, es obligatorio depurar, geolocalizar y censar la base. Muchas pymes logran mejoras del 20% en cobertura solo ordenando sus datos actuales y usando herramientas cartográficas estándar.</div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-q">¿Qué pasa con los clientes que aparecen en el sistema pero ya no compran?</div>
+                        <div class="faq-a">Se los marca en el mapa como inactivos y se diseña una ruta de barrido específica para entender por qué dejaron de comprar. Muchas veces el problema es de frecuencia de visita, no de precio, por lo que reasignarles un vendedor los recupera rápidamente.</div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-q">¿Cómo se define una zona nueva de prospección, como el caso de los 200 puntos de venta agregados?</div>
+                        <div class="faq-a">Se cruzan las rutas actuales de entrega que tienen capacidad ociosa con áreas geográficas de alta densidad comercial que hoy no están siendo visitadas por los vendedores. Ahí se envía un equipo a relevar cuadra por cuadra para sumar comercios viables al padrón.</div>
+                    </div>
+                </div>
+
+                <!-- CAJA DE AUTOR -->
+                <div class="author-box">
+                    <img src="https://lezacconsultoria.com/perfil-leandro.jpg" alt="Leandro Zacaria">
+                    <div>
+                        <p style="font-weight: 700; margin-bottom: 4px; font-size: 16px;">Leandro Zacaria</p>
+                        <p style="font-size: 14px; margin-bottom: 8px;">Consultor de inteligencia comercial, Lezac Consultoría</p>
+                        <p style="font-size: 13px; color: #6B7280; margin-bottom: 8px;">10+ años asesorando distribuidoras, mayoristas y fábricas pyme en Argentina, Paraguay, Bolivia y Uruguay.</p>
+                        <a href="https://www.linkedin.com/in/leandro-zacaria" target="_blank" rel="noopener" style="font-size: 13px; font-weight: 600; color: #7B2FBE;">Ver perfil en LinkedIn &rarr;</a>
+                    </div>
+                </div>
+
+            </article>
+
+            <!-- ÍNDICE LATERAL -->
+            <aside class="toc">
+                <div class="toc-title">En este artículo</div>
+                <ul>
+                    <li><a href="#software-ruteo-falla">Por qué falla el ruteo desordenado</a></li>
+                    <li><a href="#censo-puntos-venta">Qué es un censo de puntos de venta</a></li>
+                    <li><a href="#caso-real">Caso real: 20% más de cobertura</a></li>
+                    <li><a href="#fabricas-distribuidoras">¿Sirve para fábricas directas?</a></li>
+                    <li><a href="#diseno-zonas">Diseño de zonas y territorios</a></li>
+                </ul>
+            </aside>
+        </div>
+    </main>
+
+    <!-- CIERRE DE EMBUDO -->
+    <section class="bottom-cta">
+        <h2>Agendá tu asesoría comercial gratuita de 45 minutos</h2>
+        <p>En una charla online vemos cómo está hoy tu base de clientes y tu cobertura real, y si geolocalizarla tiene sentido para tu operación. Sin contrato inicial.</p>
+        <div class="cta-actions">
+            <a href="https://wa.me/5491154107921?text=Hola%2C%20vi%20la%20gu%C3%ADa%20de%20geolocalizaci%C3%B3n%20de%20clientes%20en%20el%20blog%20de%20Lezac%20y%20quiero%20agendar%20la%20asesor%C3%ADa%20comercial%20gratuita" class="btn btn-outline" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+            <a href="https://calendly.com/lezacconsultoria/consultoria-comercial?utm_source=blog&utm_medium=articulo&utm_campaign=geolocalizacion-clientes-antes-del-ruteo" class="btn btn-green" target="_blank" rel="noopener">Agendar asesoría gratuita · 45 min</a>
+        </div>
+        <div class="cta-stats">
+            10+ años de experiencia | 100+ empresas asesoradas | Argentina · Paraguay · Bolivia · Uruguay
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <img src="https://lezacconsultoria.com/Logo%20Lezac%20%28500%20x%20500%20px%29%20%283%29.png" alt="Lezac Consultoría" class="footer-logo">
+                <p style="max-width: 320px; line-height: 1.6; margin-bottom: 0;">Consultora de inteligencia comercial para PyMEs. Transformamos datos dispersos en decisiones rentables para la calle.</p>
+            </div>
+            <div class="footer-col">
+                <h5>Servicios</h5>
+                <ul>
+                    <li><a href="https://lezacconsultoria.com/mas-clientes-activos">+Clientes Activos</a></li>
+                    <li><a href="https://lezacconsultoria.com/consultoria-inteligencia-comercial">Brújula Comercial</a></li>
+                    <li><a href="https://lezacconsultoria.com/ia-a-medida">IA a Medida</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>Contacto Directo</h5>
+                <ul>
+                    <li><a href="https://wa.me/5491154107921?text=Hola%2C%20vengo%20del%20blog%20de%20Lezac" target="_blank" rel="noopener">WhatsApp: +54 9 11 5410-7921</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div>&copy; 2026 Lezac Consultoría. Todos los derechos reservados.</div>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/company/lezac-consultoria" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a>
+                <a href="https://www.instagram.com/lezacconsultoria" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
