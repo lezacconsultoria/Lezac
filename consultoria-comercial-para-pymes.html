@@ -137,12 +137,13 @@ body::before {
 
 /* ── 2. Headline ── */
 .headline {
-  font-size: clamp(22px, 3.5vw, 42px);
+  font-size: clamp(20px, 2.8vw, 34px);
   font-weight: 700;
   line-height: 1.15;
   letter-spacing: -0.02em;
   color: #ffffff;
-  white-space: nowrap;
+  max-width: 900px;
+  text-wrap: balance;
   flex-shrink: 0;
   margin-top: 10px;
 }
@@ -216,7 +217,7 @@ body::before {
 
 /* ── 7. Video Player ── */
 .video-wrap {
-  width: min(92vw, 900px, calc((100dvh - 410px) * 16 / 9));
+  width: min(92vw, 900px, calc((100dvh - 440px) * 16 / 9));
   aspect-ratio: 16 / 9;
   margin-top: 14px;
   position: relative;
@@ -399,7 +400,6 @@ body::before {
 /* ── Responsive: mobile ── */
 @media (max-width: 768px) {
   .landing { padding: 16px 16px 10px; }
-  .headline { white-space: normal; }
   .video-wrap { width: min(94vw, calc(40vh * 16 / 9)); border-radius: 10px; }
   .pillar-sep:nth-child(4) { display: none; }
   .pillars { gap: 4px 6px; }
@@ -436,13 +436,13 @@ body::before {
   </a>
 
   <!-- 2. Headline -->
-  <h1 class="headline">Inteligencia comercial aplicada a tu empresa</h1>
+  <h1 class="headline">Ordená tu gestión comercial y vendé más, con datos reales de tu negocio</h1>
 
   <!-- 3. Subheadline -->
-  <p class="subheadline">Te lo explicamos en 2 min</p>
+  <p class="subheadline">Consultoría de inteligencia comercial para pymes · En 1 minuto te mostramos cómo</p>
 
   <!-- 4. Specialization -->
-  <p class="specialization">Fábricas, distribuidoras y mayoristas</p>
+  <p class="specialization">Fábricas · Distribuidoras y mayoristas</p>
 
   <!-- 5. Pillars -->
   <div class="pillars">
@@ -458,12 +458,12 @@ body::before {
     <span class="pillar-sep">·</span>
     <span class="pillar">
       <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
-      Optimizar recursos
+      Rentabilidad
     </span>
     <span class="pillar-sep">·</span>
     <span class="pillar">
       <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
-      Rentabilidad
+      Optimización de recursos
     </span>
   </div>
 
